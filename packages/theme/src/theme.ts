@@ -105,12 +105,12 @@ export const themes: Themes = {
       background_2: contrastColor(backgrounds.light.level2, 'dark'),
       background_3: contrastColor(backgrounds.light.level3, 'dark'),
       primary_1: contrastColor(colors.primary.green_500, 'dark'),
-      primary_2: contrastColor(colors.secondary.cyan_500, 'dark'),
-      primary_3: contrastColor(colors.secondary.blue_500, 'light'),
+      primary_2: contrastColor(colors.secondary.blue_500, 'light'),
+      primary_3: contrastColor(colors.secondary.cyan_500, 'dark'),
       primary_destructive: contrastColor(colors.secondary.red_500, 'light'),
       secondary_1: contrastColor(colors.primary.gray_500, 'light'),
       secondary_2: contrastColor(colors.primary.gray_200, 'dark'),
-      secondary_3: contrastColor(colors.secondary.cyan_200, 'dark'),
+      secondary_3: contrastColor(colors.primary.gray_400, 'light'),
       secondary_4: contrastColor(colors.primary.gray_50, 'dark'),
 
       transport_city: contrastColor(colors.primary.green_600),
@@ -127,8 +127,8 @@ export const themes: Themes = {
         bg: contrastColor(hexToRgba(colors.primary.green_500, 0.25), 'dark'),
       },
       info: {
-        main: contrastColor(colors.secondary.blue_500, 'light'),
-        bg: contrastColor(hexToRgba(colors.secondary.blue_500, 0.25), 'dark'),
+        main: contrastColor(colors.secondary.cyan_500, 'dark'),
+        bg: contrastColor(hexToRgba(colors.secondary.cyan_500, 0.25), 'dark'),
       },
       warning: {
         main: contrastColor(colors.secondary.yellow_500, 'dark'),
