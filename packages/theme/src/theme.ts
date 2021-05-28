@@ -38,6 +38,7 @@ export interface Theme {
     background_1: ContrastColor;
     background_2: ContrastColor;
     background_3: ContrastColor;
+    background_gray: ContrastColor;
     primary_1: ContrastColor;
     primary_2: ContrastColor;
     primary_3: ContrastColor;
@@ -104,6 +105,7 @@ export const themes: Themes = {
       background_1: contrastColor(backgrounds.light.level1, 'dark'),
       background_2: contrastColor(backgrounds.light.level2, 'dark'),
       background_3: contrastColor(backgrounds.light.level3, 'dark'),
+      background_gray: contrastColor(colors.primary.gray_500, 'light'),
       primary_1: contrastColor(colors.primary.green_500, 'dark'),
       primary_2: contrastColor(colors.secondary.blue_500, 'light'),
       primary_3: contrastColor(colors.secondary.cyan_500, 'dark'),
@@ -161,6 +163,7 @@ export const themes: Themes = {
       background_1: contrastColor(backgrounds.dark.level1, 'light'),
       background_2: contrastColor(backgrounds.dark.level2, 'light'),
       background_3: contrastColor(backgrounds.dark.level3, 'light'),
+      background_gray: contrastColor(colors.primary.gray_500, 'light'),
       primary_1: contrastColor(colors.primary.green_500, 'dark'),
       primary_2: contrastColor(colors.secondary.blue_500, 'light'),
       primary_3: contrastColor(colors.secondary.cyan_500, 'dark'),
