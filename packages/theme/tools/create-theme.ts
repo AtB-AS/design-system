@@ -1,20 +1,28 @@
+import { Themes } from './../src/theme';
 import {writeFile} from 'fs/promises';
 import {join} from 'path';
-import {ContrastColor, Mode, Theme, themes} from '../src';
-import {colors} from '../src/colors';
+import {ContrastColor, Mode, Theme, } from '../src';
+import {colors} from '../src/themes/atb-theme/colors';
 import {indentJoin, maybeConvertToRem} from './utils';
 
-export default async function outputThemes() {
-  const base = join(__dirname, '../src');
+
+
+export default async function outputThemes(themeOutputDirName:string, themes:Themes) {
+
+  const base = join(__dirname,`../src/themes/${themeOutputDirName}`)
+  console.log(base);
+
+
   const cssModule = join(base, 'theme.module.css');
   const regular = join(base, 'theme.css');
 
-  const css = generateCss();
+  const css = generateCss(themes);
 
   return Promise.all([writeFile(cssModule, css), writeFile(regular, css)]);
+
 }
 
-function generateCss() {
+function generateCss(themes:Themes) {
   const colorStrings = indentJoin(printWithPrefix('baseColor', colors));
 
   return `
@@ -26,12 +34,12 @@ ${colorStrings}
 }
 
 /* Light theme data */
-${theme('light')}
+${theme(themes,'light')}
 
 /* Dark theme data */
-${theme('dark')}
+${theme(themes,'dark')}
 
-${darkTheme()}
+${darkTheme(themes)}
 
 /* Theme color pairs */
 ${printContrastColors('colors', themes.light.colors)}
@@ -40,7 +48,7 @@ ${printContrastColors('status', themes.light.status)}
 `;
 }
 
-function theme(themeName: Mode) {
+function theme(themes:Themes, themeName: Mode) {
   const extract = (name: keyof Theme) =>
     indentJoin(
       printWithPrefix(name, themes[themeName][name], maybeConvertToRem),
@@ -62,7 +70,7 @@ ${extract('status')}
 `;
 }
 
-function darkTheme() {
+function darkTheme(themes:Themes) {
   const extract = (name: keyof Theme) =>
     indentJoin(printWithPrefix(name, themes.dark[name], maybeConvertToRem));
 
