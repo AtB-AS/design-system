@@ -1,11 +1,10 @@
 import merge from 'ts-deepmerge';
 import {borderRadius, borderWidth, iconSizes, spacings} from './sizes';
 import {ConfigurationOverride, overrideConfig} from './utils/override-config';
-import {AtBThemes}   from './themes'
+import {AtBThemes} from './themes';
 export type Themes = {
   light: Theme;
   dark: Theme;
-
 };
 export type Mode = keyof Themes;
 
@@ -75,20 +74,17 @@ export interface Theme {
 
 export type Statuses = keyof Theme['status'];
 
-
-
-export enum Org{
+export enum ThemeVariant {
   AtB,
-  NFK
+  NFK,
 }
-export function createThemesFor(org:Org){
-  if(org === Org.AtB){
-    return AtBThemes
-  }
-  else{
-    throw Error("A valid org must be provided");
-  }
 
+export function createThemesFor(themeVariant: ThemeVariant) {
+  if (themeVariant === ThemeVariant.AtB) {
+    return AtBThemes;
+  } else {
+    throw Error('A valid ThemeVariant must be provided');
+  }
 }
 
 /**
