@@ -2,27 +2,25 @@ import { Themes } from './../src/theme';
 import {writeFile} from 'fs/promises';
 import {join} from 'path';
 import {ContrastColor, Mode, Theme, } from '../src';
-import {colors} from '../src/themes/atb-theme/colors';
 import {indentJoin, maybeConvertToRem} from './utils';
 
 
 
-export default async function outputThemes(themeOutputDirName:string, themes:Themes) {
+export default async function outputThemes(themeOutputDirName:string, themes:Themes, colors:any) {
 
   const base = join(__dirname,`../src/themes/${themeOutputDirName}`)
-  console.log(base);
 
 
   const cssModule = join(base, 'theme.module.css');
   const regular = join(base, 'theme.css');
 
-  const css = generateCss(themes);
+  const css = generateCss(themes,colors);
 
   return Promise.all([writeFile(cssModule, css), writeFile(regular, css)]);
 
 }
 
-function generateCss(themes:Themes) {
+function generateCss(themes:Themes, colors:any) {
   const colorStrings = indentJoin(printWithPrefix('baseColor', colors));
 
   return `
