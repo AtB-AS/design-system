@@ -76,7 +76,6 @@ export type Statuses = keyof Theme['status'];
 
 export enum ThemeVariant {
   AtB,
-  NFK,
 }
 
 export function createThemesFor(themeVariant: ThemeVariant) {
