@@ -31,7 +31,7 @@ export interface Theme {
     background_1: ContrastColor;
     background_2: ContrastColor;
     background_3: ContrastColor;
-    background_gray: ContrastColor;
+    background_accent: ContrastColor;
     primary_1: ContrastColor;
     primary_2: ContrastColor;
     primary_3: ContrastColor;
