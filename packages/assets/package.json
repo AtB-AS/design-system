@@ -1,0 +1,17 @@
+{
+  "name": "@atb-as/assets",
+  "version": "4.0.0",
+  "private": false,
+  "description": "OOS Design System Assets",
+  "license": "EUPL-1.2",
+  "scripts": {
+    "build": "echo \"OOS Design System should build now\""
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
