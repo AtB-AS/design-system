@@ -1,15 +1,14 @@
 {
-  "name": "@atb-as/assets",
-  "version": "4.0.0",
+  "name": "@atb-as/generate-assets",
+  "version": "0.0.1",
   "private": false,
-  "description": "OOS Design System Assets",
+  "description": "OOS Design System generate-assets",
   "license": "EUPL-1.2",
-  "scripts": {
-    "build": "echo \"OOS Design System should build now\""
-  },
-  "devDependencies": {
-  },
+  "bin": "./bin.js",
+  "main": "./generate.js",
+  "devDependencies": {},
   "dependencies": {
+    "fs-extra": "^10.0.0"
   },
   "publishConfig": {
     "access": "public"
