@@ -1,35 +1,33 @@
 const fs = require("fs-extra")
 const path = require('path');
 
-const recursiveFolderCheck = (path) => {
-    console.log(`Checking path ${path}`)
+const { resolve } = require('path');
+const { readdir } = require('fs').promises;
 
-    fs.readdir(path, (err, locatedPaths) => {
-        if (err) console.error(err)
+async function getFiles(dir) {
+  const dirents = await readdir(dir, { withFileTypes: true });
+  const files = await Promise.all(dirents.map((dirent) => {
+    const res = resolve(dir, dirent.name);
+    const result = dirent.isDirectory() ? getFiles(res) : res
+    // console.log("result", result)
+    return result;
+  }));
 
-        else {
-            console.log(`Located paths: ${locatedPaths}`)
+  const superResult = Array.prototype.concat(...files)
+  // console.log(`Superresult ${superResult}`);
+  
+  const filesToCopy = [];
 
-            locatedPaths.forEach(file => {
-                fs.stat(file, (err, stats) => {
-                    if (err) console.error(err)
-                    else {
-                        if (stats.isFile()) {
-                            console.log(`File located: ${file}`)
-                            filesToCopy.push(file)
-                        }
-                        else if (stats.isDirectory()) {
-                            console.log(`Directory located: ${file}`)
-                            recursiveFolderCheck(file)
-                        }
-                    }
-                })
-            })
-        }            
+    superResult.forEach(file => {
+        filesToCopy.push(file)
     })
+
+    // console.log(`Files to copy from ${dir}: ${filesToCopy}`)
+
+    return filesToCopy;
 }
 
-const assets = (orgId, destinationDirectory) => {
+const assets = async (orgId, destinationDirectory) => {
     console.log(`Copying assets for ${orgId} to ${destinationDirectory}`)
 
     const vaildOrgIds = ["atb", "nfk"];
@@ -42,16 +40,19 @@ const assets = (orgId, destinationDirectory) => {
     const commonFolder = path.join(__dirname, 'src', 'common')
     const orgFolder = path.join(__dirname, 'src', orgId)
 
-    const filesToCopy = [];
+    const commonFiles = await getFiles(commonFolder)
+    const orgFiles = await getFiles(orgFolder)
 
-    recursiveFolderCheck(commonFolder);
-    recursiveFolderCheck(orgFolder);
+    console.log(`Files to be copied from ${commonFolder}: ${commonFiles}`)
+    console.log(`Files to be copied from ${orgFolder}: ${orgFiles}`)
 
-    console.log("Files to be copied", filesToCopy)
+    const filesToCopy = commonFiles.concat(orgFiles)
+
+    console.log(filesToCopy)
 
     filesToCopy.forEach(path => {
         fs.copy(path, destinationDirectory, err => {
-            if (err) console.error(err)
+            if (err) console.log(err)
             else console.log(`${path} successfully copied to ${destinationDirectory}`)
         })
     })
