@@ -1,5 +1,5 @@
+const fs = require('fs-extra');
 const path = require('path');
-const ncp = require('ncp').ncp;
 
 const {resolve} = require('path');
 const {readdir} = require('fs').promises;
@@ -55,23 +55,19 @@ const assets = async (orgId, destinationDirectory) => {
     const splitPath =
       path.split(`/src/${orgId}`)[1] ?? path.split(`/src/common`)[1];
     const destinationPath = destinationDirectory + splitPath;
-    console.log('Aiming for destination', destinationPath);
 
-    ncp.limit = 16;
+    await fs.promises.mkdir(
+      destinationPath.substring(0, destinationPath.lastIndexOf('/')),
+      {recursive: true},
+    );
 
-    console.log('limit set');
-
-    ncp(path, destinationPath, function (err) {
-      if (err) {
-        console.log(err);
-      } else console.log(`${path} copied to ${destinationPath}`);
+    fs.copyFile(path, destinationPath, (err) => {
+      if (err) console.log(err);
+      else console.log(`${path} successfully copied to ${destinationPath}`);
     });
-
-    console.log('why was the previous lines ignored?');
   });
 
   console.log('generate-assets complete!');
-  process.exit(0);
 };
 
 module.exports = assets;
