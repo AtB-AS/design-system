@@ -121,3 +121,6 @@ dist
 .DS_Store
 
 packages/*/lib/
+
+# Should not be included, but may be while testing bin.js
+static/
