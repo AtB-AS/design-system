@@ -44,14 +44,11 @@ const assets = async (orgId, destinationDirectory) => {
   const commonFiles = await getFiles(commonFolder);
   const orgFiles = await getFiles(orgFolder);
 
-  // console.log(`Files to be copied from ${commonFolder}: ${commonFiles}`)
-  // console.log(`Files to be copied from ${orgFolder}: ${orgFiles}`)
-
   const allFilesToBeCopied = commonFiles.concat(orgFiles);
 
   console.log(allFilesToBeCopied);
 
-  allFilesToBeCopied.forEach(async (path) => {
+  const allPromises = allFilesToBeCopied.map(async (path) => {
     const splitPath =
       path.split(`/src/${orgId}`)[1] ?? path.split(`/src/common`)[1];
     const destinationPath = destinationDirectory + splitPath;
@@ -61,13 +58,15 @@ const assets = async (orgId, destinationDirectory) => {
       {recursive: true},
     );
 
-    fs.copyFile(path, destinationPath, (err) => {
-      if (err) console.log(err);
-      else console.log(`${path} successfully copied to ${destinationPath}`);
+    return new Promise(function (res, rej) {
+      fs.copyFile(path, destinationPath, (err) => {
+        if (err) rej(err);
+        else res();
+      });
     });
   });
 
-  console.log('generate-assets complete!');
+  return Promise.all(allPromises);
 };
 
 module.exports = assets;
