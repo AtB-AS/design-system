@@ -4,8 +4,14 @@
   "private": false,
   "description": "OOS Design System generate-assets",
   "license": "EUPL-1.2",
-  "bin": "./bin.js",
-  "main": "./generate.js",
+  "bin": "./lib/bin.js",
+  "main": "./lib/generate.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "prepublish": "tsc"
+  },
   "devDependencies": {},
   "dependencies": {
     "copyfiles": "^2.4.1",

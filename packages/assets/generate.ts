@@ -1,34 +1,37 @@
-const fs = require('fs-extra');
+const fs = require('fs');
 const path = require('path');
 
-const {resolve} = require('path');
-const {readdir} = require('fs').promises;
+interface Dirent {
+  name: string;
+  isDirectory: () => boolean;
+}
 
-async function getFiles(dir) {
-  const dirents = await readdir(dir, {withFileTypes: true});
+const getFiles = async (dir: Dirent) => {
+  const dirents = await fs.promises.readdir(dir, {withFileTypes: true});
+  console.log(dirents);
   const files = await Promise.all(
-    dirents.map((dirent) => {
-      const res = resolve(dir, dirent.name);
+    dirents.map((dirent: Dirent) => {
+      console.log(dirent);
+      const res = path.resolve(dir, dirent.name);
       const result = dirent.isDirectory() ? getFiles(res) : res;
       return result;
     }),
   );
 
   const superResult = Array.prototype.concat(...files);
-  // console.log(`Superresult ${superResult}`);
 
-  const filesToCopy = [];
+  const filesToCopy: Array<String> = [];
 
-  superResult.forEach((file) => {
+  superResult.forEach((file: string) => {
     filesToCopy.push(file);
   });
 
   // console.log(`Files to copy from ${dir}: ${filesToCopy}`)
 
   return filesToCopy;
-}
+};
 
-const assets = async (orgId, destinationDirectory) => {
+const assets = async (orgId: string, destinationDirectory: string) => {
   console.log(`Copying assets for ${orgId} to ${destinationDirectory}`);
 
   const vaildOrgIds = ['atb', 'nfk'];
@@ -58,8 +61,8 @@ const assets = async (orgId, destinationDirectory) => {
       {recursive: true},
     );
 
-    return new Promise(function (res, rej) {
-      fs.copyFile(path, destinationPath, (err) => {
+    return new Promise<void>(function (res, rej) {
+      fs.copyFile(path, destinationPath, (err: Error) => {
         if (err) rej(err);
         else res();
       });
@@ -69,4 +72,4 @@ const assets = async (orgId, destinationDirectory) => {
   return Promise.all(allPromises);
 };
 
-module.exports = assets;
+export default assets;
