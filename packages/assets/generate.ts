@@ -27,10 +27,8 @@ const assets = async (orgId: string, destinationDirectory: string) => {
 
   const vaildOrgIds = ['atb', 'nfk'];
 
-  if (!vaildOrgIds.includes(orgId)) {
-    console.error('Invalid orgId provided, valid orgIds are:', vaildOrgIds);
-    process.exit(1);
-  }
+  if (!vaildOrgIds.includes(orgId))
+    throw new Error(`Invalid orgId provided, valid orgIds are ${vaildOrgIds}`);
 
   const commonFolder = path.join(__dirname, 'src', 'common');
   const orgFolder = path.join(__dirname, 'src', orgId);
