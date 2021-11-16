@@ -1,34 +1,25 @@
 const fs = require('fs');
 const path = require('path');
 
-interface Dirent {
+interface Entry {
   name: string;
   isDirectory: () => boolean;
 }
 
-const getFiles = async (dir: Dirent) => {
-  const dirents = await fs.promises.readdir(dir, {withFileTypes: true});
-  console.log(dirents);
+const getFiles = async (entry: Entry) => {
+  const originalEntries = await fs.promises.readdir(entry, {
+    withFileTypes: true,
+  });
+
   const files = await Promise.all(
-    dirents.map((dirent: Dirent) => {
-      console.log(dirent);
-      const res = path.resolve(dir, dirent.name);
-      const result = dirent.isDirectory() ? getFiles(res) : res;
+    originalEntries.map((foundEntry: Entry) => {
+      const res = path.resolve(entry, foundEntry.name);
+      const result = foundEntry.isDirectory() ? getFiles(res) : res;
       return result;
     }),
   );
 
-  const superResult = Array.prototype.concat(...files);
-
-  const filesToCopy: Array<String> = [];
-
-  superResult.forEach((file: string) => {
-    filesToCopy.push(file);
-  });
-
-  // console.log(`Files to copy from ${dir}: ${filesToCopy}`)
-
-  return filesToCopy;
+  return Array.prototype.concat(...files);
 };
 
 const assets = async (orgId: string, destinationDirectory: string) => {
@@ -48,8 +39,6 @@ const assets = async (orgId: string, destinationDirectory: string) => {
   const orgFiles = await getFiles(orgFolder);
 
   const allFilesToBeCopied = commonFiles.concat(orgFiles);
-
-  console.log(allFilesToBeCopied);
 
   const allPromises = allFilesToBeCopied.map(async (path) => {
     const splitPath =
