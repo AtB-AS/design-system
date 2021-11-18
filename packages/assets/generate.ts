@@ -1,31 +1,27 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
-interface Entry {
-  name: string;
-  isDirectory: () => boolean;
-}
+export const vaildOrgIds = ['atb', 'nfk'];
 
-const getFiles = async (entry: Entry) => {
-  const originalEntries = await fs.promises.readdir(entry, {
+async function getFiles(entry: string): Promise<string[]> {
+  const originalEntries: fs.Dirent[] = await fs.promises.readdir(entry, {
     withFileTypes: true,
   });
 
-  const files = await Promise.all(
-    originalEntries.map((foundEntry: Entry) => {
-      const res = path.resolve(entry, foundEntry.name);
-      const result = foundEntry.isDirectory() ? getFiles(res) : res;
-      return result;
-    }),
-  );
+  let files: string[] = [];
+  for (let foundEntry of originalEntries) {
+    const res = path.resolve(entry, foundEntry.name);
+    const result = foundEntry.isDirectory() ? await getFiles(res) : [res];
+    files = files.concat(result);
+  }
+  return files;
+}
 
-  return Array.prototype.concat(...files);
-};
-
-const assets = async (orgId: string, destinationDirectory: string) => {
+export const generateAssets = async (
+  orgId: string,
+  destinationDirectory: string,
+) => {
   console.log(`Copying assets for ${orgId} to ${destinationDirectory}`);
-
-  const vaildOrgIds = ['atb', 'nfk'];
 
   if (!vaildOrgIds.includes(orgId))
     throw new Error(`Invalid orgId provided, valid orgIds are ${vaildOrgIds}`);
@@ -49,7 +45,7 @@ const assets = async (orgId: string, destinationDirectory: string) => {
     );
 
     return new Promise<void>(function (res, rej) {
-      fs.copyFile(path, destinationPath, (err: Error) => {
+      fs.copyFile(path, destinationPath, (err) => {
         if (err) rej(err);
         else res();
       });
@@ -59,4 +55,4 @@ const assets = async (orgId: string, destinationDirectory: string) => {
   return Promise.all(allPromises);
 };
 
-export default assets;
+export default generateAssets;
