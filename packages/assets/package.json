@@ -13,7 +13,10 @@
   "scripts": {
     "build": "tsc"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/node": "^16.11.9",
+    "typescript": "^4.5.2"
+  },
   "dependencies": {},
   "publishConfig": {
     "access": "public"
