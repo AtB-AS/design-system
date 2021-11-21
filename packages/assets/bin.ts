@@ -22,11 +22,15 @@ function showHelp() {
 
 const outputFolder = pathlib.join(process.cwd(), outputDirectory);
 
-try {
-  console.log(`Writing assets for ${orgId} to ${outputFolder}`);
-  generateAssets(orgId, outputFolder);
-  console.log(`Successfully written assets for ${orgId} to ${outputFolder}`);
-} catch (e) {
-  console.error(e);
-  process.exit(1);
-}
+const main = async () => {
+  try {
+    console.log(`Writing assets for ${orgId} to ${outputFolder}`);
+    await generateAssets(orgId, outputFolder);
+    console.log(`Successfully written assets for ${orgId} to ${outputFolder}`);
+  } catch (e) {
+    console.error(e);
+    process.exit(1);
+  }
+};
+
+main();
