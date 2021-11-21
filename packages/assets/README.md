@@ -5,10 +5,10 @@
 ### Import through `ts`/`js`:
 
 ```ts
-import assets from '@atb-as/assets';
+import generateAssets from '@atb-as/assets';
 
 // This line will copy assets for selected orgId to selected destinationDirectory
-assets(orgId: string, destinationDirectory: string)
+generateAssets(orgId: string, destinationDirectory: string)
 ```
 
 ### Run as CLI:
