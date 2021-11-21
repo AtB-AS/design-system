@@ -26,8 +26,8 @@ export const generateAssets = async (
   if (!vaildOrgIds.includes(orgId))
     throw new Error(`Invalid orgId provided, valid orgIds are ${vaildOrgIds}`);
 
-  const commonFolder = path.join(__dirname, 'src', 'common');
-  const orgFolder = path.join(__dirname, 'src', orgId);
+  const commonFolder = path.join(__dirname, '..', 'files', 'common');
+  const orgFolder = path.join(__dirname, '..', 'files', orgId);
 
   const commonFiles = await getFiles(commonFolder);
   const orgFiles = await getFiles(orgFolder);
@@ -36,8 +36,10 @@ export const generateAssets = async (
 
   const allPromises = allFilesToBeCopied.map(async (path) => {
     const splitPath =
-      path.split(`/src/${orgId}`)[1] ?? path.split(`/src/common`)[1];
+      path.split(`/files/${orgId}`)[1] ?? path.split(`/files/common`)[1];
     const destinationPath = destinationDirectory + splitPath;
+
+    console.log(destinationPath);
 
     await fs.promises.mkdir(
       destinationPath.substring(0, destinationPath.lastIndexOf('/')),
