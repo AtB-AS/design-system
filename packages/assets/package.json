@@ -7,10 +7,11 @@
   "bin": "./lib/bin.js",
   "main": "./lib/generate.js",
   "files": [
-    "lib"
+    "lib",
+    "files"
   ],
   "scripts": {
-    "prepublish": "tsc"
+    "build": "tsc"
   },
   "devDependencies": {},
   "dependencies": {},
