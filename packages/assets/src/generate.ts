@@ -39,19 +39,12 @@ export const generateAssets = async (
       path.split(`/files/${orgId}`)[1] ?? path.split(`/files/common`)[1];
     const destinationPath = destinationDirectory + splitPath;
 
-    console.log(destinationPath);
-
     await fs.promises.mkdir(
       destinationPath.substring(0, destinationPath.lastIndexOf('/')),
       {recursive: true},
     );
 
-    return new Promise<void>(function (res, rej) {
-      fs.copyFile(path, destinationPath, (err) => {
-        if (err) rej(err);
-        else res();
-      });
-    });
+    await fs.promises.copyFile(path, destinationPath);
   });
 
   return Promise.all(allPromises);
