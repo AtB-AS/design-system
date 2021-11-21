@@ -4,7 +4,7 @@ import path from 'path';
 export const vaildOrgIds = ['atb', 'nfk'];
 
 async function getFiles(entry: string): Promise<string[]> {
-  const originalEntries: fs.Dirent[] = await fs.promises.readdir(entry, {
+  const originalEntries = await fs.promises.readdir(entry, {
     withFileTypes: true,
   });
 
