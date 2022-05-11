@@ -130,7 +130,7 @@ const themes: Themes = {
         hover: contrastColor('#00232C', 'light'),
         active: contrastColor('#00303D', 'light'),
         disabled: contrastColor('#00303D', 'light'),
-        outline: contrastColor('#0181A2', 'light'),
+        outline: contrastColor('#FFFFFF', 'dark'),
       },
       interactive_3: {
         default: contrastColor('#FFFFFF', 'dark'),
