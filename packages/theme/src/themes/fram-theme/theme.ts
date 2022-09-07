@@ -40,6 +40,7 @@ export const baseColors = {
   // cyan
   cyan_100: contrastColor('#CDE9E3', 'dark'),
   cyan_200: contrastColor('#0D6569', 'light'),
+  cyan_300: contrastColor('#0b585c', 'light'),
 
   // burgundy
   burgundy_100: contrastColor('#551125', 'light'),
@@ -50,12 +51,6 @@ export const baseColors = {
   // yellow
   yellow_100: contrastColor('#F0E991', 'dark'),
   yellow_200: contrastColor('#FBDC00', 'dark'),
-
-  // interactive
-  interactive_hover: contrastColor('#006C9F', 'light'), // Not defined in color scheme
-  interactive_active: contrastColor('#A6ABCC', 'light'), // Not defined in color scheme
-  interactive_disabled: contrastColor('#D4C3DF', 'dark'), // Not defined in color scheme
-  interactive_outline: contrastColor('#71B0D3', 'light'), // Not defined in color scheme
 };
 
 export const colors = {
@@ -87,39 +82,39 @@ const themes: Themes = {
     spacings: spacings,
     interactive: {
       interactive_0: {
-        default: baseColors.blue_400,
-        hover: baseColors.interactive_hover,
-        active: baseColors.interactive_active,
-        disabled: baseColors.interactive_disabled,
-        outline: baseColors.interactive_outline,
+        default: baseColors.cyan_200,
+        hover: baseColors.cyan_300,
+        active: baseColors.cyan_300,
+        disabled: baseColors.gray_100,
+        outline: baseColors.cyan_300,
       },
       interactive_1: {
-        default: baseColors.blue_400,
-        hover: baseColors.interactive_hover,
-        active: baseColors.interactive_active,
-        disabled: baseColors.interactive_disabled,
-        outline: baseColors.interactive_outline,
+        default: baseColors.gray_0,
+        hover: baseColors.blue_200,
+        active: baseColors.blue_200,
+        disabled: baseColors.gray_0,
+        outline: baseColors.blue_300,
       },
       interactive_2: {
-        default: baseColors.blue_400,
-        hover: baseColors.interactive_hover,
-        active: baseColors.interactive_active,
-        disabled: baseColors.interactive_disabled,
-        outline: baseColors.interactive_outline,
+        default: baseColors.gray_0,
+        hover: baseColors.blue_200,
+        active: baseColors.blue_200,
+        disabled: baseColors.gray_0,
+        outline: baseColors.blue_300,
       },
       interactive_3: {
-        default: baseColors.blue_400,
-        hover: baseColors.interactive_hover,
-        active: baseColors.interactive_active,
-        disabled: baseColors.interactive_disabled,
-        outline: baseColors.interactive_outline,
+        default: contrastColor('#FFFFFF', 'dark'),
+        hover: contrastColor('#FFFFFF', 'dark'),
+        active: contrastColor('#FFFFFF', 'dark'),
+        disabled: contrastColor('#FFFFFF', 'dark'),
+        outline: contrastColor('#FFFFFF', 'dark'),
       },
       interactive_destructive: {
-        default: baseColors.blue_400,
-        hover: baseColors.interactive_hover,
-        active: baseColors.interactive_active,
-        disabled: baseColors.interactive_disabled,
-        outline: baseColors.interactive_outline,
+        default: contrastColor('#FFFFFF', 'dark'),
+        hover: contrastColor('#FFFFFF', 'dark'),
+        active: contrastColor('#FFFFFF', 'dark'),
+        disabled: contrastColor('#FFFFFF', 'dark'),
+        outline: contrastColor('#FFFFFF', 'dark'),
       },
     },
     static: {
@@ -128,7 +123,7 @@ const themes: Themes = {
         background_1: baseColors.gray_50,
         background_2: baseColors.gray_100,
         background_3: baseColors.gray_150,
-        background_accent_0: baseColors.gray_100,
+        background_accent_0: baseColors.gray_700,
         background_accent_1: baseColors.gray_600,
         background_accent_2: baseColors.cyan_100,
         background_accent_3: baseColors.cyan_200,
@@ -172,42 +167,41 @@ const themes: Themes = {
   },
   dark: {
     spacings: spacings,
-
     interactive: {
       interactive_0: {
-        default: baseColors.blue_400,
-        hover: baseColors.interactive_hover,
-        active: baseColors.interactive_active,
-        disabled: baseColors.interactive_disabled,
-        outline: baseColors.interactive_outline,
+        default: baseColors.cyan_200,
+        hover: baseColors.cyan_300,
+        active: baseColors.cyan_300,
+        disabled: baseColors.gray_100,
+        outline: baseColors.cyan_300,
       },
       interactive_1: {
-        default: baseColors.blue_400,
-        hover: baseColors.interactive_hover,
-        active: baseColors.interactive_active,
-        disabled: baseColors.interactive_disabled,
-        outline: baseColors.interactive_outline,
+        default: baseColors.gray_1000,
+        hover: baseColors.gray_800,
+        active: baseColors.blue_400,
+        disabled: baseColors.gray_1000,
+        outline: baseColors.blue_400,
       },
       interactive_2: {
-        default: baseColors.blue_400,
-        hover: baseColors.interactive_hover,
-        active: baseColors.interactive_active,
-        disabled: baseColors.interactive_disabled,
-        outline: baseColors.interactive_outline,
+        default: baseColors.gray_1000,
+        hover: baseColors.gray_800,
+        active: baseColors.blue_400,
+        disabled: baseColors.gray_1000,
+        outline: baseColors.blue_400,
       },
       interactive_3: {
-        default: baseColors.blue_400,
-        hover: baseColors.interactive_hover,
-        active: baseColors.interactive_active,
-        disabled: baseColors.interactive_disabled,
-        outline: baseColors.interactive_outline,
+        default: contrastColor('#FFFFFF', 'dark'),
+        hover: contrastColor('#FFFFFF', 'dark'),
+        active: contrastColor('#FFFFFF', 'dark'),
+        disabled: contrastColor('#FFFFFF', 'dark'),
+        outline: contrastColor('#FFFFFF', 'dark'),
       },
       interactive_destructive: {
-        default: baseColors.blue_400,
-        hover: baseColors.interactive_hover,
-        active: baseColors.interactive_active,
-        disabled: baseColors.interactive_disabled,
-        outline: baseColors.interactive_outline,
+        default: contrastColor('#FFFFFF', 'dark'),
+        hover: contrastColor('#FFFFFF', 'dark'),
+        active: contrastColor('#FFFFFF', 'dark'),
+        disabled: contrastColor('#FFFFFF', 'dark'),
+        outline: contrastColor('#FFFFFF', 'dark'),
       },
     },
     static: {
@@ -216,7 +210,7 @@ const themes: Themes = {
         background_1: baseColors.gray_850,
         background_2: baseColors.gray_700,
         background_3: baseColors.gray_600,
-        background_accent_0: baseColors.gray_100,
+        background_accent_0: baseColors.gray_700,
         background_accent_1: baseColors.gray_600,
         background_accent_2: baseColors.cyan_100,
         background_accent_3: baseColors.cyan_200,
