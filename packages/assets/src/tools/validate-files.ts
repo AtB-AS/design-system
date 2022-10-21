@@ -1,4 +1,5 @@
 import {ThemeVariant} from '@atb-as/theme';
+import {constants, promises} from 'fs';
 import path from 'path';
 import {vaildOrgIds} from '../generate';
 import {fgNormalizedForUnix, themeVariantAsString} from '../utils';
@@ -18,6 +19,33 @@ async function fromOrgFiles(org: ThemeVariant) {
   return {org, files: files.map(cleanFilenames)};
 }
 
+async function verifyThatMissingOrgFilesHasCommonReplacements(
+  missingOrgFiles: string[],
+) {
+  let filesMissingFromBothOrgAndCommonFolder = <string[]>[];
+
+  for (const missingOrgFile of missingOrgFiles) {
+    const fullPath = path.join(
+      __dirname,
+      '..',
+      '..',
+      'files',
+      'common',
+      missingOrgFile,
+    );
+    const commonFileExistsForMissingOrgFile = await promises
+      .access(fullPath, constants.F_OK)
+      .then(() => true)
+      .catch(() => false);
+
+    if (!commonFileExistsForMissingOrgFile) {
+      filesMissingFromBothOrgAndCommonFolder.push(fullPath);
+    }
+  }
+
+  return filesMissingFromBothOrgAndCommonFolder;
+}
+
 async function validateValidOrgs() {
   const expectedFiles = await fromOrgFiles(ThemeVariant.AtB);
   const extraOrgs = await Promise.all(
@@ -30,14 +58,27 @@ async function validateValidOrgs() {
     const diff = difference(expectedFiles.files, orgAssets.files);
 
     if (diff.length > 0) {
-      hasErrors = true;
-      console.error(
-        `
-${themeVariantAsString(orgAssets.org)} is missing some assets:
-${diff.join('\n')}
-
-`,
+      console.warn(
+        `${themeVariantAsString(
+          orgAssets.org,
+        )} seems to be missing some assets, checking if common files can be used for these files:\n${diff.join(
+          '\n',
+        )}`,
       );
+      const filesMissingBothInOrgAndCommon =
+        await verifyThatMissingOrgFilesHasCommonReplacements(diff);
+
+      if (filesMissingBothInOrgAndCommon.length) {
+        hasErrors = true;
+        console.error(
+          `
+                ${themeVariantAsString(
+                  orgAssets.org,
+                )} is missing some assets, that also does not have a common file:
+                ${filesMissingBothInOrgAndCommon.join('\n')}
+              `,
+        );
+      }
     }
   }
 
