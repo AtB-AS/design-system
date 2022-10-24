@@ -19,11 +19,17 @@ async function fromOrgFiles(org: ThemeVariant) {
   return {org, files: files.map(cleanFilenames)};
 }
 
+async function exists(fileToCheck: string) {
+  return await promises
+    .access(fileToCheck, constants.F_OK)
+    .then(() => true)
+    .catch(() => false);
+}
+
 async function verifyThatMissingOrgFilesHasCommonReplacements(
   missingOrgFiles: string[],
 ) {
   let filesMissingFromBothOrgAndCommonFolder = <string[]>[];
-
   for (const missingOrgFile of missingOrgFiles) {
     const fullPath = path.join(
       __dirname,
@@ -33,16 +39,10 @@ async function verifyThatMissingOrgFilesHasCommonReplacements(
       'common',
       missingOrgFile,
     );
-    const commonFileExistsForMissingOrgFile = await promises
-      .access(fullPath, constants.F_OK)
-      .then(() => true)
-      .catch(() => false);
-
-    if (!commonFileExistsForMissingOrgFile) {
+    const missingOrgFileExistsInCommon = await exists(fullPath);
+    if (!missingOrgFileExistsInCommon)
       filesMissingFromBothOrgAndCommonFolder.push(fullPath);
-    }
   }
-
   return filesMissingFromBothOrgAndCommonFolder;
 }
 
