@@ -58,7 +58,7 @@ async function validateValidOrgs() {
     const diff = difference(expectedFiles.files, orgAssets.files);
 
     if (diff.length > 0) {
-      console.warn(
+      console.log(
         `${themeVariantAsString(
           orgAssets.org,
         )} seems to be missing some assets, checking if common files can be used for these files:\n${diff.join(
