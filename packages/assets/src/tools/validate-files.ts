@@ -71,12 +71,11 @@ async function validateValidOrgs() {
       if (filesMissingBothInOrgAndCommon.length) {
         hasErrors = true;
         console.error(
-          `
-                ${themeVariantAsString(
-                  orgAssets.org,
-                )} is missing some assets, that also does not have a common file:
-                ${filesMissingBothInOrgAndCommon.join('\n')}
-              `,
+          `${themeVariantAsString(
+            orgAssets.org,
+          )} is missing some assets, that also does not have a common file:\n${filesMissingBothInOrgAndCommon.join(
+            '\n',
+          )}`,
         );
       }
     }
