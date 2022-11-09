@@ -40,13 +40,13 @@ export const androidTextTypeStyles: TextTypeStyles = {
     textDecorationLine: 'underline',
   },
   'body__primary--big': {
-    fontSize: 36,
-    lineHeight: 40,
+    fontSize: 24,
+    lineHeight: 28,
     letterSpacing: 0.25,
   },
   'body__primary--big--bold': {
-    fontSize: 36,
-    lineHeight: 40,
+    fontSize: 24,
+    lineHeight: 28,
     letterSpacing: 0.25,
     fontWeight: 'bold'
   },
