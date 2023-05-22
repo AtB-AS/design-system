@@ -123,7 +123,7 @@ const themes: Themes = {
     interactive: {
       interactive_0: {
         default: contrastColor('#007FBA', 'light'),
-        hover: contrastColor('#AAC6D8', 'dark'),
+        hover: contrastColor('#005685', 'light'),
         active: contrastColor('#CDE9E3', 'dark'),
         disabled: contrastColor('#D6D7DB', 'dark'),
         outline: contrastColor('#0D6569', 'light'),
