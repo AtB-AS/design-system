@@ -29,9 +29,9 @@ const themes: Themes = {
         destructive: contrastColor('#A40F21', 'light'),
       },
       interactive_1: {
-        default: contrastColor('#555E65', 'light'),
-        hover: contrastColor('#6F777D', 'light'),
-        active: contrastColor('#1A2024', 'light'),
+        default: contrastColor('#012C44', 'light'),
+        hover: contrastColor('#00395A', 'light'),
+        active: contrastColor('#001622', 'light'),
         disabled: contrastColor('#D6D7DB', 'dark'),
         outline: contrastColor('#005685', 'light'),
         destructive: contrastColor('#A40F21', 'light'),
@@ -40,7 +40,7 @@ const themes: Themes = {
         default: contrastColor('#FFFFFF', 'dark'),
         hover: contrastColor('#E5F3F4', 'dark'),
         active: contrastColor('#CDE9E3', 'dark'),
-        disabled: contrastColor('#FFFFFF', 'dark'),
+        disabled: contrastColor('#D6D7DB', 'dark'),
         outline: contrastColor('#005685', 'light'),
         destructive: contrastColor('#A40F21', 'light'),
       },
@@ -71,7 +71,7 @@ const themes: Themes = {
         background_accent_1: contrastColor('#005685', 'light'),
         background_accent_2: contrastColor('#CDE9E3', 'dark'),
         background_accent_3: contrastColor('#0D6569', 'light'),
-        background_accent_4: contrastColor('#0D6569', 'dark'),
+        background_accent_4: contrastColor('#ECE58D', 'dark'),
         background_accent_5: contrastColor('#AAC6D8', 'dark'),
       },
       transport: {
@@ -90,7 +90,7 @@ const themes: Themes = {
       },
       status: {
         valid: contrastColor('#82B962', 'dark'),
-        info: contrastColor('#005685', 'light'),
+        info: contrastColor('#AAC6D8', 'dark'),
         warning: contrastColor('#F8DA00', 'dark'),
         error: contrastColor('#F15629', 'light'),
       },
@@ -130,9 +130,9 @@ const themes: Themes = {
         destructive: contrastColor('#EF7684', 'dark'),
       },
       interactive_1: {
-        default: contrastColor('#555E65', 'light'),
-        hover: contrastColor('#6F777D', 'light'),
-        active: contrastColor('#1A2024', 'light'),
+        default: contrastColor('#012C44', 'light'),
+        hover: contrastColor('#00395A', 'light'),
+        active: contrastColor('#001622', 'light'),
         disabled: contrastColor('#D6D7DB', 'dark'),
         outline: contrastColor('#005685', 'light'),
         destructive: contrastColor('#EF7684', 'dark'),
@@ -141,8 +141,8 @@ const themes: Themes = {
         default: contrastColor('#012C44', 'light'),
         hover: contrastColor('#0D6569', 'light'),
         active: contrastColor('#679C9F', 'dark'),
-        disabled: contrastColor('#CCD4D9', 'dark'),
-        outline: contrastColor('#005685', 'light'),
+        disabled: contrastColor('#D6D7DB', 'dark'),
+        outline: contrastColor('#CDE9E3', 'dark'),
         destructive: contrastColor('#EF7684', 'dark'),
       },
       interactive_3: {
@@ -173,7 +173,7 @@ const themes: Themes = {
         background_accent_2: contrastColor('#CDE9E3', 'dark'),
         background_accent_3: contrastColor('#0D6569', 'light'),
         background_accent_4: contrastColor('#ECE58D', 'dark'),
-        background_accent_5: contrastColor('#AAC6D8', 'dark'),
+        background_accent_5: contrastColor('#0D6569', 'light'),
       },
 
       transport: {
@@ -192,7 +192,7 @@ const themes: Themes = {
       },
       status: {
         valid: contrastColor('#82B962', 'dark'),
-        info: contrastColor('#005685', 'light'),
+        info: contrastColor('#AAC6D8', 'dark'),
         warning: contrastColor('#F8DA00', 'dark'),
         error: contrastColor('#F15629', 'light'),
       },
