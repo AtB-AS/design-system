@@ -33,10 +33,6 @@ export const iosTextTypeStyles: TextTypeStyles = {
     ...primaryBase,
     fontWeight: '600',
   },
-  'body__primary--strike': {
-    ...primaryBase,
-    textDecorationLine: 'line-through'
-  },
   'body__primary--underline': {
     ...primaryBase,
     textDecorationLine: 'underline',
@@ -72,10 +68,6 @@ export const iosTextTypeStyles: TextTypeStyles = {
   'body__tertiary--strike': {
     ...tertiaryBase,
     textDecorationLine: 'line-through',
-  },
-  'body__tertiary--uppercase': {
-    ...primaryBase,
-    textTransform: 'uppercase'
   },
   heading__title: {
     ...primaryBase,
