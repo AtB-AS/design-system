@@ -69,6 +69,10 @@ export const iosTextTypeStyles: TextTypeStyles = {
     fontWeight: '600',
   },
   body__tertiary: tertiaryBase,
+  'body__tertiary--bold': {
+    ...tertiaryBase,
+    fontWeight: '600',
+  },
   'body__tertiary--strike': {
     ...tertiaryBase,
     textDecorationLine: 'line-through',
