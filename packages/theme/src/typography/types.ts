@@ -31,7 +31,7 @@ export type FontBook = {
   [fontName: string]: FontMetadata;
 };
 
-export type TextNames = typeof textNames[number];
+export type TextNames = (typeof textNames)[number];
 
 export type TextStyle = {
   fontSize: number;

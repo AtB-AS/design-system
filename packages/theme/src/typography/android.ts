@@ -23,8 +23,7 @@ const labelBase: TextStyle = {
 
 export const androidFontData: FontBook = {
   main: {
-    url:
-      'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap',
+    url: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap',
     fontFamily: `'Roboto', sans-serif`,
   },
 };
@@ -37,7 +36,7 @@ export const androidTextTypeStyles: TextTypeStyles = {
   },
   'body__primary--strike': {
     ...primaryBase,
-    textDecorationLine: 'line-through'
+    textDecorationLine: 'line-through',
   },
   'body__primary--underline': {
     ...primaryBase,
@@ -81,7 +80,7 @@ export const androidTextTypeStyles: TextTypeStyles = {
   },
   'body__tertiary--uppercase': {
     ...primaryBase,
-    textTransform: 'uppercase'
+    textTransform: 'uppercase',
   },
   heading__title: {
     ...primaryBase,
