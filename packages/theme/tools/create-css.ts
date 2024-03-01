@@ -1,11 +1,11 @@
 import outputThemes from './create-theme';
 import outputTypography from './create-typo';
-import {AtBThemes, NfkThemes, FRAMThemes, TFKThemes} from '../src/themes';
+import {AtBThemes, NfkThemes, FRAMThemes, TromsThemes} from '../src/themes';
 
 Promise.all([
   outputThemes('atb-theme', AtBThemes),
   outputThemes('nfk-theme', NfkThemes),
   outputThemes('fram-theme', FRAMThemes),
-  outputThemes('tfk-theme', TFKThemes),
+  outputThemes('troms-theme', TromsThemes),
   outputTypography(),
 ]).then(() => console.log('Written CSS files'), console.error);
