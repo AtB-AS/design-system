@@ -104,7 +104,7 @@ export enum ThemeVariant {
   AtB,
   Nfk,
   FRAM,
-  TROMS,
+  Troms,
 }
 
 export function createThemesFor(themeVariant: ThemeVariant) {
@@ -115,7 +115,7 @@ export function createThemesFor(themeVariant: ThemeVariant) {
       return NfkThemes;
     case ThemeVariant.FRAM:
       return FRAMThemes;
-    case ThemeVariant.TROMS:
+    case ThemeVariant.Troms:
       return TromsThemes;
     default:
       throw Error('A valid ThemeVariant must be provided');
