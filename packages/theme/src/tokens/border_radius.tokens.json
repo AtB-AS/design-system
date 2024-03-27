@@ -1,0 +1,15 @@
+
+{
+  "border-radius-small": {
+    "type": "number",
+    "value": 4
+  },
+  "border-radius-regular": {
+    "type": "number",
+    "value": 8
+  },
+  "circle": {
+    "type": "number",
+    "value": 20
+  }
+}

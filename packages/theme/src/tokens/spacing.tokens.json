@@ -1,0 +1,23 @@
+
+{
+  "spacing-xSmall": {
+    "type": "number",
+    "value": 4
+  },
+  "spacing-small": {
+    "type": "number",
+    "value": 8
+  },
+  "spacing-medium": {
+    "type": "number",
+    "value": 12
+  },
+  "spacing-large": {
+    "type": "number",
+    "value": 20
+  },
+  "spacing-xLarge": {
+    "type": "number",
+    "value": 24
+  }
+}
