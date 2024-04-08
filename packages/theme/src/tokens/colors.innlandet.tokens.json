@@ -1,320 +1,323 @@
 
 {
-  "Text": {
-    "Primary WW": {
-      "type": "color",
-      "value": "#ffffff"
-    },
-    "Primary BB": {
-      "type": "color",
-      "value": "#003441"
-    },
-    "Primary WB": {
-      "type": "color",
-      "value": "#ffffff"
-    },
-    "Primary BW": {
-      "type": "color",
-      "value": "#003441"
-    },
-    "Secondary": {
-      "type": "color",
-      "value": "#4d717a"
-    },
-    "Disabled": {
-      "type": "color",
-      "value": "#7a959c"
-    }
-  },
-  "Background": {
-    "Neutral 0": {
-      "type": "color",
-      "value": "#ffffff"
-    },
-    "Neutral 1": {
-      "type": "color",
-      "value": "#e6f2f6"
-    },
-    "Neutral 2": {
-      "type": "color",
-      "value": "#eaeaea"
-    },
-    "Neutral 3": {
-      "type": "color",
-      "value": "#e4e4e4"
-    },
-    "Accent 0": {
-      "type": "color",
-      "value": "#0181a2"
-    },
-    "Accent 1": {
-      "type": "color",
-      "value": "#046073"
-    },
-    "Accent 2": {
-      "type": "color",
-      "value": "#c5dfe6"
-    },
-    "Accent 3": {
-      "type": "color",
-      "value": "#0181a2"
-    },
-    "Accent 4": {
-      "type": "color",
-      "value": "#ffffff"
-    },
-    "Accent 5": {
-      "type": "color",
-      "value": "#ffffff"
-    }
-  },
-  "Status": {
-    "Success Primary": {
-      "type": "color",
-      "value": "#7fdabb"
-    },
-    "Info Primary": {
-      "type": "color",
-      "value": "#99cdda"
-    },
-    "Warning Primary": {
-      "type": "color",
-      "value": "#fcba63"
-    },
-    "Error Primary": {
-      "type": "color",
-      "value": "#a61419"
-    },
-    "Success Secondary": {
-      "type": "color",
-      "value": "#ffffff"
-    },
-    "Info Secondary": {
-      "type": "color",
-      "value": "#ffffff"
-    },
-    "Warning Secondary": {
-      "type": "color",
-      "value": "#ffffff"
-    },
-    "Error Secondary": {
-      "type": "color",
-      "value": "#ffffff"
-    }
-  },
-  "Interactive 0": {
-    "Default": {
-      "type": "color",
-      "value": "#046073"
-    },
-    "Hover": {
-      "type": "color",
-      "value": "#0181a2"
-    },
-    "Active": {
-      "type": "color",
-      "value": "#99cdda"
-    },
-    "Disabled": {
-      "type": "color",
-      "value": "#99cdda"
-    },
-    "Outline": {
-      "type": "color",
-      "value": "#0181a2"
-    },
-    "Destructive": {
-      "type": "color",
-      "value": "#a51140"
-    }
-  },
-  "Interactive 1": {
-    "Default": {
-      "type": "color",
-      "value": "#ffffff"
-    },
-    "Hover": {
-      "type": "color",
-      "value": "#c5dfe6"
-    },
-    "Active": {
-      "type": "color",
-      "value": "#99cdda"
-    },
-    "Disabled": {
-      "type": "color",
-      "value": "#e6f2f6"
-    },
-    "Outline": {
-      "type": "color",
-      "value": "#046073"
-    },
-    "Destructive": {
-      "type": "color",
-      "value": "#a51140"
-    }
-  },
-  "Interactive 2": {
-    "Default": {
-      "type": "color",
-      "value": "#ffffff"
-    },
-    "Hover": {
-      "type": "color",
-      "value": "#c5dfe6"
-    },
-    "Active": {
-      "type": "color",
-      "value": "#99cdda"
-    },
-    "Disabled": {
-      "type": "color",
-      "value": "#e6f2f6"
-    },
-    "Outline": {
-      "type": "color",
-      "value": "#046073"
-    },
-    "Destructive": {
-      "type": "color",
-      "value": "#a51140"
-    }
-  },
-  "Interactive 3": {
-    "Default": {
-      "type": "color",
-      "value": "#ffffff"
-    },
-    "Hover": {
-      "type": "color",
-      "value": "#ffffff"
-    },
-    "Active": {
-      "type": "color",
-      "value": "#ffffff"
-    },
-    "Disabled": {
-      "type": "color",
-      "value": "#ffffff"
-    },
-    "Outline": {
-      "type": "color",
-      "value": "#ffffff"
-    },
-    "Destructive": {
-      "type": "color",
-      "value": "#a51140"
-    }
-  },
-  "Interactive destructive": {
-    "Default": {
-      "type": "color",
-      "value": "#a61419"
-    },
-    "Hover": {
-      "type": "color",
-      "value": "#ca7275"
-    },
-    "Active": {
-      "type": "color",
-      "value": "#531b22"
-    },
-    "Disabled": {
-      "type": "color",
-      "value": "#edd0d1"
-    },
-    "Outline": {
-      "type": "color",
-      "value": "#021f28"
-    },
-    "Destructive": {
-      "type": "color",
-      "value": "#a51140"
-    }
-  },
-  "Transport": {
-    "Primary": {
-      "City": {
+  "Light": {
+
+    "Text": {
+      "Primary WW": {
         "type": "color",
-        "value": "#014d61"
+        "value": "#ffffff"
       },
-      "Region": {
+      "Primary BB": {
         "type": "color",
-        "value": "#6c7e2f"
+        "value": "#000000"
       },
-      "Airport express bus": {
+      "Primary WB": {
         "type": "color",
-        "value": "#6c7e2f"
+        "value": "#ffffff"
       },
-      "AtB Bestill": {
+      "Primary BW": {
         "type": "color",
-        "value": "#717171"
+        "value": "#000000"
       },
-      "Boat": {
+      "Secondary": {
         "type": "color",
-        "value": "#1777d7"
+        "value": "#555e65"
       },
-      "Train": {
+      "Disabled": {
         "type": "color",
-        "value": "#a5608a"
-      },
-      "Scooter": {
-        "type": "color",
-        "value": "#464a00"
-      },
-      "Car": {
-        "type": "color",
-        "value": "#6f5468"
-      },
-      "Bike": {
-        "type": "color",
-        "value": "#7d0d31"
-      },
-      "Other": {
-        "type": "color",
-        "value": "#717171"
+        "value": "#a9aeb1"
       }
     },
-    "Secondary": {
-      "City": {
+    "Background": {
+      "Neutral 0": {
         "type": "color",
-        "value": "#014d61"
+        "value": "#ffffff"
       },
-      "Region": {
+      "Neutral 1": {
         "type": "color",
-        "value": "#6c7e2f"
+        "value": "#eff5f8"
       },
-      "Airport express bus": {
+      "Neutral 2": {
         "type": "color",
-        "value": "#6c7e2f"
+        "value": "#dfe4e7"
       },
-      "AtB Bestill": {
+      "Neutral 3": {
         "type": "color",
-        "value": "#717171"
+        "value": "#e4e4e4"
       },
-      "Boat": {
+      "Accent 0": {
         "type": "color",
-        "value": "#1777d7"
+        "value": "#007ab5"
       },
-      "Train": {
+      "Accent 1": {
         "type": "color",
-        "value": "#a5608a"
+        "value": "#005685"
       },
-      "Scooter": {
+      "Accent 2": {
         "type": "color",
-        "value": "#464a00"
+        "value": "#cde9e3"
       },
-      "Car": {
+      "Accent 3": {
         "type": "color",
-        "value": "#6f5468"
+        "value": "#0d6569"
       },
-      "Bike": {
+      "Accent 4": {
         "type": "color",
-        "value": "#7d0d31"
+        "value": "#ece58d"
       },
-      "Other": {
+      "Accent 5": {
         "type": "color",
-        "value": "#717171"
+        "value": "#007ab5"
+      }
+    },
+    "Status": {
+      "Success Primary": {
+        "type": "color",
+        "value": "#82b962"
+      },
+      "Info Primary": {
+        "type": "color",
+        "value": "#8dd4cd"
+      },
+      "Warning Primary": {
+        "type": "color",
+        "value": "#f8da00"
+      },
+      "Error Primary": {
+        "type": "color",
+        "value": "#f15629"
+      },
+      "Success Secondary": {
+        "type": "color",
+        "value": "#ffffff"
+      },
+      "Info Secondary": {
+        "type": "color",
+        "value": "#ffffff"
+      },
+      "Warning Secondary": {
+        "type": "color",
+        "value": "#ffffff"
+      },
+      "Error Secondary": {
+        "type": "color",
+        "value": "#ffffff"
+      }
+    },
+    "Interactive 0": {
+      "Default": {
+        "type": "color",
+        "value": "#005685"
+      },
+      "Hover": {
+        "type": "color",
+        "value": "#007fba"
+      },
+      "Active": {
+        "type": "color",
+        "value": "#cde9e3"
+      },
+      "Disabled": {
+        "type": "color",
+        "value": "#d6d7db"
+      },
+      "Outline": {
+        "type": "color",
+        "value": "#0d6569"
+      },
+      "Destructive": {
+        "type": "color",
+        "value": "#a40f21"
+      }
+    },
+    "Interactive 1": {
+      "Default": {
+        "type": "color",
+        "value": "#012c44"
+      },
+      "Hover": {
+        "type": "color",
+        "value": "#00395a"
+      },
+      "Active": {
+        "type": "color",
+        "value": "#001622"
+      },
+      "Disabled": {
+        "type": "color",
+        "value": "#d6d7db"
+      },
+      "Outline": {
+        "type": "color",
+        "value": "#005685"
+      },
+      "Destructive": {
+        "type": "color",
+        "value": "#a40f21"
+      }
+    },
+    "Interactive 2": {
+      "Default": {
+        "type": "color",
+        "value": "#ffffff"
+      },
+      "Hover": {
+        "type": "color",
+        "value": "#e5f3f4"
+      },
+      "Active": {
+        "type": "color",
+        "value": "#cde9e3"
+      },
+      "Disabled": {
+        "type": "color",
+        "value": "#d6d7db"
+      },
+      "Outline": {
+        "type": "color",
+        "value": "#005685"
+      },
+      "Destructive": {
+        "type": "color",
+        "value": "#a40f21"
+      }
+    },
+    "Interactive 3": {
+      "Default": {
+        "type": "color",
+        "value": "#82b962"
+      },
+      "Hover": {
+        "type": "color",
+        "value": "#b8d4a8"
+      },
+      "Active": {
+        "type": "color",
+        "value": "#284320"
+      },
+      "Disabled": {
+        "type": "color",
+        "value": "#d4e5d2"
+      },
+      "Outline": {
+        "type": "color",
+        "value": "#005685"
+      },
+      "Destructive": {
+        "type": "color",
+        "value": "#a40f21"
+      }
+    },
+    "Interactive destructive": {
+      "Default": {
+        "type": "color",
+        "value": "#f18176"
+      },
+      "Hover": {
+        "type": "color",
+        "value": "#efb8b2"
+      },
+      "Active": {
+        "type": "color",
+        "value": "#551125"
+      },
+      "Disabled": {
+        "type": "color",
+        "value": "#f4d8d5"
+      },
+      "Outline": {
+        "type": "color",
+        "value": "#005685"
+      },
+      "Destructive": {
+        "type": "color",
+        "value": "#a40f21"
+      }
+    },
+    "Transport": {
+      "Primary": {
+        "City": {
+          "type": "color",
+          "value": "#82b962"
+        },
+        "Region": {
+          "type": "color",
+          "value": "#005685"
+        },
+        "Airport express bus": {
+          "type": "color",
+          "value": "#005685"
+        },
+        "AtB Bestill": {
+          "type": "color",
+          "value": "#f15659"
+        },
+        "Boat": {
+          "type": "color",
+          "value": "#007fba"
+        },
+        "Train": {
+          "type": "color",
+          "value": "#551125"
+        },
+        "Scooter": {
+          "type": "color",
+          "value": "#464a00"
+        },
+        "Car": {
+          "type": "color",
+          "value": "#6f5468"
+        },
+        "Bike": {
+          "type": "color",
+          "value": "#7d0d31"
+        },
+        "Other": {
+          "type": "color",
+          "value": "#555e65"
+        }
+      },
+      "Secondary": {
+        "City": {
+          "type": "color",
+          "value": "#82b962"
+        },
+        "Region": {
+          "type": "color",
+          "value": "#005685"
+        },
+        "Airport express bus": {
+          "type": "color",
+          "value": "#005685"
+        },
+        "AtB Bestill": {
+          "type": "color",
+          "value": "#f15659"
+        },
+        "Boat": {
+          "type": "color",
+          "value": "#007fba"
+        },
+        "Train": {
+          "type": "color",
+          "value": "#551125"
+        },
+        "Scooter": {
+          "type": "color",
+          "value": "#464a00"
+        },
+        "Car": {
+          "type": "color",
+          "value": "#6f5468"
+        },
+        "Bike": {
+          "type": "color",
+          "value": "#7d0d31"
+        },
+        "Other": {
+          "type": "color",
+          "value": "#555e65"
+        }
       }
     }
   },

@@ -10,8 +10,8 @@ const srcDir = path.join(__dirname, '..', 'src', 'tokens');
 const outDir = path.join(__dirname, '..', 'src', 'themes');
 
 // const prefix = 'gl';
-type Mode = 'atb' | 'atb dark' | 'reis' | 'fram'
-const modes: Mode[] = ['atb'];
+type Mode = 'atb' | 'fram' | 'innlandet' | 'nfk' | 'troms'
+const modes: Mode[] = ['troms'];
 
 
 /**
@@ -205,11 +205,10 @@ StyleDictionary.registerTransform({
   type: "value",
   name: "value/extractContrastColor",
   transitive: true,
-  matcher: (token: TransformedToken) => Object.entries(NEEDS_ONLY_VALUE).find(entry => token.name.includes(entry[0]))?.[1],
+  matcher: (token: TransformedToken) => Object.entries(NEEDS_ONLY_VALUE).some(entry => token.name.includes(entry[0])),
   transformer: (token: TransformedToken) => {
     
     const extractKey = Object.entries(NEEDS_ONLY_VALUE).find(entry => token.name.includes(entry[0]))?.[1]!
-    console.log(token.name, token.value, extractKey)
     return token.value[extractKey]
   }
 })
@@ -391,7 +390,7 @@ type Destination = {
 
 const getDestination = ({ name = 'tokens', mode, extension = 'json' }: Destination) => {
   const fname = [name, mode, extension].filter(Boolean).join('.');
-  const _path = path.join(outDir, 'troms-theme/')
+  const _path = path.join(outDir, `${mode}-theme/`)
   return {
     fname,
     path: _path,
@@ -406,7 +405,6 @@ const getStyleDictionaryConfig = (mode?: Mode, filter?: (token: TransformedToken
     source: [`${srcDir}/**/*.${mode}.tokens.json`],
     platforms: {
       ts: {
-        // prefix,
         buildPath: destination.path,
         transforms: ["name/makePath", "name/groupTransportByType", "name/snake", "value/contrastColor", "value/extractContrastColor"],
         files: [
@@ -416,12 +414,8 @@ const getStyleDictionaryConfig = (mode?: Mode, filter?: (token: TransformedToken
           },
         ],
       },
-      css: {
-
-      },
-      cssModule: {
-
-      }
+      // css: {},
+      // cssModule: {}
     },
   };
 };

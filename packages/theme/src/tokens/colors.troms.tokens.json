@@ -1,0 +1,985 @@
+
+{
+  "Base": {
+    "Gray": {
+      "0": {
+        "type": "color",
+        "value": "#ffffff"
+      },
+      "50": {
+        "type": "color",
+        "value": "#f1f2f2"
+      },
+      "100": {
+        "type": "color",
+        "value": "#e3e5e6"
+      },
+      "150": {
+        "type": "color",
+        "value": "#d5d7d9"
+      },
+      "200": {
+        "type": "color",
+        "value": "#c7cacc"
+      },
+      "300": {
+        "type": "color",
+        "value": "#a9aeb1"
+      },
+      "400": {
+        "type": "color",
+        "value": "#8d9398"
+      },
+      "500": {
+        "type": "color",
+        "value": "#6f777d"
+      },
+      "600": {
+        "type": "color",
+        "value": "#555e65"
+      },
+      "700": {
+        "type": "color",
+        "value": "#37424a"
+      },
+      "800": {
+        "type": "color",
+        "value": "#2b343a"
+      },
+      "850": {
+        "type": "color",
+        "value": "#242b30"
+      },
+      "900": {
+        "type": "color",
+        "value": "#1a2024"
+      },
+      "950": {
+        "type": "color",
+        "value": "#101315"
+      },
+      "1000": {
+        "type": "color",
+        "value": "#000000"
+      }
+    },
+    "Green": {
+      "100": {
+        "type": "color",
+        "value": "#e5e8b8"
+      },
+      "200": {
+        "type": "color",
+        "value": "#c9cf6b"
+      },
+      "300": {
+        "type": "color",
+        "value": "#a2ad00"
+      },
+      "400": {
+        "type": "color",
+        "value": "#909a00"
+      },
+      "500": {
+        "type": "color",
+        "value": "#757d00"
+      },
+      "600": {
+        "type": "color",
+        "value": "#5b6100"
+      },
+      "700": {
+        "type": "color",
+        "value": "#464a00"
+      },
+      "800": {
+        "type": "color",
+        "value": "#323600"
+      },
+      "900": {
+        "type": "color",
+        "value": "#1f2100"
+      }
+    },
+    "Cyan": {
+      "50": {
+        "type": "color",
+        "value": "#def5f8"
+      },
+      "100": {
+        "type": "color",
+        "value": "#bfedf1"
+      },
+      "200": {
+        "type": "color",
+        "value": "#71d6e0"
+      },
+      "300": {
+        "type": "color",
+        "value": "#62bac3"
+      },
+      "400": {
+        "type": "color",
+        "value": "#539ca4"
+      },
+      "500": {
+        "type": "color",
+        "value": "#448086"
+      },
+      "600": {
+        "type": "color",
+        "value": "#356569"
+      },
+      "700": {
+        "type": "color",
+        "value": "#294d51"
+      },
+      "800": {
+        "type": "color",
+        "value": "#1d383a"
+      },
+      "900": {
+        "type": "color",
+        "value": "#122224"
+      }
+    },
+    "Blue": {
+      "100": {
+        "type": "color",
+        "value": "#d4e9ec"
+      },
+      "200": {
+        "type": "color",
+        "value": "#a6d1d9"
+      },
+      "300": {
+        "type": "color",
+        "value": "#75b8c4"
+      },
+      "400": {
+        "type": "color",
+        "value": "#429eae"
+      },
+      "500": {
+        "type": "color",
+        "value": "#007c92"
+      },
+      "600": {
+        "type": "color",
+        "value": "#006678"
+      },
+      "700": {
+        "type": "color",
+        "value": "#004e5c"
+      },
+      "800": {
+        "type": "color",
+        "value": "#003943"
+      },
+      "900": {
+        "type": "color",
+        "value": "#002329"
+      }
+    },
+    "Burgundy": {
+      "100": {
+        "type": "color",
+        "value": "#e8e3e6"
+      },
+      "200": {
+        "type": "color",
+        "value": "#d0c7ce"
+      },
+      "300": {
+        "type": "color",
+        "value": "#b7a9b3"
+      },
+      "400": {
+        "type": "color",
+        "value": "#a08e9b"
+      },
+      "500": {
+        "type": "color",
+        "value": "#867080"
+      },
+      "600": {
+        "type": "color",
+        "value": "#6f5468"
+      },
+      "700": {
+        "type": "color",
+        "value": "#5b3c53"
+      },
+      "800": {
+        "type": "color",
+        "value": "#4b2942"
+      },
+      "900": {
+        "type": "color",
+        "value": "#2c1827"
+      }
+    },
+    "Yellow": {
+      "50": {
+        "type": "color",
+        "value": "#fbf9da"
+      },
+      "100": {
+        "type": "color",
+        "value": "#f0e973"
+      },
+      "200": {
+        "type": "color",
+        "value": "#e4d700"
+      },
+      "300": {
+        "type": "color",
+        "value": "#c6ae00"
+      },
+      "400": {
+        "type": "color",
+        "value": "#af9000"
+      },
+      "500": {
+        "type": "color",
+        "value": "#977000"
+      },
+      "600": {
+        "type": "color",
+        "value": "#815200"
+      },
+      "700": {
+        "type": "color",
+        "value": "#6f3a00"
+      },
+      "800": {
+        "type": "color",
+        "value": "#5c2000"
+      },
+      "900": {
+        "type": "color",
+        "value": "#460200"
+      }
+    },
+    "Orange": {
+      "100": {
+        "type": "color",
+        "value": "#f5e1d4"
+      },
+      "200": {
+        "type": "color",
+        "value": "#eac1a5"
+      },
+      "300": {
+        "type": "color",
+        "value": "#dea076"
+      },
+      "400": {
+        "type": "color",
+        "value": "#d27c41"
+      },
+      "500": {
+        "type": "color",
+        "value": "#c75b12"
+      },
+      "600": {
+        "type": "color",
+        "value": "#97450e"
+      },
+      "700": {
+        "type": "color",
+        "value": "#73350a"
+      },
+      "800": {
+        "type": "color",
+        "value": "#542608"
+      },
+      "900": {
+        "type": "color",
+        "value": "#341805"
+      }
+    },
+    "Red": {
+      "50": {
+        "type": "color",
+        "value": "#f4e1e7"
+      },
+      "100": {
+        "type": "color",
+        "value": "#eed2db"
+      },
+      "200": {
+        "type": "color",
+        "value": "#e4b8c6"
+      },
+      "300": {
+        "type": "color",
+        "value": "#d692a7"
+      },
+      "400": {
+        "type": "color",
+        "value": "#c76b89"
+      },
+      "500": {
+        "type": "color",
+        "value": "#b74166"
+      },
+      "600": {
+        "type": "color",
+        "value": "#a51140"
+      },
+      "700": {
+        "type": "color",
+        "value": "#7d0d31"
+      },
+      "800": {
+        "type": "color",
+        "value": "#5c0a24"
+      },
+      "900": {
+        "type": "color",
+        "value": "#380616"
+      }
+    }
+  },
+  "Dark": {
+    "Text": {
+      "Primary WW": {
+        "type": "color",
+        "value": "{Base.Gray.0}"
+      },
+      "Primary BB": {
+        "type": "color",
+        "value": "{Base.Gray.1000}"
+      },
+      "Primary WB": {
+        "type": "color",
+        "value": "{Base.Gray.1000}"
+      },
+      "Primary BW": {
+        "type": "color",
+        "value": "{Base.Gray.0}"
+      },
+      "Secondary": {
+        "type": "color",
+        "value": "{Base.Gray.100}"
+      },
+      "Disabled": {
+        "type": "color",
+        "value": "{Base.Gray.300}"
+      }
+    },
+    "Background": {
+      "Neutral 0": {
+        "type": "color",
+        "value": "{Base.Gray.1000}"
+      },
+      "Neutral 1": {
+        "type": "color",
+        "value": "{Base.Gray.850}"
+      },
+      "Neutral 2": {
+        "type": "color",
+        "value": "{Base.Gray.700}"
+      },
+      "Neutral 3": {
+        "type": "color",
+        "value": "{Base.Gray.600}"
+      },
+      "Accent 0": {
+        "type": "color",
+        "value": "{Base.Gray.700}"
+      },
+      "Accent 1": {
+        "type": "color",
+        "value": "{Base.Gray.600}"
+      },
+      "Accent 2": {
+        "type": "color",
+        "value": "{Base.Blue.100}"
+      },
+      "Accent 3": {
+        "type": "color",
+        "value": "{Base.Blue.500}"
+      },
+      "Accent 4": {
+        "type": "color",
+        "value": "{Base.Green.100}"
+      },
+      "Accent 5": {
+        "type": "color",
+        "value": "{Base.Gray.800}"
+      }
+    },
+    "Status": {
+      "Success Primary": {
+        "type": "color",
+        "value": "{Base.Green.400}"
+      },
+      "Info Primary": {
+        "type": "color",
+        "value": "{Base.Blue.500}"
+      },
+      "Warning Primary": {
+        "type": "color",
+        "value": "{Base.Yellow.200}"
+      },
+      "Error Primary": {
+        "type": "color",
+        "value": "{Base.Red.500}"
+      },
+      "Success Secondary": {
+        "type": "color",
+        "value": "{Base.Green.700}"
+      },
+      "Info Secondary": {
+        "type": "color",
+        "value": "{Base.Blue.800}"
+      },
+      "Warning Secondary": {
+        "type": "color",
+        "value": "{Base.Green.900}"
+      },
+      "Error Secondary": {
+        "type": "color",
+        "value": "{Base.Red.900}"
+      }
+    },
+    "Interactive 0": {
+      "Default": {
+        "type": "color",
+        "value": "{Base.Blue.500}"
+      },
+      "Hover": {
+        "type": "color",
+        "value": "{Base.Blue.600}"
+      },
+      "Active": {
+        "type": "color",
+        "value": "{Base.Blue.200}"
+      },
+      "Disabled": {
+        "type": "color",
+        "value": "{Base.Blue.100}"
+      },
+      "Outline": {
+        "type": "color",
+        "value": "{Base.Cyan.200}"
+      },
+      "Destructive": {
+        "type": "color",
+        "value": "{Base.Red.300}"
+      }
+    },
+    "Interactive 1": {
+      "Default": {
+        "type": "color",
+        "value": "{Base.Gray.600}"
+      },
+      "Hover": {
+        "type": "color",
+        "value": "{Base.Gray.500}"
+      },
+      "Active": {
+        "type": "color",
+        "value": "{Base.Gray.900}"
+      },
+      "Disabled": {
+        "type": "color",
+        "value": "{Base.Gray.200}"
+      },
+      "Outline": {
+        "type": "color",
+        "value": "{Base.Blue.500}"
+      },
+      "Destructive": {
+        "type": "color",
+        "value": "{Base.Red.300}"
+      }
+    },
+    "Interactive 2": {
+      "Default": {
+        "type": "color",
+        "value": "{Base.Gray.1000}"
+      },
+      "Hover": {
+        "type": "color",
+        "value": "{Base.Blue.900}"
+      },
+      "Active": {
+        "type": "color",
+        "value": "{Base.Blue.700}"
+      },
+      "Disabled": {
+        "type": "color",
+        "value": "{Base.Gray.1000}"
+      },
+      "Outline": {
+        "type": "color",
+        "value": "{Base.Blue.500}"
+      },
+      "Destructive": {
+        "type": "color",
+        "value": "{Base.Red.300}"
+      }
+    },
+    "Interactive 3": {
+      "Default": {
+        "type": "color",
+        "value": "{Base.Blue.700}"
+      },
+      "Hover": {
+        "type": "color",
+        "value": "{Base.Blue.800}"
+      },
+      "Active": {
+        "type": "color",
+        "value": "{Base.Blue.800}"
+      },
+      "Disabled": {
+        "type": "color",
+        "value": "{Base.Gray.600}"
+      },
+      "Outline": {
+        "type": "color",
+        "value": "{Base.Blue.100}"
+      },
+      "Destructive": {
+        "type": "color",
+        "value": "{Base.Red.600}"
+      }
+    },
+    "Interactive destructive": {
+      "Default": {
+        "type": "color",
+        "value": "{Base.Red.600}"
+      },
+      "Hover": {
+        "type": "color",
+        "value": "{Base.Red.500}"
+      },
+      "Active": {
+        "type": "color",
+        "value": "{Base.Red.900}"
+      },
+      "Disabled": {
+        "type": "color",
+        "value": "{Base.Red.100}"
+      },
+      "Outline": {
+        "type": "color",
+        "value": "{Base.Blue.500}"
+      },
+      "Destructive": {
+        "type": "color",
+        "value": "{Base.Red.300}"
+      }
+    },
+    "Transport": {
+      "Primary": {
+        "City": {
+          "type": "color",
+          "value": "{Base.Green.300}"
+        },
+        "Region": {
+          "type": "color",
+          "value": "{Base.Blue.500}"
+        },
+        "Airport express bus": {
+          "type": "color",
+          "value": "{Base.Red.600}"
+        },
+        "AtB Bestill": {
+          "type": "color",
+          "value": "{Base.Orange.500}"
+        },
+        "Boat": {
+          "type": "color",
+          "value": "{Base.Cyan.200}"
+        },
+        "Train": {
+          "type": "color",
+          "value": "{Base.Burgundy.800}"
+        },
+        "Scooter": {
+          "type": "color",
+          "value": "{Base.Green.700}"
+        },
+        "Car": {
+          "type": "color",
+          "value": "{Base.Burgundy.700}"
+        },
+        "Bike": {
+          "type": "color",
+          "value": "{Base.Red.700}"
+        },
+        "Other": {
+          "type": "color",
+          "value": "{Base.Gray.200}"
+        }
+      },
+      "Secondary": {
+        "City": {
+          "type": "color",
+          "value": "{Base.Green.400}"
+        },
+        "Region": {
+          "type": "color",
+          "value": "{Base.Blue.600}"
+        },
+        "Airport express bus": {
+          "type": "color",
+          "value": "{Base.Red.700}"
+        },
+        "AtB Bestill": {
+          "type": "color",
+          "value": "{Base.Orange.600}"
+        },
+        "Boat": {
+          "type": "color",
+          "value": "{Base.Cyan.400}"
+        },
+        "Train": {
+          "type": "color",
+          "value": "{Base.Burgundy.900}"
+        },
+        "Scooter": {
+          "type": "color",
+          "value": "{Base.Green.800}"
+        },
+        "Car": {
+          "type": "color",
+          "value": "{Base.Burgundy.800}"
+        },
+        "Bike": {
+          "type": "color",
+          "value": "{Base.Red.800}"
+        },
+        "Other": {
+          "type": "color",
+          "value": "{Base.Gray.400}"
+        }
+      }
+    }
+  },
+  "Light": {
+    "Text": {
+      "Primary WW": {
+        "type": "color",
+        "value": "{Base.Gray.0}"
+      },
+      "Primary BB": {
+        "type": "color",
+        "value": "{Base.Gray.1000}"
+      },
+      "Primary WB": {
+        "type": "color",
+        "value": "{Base.Gray.0}"
+      },
+      "Primary BW": {
+        "type": "color",
+        "value": "{Base.Gray.1000}"
+      },
+      "Secondary": {
+        "type": "color",
+        "value": "{Base.Gray.600}"
+      },
+      "Disabled": {
+        "type": "color",
+        "value": "{Base.Gray.300}"
+      }
+    },
+    "Background": {
+      "Neutral 0": {
+        "type": "color",
+        "value": "{Base.Gray.0}"
+      },
+      "Neutral 1": {
+        "type": "color",
+        "value": "{Base.Gray.50}"
+      },
+      "Neutral 2": {
+        "type": "color",
+        "value": "{Base.Gray.100}"
+      },
+      "Neutral 3": {
+        "type": "color",
+        "value": "{Base.Gray.150}"
+      },
+      "Accent 0": {
+        "type": "color",
+        "value": "{Base.Gray.700}"
+      },
+      "Accent 1": {
+        "type": "color",
+        "value": "{Base.Gray.600}"
+      },
+      "Accent 2": {
+        "type": "color",
+        "value": "{Base.Blue.100}"
+      },
+      "Accent 3": {
+        "type": "color",
+        "value": "{Base.Blue.500}"
+      },
+      "Accent 4": {
+        "type": "color",
+        "value": "{Base.Green.100}"
+      },
+      "Accent 5": {
+        "type": "color",
+        "value": "{Base.Blue.200}"
+      }
+    },
+    "Status": {
+      "Success Primary": {
+        "type": "color",
+        "value": "{Base.Green.400}"
+      },
+      "Info Primary": {
+        "type": "color",
+        "value": "{Base.Blue.500}"
+      },
+      "Warning Primary": {
+        "type": "color",
+        "value": "{Base.Yellow.200}"
+      },
+      "Error Primary": {
+        "type": "color",
+        "value": "{Base.Red.500}"
+      },
+      "Success Secondary": {
+        "type": "color",
+        "value": "{Base.Green.100}"
+      },
+      "Info Secondary": {
+        "type": "color",
+        "value": "{Base.Cyan.50}"
+      },
+      "Warning Secondary": {
+        "type": "color",
+        "value": "{Base.Yellow.50}"
+      },
+      "Error Secondary": {
+        "type": "color",
+        "value": "{Base.Red.50}"
+      }
+    },
+    "Interactive 0": {
+      "Default": {
+        "type": "color",
+        "value": "{Base.Blue.500}"
+      },
+      "Hover": {
+        "type": "color",
+        "value": "{Base.Blue.600}"
+      },
+      "Active": {
+        "type": "color",
+        "value": "{Base.Blue.200}"
+      },
+      "Disabled": {
+        "type": "color",
+        "value": "{Base.Blue.100}"
+      },
+      "Outline": {
+        "type": "color",
+        "value": "{Base.Cyan.200}"
+      },
+      "Destructive": {
+        "type": "color",
+        "value": "{Base.Red.600}"
+      }
+    },
+    "Interactive 1": {
+      "Default": {
+        "type": "color",
+        "value": "{Base.Gray.600}"
+      },
+      "Hover": {
+        "type": "color",
+        "value": "{Base.Gray.500}"
+      },
+      "Active": {
+        "type": "color",
+        "value": "{Base.Gray.900}"
+      },
+      "Disabled": {
+        "type": "color",
+        "value": "{Base.Gray.200}"
+      },
+      "Outline": {
+        "type": "color",
+        "value": "{Base.Blue.500}"
+      },
+      "Destructive": {
+        "type": "color",
+        "value": "{Base.Red.600}"
+      }
+    },
+    "Interactive 2": {
+      "Default": {
+        "type": "color",
+        "value": "{Base.Gray.0}"
+      },
+      "Hover": {
+        "type": "color",
+        "value": "{Base.Blue.100}"
+      },
+      "Active": {
+        "type": "color",
+        "value": "{Base.Blue.200}"
+      },
+      "Disabled": {
+        "type": "color",
+        "value": "{Base.Gray.0}"
+      },
+      "Outline": {
+        "type": "color",
+        "value": "{Base.Blue.500}"
+      },
+      "Destructive": {
+        "type": "color",
+        "value": "{Base.Red.600}"
+      }
+    },
+    "Interactive 3": {
+      "Default": {
+        "type": "color",
+        "value": "{Base.Blue.100}"
+      },
+      "Hover": {
+        "type": "color",
+        "value": "{Base.Blue.200}"
+      },
+      "Active": {
+        "type": "color",
+        "value": "{Base.Blue.200}"
+      },
+      "Disabled": {
+        "type": "color",
+        "value": "{Base.Gray.100}"
+      },
+      "Outline": {
+        "type": "color",
+        "value": "{Base.Blue.700}"
+      },
+      "Destructive": {
+        "type": "color",
+        "value": "{Base.Red.600}"
+      }
+    },
+    "Interactive destructive": {
+      "Default": {
+        "type": "color",
+        "value": "{Base.Red.600}"
+      },
+      "Hover": {
+        "type": "color",
+        "value": "{Base.Red.500}"
+      },
+      "Active": {
+        "type": "color",
+        "value": "{Base.Red.900}"
+      },
+      "Disabled": {
+        "type": "color",
+        "value": "{Base.Red.100}"
+      },
+      "Outline": {
+        "type": "color",
+        "value": "{Base.Blue.500}"
+      },
+      "Destructive": {
+        "type": "color",
+        "value": "{Base.Red.600}"
+      }
+    },
+    "Transport": {
+      "Primary": {
+        "City": {
+          "type": "color",
+          "value": "{Base.Green.300}"
+        },
+        "Region": {
+          "type": "color",
+          "value": "{Base.Blue.500}"
+        },
+        "Airport express bus": {
+          "type": "color",
+          "value": "{Base.Red.600}"
+        },
+        "AtB Bestill": {
+          "type": "color",
+          "value": "{Base.Orange.500}"
+        },
+        "Boat": {
+          "type": "color",
+          "value": "{Base.Cyan.200}"
+        },
+        "Train": {
+          "type": "color",
+          "value": "{Base.Burgundy.800}"
+        },
+        "Scooter": {
+          "type": "color",
+          "value": "{Base.Green.700}"
+        },
+        "Car": {
+          "type": "color",
+          "value": "{Base.Burgundy.700}"
+        },
+        "Bike": {
+          "type": "color",
+          "value": "{Base.Red.700}"
+        },
+        "Other": {
+          "type": "color",
+          "value": "{Base.Gray.700}"
+        }
+      },
+      "Secondary": {
+        "City": {
+          "type": "color",
+          "value": "{Base.Green.400}"
+        },
+        "Region": {
+          "type": "color",
+          "value": "{Base.Blue.600}"
+        },
+        "Airport express bus": {
+          "type": "color",
+          "value": "{Base.Red.700}"
+        },
+        "AtB Bestill": {
+          "type": "color",
+          "value": "{Base.Orange.600}"
+        },
+        "Boat": {
+          "type": "color",
+          "value": "{Base.Cyan.400}"
+        },
+        "Train": {
+          "type": "color",
+          "value": "{Base.Burgundy.900}"
+        },
+        "Scooter": {
+          "type": "color",
+          "value": "{Base.Green.800}"
+        },
+        "Car": {
+          "type": "color",
+          "value": "{Base.Burgundy.800}"
+        },
+        "Bike": {
+          "type": "color",
+          "value": "{Base.Red.800}"
+        },
+        "Other": {
+          "type": "color",
+          "value": "{Base.Gray.800}"
+        }
+      }
+    }
+  }
+}
