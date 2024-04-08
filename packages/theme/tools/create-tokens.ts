@@ -110,7 +110,8 @@ StyleDictionary.registerFormat({
     dictionary
   }: { dictionary: Dictionary }) => {
 
-    const headers = `import { Themes } from '../../theme';
+    const headers = `// @ts-nocheck\n
+import { Themes } from '../../theme';
 import { borderRadius, borderWidth, iconSizes, spacings } from '../../sizes';`
 
     // Exclude base tokens
@@ -125,7 +126,8 @@ import { borderRadius, borderWidth, iconSizes, spacings } from '../../sizes';`
     const json = JSON.stringify(tokens, null, 2).replace(regex, (_, value) => `: ${value}`)
 
     return `${headers}\n
-export const themes: Themes = ${json};`;
+export const themes: Themes = ${json};\n\n
+export default themes;`;
   }
 })
     // Headers
@@ -389,7 +391,7 @@ type Destination = {
 
 const getDestination = ({ name = 'tokens', mode, extension = 'json' }: Destination) => {
   const fname = [name, mode, extension].filter(Boolean).join('.');
-  const _path = path.join(outDir, 'test-theme/')
+  const _path = path.join(outDir, 'troms-theme/')
   return {
     fname,
     path: _path,
