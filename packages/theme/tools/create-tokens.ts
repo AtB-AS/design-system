@@ -2,6 +2,7 @@
 import * as path from "path"
 import { Config, TransformedToken, Dictionary } from "style-dictionary"
 import { useBlack } from "../src/utils/tokens";
+import { ContrastColor } from "../src";
 
 const StyleDictionary = require('style-dictionary');
 
@@ -194,6 +195,23 @@ StyleDictionary.registerTransform({
   transformer: (token: TransformedToken) => getContrastColor(token)
 })
 
+const NEEDS_ONLY_VALUE: Record<string, keyof ContrastColor> = {
+  "text/colors": "background"
+}
+
+StyleDictionary.registerTransform({
+  type: "value",
+  name: "value/extractContrastColor",
+  transitive: true,
+  matcher: (token: TransformedToken) => Object.entries(NEEDS_ONLY_VALUE).find(entry => token.name.includes(entry[0]))?.[1],
+  transformer: (token: TransformedToken) => {
+    
+    const extractKey = Object.entries(NEEDS_ONLY_VALUE).find(entry => token.name.includes(entry[0]))?.[1]!
+    console.log(token.name, token.value, extractKey)
+    return token.value[extractKey]
+  }
+})
+
 StyleDictionary.registerTransform({
     type: "name",
     name: "name/snake",
@@ -309,6 +327,23 @@ const mapPath = (path: string) => {
       buildPath = "Transport/Transport"
       break;
     }
+    // Background
+    case "Neutral 0": {
+      buildPath = "0"
+      break;
+    }
+    case "Neutral 1": {
+      buildPath = "1"
+      break;
+    }
+    case "Neutral 2": {
+      buildPath = "2"
+      break;
+    }
+    case "Neutral 3": {
+      buildPath = "3"
+      break;
+    }
  }
 
  return buildPath
@@ -371,7 +406,7 @@ const getStyleDictionaryConfig = (mode?: Mode, filter?: (token: TransformedToken
       ts: {
         // prefix,
         buildPath: destination.path,
-        transforms: ["name/makePath", "name/groupTransportByType", "name/snake", "value/contrastColor"],
+        transforms: ["name/makePath", "name/groupTransportByType", "name/snake", "value/contrastColor", "value/extractContrastColor"],
         files: [
           {
             destination: 'theme.ts',
