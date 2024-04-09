@@ -14,10 +14,10 @@
     "tsc": "tsc",
     "clean": "rm -rf lib",
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "yarn create-tokens && yarn create-css && yarn copy-css && tsc -p tsconfig.build.json",
+    "build": "yarn parse-tokens && yarn create-css && yarn copy-css && tsc -p tsconfig.build.json",
     "copy-css": "copyfiles -u 1 \"src/**/*.{css,woff,woff2,ttf,eot,svg,png}\" lib/",
     "create-css": "ts-node ./tools/create-css.ts",
-    "create-tokens": "ts-node ./tools/create-tokens.ts"
+    "parse-tokens": "ts-node ./tools/parse-tokens.ts"
   },
   "devDependencies": {
     "@types/node": "^14.14.34",

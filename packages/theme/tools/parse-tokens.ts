@@ -1,4 +1,10 @@
-/* eslint-disable no-console */
+/**
+ * Using Style Dictionary, design tokens from the ../tokens folder (exported from Figma Variables) 
+ * are parsed into the `theme.ts` file that is bundled in this package.
+ * 
+ * Mutations of the tokens are necessary to keep the same naming and layout
+ * of the `theme.ts` file as before. Suggested modifications in the future are marked with `TODO`.
+ */
 import * as path from "path"
 import { Config, TransformedToken, Dictionary } from "style-dictionary"
 import { useBlack } from "../src/utils/tokens";
@@ -9,23 +15,15 @@ const StyleDictionary = require('style-dictionary');
 const srcDir = path.join(__dirname, '..', 'src', 'tokens');
 const outDir = path.join(__dirname, '..', 'src', 'themes');
 
-// const prefix = 'gl';
 type Mode = 'atb' | 'fram' | 'innlandet' | 'nfk' | 'troms'
 const modes: Mode[] = ['troms'];
 
-
 /**
- *     border: {
-      primary: baseColors.gray_50.background,
-      secondary: colors.text.dark,
-      focus: baseColors.blue_500.background,
-      radius: borderRadius,
-      width: borderWidth,
-    },
-    icon: {
-      size: iconSizes,
-    },
-    spacings: spacings,
+ * Tokens that are not based on Figma variables, but on objects defined in code.
+ * 
+ * These are for now hardcoded in this array and added to other design tokens.
+ * 
+ * TODO: Add these tokens in Figma
  */
 const ADDITIONAL_TOKENS = (baseColors: TransformedToken[]) =>  [
   {
@@ -86,6 +84,15 @@ const ADDITIONAL_TOKENS = (baseColors: TransformedToken[]) =>  [
   },
 ]
 
+/**
+ * Turns the names of the tokens (e.g., transport/flexible) into a nested JSON structure:
+ * 
+ * transport: {
+ *    flexible: {
+ *      ...
+ *    }
+ * }
+ */
 function convertToNested(originalDict: TransformedToken[]) {
   const nestedDict: Record<string, TransformedToken | Record<string, TransformedToken>> = {};
   for (const token of originalDict) {
@@ -104,6 +111,9 @@ function convertToNested(originalDict: TransformedToken[]) {
   return nestedDict;
 }
 
+/**
+ * Writes the parsed tokens to a file.
+ */
 StyleDictionary.registerFormat({
   name: 'convention/ts',
   formatter: ({
@@ -114,15 +124,15 @@ StyleDictionary.registerFormat({
 import { Themes } from '../../theme';
 import { borderRadius, borderWidth, iconSizes, spacings } from '../../sizes';`
 
-    // Exclude base tokens
+    // Exclude base colors, since they should never be used directly in code
     const filteredTokens = dictionary.allTokens.filter((token: TransformedToken) => !token.name.includes("basecolors"))
 
     // Nest tokens based on the path in their name
     const tokens = convertToNested(filteredTokens.concat(ADDITIONAL_TOKENS(dictionary.allTokens) as TransformedToken[]))
     
     // Remove quotes around these objects
-    const VARS = ["borderWidth", "borderRadius", "spacings", "iconSizes"]
-    const regex = new RegExp(`:\\s*"(${VARS.join('|')})"(?=,|\\s*\\}|$)`, 'g');
+    const UNQUOTE_VARS = ["borderWidth", "borderRadius", "spacings", "iconSizes"]
+    const regex = new RegExp(`:\\s*"(${UNQUOTE_VARS.join('|')})"(?=,|\\s*\\}|$)`, 'g');
     const json = JSON.stringify(tokens, null, 2).replace(regex, (_, value) => `: ${value}`)
 
     return `${headers}\n
@@ -130,60 +140,14 @@ export const themes: Themes = ${json};\n\n
 export default themes;`;
   }
 })
-    // Headers
-//     let headers = `import {ContrastColor, TextColorType, Themes} from '../../theme';
-// import {borderRadius, borderWidth, iconSizes, spacings} from '../../sizes';
-// import { useBlack } from '../../utils/tokens';
-//     `
 
-//     // Base colors
-//     let baseColors = `export const baseColors = {\n`
-//     dictionary.allTokens.filter((token: TransformedToken) => token.path.includes("Base")).map((token: TransformedToken) => {
-//       baseColors += `  ${token.name}: contrastColor('${token.value}'),\n`
-//     })
-//     baseColors += `}`
-
-//     let textColors = `
-// const contrastColor = (
-//   background: string,
-// ): ContrastColor => {
-//   return {
-//     background,
-//     text: useBlack(background) ? '#000' : '#fff',
-//   };
-// };
-// `
-
-//     // console.log(dictionary.tokens)
-//     // let themes = `const themes: Themes = {`
-//     // const darkModeTokens = dictionary.allTokens.filter((token: TransformedToken) => token.filePath.includes("dark"))
-//     // darkModeTokens.map((token: TransformedToken) => {
-//     //   themes += `  dark: {\n    spacings: spacings,\n`
-//     //   darkModeTokens.filter((token: TransformedToken) => token.path.includes("Interactive")).map((token: TransformedToken) => {
-//     //     themes += 
-//     //   })
-
-//     //   // themes += `  ${token.name}: contrastColor('${token.value}'),\n`
-//     // })
-
-
-//     return `${headers}
-// ${textColors}
-// ${baseColors}
-
-// `
-
-    // const baseTokens = dictionary.tokens["Base"]
-    // const _baseColors = Object.values(baseTokens).map((token: TransformedToken) => {
-    //   console.log(token)
-    //   const line = `${token.name} = ${token.value};`
-    //   return line
-    // }).join('\n')
-
-    // return _baseColors
-//   }
-// })
-
+/**
+ * Creates the getContrastColor struct for each color value.
+ * 
+ * Note that no logic exists that can accessibly say what the foreground color should be. 
+ * 
+ * TODO: Create for each base color a variable that defines the foreground color of that base color and use that in the `text` attribute instead.
+ */
 const getContrastColor = (token: TransformedToken) => {
   return {
     background: token.value as string,
@@ -191,16 +155,30 @@ const getContrastColor = (token: TransformedToken) => {
   }
 }
 
+/**
+ * Converts each single value to a ContrastColor struct
+ */
 StyleDictionary.registerTransform({
   type: "value",
   name: "value/contrastColor",
   transformer: (token: TransformedToken) => getContrastColor(token)
 })
 
+/**
+ * There are inconsistencies in colors where some variables are not using ContrastColor, but only one value.
+ * Those values are extracted here.
+ * 
+ * NEEDS_ONLY_VALUE defines the path that requires the value and the key of which value to use from ContrastColor for this specific variable.
+ * 
+ * TODO: Unify this such that we don't need to handle special cases like this.
+ */
 const NEEDS_ONLY_VALUE: Record<string, keyof ContrastColor> = {
   "text/colors": "background"
 }
 
+/**
+ * Extracts the color from ContrastColor if necessary according to the object above
+ */
 StyleDictionary.registerTransform({
   type: "value",
   name: "value/extractContrastColor",
@@ -213,6 +191,12 @@ StyleDictionary.registerTransform({
   }
 })
 
+
+/**
+ * Turns variables to `snake_case`
+ * 
+ * TODO: Use the same formatting in Figma and code?
+ */
 StyleDictionary.registerTransform({
     type: "name",
     name: "name/snake",
@@ -224,6 +208,11 @@ StyleDictionary.registerTransform({
     }
 })
 
+/**
+ * Naming is inconsistent between Figma and code. This function maps the names of Figma variables to the name they have in code.
+ * 
+ * TODO: Align these names across design and code
+ */
 const mapModeOfTransport = (modeOfTransport: string) => {
   let _modeOfTransport = modeOfTransport.trim()
 
@@ -241,6 +230,24 @@ const mapModeOfTransport = (modeOfTransport: string) => {
   return _modeOfTransport
 }
 
+
+/**
+ * Grouping of transport variables is done different in Figma and code:
+ * 
+ * Figma:
+ * 
+ * Transport/Primary/name_of_transport
+ *          /Secondary
+ * 
+ * Code:
+ * 
+ * Transport/name_of_transport/Primary
+ *                            /Secondary
+ * 
+ * This transform inverts the Figma grouping to be the same as the one in code.
+ * 
+ * TODO: Group similarly in Figma and code, such that this becomes obsolete
+ */
 StyleDictionary.registerTransform({
   type: "name",
   name: "name/groupTransportByType",
@@ -254,6 +261,15 @@ StyleDictionary.registerTransform({
   }
 })
 
+/**
+ * This function maps naming from Figma to code. It accepts the name of a `directory` and returns the 
+ * name for that directory in code. 
+ * 
+ * Returns an empty string if the directory should be removed.
+ * Returns directories separated by `/` if it should be nested deeper.
+ * 
+ * TODO: Fix these inconcistencies, such that this becomes obsolete.
+ */
 const mapPath = (path: string) => {
   let buildPath = path
 
@@ -350,6 +366,11 @@ const mapPath = (path: string) => {
  return buildPath
 }
 
+/**
+ * Checks if the Figma `directory` is actually a directory in code.
+ * 
+ * If it is, the name will receive a `/` at the end.
+ */
 const isDir = (dir: string) => {
   const DIRS = [
     'Dark',
@@ -388,6 +409,9 @@ type Destination = {
   extension?: string
 } 
 
+/**
+ * Configures where the file should be output and what the name should be for each theme for each organisation
+*/
 const getDestination = ({ name = 'tokens', mode, extension = 'json' }: Destination) => {
   const fname = [name, mode, extension].filter(Boolean).join('.');
   const _path = path.join(outDir, `${mode}-theme/`)
@@ -414,6 +438,7 @@ const getStyleDictionaryConfig = (mode?: Mode, filter?: (token: TransformedToken
           },
         ],
       },
+      // TODO: Style Dictionary can generate CSS and CSS Modules directly too. This way we don't need to parse the `theme.ts` file into CSS files separately.
       // css: {},
       // cssModule: {}
     },
