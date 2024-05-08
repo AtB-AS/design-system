@@ -132,16 +132,16 @@ export const colors = {
 
 export const backgrounds = {
   light: {
-    level0: baseColors.orange_500,
-    level1: baseColors.gray_600,
-    level2: baseColors.orange_200,
-    level3: baseColors.orange_400,
+    level0: baseColors.gray_0,
+    level1: baseColors.gray_50,
+    level2: baseColors.gray_100,
+    level3: baseColors.gray_150,
   },
   dark: {
-    level0: baseColors.gray_1000,
-    level1: baseColors.gray_600,
-    level2: baseColors.orange_200,
-    level3: baseColors.orange_400,
+    level0: baseColors.gray_900,
+    level1: baseColors.gray_850,
+    level2: baseColors.gray_700,
+    level3: baseColors.gray_600,
   },
 };
 
@@ -169,7 +169,7 @@ const themes: Themes = {
         default: baseColors.gray_0,
         hover: baseColors.orange_300,
         active: baseColors.orange_200,
-        disabled: baseColors.gray_0,
+        disabled: baseColors.gray_100,
         outline: baseColors.orange_600,
         destructive: baseColors.red_600,
       },
@@ -183,10 +183,10 @@ const themes: Themes = {
       },
       interactive_destructive: {
         default: baseColors.red_600,
-        hover: baseColors.red_500,
-        active: baseColors.red_900,
+        hover: baseColors.red_700,
+        active: baseColors.red_700,
         disabled: baseColors.red_100,
-        outline: baseColors.blue_500,
+        outline: baseColors.blue_900,
         destructive: baseColors.red_600,
       },
     },
@@ -236,16 +236,16 @@ const themes: Themes = {
         secondary: baseColors.burgundy_800,
       },
       transport_other: {
-        primary: baseColors.gray_600,
+        primary: baseColors.gray_700,
         secondary: baseColors.gray_800,
       },
     },
     static: {
       background: {
         background_0: baseColors.gray_0,
-        background_1: baseColors.gray_100,
-        background_2: baseColors.gray_200,
-        background_3: baseColors.gray_100,
+        background_1: baseColors.gray_50,
+        background_2: baseColors.gray_100,
+        background_3: baseColors.gray_150,
         background_accent_0: baseColors.orange_500,
         background_accent_1: baseColors.gray_600,
         background_accent_2: baseColors.orange_200,
@@ -275,7 +275,7 @@ const themes: Themes = {
     border: {
       primary: baseColors.gray_50.background,
       secondary: colors.text.dark,
-      focus: baseColors.blue_500.background,
+      focus: baseColors.orange_400.background,
       radius: borderRadius,
       width: borderWidth,
     },
@@ -304,7 +304,7 @@ const themes: Themes = {
         destructive: baseColors.red_300,
       },
       interactive_2: {
-        default: baseColors.orange_950,
+        default: baseColors.gray_900,
         hover: baseColors.orange_1000,
         active: baseColors.orange_800,
         disabled: baseColors.gray_950,
@@ -320,9 +320,9 @@ const themes: Themes = {
         destructive: baseColors.red_600,
       },
       interactive_destructive: {
-        default: baseColors.red_600,
-        hover: baseColors.red_500,
-        active: baseColors.red_900,
+        default: baseColors.red_700,
+        hover: baseColors.red_600,
+        active: baseColors.red_600,
         disabled: baseColors.red_100,
         outline: baseColors.red_900,
         destructive: baseColors.red_300,
