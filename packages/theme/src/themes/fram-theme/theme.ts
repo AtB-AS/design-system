@@ -34,6 +34,9 @@ export const baseColors = {
   gray_900: contrastColor('#1A1A1A', 'light'),
   gray_950: contrastColor('#0D0D0D', 'light'),
   gray_1000: contrastColor('#000000', 'light'),
+  gray_1000_20: contrastColor('#00000033', 'light'),
+  gray_1000_77: contrastColor('#000000C4', 'light'),
+  gray_1000_91: contrastColor('#000000E8', 'light'),
 
   // blue dark
   blue_dark_0: contrastColor('#FFFFFF', 'dark'),
@@ -399,8 +402,8 @@ const themes: Themes = {
     text: {
       colors: {
         primary: textColors.dark,
-        secondary: '#000000E8',
-        disabled: '#00000033',
+        secondary: baseColors.gray_1000_91.background,
+        disabled: baseColors.gray_1000_20.background,
       },
     },
     border: {
@@ -573,8 +576,8 @@ const themes: Themes = {
     text: {
       colors: {
         primary: textColors.light,
-        secondary: '#FFFFFFC4',
-        disabled: '#FFFFFF33',
+        secondary: baseColors.gray_1000_77.background,
+        disabled: baseColors.gray_1000_20.background,
       },
     },
     border: {

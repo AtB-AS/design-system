@@ -186,8 +186,8 @@
   --icon-size-xSmall: 0.75rem;
 
   --text-colors-primary: #FFFFFF;
-  --text-colors-secondary: #FFFFFFC4;
-  --text-colors-disabled: #FFFFFF33;
+  --text-colors-secondary: #000000C4;
+  --text-colors-disabled: #00000033;
 
   --static-background-background_0-background: #011622;
   --static-background-background_0-text: #FFFFFF;
@@ -349,8 +349,8 @@
   --icon-size-xSmall: 0.75rem;
 
   --text-colors-primary: #FFFFFF;
-  --text-colors-secondary: #FFFFFFC4;
-  --text-colors-disabled: #FFFFFF33;
+  --text-colors-secondary: #000000C4;
+  --text-colors-disabled: #00000033;
 
   --static-background-background_0-background: #011622;
   --static-background-background_0-text: #FFFFFF;
