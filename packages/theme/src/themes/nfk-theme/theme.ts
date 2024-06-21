@@ -246,7 +246,7 @@ const themes: Themes = {
         hover: baseColors.blue_dark_800,
         active: baseColors.blue_dark_400,
         disabled: contrastColorWithAlpha(baseColors.blue_dark_700, 0.20),
-        outline: baseColors.transport_plane_300,
+        outline: baseColors.transport_plane_400,
         destructive: baseColors.red_600,
       },
       interactive_1: {
@@ -254,7 +254,7 @@ const themes: Themes = {
         hover: baseColors.blue_dark_800,
         active: baseColors.blue_dark_900,
         disabled: contrastColorWithAlpha(baseColors.blue_dark_700, 0.20),
-        outline: baseColors.transport_plane_300,
+        outline: baseColors.transport_plane_400,
         destructive: baseColors.red_600,
       },
       interactive_2: {
@@ -262,7 +262,7 @@ const themes: Themes = {
         hover: baseColors.blue_dark_100,
         active: baseColors.blue_dark_150,
         disabled: contrastColorWithAlpha(baseColors.gray_0, 0.20),
-        outline: baseColors.transport_plane_300,
+        outline: baseColors.transport_plane_400,
         destructive: baseColors.red_600,
       },
       interactive_3: {
@@ -270,7 +270,7 @@ const themes: Themes = {
         hover: baseColors.green_400,
         active: baseColors.green_300,
         disabled: contrastColorWithAlpha(baseColors.green_400, 0.20),
-        outline: baseColors.transport_plane_300,
+        outline: baseColors.transport_plane_400,
         destructive: baseColors.red_600,
       },
       interactive_destructive: {
@@ -278,7 +278,7 @@ const themes: Themes = {
         hover: baseColors.red_600,
         active: baseColors.red_200,
         disabled: contrastColorWithAlpha(baseColors.red_500, 0.20),
-        outline: baseColors.transport_plane_300,
+        outline: baseColors.transport_plane_400,
         destructive: baseColors.red_600,
       },
     },
