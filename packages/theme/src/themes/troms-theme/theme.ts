@@ -251,7 +251,7 @@ const themes: Themes = {
         background_accent_2: baseColors.orange_200,
         background_accent_3: baseColors.orange_400,
         background_accent_4: baseColors.yellow_300,
-        background_accent_5: baseColors.orange_300,
+        background_accent_5: baseColors.orange_500,
       },
       zone_selection: {
         from: baseColors.green_300,
@@ -426,7 +426,7 @@ const themes: Themes = {
         background_accent_2: baseColors.orange_200,
         background_accent_3: baseColors.orange_400,
         background_accent_4: baseColors.yellow_300,
-        background_accent_5: baseColors.orange_300,
+        background_accent_5: baseColors.orange_500,
       },
       zone_selection: {
         from: baseColors.green_300,
