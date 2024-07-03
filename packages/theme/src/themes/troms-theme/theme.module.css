@@ -292,14 +292,14 @@
   --interactive-interactive_destructive-destructive-background: #DB6364;
   --interactive-interactive_destructive-destructive-text: #000000;
 
-  --transport-transport_city-primary-background: #6B9956;
-  --transport-transport_city-primary-text: #000000;
-  --transport-transport_city-secondary-background: #507341;
-  --transport-transport_city-secondary-text: #FFFFFF;
-  --transport-transport_region-primary-background: #334DCE;
+  --transport-transport_region-primary-background: #507341;
   --transport-transport_region-primary-text: #FFFFFF;
-  --transport-transport_region-secondary-background: #334DCE;
+  --transport-transport_region-secondary-background: #3E5932;
   --transport-transport_region-secondary-text: #FFFFFF;
+  --transport-transport_city-primary-background: #334DCE;
+  --transport-transport_city-primary-text: #FFFFFF;
+  --transport-transport_city-secondary-background: #0020C2;
+  --transport-transport_city-secondary-text: #FFFFFF;
   --transport-transport_airport_express-primary-background: #D44546;
   --transport-transport_airport_express-primary-text: #000000;
   --transport-transport_airport_express-secondary-background: #C91618;
@@ -472,14 +472,14 @@
   --interactive-interactive_destructive-destructive-background: #DB6364;
   --interactive-interactive_destructive-destructive-text: #000000;
 
-  --transport-transport_city-primary-background: #6B9956;
-  --transport-transport_city-primary-text: #000000;
-  --transport-transport_city-secondary-background: #507341;
-  --transport-transport_city-secondary-text: #FFFFFF;
-  --transport-transport_region-primary-background: #334DCE;
+  --transport-transport_region-primary-background: #507341;
   --transport-transport_region-primary-text: #FFFFFF;
-  --transport-transport_region-secondary-background: #334DCE;
+  --transport-transport_region-secondary-background: #3E5932;
   --transport-transport_region-secondary-text: #FFFFFF;
+  --transport-transport_city-primary-background: #334DCE;
+  --transport-transport_city-primary-text: #FFFFFF;
+  --transport-transport_city-secondary-background: #0020C2;
+  --transport-transport_city-secondary-text: #FFFFFF;
   --transport-transport_airport_express-primary-background: #D44546;
   --transport-transport_airport_express-primary-text: #000000;
   --transport-transport_airport_express-secondary-background: #C91618;
