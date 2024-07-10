@@ -78,7 +78,7 @@ export const baseColors = {
   burgundy_200: contrastColor('#F9C5E3', 'dark'),
   burgundy_300: contrastColor('#EC43A6', 'dark'),
   burgundy_400: contrastColor('#D43C95', 'dark'),
-  burgundy_500: contrastColor('#BD3685', 'dark'),
+  burgundy_500: contrastColor('#BD3685', 'light'),
   burgundy_600: contrastColor('#B1327D', 'light'),
   burgundy_700: contrastColor('#8E2864', 'light'),
   burgundy_800: contrastColor('#6A1E4B', 'light'),
