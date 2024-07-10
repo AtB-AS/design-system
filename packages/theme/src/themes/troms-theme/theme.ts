@@ -262,20 +262,20 @@ const themes: Themes = {
     },
     status: {
       valid: {
-        primary: baseColors.green_700,
-        secondary: baseColors.green_700,
+        primary: baseColors.green_400,
+        secondary: baseColors.green_100,
       },
       info: {
-        primary: baseColors.blue_300,
-        secondary: baseColors.blue_300,
+        primary: baseColors.blue_500,
+        secondary: baseColors.cyan_50,
       },
       warning: {
-        primary: baseColors.yellow_400,
-        secondary: baseColors.yellow_400,
+        primary: baseColors.yellow_200,
+        secondary: baseColors.yellow_50,
       },
       error: {
-        primary: baseColors.red_300,
-        secondary: baseColors.red_300,
+        primary: baseColors.red_500,
+        secondary: baseColors.red_50,
       },
     },
     text: {
@@ -437,20 +437,20 @@ const themes: Themes = {
     },
     status: {
       valid: {
-        primary: baseColors.green_700,
+        primary: baseColors.green_400,
         secondary: baseColors.green_700,
       },
       info: {
-        primary: baseColors.blue_300,
-        secondary: baseColors.blue_300,
+        primary: baseColors.blue_500,
+        secondary: baseColors.blue_800,
       },
       warning: {
-        primary: baseColors.yellow_400,
-        secondary: baseColors.yellow_400,
+        primary: baseColors.yellow_200,
+        secondary: baseColors.green_900,
       },
       error: {
-        primary: baseColors.red_300,
-        secondary: baseColors.red_300,
+        primary: baseColors.red_500,
+        secondary: baseColors.red_900,
       },
     },
     text: {
