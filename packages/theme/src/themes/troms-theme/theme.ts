@@ -41,7 +41,7 @@ export const baseColors = {
   green_100: contrastColor('#F3FFEE', 'dark'),
   green_200: contrastColor('#E7FFDD', 'dark'),
   green_300: contrastColor('#B2FF90', 'dark'),
-  green_400: contrastColor('#a0e682', 'dark'),
+  green_400: contrastColor('#A0E682', 'dark'),
   green_500: contrastColor('#8ECC73', 'dark'),
   green_600: contrastColor('#86BF6C', 'dark'),
   green_700: contrastColor('#6B9956', 'dark'),
