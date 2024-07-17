@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - run: git checkout -b bot-design-tokens-$(date +%Y%m%d%H%M%S)"
+      - run: git checkout -b bot-design-tokens-$(date +%Y%m%d%H%M%S)
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
