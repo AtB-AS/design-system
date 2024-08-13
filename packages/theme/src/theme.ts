@@ -1,5 +1,5 @@
 import merge from 'ts-deepmerge';
-import {borderRadius, borderWidth, iconSizes, spacings} from './sizes';
+import { BorderRadius, BorderWidth, IconSizes, Spacing} from './sizes';
 import {ConfigurationOverride, overrideConfig} from './utils/override-config';
 import {
   AtBThemes,
@@ -9,36 +9,40 @@ import {
   InnlandetThemes,
 } from './themes';
 export type Themes = {
-  light: Theme;
-  dark: Theme;
+  Light: Theme;
+  Dark: Theme;
 };
 export type Mode = keyof Themes;
 
-export type TextColor = 'primary' | 'secondary' | 'disabled';
+export type TextColor = 'Primary' | 'Secondary' | 'Disabled';
 
-export type TextColorType = 'dark' | 'light';
+export type TextColorType = 'Dark' | 'Light';
 
 export type ContrastColor = {
-  background: string;
-  text: string;
+  Background: string;
+  Foreground: {
+    Primary: string;
+    Secondary: string;
+    Disabled: string;
+  };
 };
 export type TransportColor = {
-  primary: ContrastColor;
-  secondary: ContrastColor;
+  Primary: ContrastColor;
+  Secondary: ContrastColor;
 };
 
 export type StatusColor = {
-  primary: ContrastColor;
-  secondary: ContrastColor;
+  Primary: ContrastColor;
+  Secondary: ContrastColor;
 };
 
 export type InteractiveColor = {
-  default: ContrastColor;
-  hover: ContrastColor;
-  active: ContrastColor;
-  disabled: ContrastColor;
-  outline: ContrastColor;
-  destructive: ContrastColor;
+  Default: ContrastColor;
+  Hover: ContrastColor;
+  Active: ContrastColor;
+  Disabled: ContrastColor;
+  Outline: ContrastColor;
+  Destructive: ContrastColor;
 };
 
 // The colors can be changed, but should follow standard practice as commented:
@@ -52,10 +56,10 @@ export enum GeofencingZoneCodes {
 export type GeofencingZoneKeys = keyof typeof GeofencingZoneCodes;
 
 export type GeofencingZoneStyle = {
-  color: ContrastColor;
-  fillOpacity: number;
-  strokeOpacity: number;
-  layerIndexWeight: number;
+  Color: ContrastColor;
+  FillOpacity: number;
+  StrokeOpacity: number;
+  LayerIndexWeight: number;
 };
 
 export type GeofencingZoneStyles = {
@@ -63,75 +67,71 @@ export type GeofencingZoneStyles = {
 };
 
 export interface Theme {
-  spacings: typeof spacings;
+  Spacing: typeof Spacing;
 
-  interactive: {
-    interactive_0: InteractiveColor;
-    interactive_1: InteractiveColor;
-    interactive_2: InteractiveColor;
-    interactive_3: InteractiveColor;
-    interactive_destructive: InteractiveColor;
+  Interactive: {
+    0: InteractiveColor;
+    1: InteractiveColor;
+    2: InteractiveColor;
+    3: InteractiveColor;
+    Destructive: InteractiveColor;
   };
-  transport: {
-    transport_city: TransportColor;
-    transport_region: TransportColor;
-    transport_airport_express: TransportColor;
-    transport_boat: TransportColor;
-    transport_train: TransportColor;
-    transport_airport: TransportColor;
-    transport_plane: TransportColor;
-    transport_flexible: TransportColor;
-    transport_scooter: TransportColor;
-    transport_bike: TransportColor;
-    transport_car: TransportColor;
-    transport_other: TransportColor;
+  Transport: {
+    City: TransportColor;
+    Region: TransportColor;
+    AirportExpress: TransportColor;
+    Boat: TransportColor;
+    Train: TransportColor;
+    Airport: TransportColor;
+    Plane: TransportColor;
+    Flexible: TransportColor;
+    Scooter: TransportColor;
+    Bike: TransportColor;
+    Car: TransportColor;
+    Other: TransportColor;
   };
 
-  status: {
-    valid: StatusColor;
+  Status: {
+    Success: StatusColor;
     info: StatusColor;
     warning: StatusColor;
     error: StatusColor;
   };
 
-  static: {
-    background: {
-      background_0: ContrastColor;
-      background_1: ContrastColor;
-      background_2: ContrastColor;
-      background_3: ContrastColor;
-      background_accent_0: ContrastColor;
-      background_accent_1: ContrastColor;
-      background_accent_2: ContrastColor;
-      background_accent_3: ContrastColor;
-      background_accent_4: ContrastColor;
-      background_accent_5: ContrastColor;
-    };
-
-    zone_selection: {
-      from: ContrastColor;
-      to: ContrastColor;
-    };
+  Background: {
+    0: ContrastColor;
+    1: ContrastColor;
+    2: ContrastColor;
+    3: ContrastColor;
+    Accent: {
+      0: ContrastColor;
+      1: ContrastColor;
+      2: ContrastColor;
+      3: ContrastColor;
+      4: ContrastColor;
+      5: ContrastColor;
+    }
   };
 
-  text: {
-    colors: {[key in TextColor]: string};
+  Zone: {
+    From: ContrastColor;
+    To: ContrastColor;
   };
 
-  border: {
+  Border: {
     primary: string;
     secondary: string;
     focus: string;
-    radius: typeof borderRadius;
-    width: typeof borderWidth;
+    Radius: typeof BorderRadius;
+    Width: typeof BorderWidth;
   };
-  icon: {
-    size: typeof iconSizes;
+  Icon: {
+    Size: typeof IconSizes;
   };
-  geofencingZones: GeofencingZoneStyles;
+  GeofencingZones: GeofencingZoneStyles;
 }
 
-export type Statuses = keyof Theme['status'];
+export type Statuses = keyof Theme['Status'];
 
 export enum ThemeVariant {
   AtB,
@@ -207,12 +207,15 @@ export function createThemes(
  * @param extension - Object to extend original theme. Can be nested with same keys
  * @returns new deep merged intersection themes
  */
-export function createExtendedThemes<T>(
+export function createExtendedThemes<T extends Partial<Theme>>(
   themes: Themes,
-  extension: {light: T; dark: T},
-) {
+  extension: { Light: T; Dark: T },
+): {
+  Light: Themes['Light'] & T,
+  Dark: Themes['Dark'] & T,
+} {
   return {
-    light: merge(themes.light, extension.light),
-    dark: merge(themes.dark, extension.dark),
+    Light: merge(themes.Light, extension.Light) as Theme & T,
+    Dark: merge(themes.Dark, extension.Dark) as Theme & T,
   };
 }
