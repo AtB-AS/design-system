@@ -19,3 +19,7 @@ export function maybeConvertToRem(val: any, name?: string) {
 }
 
   export const __dirname = dirname(fileURLToPath(import.meta.url))
+
+  export function convertToCamelCase(input: string) {
+    return input.length === 0 ? '' : input.charAt(0).toLowerCase() + input.slice(1);
+  } 

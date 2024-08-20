@@ -7,6 +7,7 @@ import type { Config, DesignTokens, TransformedToken } from 'style-dictionary/ty
 import { fileHeader } from 'style-dictionary/utils';
 
 import path from 'path';
+import { convertToCamelCase } from "./utils";
 
 /**
  * Mocked response from Figma Variables Rest API
@@ -9317,7 +9318,7 @@ const outDir = './src/themes';
 const organizations: Organization[] = ['atb']
 const modes: Mode[] = ['light', 'dark'];
 
-const toUpperFirstCase = (name: string) => name.charAt(0).toUpperCase() + name.slice(1);
+// const toUpperFirstCase = (name: string) => name.charAt(0).toUpperCase() + name.slice(1);
 
 const makeTokens = (organization: Organization, mode: Mode) => {
     const { theme, color_palette, ...rest } = { 
@@ -9347,8 +9348,7 @@ StyleDictionary.registerTransform({
 
     if (!token.prefix) return token;
 
-    // Append the CamelCased type to the path
-    Object.assign(originalPath, [toUpperFirstCase(token.prefix), ...token.path]);
+    Object.assign(originalPath, [token.prefix, ...token.path].map(convertToCamelCase));
 
     return token;
   },
@@ -9486,7 +9486,7 @@ const getStyleDictionaryConfig = (organization: Organization, mode: Mode): Confi
 
 // Generate files for each organization-mode combination
 for (const organization of organizations) {
-  console.info(`\n👷  Built ${toUpperFirstCase(organization)} tokens      | 🌙 & 🌞 |`);
+  console.info(`\n👷  Built ${organization} tokens      | 🌙 & 🌞 |`);
   await Promise.all(
     modes.map((mode) => new StyleDictionary(
       getStyleDictionaryConfig(organization, mode),
