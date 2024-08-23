@@ -1,6 +1,6 @@
 name: update-design-tokens
 run-name: Update design tokens from Figma
-on: [push]
+on: [workflow_dispatch]
 jobs:
   update-variables:
     runs-on: ubuntu-latest
