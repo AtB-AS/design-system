@@ -1,65 +1,65 @@
 import merge from 'ts-deepmerge';
-import { BorderRadius, BorderWidth, IconSizes, Spacing} from './sizes';
 import {ConfigurationOverride, overrideConfig} from './utils/override-config';
 import {
   AtBThemes,
-  NfkThemes,
-  FRAMThemes,
-  TromsThemes,
-  InnlandetThemes,
+  // NfkThemes,
+  // FRAMThemes,
+  // TromsThemes,
+  // InnlandetThemes,
 } from './themes';
 export type Themes = {
-  Light: Theme;
-  Dark: Theme;
+  light: Theme;
+  dark: Theme;
 };
 export type Mode = keyof Themes;
 
-export type TextColor = 'Primary' | 'Secondary' | 'Disabled';
-
-export type TextColorType = 'Dark' | 'Light';
+export type TextColorType = 'dark' | 'light';
 
 export type ContrastColor = {
-  Background: string;
-  Foreground: {
-    Primary: string;
-    Secondary: string;
-    Disabled: string;
+  background: string;
+  foreground: {
+    primary: string;
+    secondary: string;
+    disabled: string;
   };
 };
+
+export type TextColor = keyof ContrastColor["foreground"];
+
 export type TransportColor = {
-  Primary: ContrastColor;
-  Secondary: ContrastColor;
+  primary: ContrastColor;
+  secondary: ContrastColor;
 };
 
 export type StatusColor = {
-  Primary: ContrastColor;
-  Secondary: ContrastColor;
+  primary: ContrastColor;
+  secondary: ContrastColor;
 };
 
 export type InteractiveColor = {
-  Default: ContrastColor;
-  Hover: ContrastColor;
-  Active: ContrastColor;
-  Disabled: ContrastColor;
-  Outline: ContrastColor;
-  Destructive: ContrastColor;
+  default: ContrastColor;
+  hover: ContrastColor;
+  active: ContrastColor;
+  disabled: ContrastColor;
+  outline: ContrastColor;
+  destructive: ContrastColor;
 };
 
 // The colors can be changed, but should follow standard practice as commented:
 export enum GeofencingZoneCodes {
-  Allowed = 'Allowed', // blue
-  Slow = 'Slow', // yellow
-  NoParking = 'NoParking', // red
-  NoEntry = 'NoEntry', // dark/black
+  allowed = 'Allowed', // blue
+  slow = 'Slow', // yellow
+  noParking = 'NoParking', // red
+  noEntry = 'NoEntry', // dark/black
 }
 
 export type GeofencingZoneKeys = keyof typeof GeofencingZoneCodes;
 
 export type GeofencingZoneStyle = {
-  Color: ContrastColor;
-  FillOpacity: number;
-  StrokeOpacity: number;
-  LayerIndexWeight: number;
+  color: ContrastColor;
+  fillOpacity: number;
+  strokeOpacity: number;
+  layerIndexWeight: number;
 };
 
 export type GeofencingZoneStyles = {
@@ -67,43 +67,49 @@ export type GeofencingZoneStyles = {
 };
 
 export interface Theme {
-  Spacing: typeof Spacing;
+  spacing: {
+    xSmall: number;
+    small: number;
+    medium: number;
+    large: number;
+    xLarge: number;
+  };
 
-  Interactive: {
+  interactive: {
     0: InteractiveColor;
     1: InteractiveColor;
     2: InteractiveColor;
     3: InteractiveColor;
-    Destructive: InteractiveColor;
+    destructive: InteractiveColor;
   };
-  Transport: {
-    City: TransportColor;
-    Region: TransportColor;
-    AirportExpress: TransportColor;
-    Boat: TransportColor;
-    Train: TransportColor;
-    Airport: TransportColor;
-    Plane: TransportColor;
-    Flexible: TransportColor;
-    Scooter: TransportColor;
-    Bike: TransportColor;
-    Car: TransportColor;
-    Other: TransportColor;
+  transport: {
+    city: TransportColor;
+    region: TransportColor;
+    airportExpress: TransportColor;
+    boat: TransportColor;
+    train: TransportColor;
+    airport: TransportColor;
+    plane: TransportColor;
+    flexible: TransportColor;
+    scooter: TransportColor;
+    bike: TransportColor;
+    car: TransportColor;
+    other: TransportColor;
   };
 
-  Status: {
-    Success: StatusColor;
+  status: {
+    success: StatusColor;
     info: StatusColor;
     warning: StatusColor;
     error: StatusColor;
   };
 
-  Background: {
+  background: {
     0: ContrastColor;
     1: ContrastColor;
     2: ContrastColor;
     3: ContrastColor;
-    Accent: {
+    accent: {
       0: ContrastColor;
       1: ContrastColor;
       2: ContrastColor;
@@ -113,25 +119,38 @@ export interface Theme {
     }
   };
 
-  Zone: {
-    From: ContrastColor;
-    To: ContrastColor;
+  zone: {
+    from: ContrastColor;
+    to: ContrastColor;
   };
 
-  Border: {
+  border: {
     primary: string;
     secondary: string;
     focus: string;
-    Radius: typeof BorderRadius;
-    Width: typeof BorderWidth;
+    radius: {
+      small: number;
+      medium: number;
+      circle: number;
+    };
+    width: {
+      slim: number;
+      medium: number;
+    };
   };
-  Icon: {
-    Size: typeof IconSizes;
+  icon: {
+    size: {
+      xSmall: number;
+      small: number;
+      medium: number;
+      large: number;
+      xLarge: number;
+    }
   };
-  GeofencingZones: GeofencingZoneStyles;
+  geofencingZones: GeofencingZoneStyles;
 }
 
-export type Statuses = keyof Theme['Status'];
+export type Statuses = keyof Theme['status'];
 
 export enum ThemeVariant {
   AtB,
@@ -145,14 +164,14 @@ export function createThemesFor(themeVariant: ThemeVariant) {
   switch (themeVariant) {
     case ThemeVariant.AtB:
       return AtBThemes;
-    case ThemeVariant.Nfk:
-      return NfkThemes;
-    case ThemeVariant.FRAM:
-      return FRAMThemes;
-    case ThemeVariant.Troms:
-      return TromsThemes;
-    case ThemeVariant.Innlandet:
-      return InnlandetThemes;
+    // case ThemeVariant.Nfk:
+    //   return NfkThemes;
+    // case ThemeVariant.FRAM:
+    //   return FRAMThemes;
+    // case ThemeVariant.Troms:
+    //   return TromsThemes;
+    // case ThemeVariant.Innlandet:
+    //   return InnlandetThemes;
     default:
       throw Error('A valid ThemeVariant must be provided');
   }
@@ -209,13 +228,13 @@ export function createThemes(
  */
 export function createExtendedThemes<T extends Partial<Theme>>(
   themes: Themes,
-  extension: { Light: T; Dark: T },
+  extension: { light: T; dark: T },
 ): {
-  Light: Themes['Light'] & T,
-  Dark: Themes['Dark'] & T,
+  light: Themes['light'] & T,
+  dark: Themes['dark'] & T,
 } {
   return {
-    Light: merge(themes.Light, extension.Light) as Theme & T,
-    Dark: merge(themes.Dark, extension.Dark) as Theme & T,
+    light: merge(themes.light, extension.light) as Theme & T,
+    dark: merge(themes.dark, extension.dark) as Theme & T,
   };
 }
