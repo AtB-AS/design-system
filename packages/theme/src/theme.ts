@@ -234,7 +234,7 @@ export function createExtendedThemes<T extends Partial<Theme>>(
   dark: Themes['dark'] & T,
 } {
   return {
-    light: merge(themes.light, extension.light) as Theme & T,
-    dark: merge(themes.dark, extension.dark) as Theme & T,
+    light: merge(themes.light, extension.light) as Themes['light'] & T,
+    dark: merge(themes.dark, extension.dark) as Themes['dark'] & T,
   };
 }
