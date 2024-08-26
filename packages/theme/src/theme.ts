@@ -1,5 +1,5 @@
 import merge from 'ts-deepmerge';
-import {ConfigurationOverride, overrideConfig} from './utils/override-config';
+import { ConfigurationOverride, overrideConfig } from './utils/override-config';
 import {
   AtBThemes,
   // NfkThemes,
@@ -67,61 +67,58 @@ export type GeofencingZoneStyles = {
 };
 
 export interface Theme {
-  spacing: {
-    xSmall: number;
-    small: number;
-    medium: number;
-    large: number;
-    xLarge: number;
-  };
+  color: {
+    interactive: {
+      0: InteractiveColor;
+      1: InteractiveColor;
+      2: InteractiveColor;
+      3: InteractiveColor;
+      destructive: InteractiveColor;
+    };
 
-  interactive: {
-    0: InteractiveColor;
-    1: InteractiveColor;
-    2: InteractiveColor;
-    3: InteractiveColor;
-    destructive: InteractiveColor;
-  };
-  transport: {
-    city: TransportColor;
-    region: TransportColor;
-    airportExpress: TransportColor;
-    boat: TransportColor;
-    train: TransportColor;
-    airport: TransportColor;
-    plane: TransportColor;
-    flexible: TransportColor;
-    scooter: TransportColor;
-    bike: TransportColor;
-    car: TransportColor;
-    other: TransportColor;
-  };
+    transport: {
+      city: TransportColor;
+      region: TransportColor;
+      airportExpress: TransportColor;
+      boat: TransportColor;
+      train: TransportColor;
+      airport: TransportColor;
+      plane: TransportColor;
+      flexible: TransportColor;
+      scooter: TransportColor;
+      bike: TransportColor;
+      car: TransportColor;
+      other: TransportColor;
+    };
 
-  status: {
-    success: StatusColor;
-    info: StatusColor;
-    warning: StatusColor;
-    error: StatusColor;
-  };
+    status: {
+      success: StatusColor;
+      info: StatusColor;
+      warning: StatusColor;
+      error: StatusColor;
+    };
 
-  background: {
-    0: ContrastColor;
-    1: ContrastColor;
-    2: ContrastColor;
-    3: ContrastColor;
-    accent: {
+    background: {
       0: ContrastColor;
       1: ContrastColor;
       2: ContrastColor;
       3: ContrastColor;
-      4: ContrastColor;
-      5: ContrastColor;
-    }
-  };
+      accent: {
+        0: ContrastColor;
+        1: ContrastColor;
+        2: ContrastColor;
+        3: ContrastColor;
+        4: ContrastColor;
+        5: ContrastColor;
+      }
+    };
 
-  zone: {
-    from: ContrastColor;
-    to: ContrastColor;
+    zone: {
+      from: ContrastColor;
+      to: ContrastColor;
+    };
+
+    geofencingZones: GeofencingZoneStyles;
   };
 
   border: {
@@ -138,6 +135,7 @@ export interface Theme {
       medium: number;
     };
   };
+
   icon: {
     size: {
       xSmall: number;
@@ -147,10 +145,17 @@ export interface Theme {
       xLarge: number;
     }
   };
-  geofencingZones: GeofencingZoneStyles;
+
+  spacing: {
+    xSmall: number;
+    small: number;
+    medium: number;
+    large: number;
+    xLarge: number;
+  };
 }
 
-export type Statuses = keyof Theme['status'];
+export type Statuses = keyof Theme['color']['status'];
 
 export enum ThemeVariant {
   AtB,
@@ -226,7 +231,7 @@ export function createThemes(
  * @param extension - Object to extend original theme. Can be nested with same keys
  * @returns new deep merged intersection themes
  */
-export function createExtendedThemes<T extends Partial<Theme>>(
+export function createExtendedThemes<T extends Record<keyof Pick<Themes, 'dark' | 'light'>, unknown>>(
   themes: Themes,
   extension: { light: T; dark: T },
 ): {
