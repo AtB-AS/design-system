@@ -231,7 +231,7 @@ export function createThemes(
  * @param extension - Object to extend original theme. Can be nested with same keys
  * @returns new deep merged intersection themes
  */
-export function createExtendedThemes<T extends Record<keyof Pick<Themes, 'dark' | 'light'>, unknown>>(
+export function createExtendedThemes<T extends {}>(
   themes: Themes,
   extension: { light: T; dark: T },
 ): {
