@@ -1,3 +1,6 @@
+> ⚠️ This is an alpha branch of the design system repository. This branch does not contain all functionality and some functionality might be broken. Depending on this now might break your application.
+> Build `@atb-as/theme` for AtB using `yarn workspace @atb-as/theme build`
+
 # @atb-as/design-system
 
 Monorepo for handling theming, colors, typography and more for different applications and solutions from AtB.

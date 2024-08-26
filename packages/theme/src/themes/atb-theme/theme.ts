@@ -3,12 +3,12 @@
  */
 
 
-import light from "./light"
-import dark from "./dark"
+import Light from "./light"
+import Dark from "./dark"
 
 const themes = {
-  light,
-  dark
+  Light,
+  Dark
 }
   
 export default themes
