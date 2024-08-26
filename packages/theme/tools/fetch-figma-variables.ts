@@ -9368,12 +9368,12 @@ StyleDictionary.registerFilter({
  * Contents of the main TypeScript file linking the themes
  */
 const tsIndex = `
-import Light from "./light"
-import Dark from "./dark"
+import light from "./light"
+import dark from "./dark"
 
 const themes = {
-  Light,
-  Dark
+  light,
+  dark
 }
   
 export default themes`;
