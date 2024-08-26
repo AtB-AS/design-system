@@ -696,9 +696,15 @@ export default {
   },
   typography: {
     ios: {
+      font: "SF Pro Text",
       number: -0.3100000023841858
     },
     android: {
+      font: "Roboto",
+      number: -0.5
+    },
+    web: {
+      font: "Roboto",
       number: -0.5
     }
   },
@@ -708,5 +714,13 @@ export default {
     medium: 12,
     large: 20,
     xLarge: 24
+  },
+  icon: {
+    size: {
+      xSmall: 12,
+      small: 16,
+      medium: 20,
+      large: 26
+    }
   }
 };

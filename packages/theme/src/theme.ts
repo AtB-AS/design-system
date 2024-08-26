@@ -82,8 +82,6 @@ export interface Theme {
       airportExpress: TransportColor;
       boat: TransportColor;
       train: TransportColor;
-      airport: TransportColor;
-      plane: TransportColor;
       flexible: TransportColor;
       scooter: TransportColor;
       bike: TransportColor;
@@ -99,10 +97,12 @@ export interface Theme {
     };
 
     background: {
-      0: ContrastColor;
-      1: ContrastColor;
-      2: ContrastColor;
-      3: ContrastColor;
+      neutral: {
+        0: ContrastColor;
+        1: ContrastColor;
+        2: ContrastColor;
+        3: ContrastColor;
+      };
       accent: {
         0: ContrastColor;
         1: ContrastColor;
@@ -110,7 +110,7 @@ export interface Theme {
         3: ContrastColor;
         4: ContrastColor;
         5: ContrastColor;
-      }
+      };
     };
 
     zone: {
@@ -153,7 +153,24 @@ export interface Theme {
     large: number;
     xLarge: number;
   };
-}
+
+  typography: {
+    ios: {
+      font: string;
+      number: number;
+    };
+
+    android: {
+      font: string;
+      number: number;
+    };
+
+    web: {
+      font: string;
+      number: number;
+    };
+  };
+};
 
 export type Statuses = keyof Theme['color']['status'];
 

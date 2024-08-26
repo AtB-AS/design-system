@@ -1073,10 +1073,10 @@
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
-"@tfk-samf/figma-to-dtcg@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@tfk-samf/figma-to-dtcg/-/figma-to-dtcg-0.2.0.tgz#e0c37cb89124226d555d15c3729fc89085efd3f5"
-  integrity sha512-DXUJPmv8t8pO6vu0BcpFZjyte/cABrceEya6/uy2kJT8cvxn/7lNXWZUOutPqlbXTBE6LDX2kmlpQ8NEUokqbw==
+"@tfk-samf/figma-to-dtcg@0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@tfk-samf/figma-to-dtcg/-/figma-to-dtcg-0.3.1.tgz#033a3d6066ae1eb9687f281c6eed853656018e07"
+  integrity sha512-UV6MCbyBuUdMGA9AclC0zH56KTS5fTGgymqPDBYR6c68yRrUrAntT6AWJ1JsmoDklXkxa1CgwM6jxV4OZ5Hkrw==
 
 "@tootallnate/once@1":
   version "1.1.2"
