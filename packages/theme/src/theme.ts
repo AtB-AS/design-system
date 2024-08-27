@@ -118,13 +118,10 @@ export interface Theme {
       to: ContrastColor;
     };
 
-    geofencingZones: GeofencingZoneStyles;
+    geofencingZone: GeofencingZoneStyles;
   };
 
   border: {
-    primary: string;
-    secondary: string;
-    focus: string;
     radius: {
       small: number;
       medium: number;
@@ -142,7 +139,6 @@ export interface Theme {
       small: number;
       medium: number;
       large: number;
-      xLarge: number;
     }
   };
 
