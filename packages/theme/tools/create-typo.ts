@@ -8,7 +8,7 @@ import {
   TextStyle,
   TextTypeStyles,
 } from '../src/typography';
-import {indentLine, maybeConvertToRem} from './utils';
+import { __dirname, indentLine, maybeConvertToRem} from './utils';
 
 export default async function outputTypography() {
   const base = join(__dirname, '../src');
