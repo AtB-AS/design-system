@@ -1,3 +1,6 @@
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+
 export function indentLine(list: string) {
   return Array.from({length: 3}).join(' ') + list;
 }
@@ -14,3 +17,9 @@ export function maybeConvertToRem(val: any, name?: string) {
   // Using 16 as base size
   return `${val / 16}rem`;
 }
+
+export const __dirname = dirname(fileURLToPath(import.meta.url))
+
+export function convertToCamelCase(input: string) {
+  return input.length === 0 ? '' : input.charAt(0).toLowerCase() + input.slice(1);
+} 

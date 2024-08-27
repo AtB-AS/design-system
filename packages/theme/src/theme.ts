@@ -1,12 +1,11 @@
 import merge from 'ts-deepmerge';
-import {borderRadius, borderWidth, iconSizes, spacings} from './sizes';
-import {ConfigurationOverride, overrideConfig} from './utils/override-config';
+import { ConfigurationOverride, overrideConfig } from './utils/override-config';
 import {
   AtBThemes,
-  NfkThemes,
-  FRAMThemes,
-  TromsThemes,
-  InnlandetThemes,
+  // NfkThemes,
+  // FRAMThemes,
+  // TromsThemes,
+  // InnlandetThemes,
 } from './themes';
 export type Themes = {
   light: Theme;
@@ -14,14 +13,19 @@ export type Themes = {
 };
 export type Mode = keyof Themes;
 
-export type TextColor = 'primary' | 'secondary' | 'disabled';
-
 export type TextColorType = 'dark' | 'light';
 
 export type ContrastColor = {
   background: string;
-  text: string;
+  foreground: {
+    primary: string;
+    secondary: string;
+    disabled: string;
+  };
 };
+
+export type TextColor = keyof ContrastColor["foreground"];
+
 export type TransportColor = {
   primary: ContrastColor;
   secondary: ContrastColor;
@@ -43,10 +47,10 @@ export type InteractiveColor = {
 
 // The colors can be changed, but should follow standard practice as commented:
 export enum GeofencingZoneCodes {
-  Allowed = 'Allowed', // blue
-  Slow = 'Slow', // yellow
-  NoParking = 'NoParking', // red
-  NoEntry = 'NoEntry', // dark/black
+  allowed = 'Allowed', // blue
+  slow = 'Slow', // yellow
+  noParking = 'NoParking', // red
+  noEntry = 'NoEntry', // dark/black
 }
 
 export type GeofencingZoneKeys = keyof typeof GeofencingZoneCodes;
@@ -63,75 +67,108 @@ export type GeofencingZoneStyles = {
 };
 
 export interface Theme {
-  spacings: typeof spacings;
-
-  interactive: {
-    interactive_0: InteractiveColor;
-    interactive_1: InteractiveColor;
-    interactive_2: InteractiveColor;
-    interactive_3: InteractiveColor;
-    interactive_destructive: InteractiveColor;
-  };
-  transport: {
-    transport_city: TransportColor;
-    transport_region: TransportColor;
-    transport_airport_express: TransportColor;
-    transport_boat: TransportColor;
-    transport_train: TransportColor;
-    transport_airport: TransportColor;
-    transport_plane: TransportColor;
-    transport_flexible: TransportColor;
-    transport_scooter: TransportColor;
-    transport_bike: TransportColor;
-    transport_car: TransportColor;
-    transport_other: TransportColor;
-  };
-
-  status: {
-    valid: StatusColor;
-    info: StatusColor;
-    warning: StatusColor;
-    error: StatusColor;
-  };
-
-  static: {
-    background: {
-      background_0: ContrastColor;
-      background_1: ContrastColor;
-      background_2: ContrastColor;
-      background_3: ContrastColor;
-      background_accent_0: ContrastColor;
-      background_accent_1: ContrastColor;
-      background_accent_2: ContrastColor;
-      background_accent_3: ContrastColor;
-      background_accent_4: ContrastColor;
-      background_accent_5: ContrastColor;
+  color: {
+    interactive: {
+      0: InteractiveColor;
+      1: InteractiveColor;
+      2: InteractiveColor;
+      3: InteractiveColor;
+      destructive: InteractiveColor;
     };
 
-    zone_selection: {
+    transport: {
+      city: TransportColor;
+      region: TransportColor;
+      airportExpress: TransportColor;
+      boat: TransportColor;
+      train: TransportColor;
+      flexible: TransportColor;
+      scooter: TransportColor;
+      bike: TransportColor;
+      car: TransportColor;
+      other: TransportColor;
+    };
+
+    status: {
+      success: StatusColor;
+      info: StatusColor;
+      warning: StatusColor;
+      error: StatusColor;
+    };
+
+    background: {
+      neutral: {
+        0: ContrastColor;
+        1: ContrastColor;
+        2: ContrastColor;
+        3: ContrastColor;
+      };
+      accent: {
+        0: ContrastColor;
+        1: ContrastColor;
+        2: ContrastColor;
+        3: ContrastColor;
+        4: ContrastColor;
+        5: ContrastColor;
+      };
+    };
+
+    zone: {
       from: ContrastColor;
       to: ContrastColor;
     };
-  };
 
-  text: {
-    colors: {[key in TextColor]: string};
+    geofencingZone: GeofencingZoneStyles;
   };
 
   border: {
-    primary: string;
-    secondary: string;
-    focus: string;
-    radius: typeof borderRadius;
-    width: typeof borderWidth;
+    radius: {
+      small: number;
+      medium: number;
+      circle: number;
+    };
+    width: {
+      slim: number;
+      medium: number;
+    };
   };
-  icon: {
-    size: typeof iconSizes;
-  };
-  geofencingZones: GeofencingZoneStyles;
-}
 
-export type Statuses = keyof Theme['status'];
+  icon: {
+    size: {
+      xSmall: number;
+      small: number;
+      medium: number;
+      large: number;
+    }
+  };
+
+  spacing: {
+    xSmall: number;
+    small: number;
+    medium: number;
+    large: number;
+    xLarge: number;
+  };
+
+  typography: {
+    ios: {
+      font: string;
+      number: number;
+    };
+
+    android: {
+      font: string;
+      number: number;
+    };
+
+    web: {
+      font: string;
+      number: number;
+    };
+  };
+};
+
+export type Statuses = keyof Theme['color']['status'];
 
 export enum ThemeVariant {
   AtB,
@@ -145,14 +182,14 @@ export function createThemesFor(themeVariant: ThemeVariant) {
   switch (themeVariant) {
     case ThemeVariant.AtB:
       return AtBThemes;
-    case ThemeVariant.Nfk:
-      return NfkThemes;
-    case ThemeVariant.FRAM:
-      return FRAMThemes;
-    case ThemeVariant.Troms:
-      return TromsThemes;
-    case ThemeVariant.Innlandet:
-      return InnlandetThemes;
+    // case ThemeVariant.Nfk:
+    //   return NfkThemes;
+    // case ThemeVariant.FRAM:
+    //   return FRAMThemes;
+    // case ThemeVariant.Troms:
+    //   return TromsThemes;
+    // case ThemeVariant.Innlandet:
+    //   return InnlandetThemes;
     default:
       throw Error('A valid ThemeVariant must be provided');
   }
@@ -207,12 +244,15 @@ export function createThemes(
  * @param extension - Object to extend original theme. Can be nested with same keys
  * @returns new deep merged intersection themes
  */
-export function createExtendedThemes<T>(
+export function createExtendedThemes<T extends {}>(
   themes: Themes,
-  extension: {light: T; dark: T},
-) {
+  extension: { light: T; dark: T },
+): {
+  light: Themes['light'] & T,
+  dark: Themes['dark'] & T,
+} {
   return {
-    light: merge(themes.light, extension.light),
-    dark: merge(themes.dark, extension.dark),
+    light: merge(themes.light, extension.light) as Themes['light'] & T,
+    dark: merge(themes.dark, extension.dark) as Themes['dark'] & T,
   };
 }
