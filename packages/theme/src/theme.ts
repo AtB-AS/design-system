@@ -68,6 +68,13 @@ export type GeofencingZoneStyles = {
 
 export interface Theme {
   color: {
+    foreground: {
+      dark: ContrastColor['foreground'];
+      light: ContrastColor['foreground'];
+      dynamic: ContrastColor['foreground'];
+      inverse: ContrastColor['foreground'];
+    };
+
     interactive: {
       0: InteractiveColor;
       1: InteractiveColor;
