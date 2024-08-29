@@ -14,6 +14,16 @@ export default {
         primary: "#000000",
         secondary: "#555e65",
         disabled: "#a9aeb1"
+      },
+      dynamic: {
+        primary: "#ffffff",
+        secondary: "#e1e7eb",
+        disabled: "#a9aeb1"
+      },
+      inverse: {
+        primary: "#000000",
+        secondary: "#555e65",
+        disabled: "#a9aeb1"
       }
     },
     background: {

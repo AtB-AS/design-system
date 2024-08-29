@@ -189,7 +189,13 @@ const response = await Promise.resolve<GetLocalVariablesResponse>(
             "VariableID:5753:42",
             "VariableID:5753:43",
             "VariableID:5753:44",
-            "VariableID:5753:45"
+            "VariableID:5753:45",
+            "VariableID:5891:23",
+            "VariableID:5891:24",
+            "VariableID:5891:25",
+            "VariableID:5891:26",
+            "VariableID:5891:27",
+            "VariableID:5891:28"
           ]
         },
         "VariableCollectionId:5414:685": {
@@ -8560,7 +8566,7 @@ const response = await Promise.resolve<GetLocalVariablesResponse>(
           "valuesByMode": {
             "3544:0": {
               "type": "VARIABLE_ALIAS",
-              "id": "VariableID:5414:699"
+              "id": "VariableID:5414:693"
             },
             "3544:2": {
               "type": "VARIABLE_ALIAS",
@@ -9284,6 +9290,222 @@ const response = await Promise.resolve<GetLocalVariablesResponse>(
             "3544:2": 5,
             "3766:0": 0,
             "3771:0": 0
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {}
+        },
+        "VariableID:5891:23": {
+          "id": "VariableID:5891:23",
+          "name": "Foreground/Dynamic/Primary",
+          "description": "",
+          "variableCollectionId": "VariableCollectionId:3544:10889",
+          "key": "6e67588cdbd8f739eee0aa84f341dc62c341105c",
+          "remote": false,
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "3544:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5414:705"
+            },
+            "3544:2": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5414:691"
+            },
+            "3766:0": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "3771:0": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {}
+        },
+        "VariableID:5891:24": {
+          "id": "VariableID:5891:24",
+          "name": "Foreground/Dynamic/Secondary",
+          "description": "",
+          "variableCollectionId": "VariableCollectionId:3544:10889",
+          "key": "efdf700b5d36d2c408c33979da328f2d87734019",
+          "remote": false,
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "3544:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5414:699"
+            },
+            "3544:2": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5414:693"
+            },
+            "3766:0": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "3771:0": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {}
+        },
+        "VariableID:5891:25": {
+          "id": "VariableID:5891:25",
+          "name": "Foreground/Dynamic/Disabled",
+          "description": "",
+          "variableCollectionId": "VariableCollectionId:3544:10889",
+          "key": "7350de9c7bdea5ab0fc7ec222910595bd58f067c",
+          "remote": false,
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "3544:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5414:696"
+            },
+            "3544:2": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5414:696"
+            },
+            "3766:0": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "3771:0": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {}
+        },
+        "VariableID:5891:26": {
+          "id": "VariableID:5891:26",
+          "name": "Foreground/Inverse/Primary",
+          "description": "",
+          "variableCollectionId": "VariableCollectionId:3544:10889",
+          "key": "9b24410d4c98a64d19a3093a8a7af505e3853f7f",
+          "remote": false,
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "3544:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5414:691"
+            },
+            "3544:2": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5414:705"
+            },
+            "3766:0": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "3771:0": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {}
+        },
+        "VariableID:5891:27": {
+          "id": "VariableID:5891:27",
+          "name": "Foreground/Inverse/Secondary",
+          "description": "",
+          "variableCollectionId": "VariableCollectionId:3544:10889",
+          "key": "2ac60eda0a653225d0e394d81f6e4137512973ec",
+          "remote": false,
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "3544:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5414:693"
+            },
+            "3544:2": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5414:699"
+            },
+            "3766:0": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "3771:0": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {}
+        },
+        "VariableID:5891:28": {
+          "id": "VariableID:5891:28",
+          "name": "Foreground/Inverse/Disabled",
+          "description": "",
+          "variableCollectionId": "VariableCollectionId:3544:10889",
+          "key": "a0d91a273e779a687123f40e9acf587d0511d881",
+          "remote": false,
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "3544:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5414:696"
+            },
+            "3544:2": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5414:696"
+            },
+            "3766:0": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "3771:0": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
           },
           "scopes": [
             "ALL_SCOPES"
