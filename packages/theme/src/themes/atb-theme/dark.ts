@@ -691,6 +691,32 @@ export default {
         strokeOpacity: 0.75,
         layerIndexWeight: 5
       }
+    },
+    border: {
+      primary: {
+        background: "#242b30",
+        foreground: {
+          primary: "#ffffff",
+          secondary: "#e1e7eb",
+          disabled: "#a9aeb1"
+        }
+      },
+      secondary: {
+        background: "#ffffff",
+        foreground: {
+          primary: "#000000",
+          secondary: "#555e65",
+          disabled: "#a9aeb1"
+        }
+      },
+      focus: {
+        background: "#448086",
+        foreground: {
+          primary: "#000000",
+          secondary: "#555e65",
+          disabled: "#a9aeb1"
+        }
+      }
     }
   },
   border: {
