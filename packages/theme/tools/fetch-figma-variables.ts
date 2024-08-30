@@ -195,7 +195,10 @@ const response = await Promise.resolve<GetLocalVariablesResponse>(
             "VariableID:5891:25",
             "VariableID:5891:26",
             "VariableID:5891:27",
-            "VariableID:5891:28"
+            "VariableID:5891:28",
+            "VariableID:5896:23",
+            "VariableID:5896:24",
+            "VariableID:5896:25"
           ]
         },
         "VariableCollectionId:5414:685": {
@@ -9493,6 +9496,114 @@ const response = await Promise.resolve<GetLocalVariablesResponse>(
             "3544:2": {
               "type": "VARIABLE_ALIAS",
               "id": "VariableID:5414:696"
+            },
+            "3766:0": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "3771:0": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {}
+        },
+        "VariableID:5896:23": {
+          "id": "VariableID:5896:23",
+          "name": "Border/Primary",
+          "description": "",
+          "variableCollectionId": "VariableCollectionId:3544:10889",
+          "key": "302e8f84bd5423d4049a6a236f3d1a7cef5da169",
+          "remote": false,
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "3544:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5414:692"
+            },
+            "3544:2": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5414:702"
+            },
+            "3766:0": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "3771:0": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {}
+        },
+        "VariableID:5896:24": {
+          "id": "VariableID:5896:24",
+          "name": "Border/Secondary",
+          "description": "",
+          "variableCollectionId": "VariableCollectionId:3544:10889",
+          "key": "55baa3d057de66dd762e65b31ae6286646059082",
+          "remote": false,
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "3544:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5414:705"
+            },
+            "3544:2": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5414:691"
+            },
+            "3766:0": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "3771:0": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "hiddenFromPublishing": false,
+          "codeSyntax": {}
+        },
+        "VariableID:5896:25": {
+          "id": "VariableID:5896:25",
+          "name": "Border/Focus",
+          "description": "",
+          "variableCollectionId": "VariableCollectionId:3544:10889",
+          "key": "c978e890dbf318ab7e4f390255f1cddbc1b347a0",
+          "remote": false,
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "3544:0": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5414:729"
+            },
+            "3544:2": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5414:720"
             },
             "3766:0": {
               "r": 1,

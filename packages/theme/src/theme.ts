@@ -126,6 +126,12 @@ export interface Theme {
     };
 
     geofencingZone: GeofencingZoneStyles;
+
+    border: {
+      primary: ContrastColor;
+      secondary: ContrastColor;
+      focus: ContrastColor;
+    };
   };
 
   border: {
