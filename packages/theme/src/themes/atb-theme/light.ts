@@ -113,7 +113,7 @@ export default {
       }
     },
     status: {
-      success: {
+      valid: {
         primary: {
           background: "#909a00",
           foreground: {
