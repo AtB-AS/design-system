@@ -97,7 +97,7 @@ export interface Theme {
     };
 
     status: {
-      success: StatusColor;
+      valid: StatusColor;
       info: StatusColor;
       warning: StatusColor;
       error: StatusColor;
