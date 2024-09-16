@@ -1,5 +1,5 @@
 import merge from 'ts-deepmerge';
-import { ConfigurationOverride, overrideConfig } from './utils/override-config';
+import {ConfigurationOverride, overrideConfig} from './utils/override-config';
 import {
   AtBThemes,
   // NfkThemes,
@@ -13,19 +13,14 @@ export type Themes = {
 };
 export type Mode = keyof Themes;
 
+export type TextColor = 'primary' | 'secondary' | 'disabled';
+
 export type TextColorType = 'dark' | 'light';
 
 export type ContrastColor = {
   background: string;
-  foreground: {
-    primary: string;
-    secondary: string;
-    disabled: string;
-  };
+  text: string;
 };
-
-export type TextColor = keyof ContrastColor["foreground"];
-
 export type TransportColor = {
   primary: ContrastColor;
   secondary: ContrastColor;
@@ -67,85 +62,81 @@ export type GeofencingZoneStyles = {
 };
 
 export interface Theme {
-  color: {
-    foreground: {
-      dark: ContrastColor['foreground'];
-      light: ContrastColor['foreground'];
-      dynamic: ContrastColor['foreground'];
-      inverse: ContrastColor['foreground'];
-    };
+  spacings: {
+    xSmall: number;
+    small: number;
+    medium: number;
+    large: number;
+    xLarge: number;
+  };
 
-    interactive: {
-      0: InteractiveColor;
-      1: InteractiveColor;
-      2: InteractiveColor;
-      3: InteractiveColor;
-      destructive: InteractiveColor;
-    };
+  interactive: {
+    interactive_0: InteractiveColor;
+    interactive_1: InteractiveColor;
+    interactive_2: InteractiveColor;
+    interactive_3: InteractiveColor;
+    interactive_destructive: InteractiveColor;
+  };
+  transport: {
+    transport_city: TransportColor;
+    transport_region: TransportColor;
+    transport_airportExpress: TransportColor;
+    transport_boat: TransportColor;
+    transport_train: TransportColor;
+    transport_flexible: TransportColor;
+    transport_scooter: TransportColor;
+    transport_bike: TransportColor;
+    transport_car: TransportColor;
+    transport_other: TransportColor;
+  };
 
-    transport: {
-      city: TransportColor;
-      region: TransportColor;
-      airportExpress: TransportColor;
-      boat: TransportColor;
-      train: TransportColor;
-      flexible: TransportColor;
-      scooter: TransportColor;
-      bike: TransportColor;
-      car: TransportColor;
-      other: TransportColor;
-    };
+  status: {
+    valid: StatusColor;
+    info: StatusColor;
+    warning: StatusColor;
+    error: StatusColor;
+  };
 
-    status: {
-      valid: StatusColor;
-      info: StatusColor;
-      warning: StatusColor;
-      error: StatusColor;
-    };
-
+  static: {
     background: {
-      neutral: {
-        0: ContrastColor;
-        1: ContrastColor;
-        2: ContrastColor;
-        3: ContrastColor;
-      };
-      accent: {
-        0: ContrastColor;
-        1: ContrastColor;
-        2: ContrastColor;
-        3: ContrastColor;
-        4: ContrastColor;
-        5: ContrastColor;
-      };
+      background_0: ContrastColor;
+      background_1: ContrastColor;
+      background_2: ContrastColor;
+      background_3: ContrastColor;
+      background_accent_0: ContrastColor;
+      background_accent_1: ContrastColor;
+      background_accent_2: ContrastColor;
+      background_accent_3: ContrastColor;
+      background_accent_4: ContrastColor;
+      background_accent_5: ContrastColor;
     };
 
-    zone: {
+    zone_selection: {
       from: ContrastColor;
       to: ContrastColor;
     };
+  };
 
-    geofencingZone: GeofencingZoneStyles;
-
-    border: {
-      primary: ContrastColor;
-      secondary: ContrastColor;
-      focus: ContrastColor;
-    };
+  text: {
+    colors: {[key in TextColor]: string};
   };
 
   border: {
-    radius: {
-      small: number;
-      medium: number;
-      circle: number;
-    };
-    width: {
-      slim: number;
-      medium: number;
+    primary: string;
+    secondary: string;
+    focus: string;
+    border: {
+      radius: {
+        small: number;
+        regular: number;
+        circle: number;
+      };
+      width: {
+        slim: number;
+        medium: number;
+      };
     };
   };
-
   icon: {
     size: {
       xSmall: number;
@@ -154,34 +145,10 @@ export interface Theme {
       large: number;
     }
   };
+  geofencingZones: GeofencingZoneStyles;
+}
 
-  spacing: {
-    xSmall: number;
-    small: number;
-    medium: number;
-    large: number;
-    xLarge: number;
-  };
-
-  typography: {
-    ios: {
-      font: string;
-      number: number;
-    };
-
-    android: {
-      font: string;
-      number: number;
-    };
-
-    web: {
-      font: string;
-      number: number;
-    };
-  };
-};
-
-export type Statuses = keyof Theme['color']['status'];
+export type Statuses = keyof Theme['status'];
 
 export enum ThemeVariant {
   AtB,

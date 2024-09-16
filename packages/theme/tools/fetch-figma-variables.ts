@@ -9676,6 +9676,85 @@ StyleDictionary.registerTransform({
 });
 
 /**
+ * Appends the name of the collection to the file path, such that
+ * it is prepended to the name of the variable (e.g., COLOR-background-neutral-...).
+ */
+StyleDictionary.registerTransform({
+  name: 'attribute/compat-path',
+  type: 'attribute',
+  transform: (token: TransformedToken) => {
+
+    const compatPath = token.path.reduce((acc, cur, index, all) => {
+
+      let lastIndex = all.findLastIndex((entry: string) => entry === cur)
+      let firstIndex = all.findIndex((entry: string) => entry === cur)
+      let origIndex = Math.abs(lastIndex - index) > Math.abs(firstIndex - index) ? firstIndex : lastIndex
+
+      switch (cur) {
+        case "0":
+        case "1":
+        case "2":
+        case "3":
+        case "4":
+        case "5":
+        case "destructive":
+        case "city":
+        case "region":
+        case "airportExpress":
+        case "boat":
+        case "train":
+        case "flexible":
+        case "bike":
+        case "scooter":
+        case "car":
+        case "other":
+          return acc
+        case "color":
+          if (origIndex === 0) return acc
+          return acc.concat(cur)
+        case "background":
+          if (origIndex === all.length - 1) {
+            // Unpack ContrastColor when border color
+            if (all.includes("border")) {
+              return acc
+            }
+            else return acc.concat(cur)
+          }
+          return acc.concat("static", "background")
+        case "neutral":
+          return acc.concat(`background_${all[origIndex + 1]}`)
+        case "accent":
+          return acc.concat(`background_accent_${all[origIndex + 1]}`)
+        case "interactive":
+        case "transport":
+          return acc.concat(cur, `${cur}_${all[origIndex + 1]}`)
+        case "foreground":
+          return acc.concat("text")
+        case "primary":
+          // If ContrastColor
+          if (origIndex === all.length - 1 && all[origIndex - 1] === "foreground" && cur === "primary") return acc
+          
+          return acc.concat(cur)
+        case "dynamic":
+          return acc.concat("colors")
+        case "zone":
+          return acc.concat("static", "zone_selection")
+        case "geofencingZone":
+          return acc.concat("geofencingZones")
+        case "spacing":
+          return acc.concat("spacings")
+        default:
+          return acc.concat(cur)
+      }
+    }, [] as string[])
+
+    token.compatPath = compatPath;
+
+    return token;
+  },
+});
+
+/**
  * Removes the base colors (color palette) from the final output.
  */
 StyleDictionary.registerFilter({
@@ -9731,12 +9810,19 @@ StyleDictionary.registerFormat({
  * @param tokens Flat list of design tokens
  * @returns Nested object based on the path of each token
  */
-const expandToNestedObject = (tokens: TransformedToken[]) => {
-  const result = {};
+const expandToNestedObject = (tokens: TransformedToken[], pathKey = 'path') => {
+  const result: any = {};
   tokens.forEach((token) => {
     let current = result;
-    token.path.forEach((element, index) => {
-      if (index === token.path.length - 1) current[element] = token.value;
+    token[pathKey].forEach((element: string, index: number) => {
+      if (typeof current === 'string') {
+        console.warn(`Path '${element}' contains a value already. Skipping assigning '${token.value}' to ${JSON.stringify(current)}. This happens when converting to the old ContrastColor where 'secondary' and 'disabled' fields do not exist.`)
+        return
+      }
+
+      if (index === token[pathKey].length - 1) {
+        current[element] = token.value;
+      } 
       else {
         current[element] = current[element] || {};
         current = current[element];
@@ -9751,8 +9837,8 @@ const expandToNestedObject = (tokens: TransformedToken[]) => {
  */
 StyleDictionary.registerFormat({
   name: 'typescript/obj',
-  format: async ({ dictionary, file }) => (`${await fileHeader({ file })
-    }export default ${JSON.stringify(expandToNestedObject(dictionary.allTokens), null, 2).replace(/"([^"]+)":/g, '$1:')
+  format: async ({ dictionary, file, options }) => (`${await fileHeader({ file })
+    }export default ${JSON.stringify(expandToNestedObject(dictionary.allTokens, options.compat && 'compatPath'), null, 2).replace(/"([^"]+)":/g, '$1:')
     };\n`),
 });
 
@@ -9784,11 +9870,19 @@ const getStyleDictionaryConfig = (organization: Organization, mode: Mode): Confi
         buildPath: destination,
         expand: true,
         // `js` transformGroup with `attribbute/append-type` prepended
-        transforms: ['attribute/append-type', 'attribute/cti', 'name/pascal', 'size/rem', 'color/hex'],
+        transforms: ['attribute/append-type', 'attribute/cti', 'attribute/compat-path', 'name/pascal', 'size/rem', 'color/hex'],
         files: [
+          // {
+          //   format: 'typescript/obj',
+          //   destination: `${mode}.ts`,
+          //   filter: 'filter-palette',
+          // },       
           {
             format: 'typescript/obj',
             destination: `${mode}.ts`,
+            options: {
+              compat: true,
+            },
             filter: 'filter-palette',
           },
           {
