@@ -9687,10 +9687,6 @@ StyleDictionary.registerTransform({
 
     const compatPath = token.path.reduce((acc, cur, index, all) => {
 
-      let lastIndex = all.findLastIndex((entry: string) => entry === cur)
-      let firstIndex = all.findIndex((entry: string) => entry === cur)
-      let origIndex = Math.abs(lastIndex - index) > Math.abs(firstIndex - index) ? firstIndex : lastIndex
-
       switch (cur) {
         case "0":
         case "1":
@@ -9711,29 +9707,34 @@ StyleDictionary.registerTransform({
         case "other":
           return acc
         case "color":
-          if (origIndex === 0) return acc
+          if (index === 0) {
+            return acc
+          }
           return acc.concat(cur)
         case "background":
-          if (origIndex === all.length - 1) {
+          if (index === all.length - 1) {
             // Unpack ContrastColor when border color
             if (all.includes("border")) {
               return acc
             }
             else return acc.concat(cur)
           }
+          
           return acc.concat("static", "background")
         case "neutral":
-          return acc.concat(`background_${all[origIndex + 1]}`)
+          return acc.concat(`background_${all[index + 1]}`)
         case "accent":
-          return acc.concat(`background_accent_${all[origIndex + 1]}`)
+          return acc.concat(`background_accent_${all[index + 1]}`)
         case "interactive":
         case "transport":
-          return acc.concat(cur, `${cur}_${all[origIndex + 1]}`)
+          return acc.concat(cur, `${cur}_${all[index + 1]}`)
         case "foreground":
           return acc.concat("text")
         case "primary":
           // If ContrastColor
-          if (origIndex === all.length - 1 && all[origIndex - 1] === "foreground" && cur === "primary") return acc
+          if (index === all.length - 1 && all[index - 1] === "foreground" && cur === "primary") {
+            return acc
+          } 
 
           return acc.concat(cur)
         case "dynamic":
