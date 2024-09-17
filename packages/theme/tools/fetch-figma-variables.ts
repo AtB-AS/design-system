@@ -8,6 +8,7 @@ import { fileHeader } from 'style-dictionary/utils';
 
 import path from 'path';
 import { convertToCamelCase } from "./utils";
+import { ThemeOptions } from "../src";
 
 /**
  * Mocked response from Figma Variables Rest API
@@ -37,7 +38,7 @@ const response = await Promise.resolve<GetLocalVariablesResponse>(
         },
         "VariableID:3534:12677": {
           "id": "VariableID:3534:12677",
-          "name": "Radius/Medium",
+          "name": "Radius/Regular",
           "description": "",
           "variableCollectionId": "VariableCollectionId:3534:12675",
           "key": "948a5edb78e02b9baedff10a4038359d8f1cd0cb",
@@ -9633,7 +9634,7 @@ const { tokens } = await useFigmaToDTCG({
   response
 })
 
-const outDir = './src/themes';
+const outDir = './src';
 
 const organizations: Organization[] = ['atb']
 const modes: Mode[] = ['light', 'dark'];
@@ -9733,7 +9734,7 @@ StyleDictionary.registerTransform({
         case "primary":
           // If ContrastColor
           if (origIndex === all.length - 1 && all[origIndex - 1] === "foreground" && cur === "primary") return acc
-          
+
           return acc.concat(cur)
         case "dynamic":
           return acc.concat("colors")
@@ -9822,7 +9823,7 @@ const expandToNestedObject = (tokens: TransformedToken[], pathKey = 'path') => {
 
       if (index === token[pathKey].length - 1) {
         current[element] = token.value;
-      } 
+      }
       else {
         current[element] = current[element] || {};
         current = current[element];
@@ -9838,7 +9839,7 @@ const expandToNestedObject = (tokens: TransformedToken[], pathKey = 'path') => {
 StyleDictionary.registerFormat({
   name: 'typescript/obj',
   format: async ({ dictionary, file, options }) => (`${await fileHeader({ file })
-    }export default ${JSON.stringify(expandToNestedObject(dictionary.allTokens, options.compat && 'compatPath'), null, 2).replace(/"([^"]+)":/g, '$1:')
+    }export default ${JSON.stringify(expandToNestedObject(dictionary.allTokens, options.useFigmaStructure ? 'path' : 'compatPath'), null, 2).replace(/"([^"]+)":/g, '$1:')
     };\n`),
 });
 
@@ -9848,7 +9849,7 @@ StyleDictionary.registerFormat({
  * @param organization Name of the organization
  * @returns Output folder
  */
-const getDestination = (organization: Organization): string => path.join(outDir, `${organization}-theme/`);
+const makeDestination = (organization: Organization, themeOptions?: ThemeOptions): string => path.join(outDir, `${themeOptions?.useFigmaStructure ? 'themes-fs' : 'themes'}/${organization}-theme/`);
 
 /**
  * @param organization Name of the organization
@@ -9856,7 +9857,6 @@ const getDestination = (organization: Organization): string => path.join(outDir,
  * @returns Style Dictionary config for the org-mode combination
  */
 const getStyleDictionaryConfig = (organization: Organization, mode: Mode): Config => {
-  const destination = getDestination(organization);
 
   return {
     log: {
@@ -9867,22 +9867,39 @@ const getStyleDictionaryConfig = (organization: Organization, mode: Mode): Confi
     // source: [`${srcDir}/**/*.${organization}_${mode}.json`, `${srcDir}/**/@(border|spacing|typography)*.json`],
     platforms: {
       ts: {
-        buildPath: destination,
+        buildPath: makeDestination(organization),
         expand: true,
         // `js` transformGroup with `attribbute/append-type` prepended
         transforms: ['attribute/append-type', 'attribute/cti', 'attribute/compat-path', 'name/pascal', 'size/rem', 'color/hex'],
         files: [
-          // {
-          //   format: 'typescript/obj',
-          //   destination: `${mode}.ts`,
-          //   filter: 'filter-palette',
-          // },       
+          {
+            format: 'typescript/obj',
+            destination: `${mode}.ts`,
+            filter: 'filter-palette',
+          },
+          {
+            format: 'index',
+            options: {
+              content: tsIndex,
+            },
+            destination: 'theme.ts',
+          },
+        ],
+      },
+      tsFs: {
+        buildPath: makeDestination(organization, {
+          useFigmaStructure: true
+        }),
+        expand: true,
+        // `js` transformGroup with `attribbute/append-type` prepended
+        transforms: ['attribute/append-type', 'attribute/cti', 'attribute/compat-path', 'name/pascal', 'size/rem', 'color/hex'],
+        files: [
           {
             format: 'typescript/obj',
             destination: `${mode}.ts`,
             options: {
-              compat: true,
-            },
+              useFigmaStructure: true
+            } as ThemeOptions,
             filter: 'filter-palette',
           },
           {

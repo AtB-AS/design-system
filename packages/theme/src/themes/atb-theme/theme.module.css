@@ -6,7 +6,7 @@
   --border-secondary: #000000;
   --border-focus: #007c92;
   --border-radius-small: 0.25rem;
-  --border-radius-medium: 0.5rem;
+  --border-radius-regular: 0.5rem;
   --border-radius-circle: 1.25rem;
   --border-width-slim: 0.0625rem;
   --border-width-medium: 0.125rem;
@@ -187,7 +187,7 @@
   --border-secondary: #ffffff;
   --border-focus: #448086;
   --border-radius-small: 0.25rem;
-  --border-radius-medium: 0.5rem;
+  --border-radius-regular: 0.5rem;
   --border-radius-circle: 1.25rem;
   --border-width-slim: 0.0625rem;
   --border-width-medium: 0.125rem;
@@ -368,7 +368,7 @@
   --border-secondary: #ffffff;
   --border-focus: #448086;
   --border-radius-small: 0.25rem;
-  --border-radius-medium: 0.5rem;
+  --border-radius-regular: 0.5rem;
   --border-radius-circle: 1.25rem;
   --border-width-slim: 0.0625rem;
   --border-width-medium: 0.125rem;

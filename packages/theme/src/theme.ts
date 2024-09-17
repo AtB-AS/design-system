@@ -7,9 +7,18 @@ import {
   // TromsThemes,
   // InnlandetThemes,
 } from './themes';
-export type Themes = {
-  light: Theme;
-  dark: Theme;
+
+import {
+  AtBThemesFs,
+  // NfkThemes,
+  // FRAMThemes,
+  // TromsThemes,
+  // InnlandetThemes,
+} from './themes-fs';
+
+export type Themes<T = Theme> = {
+  light: T;
+  dark: T;
 };
 export type Mode = keyof Themes;
 
@@ -21,23 +30,22 @@ export type ContrastColor = {
   background: string;
   text: string;
 };
-export type TransportColor = {
-  primary: ContrastColor;
-  secondary: ContrastColor;
+export type TransportColor<T = ContrastColor> = {
+  primary: T;
+  secondary: T;
 };
 
-export type StatusColor = {
-  primary: ContrastColor;
-  secondary: ContrastColor;
+export type StatusColor<T = ContrastColor> = {
+  primary: T;
+  secondary: T;
 };
 
-export type InteractiveColor = {
-  default: ContrastColor;
-  hover: ContrastColor;
-  active: ContrastColor;
-  disabled: ContrastColor;
-  outline: ContrastColor;
-  destructive: ContrastColor;
+export type InteractiveColor<T = ContrastColor> = {
+  default: T;
+  hover: T;
+  active: T;
+  disabled: T;
+  outline: T;
 };
 
 // The colors can be changed, but should follow standard practice as commented:
@@ -50,15 +58,15 @@ export enum GeofencingZoneCodes {
 
 export type GeofencingZoneKeys = keyof typeof GeofencingZoneCodes;
 
-export type GeofencingZoneStyle = {
-  color: ContrastColor;
+export type GeofencingZoneStyle<T = ContrastColor> = {
+  color: T;
   fillOpacity: number;
   strokeOpacity: number;
   layerIndexWeight: number;
 };
 
-export type GeofencingZoneStyles = {
-  [GZKey in GeofencingZoneKeys]: GeofencingZoneStyle;
+export type GeofencingZoneStyles<T = ContrastColor> = {
+  [GZKey in GeofencingZoneKeys]: GeofencingZoneStyle<T>;
 };
 
 export interface Theme {
@@ -125,16 +133,14 @@ export interface Theme {
     primary: string;
     secondary: string;
     focus: string;
-    border: {
-      radius: {
-        small: number;
-        regular: number;
-        circle: number;
-      };
-      width: {
-        slim: number;
-        medium: number;
-      };
+    radius: {
+      small: number;
+      regular: number;
+      circle: number;
+    };
+    width: {
+      slim: number;
+      medium: number;
     };
   };
   icon: {
@@ -148,6 +154,130 @@ export interface Theme {
   geofencingZones: GeofencingZoneStyles;
 }
 
+export type ContrastColorFs = {
+  background: string;
+  foreground: {
+    primary: string;
+    secondary: string;
+    disabled: string;
+  };
+};
+
+export interface ThemeFs {
+  color: {
+    foreground: {
+      dark: ContrastColorFs['foreground'];
+      light: ContrastColorFs['foreground'];
+      dynamic: ContrastColorFs['foreground'];
+      inverse: ContrastColorFs['foreground'];
+    };
+
+    interactive: {
+      0: InteractiveColor<ContrastColorFs>;
+      1: InteractiveColor<ContrastColorFs>;
+      2: InteractiveColor<ContrastColorFs>;
+      3: InteractiveColor<ContrastColorFs>;
+      destructive: InteractiveColor<ContrastColorFs>;
+    };
+
+    transport: {
+      city: TransportColor<ContrastColorFs>;
+      region: TransportColor<ContrastColorFs>;
+      airportExpress: TransportColor<ContrastColorFs>;
+      boat: TransportColor<ContrastColorFs>;
+      train: TransportColor<ContrastColorFs>;
+      flexible: TransportColor<ContrastColorFs>;
+      scooter: TransportColor<ContrastColorFs>;
+      bike: TransportColor<ContrastColorFs>;
+      car: TransportColor<ContrastColorFs>;
+      other: TransportColor<ContrastColorFs>;
+    };
+
+    status: {
+      valid: StatusColor<ContrastColorFs>;
+      info: StatusColor<ContrastColorFs>;
+      warning: StatusColor<ContrastColorFs>;
+      error: StatusColor<ContrastColorFs>;
+    };
+
+    background: {
+      neutral: {
+        0: ContrastColorFs;
+        1: ContrastColorFs;
+        2: ContrastColorFs;
+        3: ContrastColorFs;
+      };
+      accent: {
+        0: ContrastColorFs;
+        1: ContrastColorFs;
+        2: ContrastColorFs;
+        3: ContrastColorFs;
+        4: ContrastColorFs;
+        5: ContrastColorFs;
+      };
+    };
+
+    zone: {
+      from: ContrastColorFs;
+      to: ContrastColorFs;
+    };
+
+    geofencingZone: GeofencingZoneStyles<ContrastColorFs>;
+
+    border: {
+      primary: ContrastColorFs;
+      secondary: ContrastColorFs;
+      focus: ContrastColorFs;
+    };
+  };
+
+  border: {
+    radius: {
+      small: number;
+      regular: number;
+      circle: number;
+    };
+    width: {
+      slim: number;
+      medium: number;
+    };
+  };
+
+  icon: {
+    size: {
+      xSmall: number;
+      small: number;
+      medium: number;
+      large: number;
+    }
+  };
+
+  spacing: {
+    xSmall: number;
+    small: number;
+    medium: number;
+    large: number;
+    xLarge: number;
+  };
+
+  typography: {
+    ios: {
+      font: string;
+      number: number;
+    };
+
+    android: {
+      font: string;
+      number: number;
+    };
+
+    web: {
+      font: string;
+      number: number;
+    };
+  };
+};
+
 export type Statuses = keyof Theme['status'];
 
 export enum ThemeVariant {
@@ -158,10 +288,28 @@ export enum ThemeVariant {
   Innlandet,
 }
 
-export function createThemesFor(themeVariant: ThemeVariant) {
+export interface ThemeOptions {
+  useFigmaStructure?: boolean
+}
+
+/**
+ * Get a theme object for a specific organization in the desired format.
+ * 
+ * @param themeVariant Organization
+ * @param themeOptions Set if the new Figma structure should be used
+ * @returns Theme object
+ */
+export function createThemesFor<T extends ThemeOptions>(
+  themeVariant: ThemeVariant,
+  themeOptions: T = { useFigmaStructure: false } as T
+): T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme> {
   switch (themeVariant) {
     case ThemeVariant.AtB:
-      return AtBThemes;
+      if (themeOptions?.useFigmaStructure) {
+        return AtBThemesFs as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>; 
+      } else {
+        return AtBThemes as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;;
+      }
     // case ThemeVariant.Nfk:
     //   return NfkThemes;
     // case ThemeVariant.FRAM:

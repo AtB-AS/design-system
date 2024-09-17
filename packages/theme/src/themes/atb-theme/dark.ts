@@ -389,7 +389,7 @@ export default {
     focus: "#448086",
     radius: {
       small: 4,
-      medium: 8,
+      regular: 8,
       circle: 20
     },
     width: {
