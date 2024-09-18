@@ -264,7 +264,7 @@ export default {
         text: "#ffffff"
       }
     },
-    transport_airportExpress: {
+    transport_airport_express: {
       primary: {
         background: "#a51140",
         text: "#ffffff"

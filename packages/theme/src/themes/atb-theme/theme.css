@@ -129,10 +129,10 @@
   --transport-transport_region-primary-text: #ffffff;
   --transport-transport_region-secondary-background: #006678;
   --transport-transport_region-secondary-text: #ffffff;
-  --transport-transport_airportExpress-primary-background: #a51140;
-  --transport-transport_airportExpress-primary-text: #ffffff;
-  --transport-transport_airportExpress-secondary-background: #7d0d31;
-  --transport-transport_airportExpress-secondary-text: #ffffff;
+  --transport-transport_airport_express-primary-background: #a51140;
+  --transport-transport_airport_express-primary-text: #ffffff;
+  --transport-transport_airport_express-secondary-background: #7d0d31;
+  --transport-transport_airport_express-secondary-text: #ffffff;
   --transport-transport_flexible-primary-background: #c75b12;
   --transport-transport_flexible-primary-text: #000000;
   --transport-transport_flexible-secondary-background: #97450e;
@@ -310,10 +310,10 @@
   --transport-transport_region-primary-text: #ffffff;
   --transport-transport_region-secondary-background: #006678;
   --transport-transport_region-secondary-text: #ffffff;
-  --transport-transport_airportExpress-primary-background: #a51140;
-  --transport-transport_airportExpress-primary-text: #ffffff;
-  --transport-transport_airportExpress-secondary-background: #7d0d31;
-  --transport-transport_airportExpress-secondary-text: #ffffff;
+  --transport-transport_airport_express-primary-background: #a51140;
+  --transport-transport_airport_express-primary-text: #ffffff;
+  --transport-transport_airport_express-secondary-background: #7d0d31;
+  --transport-transport_airport_express-secondary-text: #ffffff;
   --transport-transport_flexible-primary-background: #c75b12;
   --transport-transport_flexible-primary-text: #000000;
   --transport-transport_flexible-secondary-background: #97450e;
@@ -491,10 +491,10 @@
   --transport-transport_region-primary-text: #ffffff;
   --transport-transport_region-secondary-background: #006678;
   --transport-transport_region-secondary-text: #ffffff;
-  --transport-transport_airportExpress-primary-background: #a51140;
-  --transport-transport_airportExpress-primary-text: #ffffff;
-  --transport-transport_airportExpress-secondary-background: #7d0d31;
-  --transport-transport_airportExpress-secondary-text: #ffffff;
+  --transport-transport_airport_express-primary-background: #a51140;
+  --transport-transport_airport_express-primary-text: #ffffff;
+  --transport-transport_airport_express-secondary-background: #7d0d31;
+  --transport-transport_airport_express-secondary-text: #ffffff;
   --transport-transport_flexible-primary-background: #c75b12;
   --transport-transport_flexible-primary-text: #000000;
   --transport-transport_flexible-secondary-background: #97450e;
@@ -610,13 +610,13 @@
   background-color: var(--transport-transport_region-secondary-background);
   color: var(--transport-transport_region-secondary-text);
 }
-.transport-transport_airportExpress-primary {
-  background-color: var(--transport-transport_airportExpress-primary-background);
-  color: var(--transport-transport_airportExpress-primary-text);
+.transport-transport_airport_express-primary {
+  background-color: var(--transport-transport_airport_express-primary-background);
+  color: var(--transport-transport_airport_express-primary-text);
 }
-.transport-transport_airportExpress-secondary {
-  background-color: var(--transport-transport_airportExpress-secondary-background);
-  color: var(--transport-transport_airportExpress-secondary-text);
+.transport-transport_airport_express-secondary {
+  background-color: var(--transport-transport_airport_express-secondary-background);
+  color: var(--transport-transport_airport_express-secondary-text);
 }
 .transport-transport_flexible-primary {
   background-color: var(--transport-transport_flexible-primary-background);

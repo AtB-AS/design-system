@@ -7,7 +7,7 @@ import type { Config, DesignTokens, TransformedToken } from 'style-dictionary/ty
 import { fileHeader } from 'style-dictionary/utils';
 
 import path from 'path';
-import { convertToCamelCase } from "./utils";
+import { convertToCamelCase, convertToSnakeCase } from "./utils";
 import { ThemeOptions } from "../src";
 
 /**
@@ -9727,7 +9727,8 @@ StyleDictionary.registerTransform({
           return acc.concat(`background_accent_${all[index + 1]}`)
         case "interactive":
         case "transport":
-          return acc.concat(cur, `${cur}_${all[index + 1]}`)
+          let mode = convertToSnakeCase(all[index + 1])
+          return acc.concat(cur, `${cur}_${mode}`)
         case "foreground":
           return acc.concat("text")
         case "primary":
