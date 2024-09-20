@@ -7,7 +7,8 @@ import type { Config, DesignTokens, TransformedToken } from 'style-dictionary/ty
 import { fileHeader } from 'style-dictionary/utils';
 
 import path from 'path';
-import { convertToCamelCase } from "./utils";
+import { convertToCamelCase, convertToSnakeCase } from "./utils";
+import { ThemeOptions } from "../src";
 
 /**
  * Mocked response from Figma Variables Rest API
@@ -37,7 +38,7 @@ const response = await Promise.resolve<GetLocalVariablesResponse>(
         },
         "VariableID:3534:12677": {
           "id": "VariableID:3534:12677",
-          "name": "Radius/Medium",
+          "name": "Radius/Regular",
           "description": "",
           "variableCollectionId": "VariableCollectionId:3534:12675",
           "key": "948a5edb78e02b9baedff10a4038359d8f1cd0cb",
@@ -9633,7 +9634,7 @@ const { tokens } = await useFigmaToDTCG({
   response
 })
 
-const outDir = './src/themes';
+const outDir = './src';
 
 const organizations: Organization[] = ['atb']
 const modes: Mode[] = ['light', 'dark'];
@@ -9670,6 +9671,87 @@ StyleDictionary.registerTransform({
     if (!token.prefix) return token;
 
     Object.assign(originalPath, [token.prefix, ...token.path].map(convertToCamelCase));
+
+    return token;
+  },
+});
+
+/**
+ * Appends the name of the collection to the file path, such that
+ * it is prepended to the name of the variable (e.g., COLOR-background-neutral-...).
+ */
+StyleDictionary.registerTransform({
+  name: 'attribute/compat-path',
+  type: 'attribute',
+  transform: (token: TransformedToken) => {
+
+    const compatPath = token.path.reduce((acc, cur, index, all) => {
+
+      switch (cur) {
+        case "0":
+        case "1":
+        case "2":
+        case "3":
+        case "4":
+        case "5":
+        case "destructive":
+        case "city":
+        case "region":
+        case "airportExpress":
+        case "boat":
+        case "train":
+        case "flexible":
+        case "bike":
+        case "scooter":
+        case "car":
+        case "other":
+          return acc
+        case "color":
+          if (index === 0) {
+            return acc
+          }
+          return acc.concat(cur)
+        case "background":
+          if (index === all.length - 1) {
+            // Unpack ContrastColor when border color
+            if (all.includes("border")) {
+              return acc
+            }
+            else return acc.concat(cur)
+          }
+          
+          return acc.concat("static", "background")
+        case "neutral":
+          return acc.concat(`background_${all[index + 1]}`)
+        case "accent":
+          return acc.concat(`background_accent_${all[index + 1]}`)
+        case "interactive":
+        case "transport":
+          let mode = convertToSnakeCase(all[index + 1])
+          return acc.concat(cur, `${cur}_${mode}`)
+        case "foreground":
+          return acc.concat("text")
+        case "primary":
+          // If ContrastColor
+          if (index === all.length - 1 && all[index - 1] === "foreground" && cur === "primary") {
+            return acc
+          } 
+
+          return acc.concat(cur)
+        case "dynamic":
+          return acc.concat("colors")
+        case "zone":
+          return acc.concat("static", "zone_selection")
+        case "geofencingZone":
+          return acc.concat("geofencingZones")
+        case "spacing":
+          return acc.concat("spacings")
+        default:
+          return acc.concat(cur)
+      }
+    }, [] as string[])
+
+    token.compatPath = compatPath;
 
     return token;
   },
@@ -9731,12 +9813,19 @@ StyleDictionary.registerFormat({
  * @param tokens Flat list of design tokens
  * @returns Nested object based on the path of each token
  */
-const expandToNestedObject = (tokens: TransformedToken[]) => {
-  const result = {};
+const expandToNestedObject = (tokens: TransformedToken[], pathKey = 'path') => {
+  const result: any = {};
   tokens.forEach((token) => {
     let current = result;
-    token.path.forEach((element, index) => {
-      if (index === token.path.length - 1) current[element] = token.value;
+    token[pathKey].forEach((element: string, index: number) => {
+      if (typeof current === 'string') {
+        console.warn(`Path '${element}' contains a value already. Skipping assigning '${token.value}' to ${JSON.stringify(current)}. This happens when converting to the old ContrastColor where 'secondary' and 'disabled' fields do not exist.`)
+        return
+      }
+
+      if (index === token[pathKey].length - 1) {
+        current[element] = token.value;
+      }
       else {
         current[element] = current[element] || {};
         current = current[element];
@@ -9751,8 +9840,8 @@ const expandToNestedObject = (tokens: TransformedToken[]) => {
  */
 StyleDictionary.registerFormat({
   name: 'typescript/obj',
-  format: async ({ dictionary, file }) => (`${await fileHeader({ file })
-    }export default ${JSON.stringify(expandToNestedObject(dictionary.allTokens), null, 2).replace(/"([^"]+)":/g, '$1:')
+  format: async ({ dictionary, file, options }) => (`${await fileHeader({ file })
+    }export default ${JSON.stringify(expandToNestedObject(dictionary.allTokens, options.useFigmaStructure ? 'path' : 'compatPath'), null, 2).replace(/"([^"]+)":/g, '$1:')
     };\n`),
 });
 
@@ -9762,7 +9851,7 @@ StyleDictionary.registerFormat({
  * @param organization Name of the organization
  * @returns Output folder
  */
-const getDestination = (organization: Organization): string => path.join(outDir, `${organization}-theme/`);
+const makeDestination = (organization: Organization, themeOptions?: ThemeOptions): string => path.join(outDir, `${themeOptions?.useFigmaStructure ? 'themes-fs' : 'themes'}/${organization}-theme/`);
 
 /**
  * @param organization Name of the organization
@@ -9770,7 +9859,6 @@ const getDestination = (organization: Organization): string => path.join(outDir,
  * @returns Style Dictionary config for the org-mode combination
  */
 const getStyleDictionaryConfig = (organization: Organization, mode: Mode): Config => {
-  const destination = getDestination(organization);
 
   return {
     log: {
@@ -9781,14 +9869,39 @@ const getStyleDictionaryConfig = (organization: Organization, mode: Mode): Confi
     // source: [`${srcDir}/**/*.${organization}_${mode}.json`, `${srcDir}/**/@(border|spacing|typography)*.json`],
     platforms: {
       ts: {
-        buildPath: destination,
+        buildPath: makeDestination(organization),
         expand: true,
         // `js` transformGroup with `attribbute/append-type` prepended
-        transforms: ['attribute/append-type', 'attribute/cti', 'name/pascal', 'size/rem', 'color/hex'],
+        transforms: ['attribute/append-type', 'attribute/cti', 'attribute/compat-path', 'name/pascal', 'size/rem', 'color/hex'],
         files: [
           {
             format: 'typescript/obj',
             destination: `${mode}.ts`,
+            filter: 'filter-palette',
+          },
+          {
+            format: 'index',
+            options: {
+              content: tsIndex,
+            },
+            destination: 'theme.ts',
+          },
+        ],
+      },
+      tsFs: {
+        buildPath: makeDestination(organization, {
+          useFigmaStructure: true
+        }),
+        expand: true,
+        // `js` transformGroup with `attribbute/append-type` prepended
+        transforms: ['attribute/append-type', 'attribute/cti', 'attribute/compat-path', 'name/pascal', 'size/rem', 'color/hex'],
+        files: [
+          {
+            format: 'typescript/obj',
+            destination: `${mode}.ts`,
+            options: {
+              useFigmaStructure: true
+            } as ThemeOptions,
             filter: 'filter-palette',
           },
           {
