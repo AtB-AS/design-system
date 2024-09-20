@@ -142,9 +142,7 @@ export default {
       outline: {
         background: "#71d6e0",
         text: "#000000"
-      },
-      background: "#d692a7",
-      text: "#000000"
+      }
     },
     interactive_1: {
       default: {
@@ -166,9 +164,7 @@ export default {
       outline: {
         background: "#007c92",
         text: "#ffffff"
-      },
-      background: "#d692a7",
-      text: "#000000"
+      }
     },
     interactive_2: {
       default: {
@@ -190,9 +186,7 @@ export default {
       outline: {
         background: "#007c92",
         text: "#ffffff"
-      },
-      background: "#d692a7",
-      text: "#000000"
+      }
     },
     interactive_3: {
       default: {
@@ -214,9 +208,7 @@ export default {
       outline: {
         background: "#d4e9ec",
         text: "#000000"
-      },
-      background: "#a51140",
-      text: "#ffffff"
+      }
     },
     interactive_destructive: {
       default: {
@@ -238,9 +230,7 @@ export default {
       outline: {
         background: "#007c92",
         text: "#ffffff"
-      },
-      background: "#d692a7",
-      text: "#000000"
+      }
     }
   },
   transport: {
