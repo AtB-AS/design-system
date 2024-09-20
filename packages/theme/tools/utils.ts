@@ -11,7 +11,7 @@ export function indentJoin(list: string[]) {
 
 export function maybeConvertToRem(val: any, name?: string) {
   if (typeof val !== 'number' || name === 'opacity') {
-    return val;
+    return (val as string).toUpperCase();
   }
 
   // Using 16 as base size

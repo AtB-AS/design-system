@@ -6,7 +6,7 @@ import { __dirname, indentJoin, maybeConvertToRem} from './utils';
 
 export default async function outputThemes(
   themeOutputDirName: string,
-  themes: Themes,
+  themes: Themes<Theme>,
 ) {
   const base = join(__dirname, `../src/themes/${themeOutputDirName}`);
 
