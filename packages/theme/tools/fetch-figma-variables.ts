@@ -19,6 +19,10 @@ const response = await fetch('https://api.figma.com/v1/files/3rlcixpbhfBglNSctUk
   }
 })
 
+if (!response.ok) {
+  throw new Error(`Failed to retrieve Figma variables with status ${response.status}: ${(await response.json())?.message}`)
+}
+
 const { tokens } = await useFigmaToDTCG({
   api: "rest",
   response: await response.json() as GetLocalVariablesResponse

@@ -88,7 +88,7 @@ export interface Theme {
   transport: {
     transport_city: TransportColor;
     transport_region: TransportColor;
-    transport_airportExpress: TransportColor;
+    transport_airport_express: TransportColor;
     transport_boat: TransportColor;
     transport_train: TransportColor;
     transport_flexible: TransportColor;
