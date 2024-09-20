@@ -372,15 +372,15 @@ export function createThemes(
  * @param extension - Object to extend original theme. Can be nested with same keys
  * @returns new deep merged intersection themes
  */
-export function createExtendedThemes<T extends {}>(
-  themes: Themes,
+export function createExtendedThemes<T extends {}, M extends Theme | ThemeFs = Theme>(
+  themes: Themes<M>,
   extension: { light: T; dark: T },
 ): {
-  light: Themes['light'] & T,
-  dark: Themes['dark'] & T,
+  light: Themes<M>['light'] & T,
+  dark: Themes<M>['dark'] & T,
 } {
   return {
-    light: merge(themes.light, extension.light) as Themes['light'] & T,
-    dark: merge(themes.dark, extension.dark) as Themes['dark'] & T,
+    light: merge(themes.light, extension.light) as Themes<M>['light'] & T,
+    dark: merge(themes.dark, extension.dark) as Themes<M>['dark'] & T,
   };
 }
