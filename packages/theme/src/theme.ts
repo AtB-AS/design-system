@@ -1,5 +1,5 @@
 import merge from 'ts-deepmerge';
-import { ConfigurationOverride, overrideConfig } from './utils/override-config';
+import {ConfigurationOverride, overrideConfig} from './utils/override-config';
 import {
   AtBThemes,
   // NfkThemes,
@@ -7,42 +7,45 @@ import {
   // TromsThemes,
   // InnlandetThemes,
 } from './themes';
-export type Themes = {
-  light: Theme;
-  dark: Theme;
+
+import {
+  AtBThemesFs,
+  // NfkThemes,
+  // FRAMThemes,
+  // TromsThemes,
+  // InnlandetThemes,
+} from './themes-fs';
+
+export type Themes<T = Theme> = {
+  light: T;
+  dark: T;
 };
 export type Mode = keyof Themes;
+
+export type TextColor = 'primary' | 'secondary' | 'disabled';
 
 export type TextColorType = 'dark' | 'light';
 
 export type ContrastColor = {
   background: string;
-  foreground: {
-    primary: string;
-    secondary: string;
-    disabled: string;
-  };
+  text: string;
+};
+export type TransportColor<T = ContrastColor> = {
+  primary: T;
+  secondary: T;
 };
 
-export type TextColor = keyof ContrastColor["foreground"];
-
-export type TransportColor = {
-  primary: ContrastColor;
-  secondary: ContrastColor;
+export type StatusColor<T = ContrastColor> = {
+  primary: T;
+  secondary: T;
 };
 
-export type StatusColor = {
-  primary: ContrastColor;
-  secondary: ContrastColor;
-};
-
-export type InteractiveColor = {
-  default: ContrastColor;
-  hover: ContrastColor;
-  active: ContrastColor;
-  disabled: ContrastColor;
-  outline: ContrastColor;
-  destructive: ContrastColor;
+export type InteractiveColor<T = ContrastColor> = {
+  default: T;
+  hover: T;
+  active: T;
+  disabled: T;
+  outline: T;
 };
 
 // The colors can be changed, but should follow standard practice as commented:
@@ -55,89 +58,183 @@ export enum GeofencingZoneCodes {
 
 export type GeofencingZoneKeys = keyof typeof GeofencingZoneCodes;
 
-export type GeofencingZoneStyle = {
-  color: ContrastColor;
+export type GeofencingZoneStyle<T = ContrastColor> = {
+  color: T;
   fillOpacity: number;
   strokeOpacity: number;
   layerIndexWeight: number;
 };
 
-export type GeofencingZoneStyles = {
-  [GZKey in GeofencingZoneKeys]: GeofencingZoneStyle;
+export type GeofencingZoneStyles<T = ContrastColor> = {
+  [GZKey in GeofencingZoneKeys]: GeofencingZoneStyle<T>;
 };
 
 export interface Theme {
+  spacings: {
+    xSmall: number;
+    small: number;
+    medium: number;
+    large: number;
+    xLarge: number;
+  };
+
+  interactive: {
+    interactive_0: InteractiveColor;
+    interactive_1: InteractiveColor;
+    interactive_2: InteractiveColor;
+    interactive_3: InteractiveColor;
+    interactive_destructive: InteractiveColor;
+  };
+  transport: {
+    transport_city: TransportColor;
+    transport_region: TransportColor;
+    transport_airportExpress: TransportColor;
+    transport_boat: TransportColor;
+    transport_train: TransportColor;
+    transport_flexible: TransportColor;
+    transport_scooter: TransportColor;
+    transport_bike: TransportColor;
+    transport_car: TransportColor;
+    transport_other: TransportColor;
+  };
+
+  status: {
+    valid: StatusColor;
+    info: StatusColor;
+    warning: StatusColor;
+    error: StatusColor;
+  };
+
+  static: {
+    background: {
+      background_0: ContrastColor;
+      background_1: ContrastColor;
+      background_2: ContrastColor;
+      background_3: ContrastColor;
+      background_accent_0: ContrastColor;
+      background_accent_1: ContrastColor;
+      background_accent_2: ContrastColor;
+      background_accent_3: ContrastColor;
+      background_accent_4: ContrastColor;
+      background_accent_5: ContrastColor;
+    };
+
+    zone_selection: {
+      from: ContrastColor;
+      to: ContrastColor;
+    };
+  };
+
+  text: {
+    colors: {[key in TextColor]: string};
+  };
+
+  border: {
+    primary: string;
+    secondary: string;
+    focus: string;
+    radius: {
+      small: number;
+      regular: number;
+      circle: number;
+    };
+    width: {
+      slim: number;
+      medium: number;
+    };
+  };
+  icon: {
+    size: {
+      xSmall: number;
+      small: number;
+      medium: number;
+      large: number;
+    }
+  };
+  geofencingZones: GeofencingZoneStyles;
+}
+
+export type ContrastColorFs = {
+  background: string;
+  foreground: {
+    primary: string;
+    secondary: string;
+    disabled: string;
+  };
+};
+
+export interface ThemeFs {
   color: {
     foreground: {
-      dark: ContrastColor['foreground'];
-      light: ContrastColor['foreground'];
-      dynamic: ContrastColor['foreground'];
-      inverse: ContrastColor['foreground'];
+      dark: ContrastColorFs['foreground'];
+      light: ContrastColorFs['foreground'];
+      dynamic: ContrastColorFs['foreground'];
+      inverse: ContrastColorFs['foreground'];
     };
 
     interactive: {
-      0: InteractiveColor;
-      1: InteractiveColor;
-      2: InteractiveColor;
-      3: InteractiveColor;
-      destructive: InteractiveColor;
+      0: InteractiveColor<ContrastColorFs>;
+      1: InteractiveColor<ContrastColorFs>;
+      2: InteractiveColor<ContrastColorFs>;
+      3: InteractiveColor<ContrastColorFs>;
+      destructive: InteractiveColor<ContrastColorFs>;
     };
 
     transport: {
-      city: TransportColor;
-      region: TransportColor;
-      airportExpress: TransportColor;
-      boat: TransportColor;
-      train: TransportColor;
-      flexible: TransportColor;
-      scooter: TransportColor;
-      bike: TransportColor;
-      car: TransportColor;
-      other: TransportColor;
+      city: TransportColor<ContrastColorFs>;
+      region: TransportColor<ContrastColorFs>;
+      airportExpress: TransportColor<ContrastColorFs>;
+      boat: TransportColor<ContrastColorFs>;
+      train: TransportColor<ContrastColorFs>;
+      flexible: TransportColor<ContrastColorFs>;
+      scooter: TransportColor<ContrastColorFs>;
+      bike: TransportColor<ContrastColorFs>;
+      car: TransportColor<ContrastColorFs>;
+      other: TransportColor<ContrastColorFs>;
     };
 
     status: {
-      valid: StatusColor;
-      info: StatusColor;
-      warning: StatusColor;
-      error: StatusColor;
+      valid: StatusColor<ContrastColorFs>;
+      info: StatusColor<ContrastColorFs>;
+      warning: StatusColor<ContrastColorFs>;
+      error: StatusColor<ContrastColorFs>;
     };
 
     background: {
       neutral: {
-        0: ContrastColor;
-        1: ContrastColor;
-        2: ContrastColor;
-        3: ContrastColor;
+        0: ContrastColorFs;
+        1: ContrastColorFs;
+        2: ContrastColorFs;
+        3: ContrastColorFs;
       };
       accent: {
-        0: ContrastColor;
-        1: ContrastColor;
-        2: ContrastColor;
-        3: ContrastColor;
-        4: ContrastColor;
-        5: ContrastColor;
+        0: ContrastColorFs;
+        1: ContrastColorFs;
+        2: ContrastColorFs;
+        3: ContrastColorFs;
+        4: ContrastColorFs;
+        5: ContrastColorFs;
       };
     };
 
     zone: {
-      from: ContrastColor;
-      to: ContrastColor;
+      from: ContrastColorFs;
+      to: ContrastColorFs;
     };
 
-    geofencingZone: GeofencingZoneStyles;
+    geofencingZone: GeofencingZoneStyles<ContrastColorFs>;
 
     border: {
-      primary: ContrastColor;
-      secondary: ContrastColor;
-      focus: ContrastColor;
+      primary: ContrastColorFs;
+      secondary: ContrastColorFs;
+      focus: ContrastColorFs;
     };
   };
 
   border: {
     radius: {
       small: number;
-      medium: number;
+      regular: number;
       circle: number;
     };
     width: {
@@ -181,7 +278,7 @@ export interface Theme {
   };
 };
 
-export type Statuses = keyof Theme['color']['status'];
+export type Statuses = keyof Theme['status'];
 
 export enum ThemeVariant {
   AtB,
@@ -191,10 +288,28 @@ export enum ThemeVariant {
   Innlandet,
 }
 
-export function createThemesFor(themeVariant: ThemeVariant) {
+export interface ThemeOptions {
+  useFigmaStructure?: boolean
+}
+
+/**
+ * Get a theme object for a specific organization in the desired format.
+ * 
+ * @param themeVariant Organization
+ * @param themeOptions Set if the new Figma structure should be used
+ * @returns Theme object
+ */
+export function createThemesFor<T extends ThemeOptions>(
+  themeVariant: ThemeVariant,
+  themeOptions: T = { useFigmaStructure: false } as T
+): T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme> {
   switch (themeVariant) {
     case ThemeVariant.AtB:
-      return AtBThemes;
+      if (themeOptions?.useFigmaStructure) {
+        return AtBThemesFs as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>; 
+      } else {
+        return AtBThemes as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;;
+      }
     // case ThemeVariant.Nfk:
     //   return NfkThemes;
     // case ThemeVariant.FRAM:
@@ -257,15 +372,15 @@ export function createThemes(
  * @param extension - Object to extend original theme. Can be nested with same keys
  * @returns new deep merged intersection themes
  */
-export function createExtendedThemes<T extends {}>(
-  themes: Themes,
+export function createExtendedThemes<T extends {}, M extends Theme | ThemeFs = Theme>(
+  themes: Themes<M>,
   extension: { light: T; dark: T },
 ): {
-  light: Themes['light'] & T,
-  dark: Themes['dark'] & T,
+  light: Themes<M>['light'] & T,
+  dark: Themes<M>['dark'] & T,
 } {
   return {
-    light: merge(themes.light, extension.light) as Themes['light'] & T,
-    dark: merge(themes.dark, extension.dark) as Themes['dark'] & T,
+    light: merge(themes.light, extension.light) as Themes<M>['light'] & T,
+    dark: merge(themes.dark, extension.dark) as Themes<M>['dark'] & T,
   };
 }

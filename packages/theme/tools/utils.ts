@@ -23,3 +23,7 @@ export const __dirname = dirname(fileURLToPath(import.meta.url))
 export function convertToCamelCase(input: string) {
   return input.length === 0 ? '' : input.charAt(0).toLowerCase() + input.slice(1);
 } 
+
+export function convertToSnakeCase(input: string) {
+  return input.replace(/[A-Z]/g, letter => `_${letter.toLowerCase()}`);
+} 
