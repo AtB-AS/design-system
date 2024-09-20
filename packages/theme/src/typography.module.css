@@ -20,13 +20,13 @@
   --baseTypo-body__primary--strike-fontSize: 1rem;
   --baseTypo-body__primary--strike-lineHeight: 1.25rem;
   --baseTypo-body__primary--strike-letterSpacing: 0.03125rem;
-  --baseTypo-body__primary--strike-textDecorationLine: LINE-THROUGH;
+  --baseTypo-body__primary--strike-textDecorationLine: line-through;
 
   /* Definitions for body__primary--underline */
   --baseTypo-body__primary--underline-fontSize: 1rem;
   --baseTypo-body__primary--underline-lineHeight: 1.25rem;
   --baseTypo-body__primary--underline-letterSpacing: 0.03125rem;
-  --baseTypo-body__primary--underline-textDecorationLine: UNDERLINE;
+  --baseTypo-body__primary--underline-textDecorationLine: underline;
 
   /* Definitions for body__primary--big */
   --baseTypo-body__primary--big-fontSize: 1.5rem;
@@ -37,7 +37,7 @@
   --baseTypo-body__primary--big--bold-fontSize: 1.5rem;
   --baseTypo-body__primary--big--bold-lineHeight: 1.75rem;
   --baseTypo-body__primary--big--bold-letterSpacing: 0.015625rem;
-  --baseTypo-body__primary--big--bold-fontWeight: BOLD;
+  --baseTypo-body__primary--big--bold-fontWeight: bold;
 
   /* Definitions for body__primary--jumbo */
   --baseTypo-body__primary--jumbo-fontSize: 2.25rem;
@@ -48,7 +48,7 @@
   --baseTypo-body__primary--jumbo--bold-fontSize: 2.25rem;
   --baseTypo-body__primary--jumbo--bold-lineHeight: 2.5rem;
   --baseTypo-body__primary--jumbo--bold-letterSpacing: 0.015625rem;
-  --baseTypo-body__primary--jumbo--bold-fontWeight: BOLD;
+  --baseTypo-body__primary--jumbo--bold-fontWeight: bold;
 
   /* Definitions for body__secondary */
   --baseTypo-body__secondary-fontSize: 0.875rem;
@@ -76,19 +76,19 @@
   --baseTypo-body__tertiary--strike-fontSize: 0.75rem;
   --baseTypo-body__tertiary--strike-lineHeight: 1rem;
   --baseTypo-body__tertiary--strike-letterSpacing: 0.025rem;
-  --baseTypo-body__tertiary--strike-textDecorationLine: LINE-THROUGH;
+  --baseTypo-body__tertiary--strike-textDecorationLine: line-through;
 
   /* Definitions for body__tertiary--uppercase */
   --baseTypo-body__tertiary--uppercase-fontSize: 1rem;
   --baseTypo-body__tertiary--uppercase-lineHeight: 1.25rem;
   --baseTypo-body__tertiary--uppercase-letterSpacing: 0.03125rem;
-  --baseTypo-body__tertiary--uppercase-textTransform: UPPERCASE;
+  --baseTypo-body__tertiary--uppercase-textTransform: uppercase;
 
   /* Definitions for heading__title */
   --baseTypo-heading__title-fontSize: 1rem;
   --baseTypo-heading__title-lineHeight: 1.25rem;
   --baseTypo-heading__title-letterSpacing: 0.03125rem;
-  --baseTypo-heading__title-fontWeight: BOLD;
+  --baseTypo-heading__title-fontWeight: bold;
 
   /* Definitions for heading__component */
   --baseTypo-heading__component-fontSize: 1rem;
@@ -106,24 +106,24 @@
   --baseTypo-heading--medium-fontSize: 1.25rem;
   --baseTypo-heading--medium-lineHeight: 1.5rem;
   --baseTypo-heading--medium-letterSpacing: 0.03125rem;
-  --baseTypo-heading--medium-fontWeight: BOLD;
+  --baseTypo-heading--medium-fontWeight: bold;
 
   /* Definitions for heading--big */
   --baseTypo-heading--big-fontSize: 1.5rem;
   --baseTypo-heading--big-lineHeight: 1.75rem;
   --baseTypo-heading--big-letterSpacing: -0.019375rem;
-  --baseTypo-heading--big-fontWeight: BOLD;
+  --baseTypo-heading--big-fontWeight: bold;
 
   /* Definitions for heading--jumbo */
   --baseTypo-heading--jumbo-fontSize: 2rem;
   --baseTypo-heading--jumbo-lineHeight: 2.375rem;
   --baseTypo-heading--jumbo-letterSpacing: -0.019375rem;
-  --baseTypo-heading--jumbo-fontWeight: BOLD;
+  --baseTypo-heading--jumbo-fontWeight: bold;
 
   /* Definitions for label__uppercase */
   --baseTypo-label__uppercase-fontSize: 0.625rem;
   --baseTypo-label__uppercase-lineHeight: 1rem;
-  --baseTypo-label__uppercase-textTransform: UPPERCASE;
+  --baseTypo-label__uppercase-textTransform: uppercase;
 
 
   /* Included font types */
@@ -153,13 +153,13 @@
   font-size: var(--baseTypo-body__primary--strike-fontSize, 1rem);
   line-height: var(--baseTypo-body__primary--strike-lineHeight, 1.25rem);
   letter-spacing: var(--baseTypo-body__primary--strike-letterSpacing, 0.03125rem);
-  text-decoration: var(--baseTypo-body__primary--strike-textDecorationLine, LINE-THROUGH);
+  text-decoration: var(--baseTypo-body__primary--strike-textDecorationLine, line-through);
 }
 .typo-body__primary--underline {
   font-size: var(--baseTypo-body__primary--underline-fontSize, 1rem);
   line-height: var(--baseTypo-body__primary--underline-lineHeight, 1.25rem);
   letter-spacing: var(--baseTypo-body__primary--underline-letterSpacing, 0.03125rem);
-  text-decoration: var(--baseTypo-body__primary--underline-textDecorationLine, UNDERLINE);
+  text-decoration: var(--baseTypo-body__primary--underline-textDecorationLine, underline);
 }
 .typo-body__primary--big {
   font-size: var(--baseTypo-body__primary--big-fontSize, 1.5rem);
@@ -170,7 +170,7 @@
   font-size: var(--baseTypo-body__primary--big--bold-fontSize, 1.5rem);
   line-height: var(--baseTypo-body__primary--big--bold-lineHeight, 1.75rem);
   letter-spacing: var(--baseTypo-body__primary--big--bold-letterSpacing, 0.015625rem);
-  font-weight: var(--baseTypo-body__primary--big--bold-fontWeight, BOLD);
+  font-weight: var(--baseTypo-body__primary--big--bold-fontWeight, bold);
 }
 .typo-body__primary--jumbo {
   font-size: var(--baseTypo-body__primary--jumbo-fontSize, 2.25rem);
@@ -181,7 +181,7 @@
   font-size: var(--baseTypo-body__primary--jumbo--bold-fontSize, 2.25rem);
   line-height: var(--baseTypo-body__primary--jumbo--bold-lineHeight, 2.5rem);
   letter-spacing: var(--baseTypo-body__primary--jumbo--bold-letterSpacing, 0.015625rem);
-  font-weight: var(--baseTypo-body__primary--jumbo--bold-fontWeight, BOLD);
+  font-weight: var(--baseTypo-body__primary--jumbo--bold-fontWeight, bold);
 }
 .typo-body__secondary {
   font-size: var(--baseTypo-body__secondary-fontSize, 0.875rem);
@@ -209,19 +209,19 @@
   font-size: var(--baseTypo-body__tertiary--strike-fontSize, 0.75rem);
   line-height: var(--baseTypo-body__tertiary--strike-lineHeight, 1rem);
   letter-spacing: var(--baseTypo-body__tertiary--strike-letterSpacing, 0.025rem);
-  text-decoration: var(--baseTypo-body__tertiary--strike-textDecorationLine, LINE-THROUGH);
+  text-decoration: var(--baseTypo-body__tertiary--strike-textDecorationLine, line-through);
 }
 .typo-body__tertiary--uppercase {
   font-size: var(--baseTypo-body__tertiary--uppercase-fontSize, 1rem);
   line-height: var(--baseTypo-body__tertiary--uppercase-lineHeight, 1.25rem);
   letter-spacing: var(--baseTypo-body__tertiary--uppercase-letterSpacing, 0.03125rem);
-  text-transform: var(--baseTypo-body__tertiary--uppercase-textTransform, UPPERCASE);
+  text-transform: var(--baseTypo-body__tertiary--uppercase-textTransform, uppercase);
 }
 .typo-heading__title {
   font-size: var(--baseTypo-heading__title-fontSize, 1rem);
   line-height: var(--baseTypo-heading__title-lineHeight, 1.25rem);
   letter-spacing: var(--baseTypo-heading__title-letterSpacing, 0.03125rem);
-  font-weight: var(--baseTypo-heading__title-fontWeight, BOLD);
+  font-weight: var(--baseTypo-heading__title-fontWeight, bold);
 }
 .typo-heading__component {
   font-size: var(--baseTypo-heading__component-fontSize, 1rem);
@@ -239,22 +239,22 @@
   font-size: var(--baseTypo-heading--medium-fontSize, 1.25rem);
   line-height: var(--baseTypo-heading--medium-lineHeight, 1.5rem);
   letter-spacing: var(--baseTypo-heading--medium-letterSpacing, 0.03125rem);
-  font-weight: var(--baseTypo-heading--medium-fontWeight, BOLD);
+  font-weight: var(--baseTypo-heading--medium-fontWeight, bold);
 }
 .typo-heading--big {
   font-size: var(--baseTypo-heading--big-fontSize, 1.5rem);
   line-height: var(--baseTypo-heading--big-lineHeight, 1.75rem);
   letter-spacing: var(--baseTypo-heading--big-letterSpacing, -0.019375rem);
-  font-weight: var(--baseTypo-heading--big-fontWeight, BOLD);
+  font-weight: var(--baseTypo-heading--big-fontWeight, bold);
 }
 .typo-heading--jumbo {
   font-size: var(--baseTypo-heading--jumbo-fontSize, 2rem);
   line-height: var(--baseTypo-heading--jumbo-lineHeight, 2.375rem);
   letter-spacing: var(--baseTypo-heading--jumbo-letterSpacing, -0.019375rem);
-  font-weight: var(--baseTypo-heading--jumbo-fontWeight, BOLD);
+  font-weight: var(--baseTypo-heading--jumbo-fontWeight, bold);
 }
 .typo-label__uppercase {
   font-size: var(--baseTypo-label__uppercase-fontSize, 0.625rem);
   line-height: var(--baseTypo-label__uppercase-lineHeight, 1rem);
-  text-transform: var(--baseTypo-label__uppercase-textTransform, UPPERCASE);
+  text-transform: var(--baseTypo-label__uppercase-textTransform, uppercase);
 }
