@@ -147,7 +147,7 @@ export interface Theme {
     size: {
       xSmall: number;
       small: number;
-      medium: number;
+      normal: number;
       large: number;
     }
   };
@@ -247,7 +247,7 @@ export interface ThemeFs {
     size: {
       xSmall: number;
       small: number;
-      medium: number;
+      normal: number;
       large: number;
     }
   };
