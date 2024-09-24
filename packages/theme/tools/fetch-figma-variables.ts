@@ -15,7 +15,7 @@ import { ThemeOptions } from "../src";
  */
 const response = await fetch('https://api.figma.com/v1/files/3rlcixpbhfBglNSctUkMys/variables/local', {
   headers: {
-    'X-FIGMA-TOKEN': '[TOKEN]'
+    'X-FIGMA-TOKEN': process.env.FIGMA_REST_API_KEY ?? "Figma token inaccessible or not set."
   }
 })
 
@@ -32,8 +32,6 @@ const outDir = './src';
 
 const organizations: Organization[] = ['atb']
 const modes: Mode[] = ['light', 'dark'];
-
-// const toUpperFirstCase = (name: string) => name.charAt(0).toUpperCase() + name.slice(1);
 
 const makeTokens = (organization: Organization, mode: Mode) => {
   const { theme, color_palette, ...rest } = {

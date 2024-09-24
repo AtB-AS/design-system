@@ -13,6 +13,8 @@ jobs:
         with:
           node-version: '20'
       - name: Fetch variables from Figma
+        env:
+          figma_token: ${{ secrets.FIGMA_REST_API_KEY }}
         run: | 
           yarn install --immutable
           echo "Mock files changed" > changes.txt
