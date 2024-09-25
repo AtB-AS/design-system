@@ -1,8 +1,10 @@
-import {ThemeVariant} from '@atb-as/theme/lib/';
+import {ThemeVariant} from '@atb-as/theme';
 
 export {ThemeVariant};
 import fg from 'fast-glob';
 import normalizeToUnix from 'normalize-path';
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 
 export type AssetType = 'colors' | 'all' | 'mono';
 
@@ -54,5 +56,7 @@ export function fgNormalizedForUnix(
       : options;
   return fg(normalizeToUnix(path), opts);
 }
+
+export const __dirname = dirname(fileURLToPath(import.meta.url))
 
 export {normalizeToUnix};
