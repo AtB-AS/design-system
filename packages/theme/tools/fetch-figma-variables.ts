@@ -15,7 +15,7 @@ import { ThemeOptions } from "../src";
  */
 const response = await fetch('https://api.figma.com/v1/files/3rlcixpbhfBglNSctUkMys/variables/local', {
   headers: {
-    'X-FIGMA-TOKEN': process.env.FIGMA_TOKEN?? "Figma token inaccessible or not set."
+    'X-FIGMA-TOKEN': process.env.FIGMA_TOKEN ?? "Figma token inaccessible or not set."
   }
 })
 
