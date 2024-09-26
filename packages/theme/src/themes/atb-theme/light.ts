@@ -5,7 +5,7 @@
 export default {
   text: {
     light: {
-      primary: "#ffffff",
+      primary: "#fffffe",
       secondary: "#e1e7eb",
       disabled: "#a9aeb1"
     },
@@ -20,7 +20,7 @@ export default {
       disabled: "#a9aeb1"
     },
     inverse: {
-      primary: "#ffffff",
+      primary: "#fffffe",
       secondary: "#e1e7eb",
       disabled: "#a9aeb1"
     }
@@ -28,7 +28,7 @@ export default {
   static: {
     background: {
       background_0: {
-        background: "#ffffff",
+        background: "#fffffe",
         text: "#000000"
       },
       background_1: {
@@ -45,11 +45,11 @@ export default {
       },
       background_accent_0: {
         background: "#37424a",
-        text: "#ffffff"
+        text: "#fffffe"
       },
       background_accent_1: {
         background: "#555e65",
-        text: "#ffffff"
+        text: "#fffffe"
       },
       background_accent_2: {
         background: "#d4e9ec",
@@ -57,7 +57,7 @@ export default {
       },
       background_accent_3: {
         background: "#007c92",
-        text: "#ffffff"
+        text: "#fffffe"
       },
       background_accent_4: {
         background: "#e5e8b8",
@@ -93,7 +93,7 @@ export default {
     info: {
       primary: {
         background: "#007c92",
-        text: "#ffffff"
+        text: "#fffffe"
       },
       secondary: {
         background: "#def5f8",
@@ -125,11 +125,11 @@ export default {
     interactive_0: {
       default: {
         background: "#007c92",
-        text: "#ffffff"
+        text: "#fffffe"
       },
       hover: {
         background: "#006678",
-        text: "#ffffff"
+        text: "#fffffe"
       },
       active: {
         background: "#a6d1d9",
@@ -147,7 +147,7 @@ export default {
     interactive_1: {
       default: {
         background: "#555e65",
-        text: "#ffffff"
+        text: "#fffffe"
       },
       hover: {
         background: "#6f777d",
@@ -155,7 +155,7 @@ export default {
       },
       active: {
         background: "#1a2024",
-        text: "#ffffff"
+        text: "#fffffe"
       },
       disabled: {
         background: "#c7cacc",
@@ -163,12 +163,12 @@ export default {
       },
       outline: {
         background: "#007c92",
-        text: "#ffffff"
+        text: "#fffffe"
       }
     },
     interactive_2: {
       default: {
-        background: "#ffffff",
+        background: "#fffffe",
         text: "#000000"
       },
       hover: {
@@ -180,12 +180,12 @@ export default {
         text: "#000000"
       },
       disabled: {
-        background: "#ffffff",
+        background: "#fffffe",
         text: "#000000"
       },
       outline: {
         background: "#007c92",
-        text: "#ffffff"
+        text: "#fffffe"
       }
     },
     interactive_3: {
@@ -207,13 +207,13 @@ export default {
       },
       outline: {
         background: "#004e5c",
-        text: "#ffffff"
+        text: "#fffffe"
       }
     },
     interactive_destructive: {
       default: {
         background: "#a51140",
-        text: "#ffffff"
+        text: "#fffffe"
       },
       hover: {
         background: "#b74166",
@@ -221,7 +221,7 @@ export default {
       },
       active: {
         background: "#380616",
-        text: "#ffffff"
+        text: "#fffffe"
       },
       disabled: {
         background: "#eed2db",
@@ -229,7 +229,7 @@ export default {
       },
       outline: {
         background: "#007c92",
-        text: "#ffffff"
+        text: "#fffffe"
       }
     }
   },
@@ -247,21 +247,21 @@ export default {
     transport_region: {
       primary: {
         background: "#007c92",
-        text: "#ffffff"
+        text: "#fffffe"
       },
       secondary: {
         background: "#006678",
-        text: "#ffffff"
+        text: "#fffffe"
       }
     },
     transport_airport_express: {
       primary: {
         background: "#a51140",
-        text: "#ffffff"
+        text: "#fffffe"
       },
       secondary: {
         background: "#7d0d31",
-        text: "#ffffff"
+        text: "#fffffe"
       }
     },
     transport_flexible: {
@@ -271,7 +271,7 @@ export default {
       },
       secondary: {
         background: "#97450e",
-        text: "#ffffff"
+        text: "#fffffe"
       }
     },
     transport_boat: {
@@ -287,51 +287,51 @@ export default {
     transport_train: {
       primary: {
         background: "#4b2942",
-        text: "#ffffff"
+        text: "#fffffe"
       },
       secondary: {
         background: "#2c1827",
-        text: "#ffffff"
+        text: "#fffffe"
       }
     },
     transport_scooter: {
       primary: {
         background: "#464a00",
-        text: "#ffffff"
+        text: "#fffffe"
       },
       secondary: {
         background: "#323600",
-        text: "#ffffff"
+        text: "#fffffe"
       }
     },
     transport_car: {
       primary: {
         background: "#5b3c53",
-        text: "#ffffff"
+        text: "#fffffe"
       },
       secondary: {
         background: "#4b2942",
-        text: "#ffffff"
+        text: "#fffffe"
       }
     },
     transport_bike: {
       primary: {
         background: "#7d0d31",
-        text: "#ffffff"
+        text: "#fffffe"
       },
       secondary: {
         background: "#5c0a24",
-        text: "#ffffff"
+        text: "#fffffe"
       }
     },
     transport_other: {
       primary: {
         background: "#37424a",
-        text: "#ffffff"
+        text: "#fffffe"
       },
       secondary: {
         background: "#2b343a",
-        text: "#ffffff"
+        text: "#fffffe"
       }
     }
   },
@@ -339,7 +339,7 @@ export default {
     allowed: {
       color: {
         background: "#007c92",
-        text: "#ffffff"
+        text: "#fffffe"
       },
       fillOpacity: 0.07500000298023224,
       strokeOpacity: 0.5,
@@ -366,7 +366,7 @@ export default {
     noEntry: {
       color: {
         background: "#380616",
-        text: "#ffffff"
+        text: "#fffffe"
       },
       fillOpacity: 0.550000011920929,
       strokeOpacity: 0.75,
