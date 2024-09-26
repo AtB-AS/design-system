@@ -26,6 +26,8 @@ if (!response.ok) {
 const { tokens } = await useFigmaToDTCG({
   api: "rest",
   response: await response.json() as GetLocalVariablesResponse
+}, {
+  verbosity: "silent"
 })
 
 const outDir = './src';

@@ -29,7 +29,7 @@
     "typescript": "^4.4.3"
   },
   "dependencies": {
-    "@tfk-samf/figma-to-dtcg": "0.3.4",
+    "@tfk-samf/figma-to-dtcg": "0.3.6",
     "hex-to-rgba": "^2.0.1",
     "ts-deepmerge": "^4.0.0",
     "typescript": "^4.4.3"
