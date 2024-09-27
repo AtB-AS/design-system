@@ -28,7 +28,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@atb-as/theme": "./packages/theme",
+    "@atb-as/theme": "11.0.0-alpha.10",
     "commander": "^9.4.0",
     "fast-glob": "^3.2.11",
     "micromatch": "^4.0.5",
