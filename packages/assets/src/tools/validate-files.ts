@@ -2,7 +2,7 @@ import {ThemeVariant} from '@atb-as/theme';
 import {constants, promises} from 'fs';
 import path from 'path';
 import {validOrgIds} from '../generate';
-import {fgNormalizedForUnix, themeVariantAsString, __dirname} from '../utils';
+import {fgNormalizedForUnix, themeVariantAsString} from '../utils';
 
 validateValidOrgs();
 

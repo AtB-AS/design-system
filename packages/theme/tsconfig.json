@@ -1,11 +1,7 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "target": "es2022",
-    "module": "es2022",
     "declaration": true,
-    "outDir": "./lib",
-    "sourceMap": true,
     "noEmit": true
   },
   "exclude": ["node_modules", "lib"],

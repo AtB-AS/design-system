@@ -7,8 +7,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
 
-    "module": "esnext",
-    "target": "esnext",
+    "module": "commonjs",
+    "target": "es5",
     "sourceMap": true,
 
     "jsx": "react",
