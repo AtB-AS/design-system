@@ -1,5 +1,4 @@
 import { useFigmaToDTCG } from "@tfk-samf/figma-to-dtcg"
-import type { Organization, Mode } from "@tfk-samf/figma-to-dtcg"
 import type { GetLocalVariablesResponse } from "@figma/rest-api-spec"
 
 import StyleDictionary from 'style-dictionary';
@@ -9,6 +8,12 @@ import { fileHeader } from 'style-dictionary/utils';
 import path from 'path';
 import { convertToCamelCase, convertToSnakeCase } from "./utils";
 import { ThemeOptions } from "../src";
+
+export type Organizations = 'atb' | 'fram' | 'innlandet' | 'nfk' | 'troms'
+export type Modes = 'light' | 'dark'
+export type SharedCollections = 'border' | 'spacing' | 'typography' | 'icon'
+export type OrganisationCollections = 'color_palette'
+export type VariantCollections = 'theme'
 
 /**
  * Mocked response from Figma Variables Rest API
@@ -23,7 +28,13 @@ if (!response.ok) {
   throw new Error(`Failed to retrieve Figma variables with status ${response.status}: ${(await response.json())?.message}`)
 }
 
-const { tokens } = await useFigmaToDTCG({
+const { tokens } = await useFigmaToDTCG<
+  Organizations,
+  Modes,
+  SharedCollections,
+  OrganisationCollections,
+  VariantCollections
+>({
   api: "rest",
   response: await response.json() as GetLocalVariablesResponse
 }, {
@@ -32,10 +43,10 @@ const { tokens } = await useFigmaToDTCG({
 
 const outDir = './src';
 
-const organizations: Organization[] = ['atb']
-const modes: Mode[] = ['light', 'dark'];
+const organizations: Organizations[] = ['atb']
+const modes: Modes[] = ['light', 'dark'];
 
-const makeTokens = (organization: Organization, mode: Mode) => {
+const makeTokens = (organization: Organizations, mode: Modes) => {
   const { theme, color_palette, ...rest } = {
     ...tokens,
     theme: tokens['theme']?.[`${organization}_${mode}`],
@@ -245,14 +256,14 @@ StyleDictionary.registerFormat({
  * @param organization Name of the organization
  * @returns Output folder
  */
-const makeDestination = (organization: Organization, themeOptions?: ThemeOptions): string => path.join(outDir, `${themeOptions?.useFigmaStructure ? 'themes-fs' : 'themes'}/${organization}-theme/`);
+const makeDestination = (organization: Organizations, themeOptions?: ThemeOptions): string => path.join(outDir, `${themeOptions?.useFigmaStructure ? 'themes-fs' : 'themes'}/${organization}-theme/`);
 
 /**
  * @param organization Name of the organization
  * @param mode Theme mode
  * @returns Style Dictionary config for the org-mode combination
  */
-const getStyleDictionaryConfig = (organization: Organization, mode: Mode): Config => {
+const getStyleDictionaryConfig = (organization: Organizations, mode: Modes): Config => {
 
   return {
     log: {

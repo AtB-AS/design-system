@@ -17,6 +17,7 @@ jobs:
           FIGMA_TOKEN: ${{ secrets.FIGMA_REST_API_KEY }}
         run: | 
           yarn install --immutable
+          yarn fetch-variables
           yarn build-all
       - name: Commit new design tokens
         run: | 
