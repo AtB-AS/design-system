@@ -5,8 +5,11 @@
   "description": "AtB Design System Colors",
   "license": "EUPL-1.2",
   "type": "module",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js"
+  },
+  "types": "./lib/index.d.ts",
   "files": [
     "lib"
   ],

@@ -9,6 +9,9 @@
     "generate-assets": "./lib/bin.js"
   },
   "main": "./lib/generate.js",
+  "exports": {
+    ".": "./lib/generate.js"
+  },
   "files": [
     "lib",
     "!lib/tools",
@@ -29,7 +32,6 @@
     "access": "public"
   },
   "dependencies": {
-    "@atb-as/theme": "^11.0.0-alpha.8",
     "commander": "^9.4.0",
     "fast-glob": "^3.2.11",
     "micromatch": "^4.0.5",
