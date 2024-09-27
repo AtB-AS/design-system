@@ -26,6 +26,8 @@ export type TextColor = 'primary' | 'secondary' | 'disabled';
 
 export type TextColorType = 'dark' | 'light';
 
+export type RadiusSizes = keyof Theme['border']['radius']
+
 export type ContrastColor = {
   background: string;
   text: string;
