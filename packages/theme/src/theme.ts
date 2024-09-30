@@ -48,6 +48,7 @@ export type InteractiveColor<T = ContrastColor> = {
   active: T;
   disabled: T;
   outline: T;
+  destructive: T;
 };
 
 // The colors can be changed, but should follow standard practice as commented:

@@ -15,53 +15,9 @@ export type SharedCollections = 'border' | 'spacing' | 'typography' | 'icon'
 export type OrganisationCollections = 'color_palette'
 export type VariantCollections = 'theme'
 
-/**
- * Mocked response from Figma Variables Rest API
- */
-const response = await fetch('https://api.figma.com/v1/files/3rlcixpbhfBglNSctUkMys/variables/local', {
-  headers: {
-    'X-FIGMA-TOKEN': process.env.FIGMA_TOKEN ?? "Figma token inaccessible or not set."
-  }
-})
-
-if (!response.ok) {
-  throw new Error(`Failed to retrieve Figma variables with status ${response.status}: ${(await response.json())?.message}`)
-}
-
-const { tokens } = await useFigmaToDTCG<
-  Organizations,
-  Modes,
-  SharedCollections,
-  OrganisationCollections,
-  VariantCollections
->({
-  api: "rest",
-  response: await response.json() as GetLocalVariablesResponse
-}, {
-  verbosity: "silent"
-})
-
 const outDir = './src';
-
 const organizations: Organizations[] = ['atb']
 const modes: Modes[] = ['light', 'dark'];
-
-const makeTokens = (organization: Organizations, mode: Modes) => {
-  const { theme, color_palette, ...rest } = {
-    ...tokens,
-    theme: tokens['theme']?.[`${organization}_${mode}`],
-    color_palette: tokens['color_palette']?.[organization]
-  }
-
-  return {
-    ...theme,
-    ...color_palette,
-    ...rest.border,
-    ...rest.typography,
-    ...rest.spacing,
-    ...rest.icon
-  } as DesignTokens
-}
 
 /**
  * Appends the name of the collection to the file path, such that
@@ -99,7 +55,6 @@ StyleDictionary.registerTransform({
         case "3":
         case "4":
         case "5":
-        case "destructive":
         case "city":
         case "region":
         case "airportExpress":
@@ -110,6 +65,13 @@ StyleDictionary.registerTransform({
         case "scooter":
         case "car":
         case "other":
+          return acc
+        case "destructive":
+          // Keep the destructive key if it is the last one
+          // Happens in `interactive/x/destructive`
+          if (index === 3) {
+            return acc.concat(cur)
+          }
           return acc
         case "color":
           if (index === 0) {
@@ -124,7 +86,7 @@ StyleDictionary.registerTransform({
             }
             else return acc.concat(cur)
           }
-          
+
           return acc.concat("static", "background")
         case "neutral":
           return acc.concat(`background_${all[index + 1]}`)
@@ -140,7 +102,7 @@ StyleDictionary.registerTransform({
           // If ContrastColor
           if (index === all.length - 1 && all[index - 1] === "foreground" && cur === "primary") {
             return acc
-          } 
+          }
 
           return acc.concat(cur)
         case "dynamic":
@@ -258,78 +220,126 @@ StyleDictionary.registerFormat({
  */
 const makeDestination = (organization: Organizations, themeOptions?: ThemeOptions): string => path.join(outDir, `${themeOptions?.useFigmaStructure ? 'themes-fs' : 'themes'}/${organization}-theme/`);
 
-/**
- * @param organization Name of the organization
- * @param mode Theme mode
- * @returns Style Dictionary config for the org-mode combination
- */
-const getStyleDictionaryConfig = (organization: Organizations, mode: Modes): Config => {
+const generateThemes = async () => {
 
-  return {
-    log: {
-      verbosity: 'silent',
-    },
-    tokens: makeTokens(organization, mode),
-    // include: [`${srcDir}/**/*.${organization}.json`],
-    // source: [`${srcDir}/**/*.${organization}_${mode}.json`, `${srcDir}/**/@(border|spacing|typography)*.json`],
-    platforms: {
-      ts: {
-        buildPath: makeDestination(organization),
-        expand: true,
-        // `js` transformGroup with `attribbute/append-type` prepended
-        transforms: ['attribute/append-type', 'attribute/cti', 'attribute/compat-path', 'name/pascal', 'size/rem', 'color/hex'],
-        files: [
-          {
-            format: 'typescript/obj',
-            destination: `${mode}.ts`,
-            filter: 'filter-palette',
-          },
-          {
-            format: 'index',
-            options: {
-              content: tsIndex,
-            },
-            destination: 'theme.ts',
-          },
-        ],
+  /**
+   * Mocked response from Figma Variables Rest API
+   */
+  const response = await fetch('https://api.figma.com/v1/files/3rlcixpbhfBglNSctUkMys/variables/local', {
+    headers: {
+      'X-FIGMA-TOKEN': process.env.FIGMA_TOKEN ?? "Figma token inaccessible or not set."
+    }
+  })
+
+  if (!response.ok) {
+    throw new Error(`Failed to retrieve Figma variables with status ${response.status}: ${(await response.json())?.message}`)
+  }
+
+  const { tokens } = await useFigmaToDTCG<
+    Organizations,
+    Modes,
+    SharedCollections,
+    OrganisationCollections,
+    VariantCollections
+  >({
+    api: "rest",
+    response: await response.json() as GetLocalVariablesResponse
+  }, {
+    verbosity: "silent"
+  })
+
+  const makeTokens = (organization: Organizations, mode: Modes) => {
+    const { theme, color_palette, ...rest } = {
+      ...tokens,
+      theme: tokens['theme']?.[`${organization}_${mode}`],
+      color_palette: tokens['color_palette']?.[organization]
+    }
+
+    return {
+      ...theme,
+      ...color_palette,
+      ...rest.border,
+      ...rest.typography,
+      ...rest.spacing,
+      ...rest.icon
+    } as DesignTokens
+  }
+
+  /**
+   * @param organization Name of the organization
+   * @param mode Theme mode
+   * @returns Style Dictionary config for the org-mode combination
+   */
+  const getStyleDictionaryConfig = (organization: Organizations, mode: Modes): Config => {
+
+    return {
+      log: {
+        verbosity: 'silent',
       },
-      tsFs: {
-        buildPath: makeDestination(organization, {
-          useFigmaStructure: true
-        }),
-        expand: true,
-        // `js` transformGroup with `attribbute/append-type` prepended
-        transforms: ['attribute/append-type', 'attribute/cti', 'attribute/compat-path', 'name/pascal', 'size/rem', 'color/hex'],
-        files: [
-          {
-            format: 'typescript/obj',
-            destination: `${mode}.ts`,
-            options: {
-              useFigmaStructure: true
-            } as ThemeOptions,
-            filter: 'filter-palette',
-          },
-          {
-            format: 'index',
-            options: {
-              content: tsIndex,
+      tokens: makeTokens(organization, mode),
+      // include: [`${srcDir}/**/*.${organization}.json`],
+      // source: [`${srcDir}/**/*.${organization}_${mode}.json`, `${srcDir}/**/@(border|spacing|typography)*.json`],
+      platforms: {
+        ts: {
+          buildPath: makeDestination(organization),
+          expand: true,
+          // `js` transformGroup with `attribbute/append-type` prepended
+          transforms: ['attribute/append-type', 'attribute/cti', 'attribute/compat-path', 'name/pascal', 'size/rem', 'color/hex'],
+          files: [
+            {
+              format: 'typescript/obj',
+              destination: `${mode}.ts`,
+              filter: 'filter-palette',
             },
-            destination: 'theme.ts',
-          },
-        ],
-      }
-    },
+            {
+              format: 'index',
+              options: {
+                content: tsIndex,
+              },
+              destination: 'theme.ts',
+            },
+          ],
+        },
+        tsFs: {
+          buildPath: makeDestination(organization, {
+            useFigmaStructure: true
+          }),
+          expand: true,
+          // `js` transformGroup with `attribbute/append-type` prepended
+          transforms: ['attribute/append-type', 'attribute/cti', 'attribute/compat-path', 'name/pascal', 'size/rem', 'color/hex'],
+          files: [
+            {
+              format: 'typescript/obj',
+              destination: `${mode}.ts`,
+              options: {
+                useFigmaStructure: true
+              } as ThemeOptions,
+              filter: 'filter-palette',
+            },
+            {
+              format: 'index',
+              options: {
+                content: tsIndex,
+              },
+              destination: 'theme.ts',
+            },
+          ],
+        }
+      },
+    };
   };
-};
 
-// Generate files for each organization-mode combination
-for (const organization of organizations) {
-  console.info(`\n👷  Built ${organization} tokens      | 🌙 & 🌞 |`);
-  await Promise.all(
-    modes.map((mode) => new StyleDictionary(
-      getStyleDictionaryConfig(organization, mode),
-    ).buildAllPlatforms()),
-  );
+  // Generate files for each organization-mode combination
+  for (const organization of organizations) {
+    console.info(`\n👷  Built ${organization} tokens      | 🌙 & 🌞 |`);
+    await Promise.all(
+      modes.map((mode) => new StyleDictionary(
+        getStyleDictionaryConfig(organization, mode),
+      ).buildAllPlatforms()),
+    );
+  }
 }
+
+generateThemes()
 
 console.log('\n');
