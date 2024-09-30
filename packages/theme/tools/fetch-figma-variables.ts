@@ -16,7 +16,7 @@ export type OrganisationCollections = 'color_palette'
 export type VariantCollections = 'theme'
 
 const outDir = './src';
-const organizations: Organizations[] = ['atb']
+const organizations: Organizations[] = ['atb', 'troms']
 const modes: Modes[] = ['light', 'dark'];
 
 /**
