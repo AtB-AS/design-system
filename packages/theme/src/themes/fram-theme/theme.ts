@@ -1,5 +1,4 @@
 import {ContrastColor, TextColorType, Themes} from '../../theme';
-import {borderRadius, borderWidth, iconSizes, spacings} from '../../sizes';
 import hexToRgba from "hex-to-rgba";
 
 const textColors = {
@@ -268,7 +267,21 @@ export const baseColors = {
 
 const themes: Themes = {
   light: {
-    spacings: spacings,
+    spacings: {
+      xSmall: 4,
+      small: 8,
+      medium: 12,
+      large: 20,
+      xLarge: 24
+    },
+    icon: {
+      size: {
+        xSmall: 12,
+        small: 16,
+        normal: 20,
+        large: 26
+      }
+    },
     interactive: {
       interactive_0: {
         default: baseColors.blue_dark_600,
@@ -331,14 +344,6 @@ const themes: Themes = {
       transport_train: {
         primary: baseColors.red_dark_800,
         secondary: baseColors.red_dark_900,
-      },
-      transport_airport: {
-        primary: baseColors.orange_400,
-        secondary: baseColors.orange_500,
-      },
-      transport_plane: {
-        primary: baseColors.pink_light_300,
-        secondary: baseColors.pink_light_400,
       },
       transport_flexible: {
         primary: baseColors.pink_light_300,
@@ -408,32 +413,36 @@ const themes: Themes = {
       primary: baseColors.gray_100.background,
       secondary: baseColors.gray_1000.background,
       focus: baseColors.blue_dark_600.background,
-      radius: borderRadius,
-      width: borderWidth,
-    },
-    icon: {
-      size: iconSizes,
+      radius: {
+        small: 4,
+        regular: 8,
+        circle: 20
+      },
+      width: {
+        slim: 1,
+        medium: 2
+      }
     },
     geofencingZones: {
-      Allowed: {
+      allowed: {
         color: baseColors.blue_dark_500,
         fillOpacity: 0.075,
         strokeOpacity: 0.5,
         layerIndexWeight: 1,
       },
-      Slow: {
+      slow: {
         color: baseColors.yellow_100,
         fillOpacity: 0.6,
         strokeOpacity: 0.8,
         layerIndexWeight: 2,
       },
-      NoParking: {
+      noParking: {
         color: baseColors.red_400,
         fillOpacity: 0.5,
         strokeOpacity: 0.7,
         layerIndexWeight: 3,
       },
-      NoEntry: {
+      noEntry: {
         color: baseColors.red_900,
         fillOpacity: 0.55,
         strokeOpacity: 0.75,
@@ -442,7 +451,21 @@ const themes: Themes = {
     },
   },
   dark: {
-    spacings: spacings,
+    spacings: {
+      xSmall: 4,
+      small: 8,
+      medium: 12,
+      large: 20,
+      xLarge: 24
+    },
+    icon: {
+      size: {
+        xSmall: 12,
+        small: 16,
+        normal: 20,
+        large: 26
+      }
+    },
     interactive: {
       interactive_0: {
         default: baseColors.blue_logo_500,
@@ -505,14 +528,6 @@ const themes: Themes = {
       transport_train: {
         primary: baseColors.red_dark_800,
         secondary: baseColors.red_dark_700,
-      },
-      transport_airport: {
-        primary: baseColors.orange_400,
-        secondary: baseColors.orange_300,
-      },
-      transport_plane: {
-        primary: baseColors.pink_light_300,
-        secondary: baseColors.pink_light_200,
       },
       transport_flexible: {
         primary: baseColors.pink_light_300,
@@ -582,32 +597,36 @@ const themes: Themes = {
       primary: baseColors.blue_dark_800.background,
       secondary: baseColors.gray_1000.background,
       focus: baseColors.blue_dark_600.background,
-      radius: borderRadius,
-      width: borderWidth,
-    },
-    icon: {
-      size: iconSizes,
+      radius: {
+        small: 4,
+        regular: 8,
+        circle: 20
+      },
+      width: {
+        slim: 1,
+        medium: 2
+      }
     },
     geofencingZones: {
-      Allowed: {
+      allowed: {
         color: baseColors.blue_logo_500,
         fillOpacity: 0.075,
         strokeOpacity: 0.5,
         layerIndexWeight: 1,
       },
-      Slow: {
+      slow: {
         color: baseColors.yellow_100,
         fillOpacity: 0.6,
         strokeOpacity: 0.8,
         layerIndexWeight: 2,
       },
-      NoParking: {
+      noParking: {
         color: baseColors.red_400,
         fillOpacity: 0.5,
         strokeOpacity: 0.7,
         layerIndexWeight: 3,
       },
-      NoEntry: {
+      noEntry: {
         color: baseColors.red_900,
         fillOpacity: 0.55,
         strokeOpacity: 0.75,

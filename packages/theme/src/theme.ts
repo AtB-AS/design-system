@@ -2,17 +2,17 @@ import merge from 'ts-deepmerge';
 import {ConfigurationOverride, overrideConfig} from './utils/override-config';
 import {
   AtBThemes,
-  // NfkThemes,
-  // FRAMThemes,
-  // TromsThemes,
-  // InnlandetThemes,
+  NfkThemes,
+  FRAMThemes,
+  TromsThemes,
+  InnlandetThemes,
 } from './themes';
 
 import {
   AtBThemesFs,
   // NfkThemes,
   // FRAMThemes,
-  // TromsThemes,
+  TromsThemesFs,
   // InnlandetThemes,
 } from './themes-fs';
 
@@ -313,14 +313,27 @@ export function createThemesFor<T extends ThemeOptions>(
       } else {
         return AtBThemes as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;;
       }
-    // case ThemeVariant.Nfk:
-    //   return NfkThemes;
-    // case ThemeVariant.FRAM:
-    //   return FRAMThemes;
-    // case ThemeVariant.Troms:
-    //   return TromsThemes;
-    // case ThemeVariant.Innlandet:
-    //   return InnlandetThemes;
+    case ThemeVariant.Troms:
+      if (themeOptions?.useFigmaStructure) {
+        return TromsThemesFs as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>; 
+      } else {
+        return TromsThemes as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
+      }
+    case ThemeVariant.Nfk:
+      if (themeOptions.useFigmaStructure) {
+        console.log(`Note that Nfk does not support the Figma structure yet. Return old structure.`)
+      }
+      return NfkThemes as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
+    case ThemeVariant.FRAM:
+      if (themeOptions.useFigmaStructure) {
+        console.log(`Note that FRAM does not support the Figma structure yet. Return old structure.`)
+      }
+      return FRAMThemes as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
+    case ThemeVariant.Innlandet:
+      if (themeOptions.useFigmaStructure) {
+        console.log(`Note that Innlandet does not support the Figma structure yet. Return old structure.`)
+      }
+      return InnlandetThemes as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
     default:
       throw Error('A valid ThemeVariant must be provided');
   }

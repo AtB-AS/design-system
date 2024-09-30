@@ -354,13 +354,22 @@ export default {
       color: "#ffffff"
     },
     slow: {
-      color: "#ffffff"
+      color: {
+        background: "#fffcde",
+        text: "#000000"
+      }
     },
     noParking: {
-      color: "#ffffff"
+      color: {
+        background: "#d44546",
+        text: "#000000"
+      }
     },
     noEntry: {
-      color: "#ffffff"
+      color: {
+        background: "#54090a",
+        text: "#ffffff"
+      }
     }
   },
   border: {

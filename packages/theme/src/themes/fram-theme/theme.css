@@ -5,26 +5,26 @@
   --border-primary: #E6E6E6;
   --border-secondary: #000000;
   --border-focus: #005686;
-  --border-radius-circle: 1.25rem;
-  --border-radius-regular: 0.5rem;
   --border-radius-small: 0.25rem;
+  --border-radius-regular: 0.5rem;
+  --border-radius-circle: 1.25rem;
   --border-width-slim: 0.0625rem;
   --border-width-medium: 0.125rem;
 
-  --spacings-xLarge: 1.5rem;
-  --spacings-large: 1.25rem;
-  --spacings-medium: 0.75rem;
-  --spacings-small: 0.5rem;
   --spacings-xSmall: 0.25rem;
+  --spacings-small: 0.5rem;
+  --spacings-medium: 0.75rem;
+  --spacings-large: 1.25rem;
+  --spacings-xLarge: 1.5rem;
 
-  --icon-size-large: 1.75rem;
-  --icon-size-normal: 1.25rem;
-  --icon-size-small: 1rem;
   --icon-size-xSmall: 0.75rem;
+  --icon-size-small: 1rem;
+  --icon-size-normal: 1.25rem;
+  --icon-size-large: 1.625rem;
 
   --text-colors-primary: #000000;
-  --text-colors-secondary: rgba(0, 0, 0, 0.91);
-  --text-colors-disabled: rgba(0, 0, 0, 0.2);
+  --text-colors-secondary: RGBA(0, 0, 0, 0.91);
+  --text-colors-disabled: RGBA(0, 0, 0, 0.2);
 
   --static-background-background_0-background: #FFFFFF;
   --static-background-background_0-text: #000000;
@@ -57,7 +57,7 @@
   --interactive-interactive_0-hover-text: #FFFFFF;
   --interactive-interactive_0-active-background: #80ABC3;
   --interactive-interactive_0-active-text: #000000;
-  --interactive-interactive_0-disabled-background: rgba(0, 86, 134, 0.2);
+  --interactive-interactive_0-disabled-background: RGBA(0, 86, 134, 0.2);
   --interactive-interactive_0-disabled-text: #FFFFFF;
   --interactive-interactive_0-outline-background: #3395C4;
   --interactive-interactive_0-outline-text: #000000;
@@ -69,7 +69,7 @@
   --interactive-interactive_1-hover-text: #FFFFFF;
   --interactive-interactive_1-active-background: #011622;
   --interactive-interactive_1-active-text: #FFFFFF;
-  --interactive-interactive_1-disabled-background: rgba(0, 86, 134, 0.2);
+  --interactive-interactive_1-disabled-background: RGBA(0, 86, 134, 0.2);
   --interactive-interactive_1-disabled-text: #FFFFFF;
   --interactive-interactive_1-outline-background: #3395C4;
   --interactive-interactive_1-outline-text: #000000;
@@ -81,7 +81,7 @@
   --interactive-interactive_2-hover-text: #000000;
   --interactive-interactive_2-active-background: #ACD097;
   --interactive-interactive_2-active-text: #000000;
-  --interactive-interactive_2-disabled-background: rgba(255, 255, 255, 0.2);
+  --interactive-interactive_2-disabled-background: RGBA(255, 255, 255, 0.2);
   --interactive-interactive_2-disabled-text: #000000;
   --interactive-interactive_2-outline-background: #3395C4;
   --interactive-interactive_2-outline-text: #000000;
@@ -93,7 +93,7 @@
   --interactive-interactive_3-hover-text: #000000;
   --interactive-interactive_3-active-background: #ACD097;
   --interactive-interactive_3-active-text: #000000;
-  --interactive-interactive_3-disabled-background: rgba(130, 185, 98, 0.2);
+  --interactive-interactive_3-disabled-background: RGBA(130, 185, 98, 0.2);
   --interactive-interactive_3-disabled-text: #000000;
   --interactive-interactive_3-outline-background: #3395C4;
   --interactive-interactive_3-outline-text: #000000;
@@ -105,7 +105,7 @@
   --interactive-interactive_destructive-hover-text: #FFFFFF;
   --interactive-interactive_destructive-active-background: #F4A4A7;
   --interactive-interactive_destructive-active-text: #000000;
-  --interactive-interactive_destructive-disabled-background: rgba(227, 27, 34, 0.2);
+  --interactive-interactive_destructive-disabled-background: RGBA(227, 27, 34, 0.2);
   --interactive-interactive_destructive-disabled-text: #FFFFFF;
   --interactive-interactive_destructive-outline-background: #3395C4;
   --interactive-interactive_destructive-outline-text: #000000;
@@ -132,14 +132,6 @@
   --transport-transport_train-primary-text: #FFFFFF;
   --transport-transport_train-secondary-background: #2B0913;
   --transport-transport_train-secondary-text: #FFFFFF;
-  --transport-transport_airport-primary-background: #F15629;
-  --transport-transport_airport-primary-text: #000000;
-  --transport-transport_airport-secondary-background: #C94823;
-  --transport-transport_airport-secondary-text: #FFFFFF;
-  --transport-transport_plane-primary-background: #EE8076;
-  --transport-transport_plane-primary-text: #000000;
-  --transport-transport_plane-secondary-background: #CC6E66;
-  --transport-transport_plane-secondary-text: #000000;
   --transport-transport_flexible-primary-background: #EE8076;
   --transport-transport_flexible-primary-text: #000000;
   --transport-transport_flexible-secondary-background: #CC6E66;
@@ -185,26 +177,26 @@
   --border-primary: #012C44;
   --border-secondary: #000000;
   --border-focus: #005686;
-  --border-radius-circle: 1.25rem;
-  --border-radius-regular: 0.5rem;
   --border-radius-small: 0.25rem;
+  --border-radius-regular: 0.5rem;
+  --border-radius-circle: 1.25rem;
   --border-width-slim: 0.0625rem;
   --border-width-medium: 0.125rem;
 
-  --spacings-xLarge: 1.5rem;
-  --spacings-large: 1.25rem;
-  --spacings-medium: 0.75rem;
-  --spacings-small: 0.5rem;
   --spacings-xSmall: 0.25rem;
+  --spacings-small: 0.5rem;
+  --spacings-medium: 0.75rem;
+  --spacings-large: 1.25rem;
+  --spacings-xLarge: 1.5rem;
 
-  --icon-size-large: 1.75rem;
-  --icon-size-normal: 1.25rem;
-  --icon-size-small: 1rem;
   --icon-size-xSmall: 0.75rem;
+  --icon-size-small: 1rem;
+  --icon-size-normal: 1.25rem;
+  --icon-size-large: 1.625rem;
 
   --text-colors-primary: #FFFFFF;
-  --text-colors-secondary: rgba(255, 255, 255, 0.77);
-  --text-colors-disabled: rgba(255, 255, 255, 0.2);
+  --text-colors-secondary: RGBA(255, 255, 255, 0.77);
+  --text-colors-disabled: RGBA(255, 255, 255, 0.2);
 
   --static-background-background_0-background: #011622;
   --static-background-background_0-text: #FFFFFF;
@@ -237,7 +229,7 @@
   --interactive-interactive_0-hover-text: #FFFFFF;
   --interactive-interactive_0-active-background: #99CAE2;
   --interactive-interactive_0-active-text: #000000;
-  --interactive-interactive_0-disabled-background: rgba(0, 122, 181, 0.2);
+  --interactive-interactive_0-disabled-background: RGBA(0, 122, 181, 0.2);
   --interactive-interactive_0-disabled-text: #FFFFFF;
   --interactive-interactive_0-outline-background: #ACD097;
   --interactive-interactive_0-outline-text: #000000;
@@ -249,7 +241,7 @@
   --interactive-interactive_1-hover-text: #FFFFFF;
   --interactive-interactive_1-active-background: #011925;
   --interactive-interactive_1-active-text: #FFFFFF;
-  --interactive-interactive_1-disabled-background: rgba(0, 122, 181, 0.2);
+  --interactive-interactive_1-disabled-background: RGBA(0, 122, 181, 0.2);
   --interactive-interactive_1-disabled-text: #FFFFFF;
   --interactive-interactive_1-outline-background: #ACD097;
   --interactive-interactive_1-outline-text: #000000;
@@ -261,7 +253,7 @@
   --interactive-interactive_2-hover-text: #FFFFFF;
   --interactive-interactive_2-active-background: #284320;
   --interactive-interactive_2-active-text: #FFFFFF;
-  --interactive-interactive_2-disabled-background: rgba(1, 22, 34, 0.2);
+  --interactive-interactive_2-disabled-background: RGBA(1, 22, 34, 0.2);
   --interactive-interactive_2-disabled-text: #FFFFFF;
   --interactive-interactive_2-outline-background: #ACD097;
   --interactive-interactive_2-outline-text: #000000;
@@ -273,7 +265,7 @@
   --interactive-interactive_3-hover-text: #FFFFFF;
   --interactive-interactive_3-active-background: #475E40;
   --interactive-interactive_3-active-text: #FFFFFF;
-  --interactive-interactive_3-disabled-background: rgba(40, 67, 32, 0.2);
+  --interactive-interactive_3-disabled-background: RGBA(40, 67, 32, 0.2);
   --interactive-interactive_3-disabled-text: #FFFFFF;
   --interactive-interactive_3-outline-background: #ACD097;
   --interactive-interactive_3-outline-text: #000000;
@@ -285,7 +277,7 @@
   --interactive-interactive_destructive-hover-text: #FFFFFF;
   --interactive-interactive_destructive-active-background: #F4A4A7;
   --interactive-interactive_destructive-active-text: #000000;
-  --interactive-interactive_destructive-disabled-background: rgba(227, 27, 34, 0.2);
+  --interactive-interactive_destructive-disabled-background: RGBA(227, 27, 34, 0.2);
   --interactive-interactive_destructive-disabled-text: #FFFFFF;
   --interactive-interactive_destructive-outline-background: #ACD097;
   --interactive-interactive_destructive-outline-text: #000000;
@@ -312,14 +304,6 @@
   --transport-transport_train-primary-text: #FFFFFF;
   --transport-transport_train-secondary-background: #6B2F41;
   --transport-transport_train-secondary-text: #FFFFFF;
-  --transport-transport_airport-primary-background: #F15629;
-  --transport-transport_airport-primary-text: #000000;
-  --transport-transport_airport-secondary-background: #F5805F;
-  --transport-transport_airport-secondary-text: #000000;
-  --transport-transport_plane-primary-background: #EE8076;
-  --transport-transport_plane-primary-text: #000000;
-  --transport-transport_plane-secondary-background: #F4AAA4;
-  --transport-transport_plane-secondary-text: #000000;
   --transport-transport_flexible-primary-background: #EE8076;
   --transport-transport_flexible-primary-text: #000000;
   --transport-transport_flexible-secondary-background: #F4AAA4;
@@ -365,26 +349,26 @@
   --border-primary: #012C44;
   --border-secondary: #000000;
   --border-focus: #005686;
-  --border-radius-circle: 1.25rem;
-  --border-radius-regular: 0.5rem;
   --border-radius-small: 0.25rem;
+  --border-radius-regular: 0.5rem;
+  --border-radius-circle: 1.25rem;
   --border-width-slim: 0.0625rem;
   --border-width-medium: 0.125rem;
 
-  --spacings-xLarge: 1.5rem;
-  --spacings-large: 1.25rem;
-  --spacings-medium: 0.75rem;
-  --spacings-small: 0.5rem;
   --spacings-xSmall: 0.25rem;
+  --spacings-small: 0.5rem;
+  --spacings-medium: 0.75rem;
+  --spacings-large: 1.25rem;
+  --spacings-xLarge: 1.5rem;
 
-  --icon-size-large: 1.75rem;
-  --icon-size-normal: 1.25rem;
-  --icon-size-small: 1rem;
   --icon-size-xSmall: 0.75rem;
+  --icon-size-small: 1rem;
+  --icon-size-normal: 1.25rem;
+  --icon-size-large: 1.625rem;
 
   --text-colors-primary: #FFFFFF;
-  --text-colors-secondary: rgba(255, 255, 255, 0.77);
-  --text-colors-disabled: rgba(255, 255, 255, 0.2);
+  --text-colors-secondary: RGBA(255, 255, 255, 0.77);
+  --text-colors-disabled: RGBA(255, 255, 255, 0.2);
 
   --static-background-background_0-background: #011622;
   --static-background-background_0-text: #FFFFFF;
@@ -417,7 +401,7 @@
   --interactive-interactive_0-hover-text: #FFFFFF;
   --interactive-interactive_0-active-background: #99CAE2;
   --interactive-interactive_0-active-text: #000000;
-  --interactive-interactive_0-disabled-background: rgba(0, 122, 181, 0.2);
+  --interactive-interactive_0-disabled-background: RGBA(0, 122, 181, 0.2);
   --interactive-interactive_0-disabled-text: #FFFFFF;
   --interactive-interactive_0-outline-background: #ACD097;
   --interactive-interactive_0-outline-text: #000000;
@@ -429,7 +413,7 @@
   --interactive-interactive_1-hover-text: #FFFFFF;
   --interactive-interactive_1-active-background: #011925;
   --interactive-interactive_1-active-text: #FFFFFF;
-  --interactive-interactive_1-disabled-background: rgba(0, 122, 181, 0.2);
+  --interactive-interactive_1-disabled-background: RGBA(0, 122, 181, 0.2);
   --interactive-interactive_1-disabled-text: #FFFFFF;
   --interactive-interactive_1-outline-background: #ACD097;
   --interactive-interactive_1-outline-text: #000000;
@@ -441,7 +425,7 @@
   --interactive-interactive_2-hover-text: #FFFFFF;
   --interactive-interactive_2-active-background: #284320;
   --interactive-interactive_2-active-text: #FFFFFF;
-  --interactive-interactive_2-disabled-background: rgba(1, 22, 34, 0.2);
+  --interactive-interactive_2-disabled-background: RGBA(1, 22, 34, 0.2);
   --interactive-interactive_2-disabled-text: #FFFFFF;
   --interactive-interactive_2-outline-background: #ACD097;
   --interactive-interactive_2-outline-text: #000000;
@@ -453,7 +437,7 @@
   --interactive-interactive_3-hover-text: #FFFFFF;
   --interactive-interactive_3-active-background: #475E40;
   --interactive-interactive_3-active-text: #FFFFFF;
-  --interactive-interactive_3-disabled-background: rgba(40, 67, 32, 0.2);
+  --interactive-interactive_3-disabled-background: RGBA(40, 67, 32, 0.2);
   --interactive-interactive_3-disabled-text: #FFFFFF;
   --interactive-interactive_3-outline-background: #ACD097;
   --interactive-interactive_3-outline-text: #000000;
@@ -465,7 +449,7 @@
   --interactive-interactive_destructive-hover-text: #FFFFFF;
   --interactive-interactive_destructive-active-background: #F4A4A7;
   --interactive-interactive_destructive-active-text: #000000;
-  --interactive-interactive_destructive-disabled-background: rgba(227, 27, 34, 0.2);
+  --interactive-interactive_destructive-disabled-background: RGBA(227, 27, 34, 0.2);
   --interactive-interactive_destructive-disabled-text: #FFFFFF;
   --interactive-interactive_destructive-outline-background: #ACD097;
   --interactive-interactive_destructive-outline-text: #000000;
@@ -492,14 +476,6 @@
   --transport-transport_train-primary-text: #FFFFFF;
   --transport-transport_train-secondary-background: #6B2F41;
   --transport-transport_train-secondary-text: #FFFFFF;
-  --transport-transport_airport-primary-background: #F15629;
-  --transport-transport_airport-primary-text: #000000;
-  --transport-transport_airport-secondary-background: #F5805F;
-  --transport-transport_airport-secondary-text: #000000;
-  --transport-transport_plane-primary-background: #EE8076;
-  --transport-transport_plane-primary-text: #000000;
-  --transport-transport_plane-secondary-background: #F4AAA4;
-  --transport-transport_plane-secondary-text: #000000;
   --transport-transport_flexible-primary-background: #EE8076;
   --transport-transport_flexible-primary-text: #000000;
   --transport-transport_flexible-secondary-background: #F4AAA4;
@@ -630,22 +606,6 @@
 .transport-transport_train-secondary {
   background-color: var(--transport-transport_train-secondary-background);
   color: var(--transport-transport_train-secondary-text);
-}
-.transport-transport_airport-primary {
-  background-color: var(--transport-transport_airport-primary-background);
-  color: var(--transport-transport_airport-primary-text);
-}
-.transport-transport_airport-secondary {
-  background-color: var(--transport-transport_airport-secondary-background);
-  color: var(--transport-transport_airport-secondary-text);
-}
-.transport-transport_plane-primary {
-  background-color: var(--transport-transport_plane-primary-background);
-  color: var(--transport-transport_plane-primary-text);
-}
-.transport-transport_plane-secondary {
-  background-color: var(--transport-transport_plane-secondary-background);
-  color: var(--transport-transport_plane-secondary-text);
 }
 .transport-transport_flexible-primary {
   background-color: var(--transport-transport_flexible-primary-background);

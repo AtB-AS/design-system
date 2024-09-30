@@ -5,22 +5,22 @@
   --border-primary: #F1F2F2;
   --border-secondary: #000000;
   --border-focus: #007C92;
-  --border-radius-circle: 1.25rem;
-  --border-radius-regular: 0.5rem;
   --border-radius-small: 0.25rem;
+  --border-radius-regular: 0.5rem;
+  --border-radius-circle: 1.25rem;
   --border-width-slim: 0.0625rem;
   --border-width-medium: 0.125rem;
 
-  --spacings-xLarge: 1.5rem;
-  --spacings-large: 1.25rem;
-  --spacings-medium: 0.75rem;
-  --spacings-small: 0.5rem;
   --spacings-xSmall: 0.25rem;
+  --spacings-small: 0.5rem;
+  --spacings-medium: 0.75rem;
+  --spacings-large: 1.25rem;
+  --spacings-xLarge: 1.5rem;
 
-  --icon-size-large: 1.75rem;
-  --icon-size-normal: 1.25rem;
-  --icon-size-small: 1rem;
   --icon-size-xSmall: 0.75rem;
+  --icon-size-small: 1rem;
+  --icon-size-normal: 1.25rem;
+  --icon-size-large: 1.625rem;
 
   --text-colors-primary: #000000;
   --text-colors-secondary: #555E65;
@@ -132,14 +132,6 @@
   --transport-transport_train-primary-text: #FFFFFF;
   --transport-transport_train-secondary-background: #2C1827;
   --transport-transport_train-secondary-text: #FFFFFF;
-  --transport-transport_airport-primary-background: #C75B12;
-  --transport-transport_airport-primary-text: #000000;
-  --transport-transport_airport-secondary-background: #97450E;
-  --transport-transport_airport-secondary-text: #FFFFFF;
-  --transport-transport_plane-primary-background: #2B343A;
-  --transport-transport_plane-primary-text: #FFFFFF;
-  --transport-transport_plane-secondary-background: #1A2024;
-  --transport-transport_plane-secondary-text: #FFFFFF;
   --transport-transport_flexible-primary-background: #C75B12;
   --transport-transport_flexible-primary-text: #000000;
   --transport-transport_flexible-secondary-background: #97450E;
@@ -185,22 +177,22 @@
   --border-primary: #242B30;
   --border-secondary: #FFFFFF;
   --border-focus: #448086;
-  --border-radius-circle: 1.25rem;
-  --border-radius-regular: 0.5rem;
   --border-radius-small: 0.25rem;
+  --border-radius-regular: 0.5rem;
+  --border-radius-circle: 1.25rem;
   --border-width-slim: 0.0625rem;
   --border-width-medium: 0.125rem;
 
-  --spacings-xLarge: 1.5rem;
-  --spacings-large: 1.25rem;
-  --spacings-medium: 0.75rem;
-  --spacings-small: 0.5rem;
   --spacings-xSmall: 0.25rem;
+  --spacings-small: 0.5rem;
+  --spacings-medium: 0.75rem;
+  --spacings-large: 1.25rem;
+  --spacings-xLarge: 1.5rem;
 
-  --icon-size-large: 1.75rem;
-  --icon-size-normal: 1.25rem;
-  --icon-size-small: 1rem;
   --icon-size-xSmall: 0.75rem;
+  --icon-size-small: 1rem;
+  --icon-size-normal: 1.25rem;
+  --icon-size-large: 1.625rem;
 
   --text-colors-primary: #FFFFFF;
   --text-colors-secondary: #E3E5E6;
@@ -312,14 +304,6 @@
   --transport-transport_train-primary-text: #FFFFFF;
   --transport-transport_train-secondary-background: #2C1827;
   --transport-transport_train-secondary-text: #FFFFFF;
-  --transport-transport_airport-primary-background: #C75B12;
-  --transport-transport_airport-primary-text: #000000;
-  --transport-transport_airport-secondary-background: #97450E;
-  --transport-transport_airport-secondary-text: #FFFFFF;
-  --transport-transport_plane-primary-background: #2B343A;
-  --transport-transport_plane-primary-text: #FFFFFF;
-  --transport-transport_plane-secondary-background: #1A2024;
-  --transport-transport_plane-secondary-text: #FFFFFF;
   --transport-transport_flexible-primary-background: #C75B12;
   --transport-transport_flexible-primary-text: #000000;
   --transport-transport_flexible-secondary-background: #97450E;
@@ -365,22 +349,22 @@
   --border-primary: #242B30;
   --border-secondary: #FFFFFF;
   --border-focus: #448086;
-  --border-radius-circle: 1.25rem;
-  --border-radius-regular: 0.5rem;
   --border-radius-small: 0.25rem;
+  --border-radius-regular: 0.5rem;
+  --border-radius-circle: 1.25rem;
   --border-width-slim: 0.0625rem;
   --border-width-medium: 0.125rem;
 
-  --spacings-xLarge: 1.5rem;
-  --spacings-large: 1.25rem;
-  --spacings-medium: 0.75rem;
-  --spacings-small: 0.5rem;
   --spacings-xSmall: 0.25rem;
+  --spacings-small: 0.5rem;
+  --spacings-medium: 0.75rem;
+  --spacings-large: 1.25rem;
+  --spacings-xLarge: 1.5rem;
 
-  --icon-size-large: 1.75rem;
-  --icon-size-normal: 1.25rem;
-  --icon-size-small: 1rem;
   --icon-size-xSmall: 0.75rem;
+  --icon-size-small: 1rem;
+  --icon-size-normal: 1.25rem;
+  --icon-size-large: 1.625rem;
 
   --text-colors-primary: #FFFFFF;
   --text-colors-secondary: #E3E5E6;
@@ -492,14 +476,6 @@
   --transport-transport_train-primary-text: #FFFFFF;
   --transport-transport_train-secondary-background: #2C1827;
   --transport-transport_train-secondary-text: #FFFFFF;
-  --transport-transport_airport-primary-background: #C75B12;
-  --transport-transport_airport-primary-text: #000000;
-  --transport-transport_airport-secondary-background: #97450E;
-  --transport-transport_airport-secondary-text: #FFFFFF;
-  --transport-transport_plane-primary-background: #2B343A;
-  --transport-transport_plane-primary-text: #FFFFFF;
-  --transport-transport_plane-secondary-background: #1A2024;
-  --transport-transport_plane-secondary-text: #FFFFFF;
   --transport-transport_flexible-primary-background: #C75B12;
   --transport-transport_flexible-primary-text: #000000;
   --transport-transport_flexible-secondary-background: #97450E;
@@ -630,22 +606,6 @@
 .transport-transport_train-secondary {
   background-color: var(--transport-transport_train-secondary-background);
   color: var(--transport-transport_train-secondary-text);
-}
-.transport-transport_airport-primary {
-  background-color: var(--transport-transport_airport-primary-background);
-  color: var(--transport-transport_airport-primary-text);
-}
-.transport-transport_airport-secondary {
-  background-color: var(--transport-transport_airport-secondary-background);
-  color: var(--transport-transport_airport-secondary-text);
-}
-.transport-transport_plane-primary {
-  background-color: var(--transport-transport_plane-primary-background);
-  color: var(--transport-transport_plane-primary-text);
-}
-.transport-transport_plane-secondary {
-  background-color: var(--transport-transport_plane-secondary-background);
-  color: var(--transport-transport_plane-secondary-text);
 }
 .transport-transport_flexible-primary {
   background-color: var(--transport-transport_flexible-primary-background);

@@ -629,13 +629,34 @@ export default {
         color: "#ffffff"
       },
       slow: {
-        color: "#ffffff"
+        color: {
+          background: "#fffcde",
+          foreground: {
+            primary: "#000000",
+            secondary: "#555e65",
+            disabled: "#a9aeb1"
+          }
+        }
       },
       noParking: {
-        color: "#ffffff"
+        color: {
+          background: "#d44546",
+          foreground: {
+            primary: "#000000",
+            secondary: "#555e65",
+            disabled: "#a9aeb1"
+          }
+        }
       },
       noEntry: {
-        color: "#ffffff"
+        color: {
+          background: "#54090a",
+          foreground: {
+            primary: "#ffffff",
+            secondary: "#d5dce0",
+            disabled: "#a9aeb1"
+          }
+        }
       }
     },
     border: {
