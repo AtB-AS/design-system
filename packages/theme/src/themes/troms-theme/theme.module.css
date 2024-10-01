@@ -44,7 +44,7 @@
   --static-background-background_3-background: #D5DCE0;
   --static-background-background_3-text: #000000;
   --static-background-background_accent_0-background: #D24600;
-  --static-background-background_accent_0-text: #000000;
+  --static-background-background_accent_0-text: #FFFFFF;
   --static-background-background_accent_1-background: #953200;
   --static-background-background_accent_1-text: #FFFFFF;
   --static-background-background_accent_2-background: #F4B392;
@@ -54,7 +54,7 @@
   --static-background-background_accent_4-background: #FFE924;
   --static-background-background_accent_4-text: #000000;
   --static-background-background_accent_5-background: #D24600;
-  --static-background-background_accent_5-text: #000000;
+  --static-background-background_accent_5-text: #FFFFFF;
   --static-zone_selection-from-background: #B2FF90;
   --static-zone_selection-from-text: #000000;
   --static-zone_selection-to-background: #D7FDFF;
@@ -122,7 +122,7 @@
   --interactive-interactive_destructive-destructive-text: #FFFFFF;
 
   --transport-transport_city-primary-background: #334DCE;
-  --transport-transport_city-primary-text: #000000;
+  --transport-transport_city-primary-text: #FFFFFF;
   --transport-transport_city-secondary-background: #0020C2;
   --transport-transport_city-secondary-text: #FFFFFF;
   --transport-transport_region-primary-background: #507341;
@@ -132,9 +132,9 @@
   --transport-transport_airport_express-primary-background: #D44546;
   --transport-transport_airport_express-primary-text: #000000;
   --transport-transport_airport_express-secondary-background: #C91618;
-  --transport-transport_airport_express-secondary-text: #000000;
+  --transport-transport_airport_express-secondary-text: #FFFFFF;
   --transport-transport_flexible-primary-background: #D24600;
-  --transport-transport_flexible-primary-text: #000000;
+  --transport-transport_flexible-primary-text: #FFFFFF;
   --transport-transport_flexible-secondary-background: #BF4000;
   --transport-transport_flexible-secondary-text: #FFFFFF;
   --transport-transport_boat-primary-background: #418083;
@@ -142,11 +142,11 @@
   --transport-transport_boat-secondary-background: #366A6D;
   --transport-transport_boat-secondary-text: #FFFFFF;
   --transport-transport_train-primary-background: #BD3685;
-  --transport-transport_train-primary-text: #000000;
+  --transport-transport_train-primary-text: #FFFFFF;
   --transport-transport_train-secondary-background: #8E2864;
   --transport-transport_train-secondary-text: #FFFFFF;
   --transport-transport_scooter-primary-background: #6B9956;
-  --transport-transport_scooter-primary-text: #FFFFFF;
+  --transport-transport_scooter-primary-text: #000000;
   --transport-transport_scooter-secondary-background: #507341;
   --transport-transport_scooter-secondary-text: #FFFFFF;
   --transport-transport_car-primary-background: #8E2864;
@@ -163,11 +163,11 @@
   --transport-transport_other-secondary-text: #FFFFFF;
 
   --status-valid-primary-background: #86BF6C;
-  --status-valid-primary-text: #FFFFFF;
+  --status-valid-primary-text: #000000;
   --status-valid-secondary-background: #F7FFF4;
   --status-valid-secondary-text: #000000;
   --status-info-primary-background: #546AD6;
-  --status-info-primary-text: #000000;
+  --status-info-primary-text: #FFFFFF;
   --status-info-secondary-background: #E6E9F9;
   --status-info-secondary-text: #000000;
   --status-warning-primary-background: #E6D220;
@@ -204,7 +204,7 @@
   --icon-size-large: 1.625rem;
 
   --text-light-primary: #FFFFFF;
-  --text-light-secondary: #D5DCE0;
+  --text-light-secondary: #E3E5E6;
   --text-light-disabled: #A9AEB1;
   --text-dark-primary: #000000;
   --text-dark-secondary: #555E65;
@@ -234,13 +234,13 @@
   --static-background-background_accent_3-text: #000000;
   --static-background-background_accent_4-background: #FFE924;
   --static-background-background_accent_4-text: #000000;
-  --static-background-background_accent_5-background: #BF4000;
+  --static-background-background_accent_5-background: #D24600;
   --static-background-background_accent_5-text: #FFFFFF;
   --static-zone_selection-from: #FFFFFF;
   --static-zone_selection-to: #FFFFFF;
 
   --interactive-interactive_0-default-background: #D24600;
-  --interactive-interactive_0-default-text: #000000;
+  --interactive-interactive_0-default-text: #FFFFFF;
   --interactive-interactive_0-hover-background: #B71416;
   --interactive-interactive_0-hover-text: #FFFFFF;
   --interactive-interactive_0-active-background: #6F0C0D;
@@ -251,10 +251,10 @@
   --interactive-interactive_0-outline-text: #FFFFFF;
   --interactive-interactive_0-destructive-background: #DB6364;
   --interactive-interactive_0-destructive-text: #000000;
-  --interactive-interactive_1-default-background: #555E65;
+  --interactive-interactive_1-default-background: #401805;
   --interactive-interactive_1-default-text: #FFFFFF;
   --interactive-interactive_1-hover-background: #6F777D;
-  --interactive-interactive_1-hover-text: #000000;
+  --interactive-interactive_1-hover-text: #FFFFFF;
   --interactive-interactive_1-active-background: #1A2024;
   --interactive-interactive_1-active-text: #FFFFFF;
   --interactive-interactive_1-disabled-background: #C7CACC;
@@ -301,7 +301,7 @@
   --interactive-interactive_destructive-destructive-text: #000000;
 
   --transport-transport_city-primary-background: #334DCE;
-  --transport-transport_city-primary-text: #000000;
+  --transport-transport_city-primary-text: #FFFFFF;
   --transport-transport_city-secondary-background: #0020C2;
   --transport-transport_city-secondary-text: #FFFFFF;
   --transport-transport_region-primary-background: #507341;
@@ -311,9 +311,9 @@
   --transport-transport_airport_express-primary-background: #D44546;
   --transport-transport_airport_express-primary-text: #000000;
   --transport-transport_airport_express-secondary-background: #C91618;
-  --transport-transport_airport_express-secondary-text: #000000;
+  --transport-transport_airport_express-secondary-text: #FFFFFF;
   --transport-transport_flexible-primary-background: #D24600;
-  --transport-transport_flexible-primary-text: #000000;
+  --transport-transport_flexible-primary-text: #FFFFFF;
   --transport-transport_flexible-secondary-background: #BF4000;
   --transport-transport_flexible-secondary-text: #FFFFFF;
   --transport-transport_boat-primary-background: #418083;
@@ -321,11 +321,11 @@
   --transport-transport_boat-secondary-background: #366A6D;
   --transport-transport_boat-secondary-text: #FFFFFF;
   --transport-transport_train-primary-background: #BD3685;
-  --transport-transport_train-primary-text: #000000;
+  --transport-transport_train-primary-text: #FFFFFF;
   --transport-transport_train-secondary-background: #8E2864;
   --transport-transport_train-secondary-text: #FFFFFF;
   --transport-transport_scooter-primary-background: #6B9956;
-  --transport-transport_scooter-primary-text: #FFFFFF;
+  --transport-transport_scooter-primary-text: #000000;
   --transport-transport_scooter-secondary-background: #507341;
   --transport-transport_scooter-secondary-text: #FFFFFF;
   --transport-transport_car-primary-background: #8E2864;
@@ -342,7 +342,7 @@
   --transport-transport_other-secondary-text: #000000;
 
   --status-valid-primary-background: #86BF6C;
-  --status-valid-primary-text: #FFFFFF;
+  --status-valid-primary-text: #000000;
   --status-valid-secondary-background: #3E5932;
   --status-valid-secondary-text: #FFFFFF;
   --status-info-primary-background: #8A98E3;
@@ -383,7 +383,7 @@
   --icon-size-large: 1.625rem;
 
   --text-light-primary: #FFFFFF;
-  --text-light-secondary: #D5DCE0;
+  --text-light-secondary: #E3E5E6;
   --text-light-disabled: #A9AEB1;
   --text-dark-primary: #000000;
   --text-dark-secondary: #555E65;
@@ -413,13 +413,13 @@
   --static-background-background_accent_3-text: #000000;
   --static-background-background_accent_4-background: #FFE924;
   --static-background-background_accent_4-text: #000000;
-  --static-background-background_accent_5-background: #BF4000;
+  --static-background-background_accent_5-background: #D24600;
   --static-background-background_accent_5-text: #FFFFFF;
   --static-zone_selection-from: #FFFFFF;
   --static-zone_selection-to: #FFFFFF;
 
   --interactive-interactive_0-default-background: #D24600;
-  --interactive-interactive_0-default-text: #000000;
+  --interactive-interactive_0-default-text: #FFFFFF;
   --interactive-interactive_0-hover-background: #B71416;
   --interactive-interactive_0-hover-text: #FFFFFF;
   --interactive-interactive_0-active-background: #6F0C0D;
@@ -430,10 +430,10 @@
   --interactive-interactive_0-outline-text: #FFFFFF;
   --interactive-interactive_0-destructive-background: #DB6364;
   --interactive-interactive_0-destructive-text: #000000;
-  --interactive-interactive_1-default-background: #555E65;
+  --interactive-interactive_1-default-background: #401805;
   --interactive-interactive_1-default-text: #FFFFFF;
   --interactive-interactive_1-hover-background: #6F777D;
-  --interactive-interactive_1-hover-text: #000000;
+  --interactive-interactive_1-hover-text: #FFFFFF;
   --interactive-interactive_1-active-background: #1A2024;
   --interactive-interactive_1-active-text: #FFFFFF;
   --interactive-interactive_1-disabled-background: #C7CACC;
@@ -480,7 +480,7 @@
   --interactive-interactive_destructive-destructive-text: #000000;
 
   --transport-transport_city-primary-background: #334DCE;
-  --transport-transport_city-primary-text: #000000;
+  --transport-transport_city-primary-text: #FFFFFF;
   --transport-transport_city-secondary-background: #0020C2;
   --transport-transport_city-secondary-text: #FFFFFF;
   --transport-transport_region-primary-background: #507341;
@@ -490,9 +490,9 @@
   --transport-transport_airport_express-primary-background: #D44546;
   --transport-transport_airport_express-primary-text: #000000;
   --transport-transport_airport_express-secondary-background: #C91618;
-  --transport-transport_airport_express-secondary-text: #000000;
+  --transport-transport_airport_express-secondary-text: #FFFFFF;
   --transport-transport_flexible-primary-background: #D24600;
-  --transport-transport_flexible-primary-text: #000000;
+  --transport-transport_flexible-primary-text: #FFFFFF;
   --transport-transport_flexible-secondary-background: #BF4000;
   --transport-transport_flexible-secondary-text: #FFFFFF;
   --transport-transport_boat-primary-background: #418083;
@@ -500,11 +500,11 @@
   --transport-transport_boat-secondary-background: #366A6D;
   --transport-transport_boat-secondary-text: #FFFFFF;
   --transport-transport_train-primary-background: #BD3685;
-  --transport-transport_train-primary-text: #000000;
+  --transport-transport_train-primary-text: #FFFFFF;
   --transport-transport_train-secondary-background: #8E2864;
   --transport-transport_train-secondary-text: #FFFFFF;
   --transport-transport_scooter-primary-background: #6B9956;
-  --transport-transport_scooter-primary-text: #FFFFFF;
+  --transport-transport_scooter-primary-text: #000000;
   --transport-transport_scooter-secondary-background: #507341;
   --transport-transport_scooter-secondary-text: #FFFFFF;
   --transport-transport_car-primary-background: #8E2864;
@@ -521,7 +521,7 @@
   --transport-transport_other-secondary-text: #000000;
 
   --status-valid-primary-background: #86BF6C;
-  --status-valid-primary-text: #FFFFFF;
+  --status-valid-primary-text: #000000;
   --status-valid-secondary-background: #3E5932;
   --status-valid-secondary-text: #FFFFFF;
   --status-info-primary-background: #8A98E3;

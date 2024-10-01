@@ -45,7 +45,7 @@ export default {
       },
       background_accent_0: {
         background: "#d24600",
-        text: "#000000"
+        text: "#ffffff"
       },
       background_accent_1: {
         background: "#953200",
@@ -65,7 +65,7 @@ export default {
       },
       background_accent_5: {
         background: "#d24600",
-        text: "#000000"
+        text: "#ffffff"
       }
     },
     zone_selection: {
@@ -83,7 +83,7 @@ export default {
     valid: {
       primary: {
         background: "#86bf6c",
-        text: "#ffffff"
+        text: "#000000"
       },
       secondary: {
         background: "#f7fff4",
@@ -93,7 +93,7 @@ export default {
     info: {
       primary: {
         background: "#546ad6",
-        text: "#000000"
+        text: "#ffffff"
       },
       secondary: {
         background: "#e6e9f9",
@@ -257,7 +257,7 @@ export default {
     transport_city: {
       primary: {
         background: "#334dce",
-        text: "#000000"
+        text: "#ffffff"
       },
       secondary: {
         background: "#0020c2",
@@ -281,13 +281,13 @@ export default {
       },
       secondary: {
         background: "#c91618",
-        text: "#000000"
+        text: "#ffffff"
       }
     },
     transport_flexible: {
       primary: {
         background: "#d24600",
-        text: "#000000"
+        text: "#ffffff"
       },
       secondary: {
         background: "#bf4000",
@@ -307,7 +307,7 @@ export default {
     transport_train: {
       primary: {
         background: "#bd3685",
-        text: "#000000"
+        text: "#ffffff"
       },
       secondary: {
         background: "#8e2864",
@@ -317,7 +317,7 @@ export default {
     transport_scooter: {
       primary: {
         background: "#6b9956",
-        text: "#ffffff"
+        text: "#000000"
       },
       secondary: {
         background: "#507341",

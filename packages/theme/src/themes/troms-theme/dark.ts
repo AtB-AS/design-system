@@ -6,7 +6,7 @@ export default {
   text: {
     light: {
       primary: "#ffffff",
-      secondary: "#d5dce0",
+      secondary: "#e3e5e6",
       disabled: "#a9aeb1"
     },
     dark: {
@@ -64,7 +64,7 @@ export default {
         text: "#000000"
       },
       background_accent_5: {
-        background: "#bf4000",
+        background: "#d24600",
         text: "#ffffff"
       }
     },
@@ -77,7 +77,7 @@ export default {
     valid: {
       primary: {
         background: "#86bf6c",
-        text: "#ffffff"
+        text: "#000000"
       },
       secondary: {
         background: "#3e5932",
@@ -119,7 +119,7 @@ export default {
     interactive_0: {
       default: {
         background: "#d24600",
-        text: "#000000"
+        text: "#ffffff"
       },
       hover: {
         background: "#b71416",
@@ -144,12 +144,12 @@ export default {
     },
     interactive_1: {
       default: {
-        background: "#555e65",
+        background: "#401805",
         text: "#ffffff"
       },
       hover: {
         background: "#6f777d",
-        text: "#000000"
+        text: "#ffffff"
       },
       active: {
         background: "#1a2024",
@@ -251,7 +251,7 @@ export default {
     transport_city: {
       primary: {
         background: "#334dce",
-        text: "#000000"
+        text: "#ffffff"
       },
       secondary: {
         background: "#0020c2",
@@ -275,13 +275,13 @@ export default {
       },
       secondary: {
         background: "#c91618",
-        text: "#000000"
+        text: "#ffffff"
       }
     },
     transport_flexible: {
       primary: {
         background: "#d24600",
-        text: "#000000"
+        text: "#ffffff"
       },
       secondary: {
         background: "#bf4000",
@@ -301,7 +301,7 @@ export default {
     transport_train: {
       primary: {
         background: "#bd3685",
-        text: "#000000"
+        text: "#ffffff"
       },
       secondary: {
         background: "#8e2864",
@@ -311,7 +311,7 @@ export default {
     transport_scooter: {
       primary: {
         background: "#6b9956",
-        text: "#ffffff"
+        text: "#000000"
       },
       secondary: {
         background: "#507341",

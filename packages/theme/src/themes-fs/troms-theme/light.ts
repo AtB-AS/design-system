@@ -65,8 +65,8 @@ export default {
         0: {
           background: "#d24600",
           foreground: {
-            primary: "#000000",
-            secondary: "#555e65",
+            primary: "#ffffff",
+            secondary: "#e3e5e6",
             disabled: "#a9aeb1"
           }
         },
@@ -105,8 +105,8 @@ export default {
         5: {
           background: "#d24600",
           foreground: {
-            primary: "#000000",
-            secondary: "#555e65",
+            primary: "#ffffff",
+            secondary: "#e3e5e6",
             disabled: "#a9aeb1"
           }
         }
@@ -117,8 +117,8 @@ export default {
         primary: {
           background: "#86bf6c",
           foreground: {
-            primary: "#ffffff",
-            secondary: "#e3e5e6",
+            primary: "#000000",
+            secondary: "#555e65",
             disabled: "#a9aeb1"
           }
         },
@@ -135,8 +135,8 @@ export default {
         primary: {
           background: "#546ad6",
           foreground: {
-            primary: "#000000",
-            secondary: "#555e65",
+            primary: "#ffffff",
+            secondary: "#e3e5e6",
             disabled: "#a9aeb1"
           }
         },
@@ -443,8 +443,8 @@ export default {
         primary: {
           background: "#334dce",
           foreground: {
-            primary: "#000000",
-            secondary: "#555e65",
+            primary: "#ffffff",
+            secondary: "#e3e5e6",
             disabled: "#a9aeb1"
           }
         },
@@ -487,8 +487,8 @@ export default {
         secondary: {
           background: "#c91618",
           foreground: {
-            primary: "#000000",
-            secondary: "#555e65",
+            primary: "#ffffff",
+            secondary: "#e3e5e6",
             disabled: "#a9aeb1"
           }
         }
@@ -497,8 +497,8 @@ export default {
         primary: {
           background: "#d24600",
           foreground: {
-            primary: "#000000",
-            secondary: "#555e65",
+            primary: "#ffffff",
+            secondary: "#e3e5e6",
             disabled: "#a9aeb1"
           }
         },
@@ -533,8 +533,8 @@ export default {
         primary: {
           background: "#bd3685",
           foreground: {
-            primary: "#000000",
-            secondary: "#555e65",
+            primary: "#ffffff",
+            secondary: "#e3e5e6",
             disabled: "#a9aeb1"
           }
         },
@@ -551,8 +551,8 @@ export default {
         primary: {
           background: "#6b9956",
           foreground: {
-            primary: "#ffffff",
-            secondary: "#e3e5e6",
+            primary: "#000000",
+            secondary: "#555e65",
             disabled: "#a9aeb1"
           }
         },
