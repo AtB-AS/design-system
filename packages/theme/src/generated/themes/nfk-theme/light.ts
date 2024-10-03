@@ -6,376 +6,397 @@ export default {
   text: {
     light: {
       primary: "#ffffff",
-      secondary: "#e3e5e6",
-      disabled: "#a9aeb1"
+      secondary: "#dae2e4",
+      disabled: "#8fa9af"
     },
     dark: {
       primary: "#000000",
-      secondary: "#555e65",
-      disabled: "#a9aeb1"
+      secondary: "#526164",
+      disabled: "#8fa9af"
     },
     colors: {
-      primary: "#ffffff",
-      secondary: "#e3e5e6",
-      disabled: "#a9aeb1"
+      primary: "#000000",
+      secondary: "#526164",
+      disabled: "#8fa9af"
     },
     inverse: {
-      primary: "#000000",
-      secondary: "#555e65",
-      disabled: "#a9aeb1"
+      primary: "#ffffff",
+      secondary: "#dae2e4",
+      disabled: "#8fa9af"
     }
   },
   static: {
     background: {
       background_0: {
-        background: "#1a2024",
-        text: "#ffffff"
+        background: "#ffffff",
+        text: "#000000"
       },
       background_1: {
-        background: "#242b30",
-        text: "#ffffff"
+        background: "#ecf1f2",
+        text: "#000000"
       },
       background_2: {
-        background: "#37424a",
-        text: "#ffffff"
+        background: "#dae2e4",
+        text: "#000000"
       },
       background_3: {
-        background: "#555e65",
-        text: "#ffffff"
+        background: "#c7d4d7",
+        text: "#000000"
       },
       background_accent_0: {
-        background: "#000000",
+        background: "#0181a3",
         text: "#ffffff"
       },
       background_accent_1: {
-        background: "#953200",
-        text: "#ffffff"
+        background: "#349ab6",
+        text: "#000000"
       },
       background_accent_2: {
-        background: "#f4b392",
+        background: "#cce6ed",
         text: "#000000"
       },
       background_accent_3: {
-        background: "#e85912",
-        text: "#000000"
+        background: "#046078",
+        text: "#ffffff"
       },
       background_accent_4: {
-        background: "#ffe924",
+        background: "#fdcb8a",
         text: "#000000"
       },
       background_accent_5: {
-        background: "#d24600",
-        text: "#ffffff"
+        background: "#9acdda",
+        text: "#000000"
       }
     },
     zone_selection: {
-      from: "#ffffff",
-      to: "#ffffff"
+      from: {
+        background: "#f2726a",
+        text: "#000000"
+      },
+      to: {
+        background: "#ef4e45",
+        text: "#000000"
+      }
     }
   },
   status: {
     valid: {
       primary: {
-        background: "#86bf6c",
+        background: "#33af85",
         text: "#000000"
       },
       secondary: {
-        background: "#3e5932",
-        text: "#ffffff"
+        background: "#ccebe1",
+        text: "#000000"
       }
     },
     info: {
       primary: {
-        background: "#8a98e3",
-        text: "#000000"
+        background: "#046078",
+        text: "#ffffff"
       },
       secondary: {
-        background: "#000d51",
-        text: "#ffffff"
+        background: "#dbe9ec",
+        text: "#000000"
       }
     },
     warning: {
       primary: {
-        background: "#e6d220",
+        background: "#fcba63",
         text: "#000000"
       },
       secondary: {
-        background: "#59520d",
-        text: "#ffffff"
+        background: "#feeed8",
+        text: "#000000"
       }
     },
     error: {
       primary: {
-        background: "#d44546",
+        background: "#ef4e45",
         text: "#000000"
       },
       secondary: {
-        background: "#54090a",
-        text: "#ffffff"
+        background: "#fcdcda",
+        text: "#000000"
       }
     }
   },
   interactive: {
     interactive_0: {
       default: {
-        background: "#d24600",
+        background: "#046078",
         text: "#ffffff"
       },
       hover: {
-        background: "#b71416",
+        background: "#034151",
         text: "#ffffff"
       },
       active: {
-        background: "#6f0c0d",
-        text: "#ffffff"
+        background: "#70a4b2",
+        text: "#000000"
       },
       disabled: {
-        background: "#f4b392",
+        background: "#dbe9ec",
         text: "#000000"
       },
       outline: {
-        background: "#bf4000",
-        text: "#ffffff"
+        background: "#70a4b2",
+        text: "#000000"
       },
       destructive: {
-        background: "#db6364",
-        text: "#000000"
+        background: "#c03f38",
+        text: "#ffffff"
       }
     },
     interactive_1: {
       default: {
-        background: "#401805",
+        background: "#046078",
         text: "#ffffff"
       },
       hover: {
-        background: "#6f777d",
+        background: "#034151",
         text: "#ffffff"
       },
       active: {
-        background: "#1a2024",
+        background: "#022129",
         text: "#ffffff"
       },
       disabled: {
-        background: "#c7cacc",
+        background: "#b5c6ca",
         text: "#000000"
       },
       outline: {
-        background: "#4f1e06",
-        text: "#ffffff"
+        background: "#70a4b2",
+        text: "#000000"
       },
       destructive: {
-        background: "#db6364",
-        text: "#000000"
+        background: "#c03f38",
+        text: "#ffffff"
       }
     },
     interactive_2: {
       default: {
-        background: "#1a2024",
-        text: "#ffffff"
+        background: "#ffffff",
+        text: "#000000"
       },
       hover: {
-        background: "#301204",
-        text: "#ffffff"
+        background: "#dbe9ec",
+        text: "#000000"
       },
       active: {
-        background: "#742700",
-        text: "#ffffff"
+        background: "#c9dde2",
+        text: "#000000"
       },
       disabled: {
-        background: "#101315",
-        text: "#ffffff"
+        background: "#ffffff",
+        text: "#000000"
       },
       outline: {
-        background: "#bf4000",
-        text: "#ffffff"
+        background: "#70a4b2",
+        text: "#000000"
       },
       destructive: {
-        background: "#db6364",
-        text: "#000000"
+        background: "#c03f38",
+        text: "#ffffff"
       }
     },
     interactive_3: {
       default: {
-        background: "#bf4000",
-        text: "#ffffff"
+        background: "#33af85",
+        text: "#000000"
       },
       hover: {
-        background: "#742700",
-        text: "#ffffff"
+        background: "#33af85",
+        text: "#000000"
       },
       active: {
-        background: "#4f1e06",
-        text: "#ffffff"
+        background: "#66c3a4",
+        text: "#000000"
       },
       disabled: {
-        background: "#37424a",
-        text: "#ffffff"
+        background: "#dae2e4",
+        text: "#000000"
       },
       outline: {
-        background: "#953200",
-        text: "#ffffff"
+        background: "#70a4b2",
+        text: "#000000"
       },
       destructive: {
-        background: "#b71416",
+        background: "#c03f38",
         text: "#ffffff"
       }
     },
     interactive_destructive: {
       default: {
-        background: "#8f1011",
-        text: "#ffffff"
+        background: "#ef4e45",
+        text: "#000000"
       },
       hover: {
-        background: "#b71416",
+        background: "#c03f38",
         text: "#ffffff"
       },
       active: {
-        background: "#b71416",
+        background: "#30100e",
         text: "#ffffff"
       },
       disabled: {
-        background: "#eeb7b7",
+        background: "#fcdcda",
         text: "#000000"
       },
       outline: {
-        background: "#54090a",
-        text: "#ffffff"
+        background: "#70a4b2",
+        text: "#000000"
       },
       destructive: {
-        background: "#db6364",
-        text: "#000000"
+        background: "#c03f38",
+        text: "#ffffff"
       }
     }
   },
   transport: {
     transport_city: {
       primary: {
-        background: "#334dce",
+        background: "#046078",
         text: "#ffffff"
       },
       secondary: {
-        background: "#0020c2",
+        background: "#034151",
         text: "#ffffff"
       }
     },
     transport_region: {
       primary: {
-        background: "#507341",
-        text: "#ffffff"
+        background: "#2b926f",
+        text: "#000000"
       },
       secondary: {
-        background: "#3e5932",
+        background: "#237559",
         text: "#ffffff"
       }
     },
     transport_airport_express: {
       primary: {
-        background: "#d44546",
-        text: "#000000"
+        background: "#8a61c2",
+        text: "#ffffff"
       },
       secondary: {
-        background: "#c91618",
+        background: "#6f4e9c",
         text: "#ffffff"
       }
     },
     transport_flexible: {
       primary: {
-        background: "#d24600",
+        background: "#526164",
         text: "#ffffff"
       },
       secondary: {
-        background: "#bf4000",
+        background: "#3e494b",
         text: "#ffffff"
       }
     },
     transport_boat: {
       primary: {
-        background: "#418083",
-        text: "#ffffff"
+        background: "#349ab6",
+        text: "#000000"
       },
       secondary: {
-        background: "#366a6d",
+        background: "#0181a3",
         text: "#ffffff"
       }
     },
     transport_train: {
       primary: {
-        background: "#bd3685",
-        text: "#ffffff"
+        background: "#a281ce",
+        text: "#000000"
       },
       secondary: {
-        background: "#8e2864",
+        background: "#8a61c2",
         text: "#ffffff"
       }
     },
     transport_scooter: {
       primary: {
-        background: "#6b9956",
-        text: "#000000"
+        background: "#1a5843",
+        text: "#ffffff"
       },
       secondary: {
-        background: "#507341",
+        background: "#123b2d",
         text: "#ffffff"
       }
     },
     transport_car: {
       primary: {
-        background: "#8e2864",
+        background: "#533b75",
         text: "#ffffff"
       },
       secondary: {
-        background: "#6a1e4b",
+        background: "#38274e",
         text: "#ffffff"
       }
     },
     transport_bike: {
       primary: {
-        background: "#8f1011",
+        background: "#902f2a",
         text: "#ffffff"
       },
       secondary: {
-        background: "#6f0c0d",
+        background: "#60201c",
         text: "#ffffff"
       }
     },
     transport_other: {
       primary: {
-        background: "#c7cacc",
-        text: "#000000"
+        background: "#526164",
+        text: "#ffffff"
       },
       secondary: {
-        background: "#8d9398",
-        text: "#000000"
+        background: "#3e494b",
+        text: "#ffffff"
       }
     }
   },
   geofencingZones: {
     allowed: {
-      color: "#ffffff"
+      color: {
+        background: "#28778b",
+        text: "#ffffff"
+      },
+      fillOpacity: 0.07999999821186066,
+      strokeOpacity: 0.5,
+      layerIndexWeight: 1
     },
     slow: {
       color: {
-        background: "#fffcde",
+        background: "#feddb1",
         text: "#000000"
-      }
+      },
+      fillOpacity: 0.6000000238418579,
+      strokeOpacity: 0.800000011920929,
+      layerIndexWeight: 2
     },
     noParking: {
       color: {
-        background: "#d44546",
+        background: "#f2726a",
         text: "#000000"
-      }
+      },
+      fillOpacity: 0.5,
+      strokeOpacity: 0.699999988079071,
+      layerIndexWeight: 3
     },
     noEntry: {
       color: {
-        background: "#54090a",
+        background: "#30100e",
         text: "#ffffff"
-      }
+      },
+      fillOpacity: 0.550000011920929,
+      strokeOpacity: 0.75,
+      layerIndexWeight: 5
     }
   },
   border: {
-    primary: "#ffffff",
-    secondary: "#ffffff",
-    focus: "#ffffff",
+    primary: "#dae2e4",
+    secondary: "#000000",
+    focus: "#28778b",
     radius: {
       small: 4,
       regular: 8,

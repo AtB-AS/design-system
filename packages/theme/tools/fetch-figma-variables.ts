@@ -15,8 +15,8 @@ export type SharedCollections = 'border' | 'spacing' | 'typography' | 'icon'
 export type OrganisationCollections = 'color_palette'
 export type VariantCollections = 'theme'
 
-const outDir = './src';
-const organizations: Organizations[] = ['atb', 'troms']
+const outDir = './src/generated/';
+const organizations: Organizations[] = ['atb', 'troms', 'fram', 'innlandet', 'nfk']
 const modes: Modes[] = ['light', 'dark'];
 
 /**
@@ -133,6 +133,17 @@ StyleDictionary.registerFilter({
     return token.prefix !== "color_palette"
   }
 });
+
+const mainIndex = (options?: ThemeOptions) => {
+  const postfix = options?.useFigmaStructure ? `Fs`: ``
+  return `
+export {default as AtBThemes${postfix}} from './atb-theme/theme';
+export {default as NfkThemes${postfix}} from './nfk-theme/theme';
+export {default as FRAMThemes${postfix}} from './fram-theme/theme';
+export {default as TromsThemes${postfix}} from './troms-theme/theme';
+export {default as InnlandetThemes${postfix}} from './innlandet-theme/theme';
+`
+}
 
 /**
  * Contents of the main TypeScript file linking the themes
@@ -296,6 +307,13 @@ const generateThemes = async () => {
               },
               destination: 'theme.ts',
             },
+            {
+              format: 'index',
+              options: {
+                content: mainIndex(),
+              },
+              destination: '../index.ts',
+            },
           ],
         },
         tsFs: {
@@ -320,6 +338,15 @@ const generateThemes = async () => {
                 content: tsIndex,
               },
               destination: 'theme.ts',
+            },
+            {
+              format: 'index',
+              options: {
+                content: mainIndex({
+                  useFigmaStructure: true
+                }),
+              },
+              destination: '../index.ts',
             },
           ],
         }

@@ -6,7 +6,7 @@ import {
   FRAMThemes,
   TromsThemes,
   InnlandetThemes,
-} from '../src/themes';
+} from '../src/generated/themes';
 
 Promise.all([
   outputThemes('atb-theme', AtBThemes),

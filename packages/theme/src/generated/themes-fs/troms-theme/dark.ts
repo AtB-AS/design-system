@@ -487,8 +487,8 @@ export default {
         secondary: {
           background: "#c91618",
           foreground: {
-            primary: "#ffffff",
-            secondary: "#e3e5e6",
+            primary: "#000000",
+            secondary: "#555e65",
             disabled: "#a9aeb1"
           }
         }
@@ -621,12 +621,36 @@ export default {
       }
     },
     zone: {
-      from: "#ffffff",
-      to: "#ffffff"
+      from: {
+        background: "#b2ff90",
+        foreground: {
+          primary: "#000000",
+          secondary: "#555e65",
+          disabled: "#a9aeb1"
+        }
+      },
+      to: {
+        background: "#d7fdff",
+        foreground: {
+          primary: "#000000",
+          secondary: "#555e65",
+          disabled: "#a9aeb1"
+        }
+      }
     },
     geofencingZone: {
       allowed: {
-        color: "#ffffff"
+        color: {
+          background: "#0020c2",
+          foreground: {
+            primary: "#ffffff",
+            secondary: "#e3e5e6",
+            disabled: "#a9aeb1"
+          }
+        },
+        fillOpacity: 0.07999999821186066,
+        strokeOpacity: 0.6000000238418579,
+        layerIndexWeight: 1
       },
       slow: {
         color: {
@@ -636,7 +660,10 @@ export default {
             secondary: "#555e65",
             disabled: "#a9aeb1"
           }
-        }
+        },
+        fillOpacity: 0.6000000238418579,
+        strokeOpacity: 0.800000011920929,
+        layerIndexWeight: 2
       },
       noParking: {
         color: {
@@ -646,7 +673,10 @@ export default {
             secondary: "#555e65",
             disabled: "#a9aeb1"
           }
-        }
+        },
+        fillOpacity: 0.5,
+        strokeOpacity: 0.699999988079071,
+        layerIndexWeight: 3
       },
       noEntry: {
         color: {
@@ -656,13 +686,37 @@ export default {
             secondary: "#e3e5e6",
             disabled: "#a9aeb1"
           }
-        }
+        },
+        fillOpacity: 0.550000011920929,
+        strokeOpacity: 0.75,
+        layerIndexWeight: 5
       }
     },
     border: {
-      primary: "#ffffff",
-      secondary: "#ffffff",
-      focus: "#ffffff"
+      primary: {
+        background: "#242b30",
+        foreground: {
+          primary: "#ffffff",
+          secondary: "#e3e5e6",
+          disabled: "#a9aeb1"
+        }
+      },
+      secondary: {
+        background: "#ffffff",
+        foreground: {
+          primary: "#000000",
+          secondary: "#555e65",
+          disabled: "#a9aeb1"
+        }
+      },
+      focus: {
+        background: "#e85912",
+        foreground: {
+          primary: "#000000",
+          secondary: "#555e65",
+          disabled: "#a9aeb1"
+        }
+      }
     }
   },
   border: {

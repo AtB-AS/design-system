@@ -6,15 +6,15 @@ import {
   FRAMThemes,
   TromsThemes,
   InnlandetThemes,
-} from './themes';
+} from './generated/themes';
 
 import {
   AtBThemesFs,
-  // NfkThemes,
-  // FRAMThemes,
+  NfkThemesFs,
+  FRAMThemesFs,
   TromsThemesFs,
-  // InnlandetThemes,
-} from './themes-fs';
+  InnlandetThemesFs,
+} from './generated/themes-fs';
 
 export type Themes<T = Theme> = {
   light: T;
@@ -320,20 +320,23 @@ export function createThemesFor<T extends ThemeOptions>(
         return TromsThemes as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
       }
     case ThemeVariant.Nfk:
-      if (themeOptions.useFigmaStructure) {
-        console.log(`Note that Nfk does not support the Figma structure yet. Return old structure.`)
+      if (themeOptions?.useFigmaStructure) {
+        return NfkThemesFs as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>; 
+      } else {
+        return NfkThemes as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
       }
-      return NfkThemes as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
     case ThemeVariant.FRAM:
-      if (themeOptions.useFigmaStructure) {
-        console.log(`Note that FRAM does not support the Figma structure yet. Return old structure.`)
+      if (themeOptions?.useFigmaStructure) {
+        return FRAMThemesFs as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>; 
+      } else {
+        return FRAMThemes as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
       }
-      return FRAMThemes as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
     case ThemeVariant.Innlandet:
-      if (themeOptions.useFigmaStructure) {
-        console.log(`Note that Innlandet does not support the Figma structure yet. Return old structure.`)
+      if (themeOptions?.useFigmaStructure) {
+        return InnlandetThemesFs as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>; 
+      } else {
+        return InnlandetThemes as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
       }
-      return InnlandetThemes as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
     default:
       throw Error('A valid ThemeVariant must be provided');
   }
