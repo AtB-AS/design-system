@@ -311,7 +311,7 @@ export function createThemesFor<T extends ThemeOptions>(
       if (themeOptions?.useFigmaStructure) {
         return AtBThemesFs as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>; 
       } else {
-        return AtBThemes as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;;
+        return AtBThemes as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
       }
     case ThemeVariant.Troms:
       if (themeOptions?.useFigmaStructure) {

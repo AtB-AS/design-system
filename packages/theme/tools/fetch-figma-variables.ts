@@ -20,8 +20,8 @@ const organizations: Organizations[] = ['atb', 'troms']
 const modes: Modes[] = ['light', 'dark'];
 
 /**
- * Appends the name of the collection to the file path, such that
- * it is prepended to the name of the variable (e.g., COLOR-background-neutral-...).
+ * Prepends collection name to file path of the token 
+ * and converts it to camelCase.
  */
 StyleDictionary.registerTransform({
   name: 'attribute/append-type',
@@ -38,8 +38,8 @@ StyleDictionary.registerTransform({
 });
 
 /**
- * Appends the name of the collection to the file path, such that
- * it is prepended to the name of the variable (e.g., COLOR-background-neutral-...).
+ * Converts Figma structure back to the `theme.ts` structure
+ * for backwards compatibility with versions < 11.0.0 of `@atb-as/theme`
  */
 StyleDictionary.registerTransform({
   name: 'attribute/compat-path',
@@ -222,10 +222,7 @@ const makeDestination = (organization: Organizations, themeOptions?: ThemeOption
 
 const generateThemes = async () => {
 
-  /**
-   * Mocked response from Figma Variables Rest API
-   */
-  const response = await fetch('https://api.figma.com/v1/files/3rlcixpbhfBglNSctUkMys/variables/local', {
+  const response = await fetch(`${process.env.FIGMA_VARIABLES_URL}`, {
     headers: {
       'X-FIGMA-TOKEN': process.env.FIGMA_TOKEN ?? "Figma token inaccessible or not set."
     }
@@ -235,6 +232,9 @@ const generateThemes = async () => {
     throw new Error(`Failed to retrieve Figma variables with status ${response.status}: ${(await response.json())?.message}`)
   }
 
+  /**
+   * Convert Figma response to Design Tokens Community Group (DTCG) standard
+   */
   const { tokens } = await useFigmaToDTCG<
     Organizations,
     Modes,
@@ -277,8 +277,6 @@ const generateThemes = async () => {
         verbosity: 'silent',
       },
       tokens: makeTokens(organization, mode),
-      // include: [`${srcDir}/**/*.${organization}.json`],
-      // source: [`${srcDir}/**/*.${organization}_${mode}.json`, `${srcDir}/**/@(border|spacing|typography)*.json`],
       platforms: {
         ts: {
           buildPath: makeDestination(organization),
