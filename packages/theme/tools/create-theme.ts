@@ -8,7 +8,7 @@ export default async function outputThemes(
   themeOutputDirName: string,
   themes: Themes<Theme>,
 ) {
-  const base = join(__dirname, `../src/themes/${themeOutputDirName}`);
+  const base = join(__dirname, `../src/generated/themes/${themeOutputDirName}`);
 
   const cssModule = join(base, 'theme.module.css');
   const regular = join(base, 'theme.css');
