@@ -37,7 +37,7 @@ export default {
           }
         },
         1: {
-          background: "#f1f1f2",
+          background: "#f1f2f2",
           foreground: {
             primary: "#000000",
             secondary: "#555e65",
@@ -694,7 +694,7 @@ export default {
     },
     border: {
       primary: {
-        background: "#f1f1f2",
+        background: "#f1f2f2",
         foreground: {
           primary: "#000000",
           secondary: "#555e65",

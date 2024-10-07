@@ -4,7 +4,7 @@
 .light {
   --border-primary: #E6E6E6;
   --border-secondary: #000000;
-  --border-focus: #016291;
+  --border-focus: #005686;
   --border-radius-small: 0.25rem;
   --border-radius-regular: 0.5rem;
   --border-radius-circle: 1.25rem;
@@ -57,12 +57,12 @@
   --static-background-background_accent_5-text: #FFFFFF;
   --static-zone_selection-from-background: #82B962;
   --static-zone_selection-from-text: #000000;
-  --static-zone_selection-to-background: #016291;
+  --static-zone_selection-to-background: #005686;
   --static-zone_selection-to-text: #FFFFFF;
 
-  --interactive-interactive_0-default-background: #016291;
+  --interactive-interactive_0-default-background: #005686;
   --interactive-interactive_0-default-text: #FFFFFF;
-  --interactive-interactive_0-hover-background: #014A6D;
+  --interactive-interactive_0-hover-background: #014165;
   --interactive-interactive_0-hover-text: #FFFFFF;
   --interactive-interactive_0-active-background: #66AFD3;
   --interactive-interactive_0-active-text: #000000;
@@ -72,9 +72,9 @@
   --interactive-interactive_0-outline-text: #000000;
   --interactive-interactive_0-destructive-background: #B6161C;
   --interactive-interactive_0-destructive-text: #FFFFFF;
-  --interactive-interactive_1-default-background: #016291;
+  --interactive-interactive_1-default-background: #005686;
   --interactive-interactive_1-default-text: #FFFFFF;
-  --interactive-interactive_1-hover-background: #014A6D;
+  --interactive-interactive_1-hover-background: #014165;
   --interactive-interactive_1-hover-text: #FFFFFF;
   --interactive-interactive_1-active-background: #012537;
   --interactive-interactive_1-active-text: #FFFFFF;
@@ -125,13 +125,13 @@
   --transport-transport_city-primary-text: #000000;
   --transport-transport_city-secondary-background: #709F55;
   --transport-transport_city-secondary-text: #000000;
-  --transport-transport_region-primary-background: #016291;
+  --transport-transport_region-primary-background: #005686;
   --transport-transport_region-primary-text: #FFFFFF;
-  --transport-transport_region-secondary-background: #014A6D;
+  --transport-transport_region-secondary-background: #014165;
   --transport-transport_region-secondary-text: #FFFFFF;
-  --transport-transport_airport_express-primary-background: #016291;
+  --transport-transport_airport_express-primary-background: #005686;
   --transport-transport_airport_express-primary-text: #FFFFFF;
-  --transport-transport_airport_express-secondary-background: #014A6D;
+  --transport-transport_airport_express-secondary-background: #014165;
   --transport-transport_airport_express-secondary-text: #FFFFFF;
   --transport-transport_flexible-primary-background: #EE777B;
   --transport-transport_flexible-primary-text: #000000;
@@ -139,7 +139,7 @@
   --transport-transport_flexible-secondary-text: #000000;
   --transport-transport_boat-primary-background: #007AB5;
   --transport-transport_boat-primary-text: #FFFFFF;
-  --transport-transport_boat-secondary-background: #016291;
+  --transport-transport_boat-secondary-background: #005686;
   --transport-transport_boat-secondary-text: #FFFFFF;
   --transport-transport_train-primary-background: #551125;
   --transport-transport_train-primary-text: #FFFFFF;
@@ -185,7 +185,7 @@
 .dark {
   --border-primary: #013149;
   --border-secondary: #000000;
-  --border-focus: #016291;
+  --border-focus: #005686;
   --border-radius-small: 0.25rem;
   --border-radius-regular: 0.5rem;
   --border-radius-circle: 1.25rem;
@@ -222,11 +222,11 @@
   --static-background-background_1-text: #FFFFFF;
   --static-background-background_2-background: #013149;
   --static-background-background_2-text: #FFFFFF;
-  --static-background-background_3-background: #014A6D;
+  --static-background-background_3-background: #014165;
   --static-background-background_3-text: #FFFFFF;
-  --static-background-background_accent_0-background: #016291;
+  --static-background-background_accent_0-background: #005686;
   --static-background-background_accent_0-text: #FFFFFF;
-  --static-background-background_accent_1-background: #014A6D;
+  --static-background-background_accent_1-background: #014165;
   --static-background-background_accent_1-text: #FFFFFF;
   --static-background-background_accent_2-background: #011925;
   --static-background-background_accent_2-text: #FFFFFF;
@@ -238,12 +238,12 @@
   --static-background-background_accent_5-text: #FFFFFF;
   --static-zone_selection-from-background: #82B962;
   --static-zone_selection-from-text: #000000;
-  --static-zone_selection-to-background: #016291;
+  --static-zone_selection-to-background: #005686;
   --static-zone_selection-to-text: #FFFFFF;
 
   --interactive-interactive_0-default-background: #007AB5;
   --interactive-interactive_0-default-text: #FFFFFF;
-  --interactive-interactive_0-hover-background: #016291;
+  --interactive-interactive_0-hover-background: #005686;
   --interactive-interactive_0-hover-text: #FFFFFF;
   --interactive-interactive_0-active-background: #99CAE2;
   --interactive-interactive_0-active-text: #000000;
@@ -255,7 +255,7 @@
   --interactive-interactive_0-destructive-text: #000000;
   --interactive-interactive_1-default-background: #007AB5;
   --interactive-interactive_1-default-text: #FFFFFF;
-  --interactive-interactive_1-hover-background: #016291;
+  --interactive-interactive_1-hover-background: #005686;
   --interactive-interactive_1-hover-text: #FFFFFF;
   --interactive-interactive_1-active-background: #012537;
   --interactive-interactive_1-active-text: #FFFFFF;
@@ -306,11 +306,11 @@
   --transport-transport_city-primary-text: #000000;
   --transport-transport_city-secondary-background: #ACD097;
   --transport-transport_city-secondary-text: #000000;
-  --transport-transport_region-primary-background: #016291;
+  --transport-transport_region-primary-background: #005686;
   --transport-transport_region-primary-text: #FFFFFF;
   --transport-transport_region-secondary-background: #007AB5;
   --transport-transport_region-secondary-text: #FFFFFF;
-  --transport-transport_airport_express-primary-background: #016291;
+  --transport-transport_airport_express-primary-background: #005686;
   --transport-transport_airport_express-primary-text: #FFFFFF;
   --transport-transport_airport_express-secondary-background: #007AB5;
   --transport-transport_airport_express-secondary-text: #FFFFFF;
@@ -366,7 +366,7 @@
   .light:not(.override-light) {
   --border-primary: #013149;
   --border-secondary: #000000;
-  --border-focus: #016291;
+  --border-focus: #005686;
   --border-radius-small: 0.25rem;
   --border-radius-regular: 0.5rem;
   --border-radius-circle: 1.25rem;
@@ -403,11 +403,11 @@
   --static-background-background_1-text: #FFFFFF;
   --static-background-background_2-background: #013149;
   --static-background-background_2-text: #FFFFFF;
-  --static-background-background_3-background: #014A6D;
+  --static-background-background_3-background: #014165;
   --static-background-background_3-text: #FFFFFF;
-  --static-background-background_accent_0-background: #016291;
+  --static-background-background_accent_0-background: #005686;
   --static-background-background_accent_0-text: #FFFFFF;
-  --static-background-background_accent_1-background: #014A6D;
+  --static-background-background_accent_1-background: #014165;
   --static-background-background_accent_1-text: #FFFFFF;
   --static-background-background_accent_2-background: #011925;
   --static-background-background_accent_2-text: #FFFFFF;
@@ -419,12 +419,12 @@
   --static-background-background_accent_5-text: #FFFFFF;
   --static-zone_selection-from-background: #82B962;
   --static-zone_selection-from-text: #000000;
-  --static-zone_selection-to-background: #016291;
+  --static-zone_selection-to-background: #005686;
   --static-zone_selection-to-text: #FFFFFF;
 
   --interactive-interactive_0-default-background: #007AB5;
   --interactive-interactive_0-default-text: #FFFFFF;
-  --interactive-interactive_0-hover-background: #016291;
+  --interactive-interactive_0-hover-background: #005686;
   --interactive-interactive_0-hover-text: #FFFFFF;
   --interactive-interactive_0-active-background: #99CAE2;
   --interactive-interactive_0-active-text: #000000;
@@ -436,7 +436,7 @@
   --interactive-interactive_0-destructive-text: #000000;
   --interactive-interactive_1-default-background: #007AB5;
   --interactive-interactive_1-default-text: #FFFFFF;
-  --interactive-interactive_1-hover-background: #016291;
+  --interactive-interactive_1-hover-background: #005686;
   --interactive-interactive_1-hover-text: #FFFFFF;
   --interactive-interactive_1-active-background: #012537;
   --interactive-interactive_1-active-text: #FFFFFF;
@@ -487,11 +487,11 @@
   --transport-transport_city-primary-text: #000000;
   --transport-transport_city-secondary-background: #ACD097;
   --transport-transport_city-secondary-text: #000000;
-  --transport-transport_region-primary-background: #016291;
+  --transport-transport_region-primary-background: #005686;
   --transport-transport_region-primary-text: #FFFFFF;
   --transport-transport_region-secondary-background: #007AB5;
   --transport-transport_region-secondary-text: #FFFFFF;
-  --transport-transport_airport_express-primary-background: #016291;
+  --transport-transport_airport_express-primary-background: #005686;
   --transport-transport_airport_express-primary-text: #FFFFFF;
   --transport-transport_airport_express-secondary-background: #007AB5;
   --transport-transport_airport_express-secondary-text: #FFFFFF;

@@ -32,7 +32,7 @@ export default {
         text: "#000000"
       },
       background_1: {
-        background: "#f1f1f2",
+        background: "#f1f2f2",
         text: "#000000"
       },
       background_2: {
@@ -40,7 +40,7 @@ export default {
         text: "#000000"
       },
       background_3: {
-        background: "#d5dce0",
+        background: "#d5d7d9",
         text: "#000000"
       },
       background_accent_0: {
@@ -394,7 +394,7 @@ export default {
     }
   },
   border: {
-    primary: "#f1f1f2",
+    primary: "#f1f2f2",
     secondary: "#000000",
     focus: "#e85912",
     radius: {

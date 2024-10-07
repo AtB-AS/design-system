@@ -144,7 +144,7 @@ export default {
         text: "#000000"
       },
       destructive: {
-        background: "#d692a7",
+        background: "#d691a7",
         text: "#000000"
       }
     },
@@ -170,7 +170,7 @@ export default {
         text: "#ffffff"
       },
       destructive: {
-        background: "#d692a7",
+        background: "#d691a7",
         text: "#000000"
       }
     },
@@ -196,7 +196,7 @@ export default {
         text: "#ffffff"
       },
       destructive: {
-        background: "#d692a7",
+        background: "#d691a7",
         text: "#000000"
       }
     },
@@ -248,7 +248,7 @@ export default {
         text: "#ffffff"
       },
       destructive: {
-        background: "#d692a7",
+        background: "#d691a7",
         text: "#000000"
       }
     }
@@ -326,7 +326,7 @@ export default {
     },
     transport_car: {
       primary: {
-        background: "#5b3c53",
+        background: "#6f5468",
         text: "#ffffff"
       },
       secondary: {

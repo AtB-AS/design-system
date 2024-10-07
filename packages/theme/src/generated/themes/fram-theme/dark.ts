@@ -40,15 +40,15 @@ export default {
         text: "#ffffff"
       },
       background_3: {
-        background: "#014a6d",
+        background: "#014165",
         text: "#ffffff"
       },
       background_accent_0: {
-        background: "#016291",
+        background: "#005686",
         text: "#ffffff"
       },
       background_accent_1: {
-        background: "#014a6d",
+        background: "#014165",
         text: "#ffffff"
       },
       background_accent_2: {
@@ -74,7 +74,7 @@ export default {
         text: "#000000"
       },
       to: {
-        background: "#016291",
+        background: "#005686",
         text: "#ffffff"
       }
     }
@@ -128,7 +128,7 @@ export default {
         text: "#ffffff"
       },
       hover: {
-        background: "#016291",
+        background: "#005686",
         text: "#ffffff"
       },
       active: {
@@ -154,7 +154,7 @@ export default {
         text: "#ffffff"
       },
       hover: {
-        background: "#016291",
+        background: "#005686",
         text: "#ffffff"
       },
       active: {
@@ -266,7 +266,7 @@ export default {
     },
     transport_region: {
       primary: {
-        background: "#016291",
+        background: "#005686",
         text: "#ffffff"
       },
       secondary: {
@@ -276,7 +276,7 @@ export default {
     },
     transport_airport_express: {
       primary: {
-        background: "#016291",
+        background: "#005686",
         text: "#ffffff"
       },
       secondary: {
@@ -396,7 +396,7 @@ export default {
   border: {
     primary: "#013149",
     secondary: "#000000",
-    focus: "#016291",
+    focus: "#005686",
     radius: {
       small: 4,
       regular: 8,

@@ -53,7 +53,7 @@ export default {
           }
         },
         3: {
-          background: "#014a6d",
+          background: "#014165",
           foreground: {
             primary: "#ffffff",
             secondary: "#e6e6e6",
@@ -63,7 +63,7 @@ export default {
       },
       accent: {
         0: {
-          background: "#016291",
+          background: "#005686",
           foreground: {
             primary: "#ffffff",
             secondary: "#e6e6e6",
@@ -71,7 +71,7 @@ export default {
           }
         },
         1: {
-          background: "#014a6d",
+          background: "#014165",
           foreground: {
             primary: "#ffffff",
             secondary: "#e6e6e6",
@@ -197,7 +197,7 @@ export default {
           }
         },
         hover: {
-          background: "#016291",
+          background: "#005686",
           foreground: {
             primary: "#ffffff",
             secondary: "#e6e6e6",
@@ -247,7 +247,7 @@ export default {
           }
         },
         hover: {
-          background: "#016291",
+          background: "#005686",
           foreground: {
             primary: "#ffffff",
             secondary: "#e6e6e6",
@@ -459,7 +459,7 @@ export default {
       },
       region: {
         primary: {
-          background: "#016291",
+          background: "#005686",
           foreground: {
             primary: "#ffffff",
             secondary: "#e6e6e6",
@@ -477,7 +477,7 @@ export default {
       },
       airportExpress: {
         primary: {
-          background: "#016291",
+          background: "#005686",
           foreground: {
             primary: "#ffffff",
             secondary: "#e6e6e6",
@@ -630,7 +630,7 @@ export default {
         }
       },
       to: {
-        background: "#016291",
+        background: "#005686",
         foreground: {
           primary: "#ffffff",
           secondary: "#e6e6e6",
@@ -710,7 +710,7 @@ export default {
         }
       },
       focus: {
-        background: "#016291",
+        background: "#005686",
         foreground: {
           primary: "#ffffff",
           secondary: "#e6e6e6",

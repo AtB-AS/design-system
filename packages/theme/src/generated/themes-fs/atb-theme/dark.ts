@@ -229,7 +229,7 @@ export default {
           }
         },
         destructive: {
-          background: "#d692a7",
+          background: "#d691a7",
           foreground: {
             primary: "#000000",
             secondary: "#555e65",
@@ -279,7 +279,7 @@ export default {
           }
         },
         destructive: {
-          background: "#d692a7",
+          background: "#d691a7",
           foreground: {
             primary: "#000000",
             secondary: "#555e65",
@@ -329,7 +329,7 @@ export default {
           }
         },
         destructive: {
-          background: "#d692a7",
+          background: "#d691a7",
           foreground: {
             primary: "#000000",
             secondary: "#555e65",
@@ -429,7 +429,7 @@ export default {
           }
         },
         destructive: {
-          background: "#d692a7",
+          background: "#d691a7",
           foreground: {
             primary: "#000000",
             secondary: "#555e65",
@@ -567,7 +567,7 @@ export default {
       },
       car: {
         primary: {
-          background: "#5b3c53",
+          background: "#6f5468",
           foreground: {
             primary: "#ffffff",
             secondary: "#e1e7eb",

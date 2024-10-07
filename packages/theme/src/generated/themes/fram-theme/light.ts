@@ -74,7 +74,7 @@ export default {
         text: "#000000"
       },
       to: {
-        background: "#016291",
+        background: "#005686",
         text: "#ffffff"
       }
     }
@@ -124,11 +124,11 @@ export default {
   interactive: {
     interactive_0: {
       default: {
-        background: "#016291",
+        background: "#005686",
         text: "#ffffff"
       },
       hover: {
-        background: "#014a6d",
+        background: "#014165",
         text: "#ffffff"
       },
       active: {
@@ -150,11 +150,11 @@ export default {
     },
     interactive_1: {
       default: {
-        background: "#016291",
+        background: "#005686",
         text: "#ffffff"
       },
       hover: {
-        background: "#014a6d",
+        background: "#014165",
         text: "#ffffff"
       },
       active: {
@@ -266,21 +266,21 @@ export default {
     },
     transport_region: {
       primary: {
-        background: "#016291",
+        background: "#005686",
         text: "#ffffff"
       },
       secondary: {
-        background: "#014a6d",
+        background: "#014165",
         text: "#ffffff"
       }
     },
     transport_airport_express: {
       primary: {
-        background: "#016291",
+        background: "#005686",
         text: "#ffffff"
       },
       secondary: {
-        background: "#014a6d",
+        background: "#014165",
         text: "#ffffff"
       }
     },
@@ -300,7 +300,7 @@ export default {
         text: "#ffffff"
       },
       secondary: {
-        background: "#016291",
+        background: "#005686",
         text: "#ffffff"
       }
     },
@@ -396,7 +396,7 @@ export default {
   border: {
     primary: "#e6e6e6",
     secondary: "#000000",
-    focus: "#016291",
+    focus: "#005686",
     radius: {
       small: 4,
       regular: 8,

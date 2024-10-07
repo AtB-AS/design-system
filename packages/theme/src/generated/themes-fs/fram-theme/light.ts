@@ -189,7 +189,7 @@ export default {
     interactive: {
       0: {
         default: {
-          background: "#016291",
+          background: "#005686",
           foreground: {
             primary: "#ffffff",
             secondary: "#e6e6e6",
@@ -197,7 +197,7 @@ export default {
           }
         },
         hover: {
-          background: "#014a6d",
+          background: "#014165",
           foreground: {
             primary: "#ffffff",
             secondary: "#e6e6e6",
@@ -239,7 +239,7 @@ export default {
       },
       1: {
         default: {
-          background: "#016291",
+          background: "#005686",
           foreground: {
             primary: "#ffffff",
             secondary: "#e6e6e6",
@@ -247,7 +247,7 @@ export default {
           }
         },
         hover: {
-          background: "#014a6d",
+          background: "#014165",
           foreground: {
             primary: "#ffffff",
             secondary: "#e6e6e6",
@@ -459,7 +459,7 @@ export default {
       },
       region: {
         primary: {
-          background: "#016291",
+          background: "#005686",
           foreground: {
             primary: "#ffffff",
             secondary: "#e6e6e6",
@@ -467,7 +467,7 @@ export default {
           }
         },
         secondary: {
-          background: "#014a6d",
+          background: "#014165",
           foreground: {
             primary: "#ffffff",
             secondary: "#e6e6e6",
@@ -477,7 +477,7 @@ export default {
       },
       airportExpress: {
         primary: {
-          background: "#016291",
+          background: "#005686",
           foreground: {
             primary: "#ffffff",
             secondary: "#e6e6e6",
@@ -485,7 +485,7 @@ export default {
           }
         },
         secondary: {
-          background: "#014a6d",
+          background: "#014165",
           foreground: {
             primary: "#ffffff",
             secondary: "#e6e6e6",
@@ -521,7 +521,7 @@ export default {
           }
         },
         secondary: {
-          background: "#016291",
+          background: "#005686",
           foreground: {
             primary: "#ffffff",
             secondary: "#e6e6e6",
@@ -630,7 +630,7 @@ export default {
         }
       },
       to: {
-        background: "#016291",
+        background: "#005686",
         foreground: {
           primary: "#ffffff",
           secondary: "#e6e6e6",
@@ -710,7 +710,7 @@ export default {
         }
       },
       focus: {
-        background: "#016291",
+        background: "#005686",
         foreground: {
           primary: "#ffffff",
           secondary: "#e6e6e6",

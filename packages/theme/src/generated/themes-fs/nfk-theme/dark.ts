@@ -151,7 +151,7 @@ export default {
       },
       warning: {
         primary: {
-          background: "#fdcb8a",
+          background: "#fcba63",
           foreground: {
             primary: "#000000",
             secondary: "#526164",
@@ -221,7 +221,7 @@ export default {
           }
         },
         outline: {
-          background: "#c9dde2",
+          background: "#9acdda",
           foreground: {
             primary: "#000000",
             secondary: "#526164",

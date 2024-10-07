@@ -112,8 +112,8 @@
   --interactive-interactive_destructive-default-text: #000000;
   --interactive-interactive_destructive-hover-background: #C03F38;
   --interactive-interactive_destructive-hover-text: #FFFFFF;
-  --interactive-interactive_destructive-active-background: #30100E;
-  --interactive-interactive_destructive-active-text: #FFFFFF;
+  --interactive-interactive_destructive-active-background: #F9B9B5;
+  --interactive-interactive_destructive-active-text: #000000;
   --interactive-interactive_destructive-disabled-background: #FCDCDA;
   --interactive-interactive_destructive-disabled-text: #000000;
   --interactive-interactive_destructive-outline-background: #70A4B2;
@@ -123,7 +123,7 @@
 
   --transport-transport_city-primary-background: #046078;
   --transport-transport_city-primary-text: #FFFFFF;
-  --transport-transport_city-secondary-background: #034151;
+  --transport-transport_city-secondary-background: #013441;
   --transport-transport_city-secondary-text: #FFFFFF;
   --transport-transport_region-primary-background: #2B926F;
   --transport-transport_region-primary-text: #000000;
@@ -249,7 +249,7 @@
   --interactive-interactive_0-active-text: #000000;
   --interactive-interactive_0-disabled-background: #CCE6ED;
   --interactive-interactive_0-disabled-text: #000000;
-  --interactive-interactive_0-outline-background: #C9DDE2;
+  --interactive-interactive_0-outline-background: #9ACDDA;
   --interactive-interactive_0-outline-text: #000000;
   --interactive-interactive_0-destructive-background: #F59590;
   --interactive-interactive_0-destructive-text: #000000;
@@ -351,7 +351,7 @@
   --status-info-primary-text: #FFFFFF;
   --status-info-secondary-background: #034151;
   --status-info-secondary-text: #FFFFFF;
-  --status-warning-primary-background: #FDCB8A;
+  --status-warning-primary-background: #FCBA63;
   --status-warning-primary-text: #000000;
   --status-warning-secondary-background: #3F2F19;
   --status-warning-secondary-text: #FFFFFF;
@@ -430,7 +430,7 @@
   --interactive-interactive_0-active-text: #000000;
   --interactive-interactive_0-disabled-background: #CCE6ED;
   --interactive-interactive_0-disabled-text: #000000;
-  --interactive-interactive_0-outline-background: #C9DDE2;
+  --interactive-interactive_0-outline-background: #9ACDDA;
   --interactive-interactive_0-outline-text: #000000;
   --interactive-interactive_0-destructive-background: #F59590;
   --interactive-interactive_0-destructive-text: #000000;
@@ -532,7 +532,7 @@
   --status-info-primary-text: #FFFFFF;
   --status-info-secondary-background: #034151;
   --status-info-secondary-text: #FFFFFF;
-  --status-warning-primary-background: #FDCB8A;
+  --status-warning-primary-background: #FCBA63;
   --status-warning-primary-text: #000000;
   --status-warning-secondary-background: #3F2F19;
   --status-warning-secondary-text: #FFFFFF;

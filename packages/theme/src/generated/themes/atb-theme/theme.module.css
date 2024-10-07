@@ -157,7 +157,7 @@
   --transport-transport_bike-primary-text: #FFFFFF;
   --transport-transport_bike-secondary-background: #5C0A24;
   --transport-transport_bike-secondary-text: #FFFFFF;
-  --transport-transport_other-primary-background: #37424A;
+  --transport-transport_other-primary-background: #555E65;
   --transport-transport_other-primary-text: #FFFFFF;
   --transport-transport_other-secondary-background: #2B343A;
   --transport-transport_other-secondary-text: #FFFFFF;
@@ -251,7 +251,7 @@
   --interactive-interactive_0-disabled-text: #000000;
   --interactive-interactive_0-outline-background: #71D6E0;
   --interactive-interactive_0-outline-text: #000000;
-  --interactive-interactive_0-destructive-background: #D692A7;
+  --interactive-interactive_0-destructive-background: #D691A7;
   --interactive-interactive_0-destructive-text: #000000;
   --interactive-interactive_1-default-background: #555E65;
   --interactive-interactive_1-default-text: #FFFFFF;
@@ -263,7 +263,7 @@
   --interactive-interactive_1-disabled-text: #000000;
   --interactive-interactive_1-outline-background: #007C92;
   --interactive-interactive_1-outline-text: #FFFFFF;
-  --interactive-interactive_1-destructive-background: #D692A7;
+  --interactive-interactive_1-destructive-background: #D691A7;
   --interactive-interactive_1-destructive-text: #000000;
   --interactive-interactive_2-default-background: #000000;
   --interactive-interactive_2-default-text: #FFFFFF;
@@ -275,7 +275,7 @@
   --interactive-interactive_2-disabled-text: #FFFFFF;
   --interactive-interactive_2-outline-background: #007C92;
   --interactive-interactive_2-outline-text: #FFFFFF;
-  --interactive-interactive_2-destructive-background: #D692A7;
+  --interactive-interactive_2-destructive-background: #D691A7;
   --interactive-interactive_2-destructive-text: #000000;
   --interactive-interactive_3-default-background: #004E5C;
   --interactive-interactive_3-default-text: #FFFFFF;
@@ -299,7 +299,7 @@
   --interactive-interactive_destructive-disabled-text: #000000;
   --interactive-interactive_destructive-outline-background: #007C92;
   --interactive-interactive_destructive-outline-text: #FFFFFF;
-  --interactive-interactive_destructive-destructive-background: #D692A7;
+  --interactive-interactive_destructive-destructive-background: #D691A7;
   --interactive-interactive_destructive-destructive-text: #000000;
 
   --transport-transport_city-primary-background: #A2AD00;
@@ -330,7 +330,7 @@
   --transport-transport_scooter-primary-text: #FFFFFF;
   --transport-transport_scooter-secondary-background: #323600;
   --transport-transport_scooter-secondary-text: #FFFFFF;
-  --transport-transport_car-primary-background: #5B3C53;
+  --transport-transport_car-primary-background: #6F5468;
   --transport-transport_car-primary-text: #FFFFFF;
   --transport-transport_car-secondary-background: #4B2942;
   --transport-transport_car-secondary-text: #FFFFFF;
@@ -432,7 +432,7 @@
   --interactive-interactive_0-disabled-text: #000000;
   --interactive-interactive_0-outline-background: #71D6E0;
   --interactive-interactive_0-outline-text: #000000;
-  --interactive-interactive_0-destructive-background: #D692A7;
+  --interactive-interactive_0-destructive-background: #D691A7;
   --interactive-interactive_0-destructive-text: #000000;
   --interactive-interactive_1-default-background: #555E65;
   --interactive-interactive_1-default-text: #FFFFFF;
@@ -444,7 +444,7 @@
   --interactive-interactive_1-disabled-text: #000000;
   --interactive-interactive_1-outline-background: #007C92;
   --interactive-interactive_1-outline-text: #FFFFFF;
-  --interactive-interactive_1-destructive-background: #D692A7;
+  --interactive-interactive_1-destructive-background: #D691A7;
   --interactive-interactive_1-destructive-text: #000000;
   --interactive-interactive_2-default-background: #000000;
   --interactive-interactive_2-default-text: #FFFFFF;
@@ -456,7 +456,7 @@
   --interactive-interactive_2-disabled-text: #FFFFFF;
   --interactive-interactive_2-outline-background: #007C92;
   --interactive-interactive_2-outline-text: #FFFFFF;
-  --interactive-interactive_2-destructive-background: #D692A7;
+  --interactive-interactive_2-destructive-background: #D691A7;
   --interactive-interactive_2-destructive-text: #000000;
   --interactive-interactive_3-default-background: #004E5C;
   --interactive-interactive_3-default-text: #FFFFFF;
@@ -480,7 +480,7 @@
   --interactive-interactive_destructive-disabled-text: #000000;
   --interactive-interactive_destructive-outline-background: #007C92;
   --interactive-interactive_destructive-outline-text: #FFFFFF;
-  --interactive-interactive_destructive-destructive-background: #D692A7;
+  --interactive-interactive_destructive-destructive-background: #D691A7;
   --interactive-interactive_destructive-destructive-text: #000000;
 
   --transport-transport_city-primary-background: #A2AD00;
@@ -511,7 +511,7 @@
   --transport-transport_scooter-primary-text: #FFFFFF;
   --transport-transport_scooter-secondary-background: #323600;
   --transport-transport_scooter-secondary-text: #FFFFFF;
-  --transport-transport_car-primary-background: #5B3C53;
+  --transport-transport_car-primary-background: #6F5468;
   --transport-transport_car-primary-text: #FFFFFF;
   --transport-transport_car-secondary-background: #4B2942;
   --transport-transport_car-secondary-text: #FFFFFF;

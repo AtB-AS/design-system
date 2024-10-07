@@ -346,7 +346,7 @@ export default {
     },
     transport_other: {
       primary: {
-        background: "#37424a",
+        background: "#555e65",
         text: "#ffffff"
       },
       secondary: {

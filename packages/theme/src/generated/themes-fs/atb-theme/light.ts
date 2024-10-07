@@ -603,7 +603,7 @@ export default {
       },
       other: {
         primary: {
-          background: "#37424a",
+          background: "#555e65",
           foreground: {
             primary: "#ffffff",
             secondary: "#e1e7eb",

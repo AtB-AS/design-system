@@ -236,8 +236,8 @@ export default {
         text: "#ffffff"
       },
       active: {
-        background: "#30100e",
-        text: "#ffffff"
+        background: "#f9b9b5",
+        text: "#000000"
       },
       disabled: {
         background: "#fcdcda",
@@ -260,7 +260,7 @@ export default {
         text: "#ffffff"
       },
       secondary: {
-        background: "#034151",
+        background: "#013441",
         text: "#ffffff"
       }
     },

@@ -102,7 +102,7 @@ export default {
     },
     warning: {
       primary: {
-        background: "#fdcb8a",
+        background: "#fcba63",
         text: "#000000"
       },
       secondary: {
@@ -140,7 +140,7 @@ export default {
         text: "#000000"
       },
       outline: {
-        background: "#c9dde2",
+        background: "#9acdda",
         text: "#000000"
       },
       destructive: {
