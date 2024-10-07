@@ -10,13 +10,23 @@ import { convertToCamelCase, convertToSnakeCase } from "./utils";
 import { ThemeOptions } from "../src";
 
 export type Organizations = 'atb' | 'fram' | 'innlandet' | 'nfk' | 'troms'
+export interface Organization {
+  id: Organizations
+  name: string
+}
 export type Modes = 'light' | 'dark'
 export type SharedCollections = 'border' | 'spacing' | 'typography' | 'icon'
 export type OrganisationCollections = 'color_palette'
 export type VariantCollections = 'theme'
 
 const outDir = './src/generated/';
-const organizations: Organizations[] = ['atb', 'troms', 'fram', 'innlandet', 'nfk']
+const organizations: Organization[] = [
+  {id: 'atb', name: 'AtB'},
+  {id: 'troms', name: 'Troms'},
+  {id: 'fram', name: 'FRAM'},
+  {id: 'innlandet', name: 'Innlandet'},
+  {id: 'nfk', name: 'Nfk'}
+]
 const modes: Modes[] = ['light', 'dark'];
 
 /**
@@ -136,13 +146,10 @@ StyleDictionary.registerFilter({
 
 const mainIndex = (options?: ThemeOptions) => {
   const postfix = options?.useFigmaStructure ? `Fs`: ``
-  return `
-export {default as AtBThemes${postfix}} from './atb-theme/theme';
-export {default as NfkThemes${postfix}} from './nfk-theme/theme';
-export {default as FRAMThemes${postfix}} from './fram-theme/theme';
-export {default as TromsThemes${postfix}} from './troms-theme/theme';
-export {default as InnlandetThemes${postfix}} from './innlandet-theme/theme';
-`
+  return organizations.map(organization => (
+    `export {default as ${organization.name}Themes${postfix}} from './${organization.id}-theme/theme';`
+    ))
+    .join("\n")
 }
 
 /**
@@ -229,7 +236,7 @@ StyleDictionary.registerFormat({
  * @param organization Name of the organization
  * @returns Output folder
  */
-const makeDestination = (organization: Organizations, themeOptions?: ThemeOptions): string => path.join(outDir, `${themeOptions?.useFigmaStructure ? 'themes-fs' : 'themes'}/${organization}-theme/`);
+const makeDestination = (organization: Organization, themeOptions?: ThemeOptions): string => path.join(outDir, `${themeOptions?.useFigmaStructure ? 'themes-fs' : 'themes'}/${organization.id}-theme/`);
 
 const generateThemes = async () => {
 
@@ -259,11 +266,11 @@ const generateThemes = async () => {
     verbosity: "silent"
   })
 
-  const makeTokens = (organization: Organizations, mode: Modes) => {
+  const makeTokens = (organization: Organization, mode: Modes) => {
     const { theme, color_palette, ...rest } = {
       ...tokens,
-      theme: tokens['theme']?.[`${organization}_${mode}`],
-      color_palette: tokens['color_palette']?.[organization]
+      theme: tokens['theme']?.[`${organization.id}_${mode}`],
+      color_palette: tokens['color_palette']?.[organization.id]
     }
 
     return {
@@ -281,7 +288,7 @@ const generateThemes = async () => {
    * @param mode Theme mode
    * @returns Style Dictionary config for the org-mode combination
    */
-  const getStyleDictionaryConfig = (organization: Organizations, mode: Modes): Config => {
+  const getStyleDictionaryConfig = (organization: Organization, mode: Modes): Config => {
 
     return {
       log: {
@@ -356,7 +363,7 @@ const generateThemes = async () => {
 
   // Generate files for each organization-mode combination
   for (const organization of organizations) {
-    console.info(`\n👷  Built ${organization} tokens      | 🌙 & 🌞 |`);
+    console.info(`\n👷  Built ${organization.name} tokens      | 🌙 & 🌞 |`);
     await Promise.all(
       modes.map((mode) => new StyleDictionary(
         getStyleDictionaryConfig(organization, mode),
