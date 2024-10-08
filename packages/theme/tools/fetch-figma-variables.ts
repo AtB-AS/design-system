@@ -9,9 +9,9 @@ import path from 'path';
 import { convertToCamelCase, convertToSnakeCase } from "./utils";
 import { ThemeOptions } from "../src";
 
-export type Organizations = 'atb' | 'fram' | 'innlandet' | 'nfk' | 'troms'
+export type OrganizationId = 'atb' | 'fram' | 'innlandet' | 'nfk' | 'troms'
 export interface Organization {
-  id: Organizations
+  id: OrganizationId
   name: string
 }
 export type Modes = 'light' | 'dark'
@@ -254,7 +254,7 @@ const generateThemes = async () => {
    * Convert Figma response to Design Tokens Community Group (DTCG) standard
    */
   const { tokens } = await useFigmaToDTCG<
-    Organizations,
+    OrganizationId,
     Modes,
     SharedCollections,
     OrganisationCollections,
