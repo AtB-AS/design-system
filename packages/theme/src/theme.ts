@@ -289,6 +289,8 @@ export enum ThemeVariant {
   FRAM,
   Troms,
   Innlandet,
+  VKT,
+  Farte
 }
 
 export interface ThemeOptions {

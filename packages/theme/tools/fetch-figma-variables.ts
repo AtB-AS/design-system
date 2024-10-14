@@ -9,7 +9,7 @@ import path from 'path';
 import { convertToCamelCase, convertToSnakeCase } from "./utils";
 import { ThemeOptions } from "../src";
 
-export type OrganizationId = 'atb' | 'fram' | 'innlandet' | 'nfk' | 'troms'
+export type OrganizationId = 'atb' | 'fram' | 'innlandet' | 'nfk' | 'troms' | 'vkt' | 'farte'
 export interface Organization {
   id: OrganizationId
   name: string
