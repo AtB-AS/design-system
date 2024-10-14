@@ -6,15 +6,9 @@
   "license": "EUPL-1.2",
   "type": "commonjs",
   "main": "./lib/index.js",
-  "exports": {
-    ".": {
-      "types": "./lib/index.d.ts",
-      "require": "./lib/index.js",
-      "default": "./lib/index.js"
-    }
-  },
+  "types": "./lib/index.d.ts",
   "files": [
-    "lib"
+    "./lib/**/*"
   ],
   "scripts": {
     "pack": "yarn pack",
