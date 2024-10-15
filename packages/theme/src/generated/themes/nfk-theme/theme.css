@@ -76,7 +76,7 @@
   --interactive-interactive_1-default-text: #FFFFFF;
   --interactive-interactive_1-hover-background: #034151;
   --interactive-interactive_1-hover-text: #FFFFFF;
-  --interactive-interactive_1-active-background: #03313D;
+  --interactive-interactive_1-active-background: #022129;
   --interactive-interactive_1-active-text: #FFFFFF;
   --interactive-interactive_1-disabled-background: #DBE9EC;
   --interactive-interactive_1-disabled-text: #000000;
@@ -183,9 +183,9 @@
 
 /* Dark theme data */
 .dark {
-  --border-primary: #046078;
-  --border-secondary: #03313D;
-  --border-focus: #70A4B2;
+  --border-primary: #034151;
+  --border-secondary: #022129;
+  --border-focus: #28778B;
   --border-radius-small: 0.25rem;
   --border-radius-regular: 0.5rem;
   --border-radius-circle: 1.25rem;
@@ -364,9 +364,9 @@
 
 @media (prefers-color-scheme: dark) {
   .light:not(.override-light) {
-  --border-primary: #046078;
-  --border-secondary: #03313D;
-  --border-focus: #70A4B2;
+  --border-primary: #034151;
+  --border-secondary: #022129;
+  --border-focus: #28778B;
   --border-radius-small: 0.25rem;
   --border-radius-regular: 0.5rem;
   --border-radius-circle: 1.25rem;

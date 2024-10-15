@@ -694,7 +694,7 @@ export default {
     },
     border: {
       primary: {
-        background: "#046078",
+        background: "#034151",
         foreground: {
           primary: "#ffffff",
           secondary: "#dae2e4",
@@ -702,7 +702,7 @@ export default {
         }
       },
       secondary: {
-        background: "#03313d",
+        background: "#022129",
         foreground: {
           primary: "#ffffff",
           secondary: "#dae2e4",
@@ -710,10 +710,10 @@ export default {
         }
       },
       focus: {
-        background: "#70a4b2",
+        background: "#28778b",
         foreground: {
-          primary: "#000000",
-          secondary: "#555760",
+          primary: "#ffffff",
+          secondary: "#dae2e4",
           disabled: "#8fa9af"
         }
       }

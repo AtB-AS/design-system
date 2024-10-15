@@ -394,9 +394,9 @@ export default {
     }
   },
   border: {
-    primary: "#046078",
-    secondary: "#03313d",
-    focus: "#70a4b2",
+    primary: "#034151",
+    secondary: "#022129",
+    focus: "#28778b",
     radius: {
       small: 4,
       regular: 8,

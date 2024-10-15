@@ -255,7 +255,7 @@ export default {
           }
         },
         active: {
-          background: "#03313d",
+          background: "#022129",
           foreground: {
             primary: "#ffffff",
             secondary: "#dae2e4",

@@ -158,7 +158,7 @@ export default {
         text: "#ffffff"
       },
       active: {
-        background: "#03313d",
+        background: "#022129",
         text: "#ffffff"
       },
       disabled: {
