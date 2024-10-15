@@ -205,10 +205,10 @@ export default {
           }
         },
         active: {
-          background: "#011a21",
+          background: "#9acdda",
           foreground: {
-            primary: "#ffffff",
-            secondary: "#dae2e4",
+            primary: "#000000",
+            secondary: "#555760",
             disabled: "#8fa9af"
           }
         },
