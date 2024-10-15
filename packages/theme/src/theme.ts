@@ -6,6 +6,8 @@ import {
   FRAMThemes,
   TromsThemes,
   InnlandetThemes,
+  VKTThemes,
+  FarteThemes
 } from './generated/themes';
 
 import {
@@ -14,6 +16,8 @@ import {
   FRAMThemesFs,
   TromsThemesFs,
   InnlandetThemesFs,
+  VKTThemesFs,
+  FarteThemesFs
 } from './generated/themes-fs';
 
 export type Themes<T = Theme> = {
@@ -290,7 +294,7 @@ export enum ThemeVariant {
   Troms,
   Innlandet,
   VKT,
-  Farte
+  Farte,
 }
 
 export interface ThemeOptions {
@@ -338,6 +342,18 @@ export function createThemesFor<T extends ThemeOptions>(
         return InnlandetThemesFs as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>; 
       } else {
         return InnlandetThemes as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
+      }
+    case ThemeVariant.VKT:
+      if (themeOptions?.useFigmaStructure) {
+        return VKTThemesFs as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>; 
+      } else {
+        return VKTThemes as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
+      }
+    case ThemeVariant.Farte:
+      if (themeOptions?.useFigmaStructure) {
+        return FarteThemesFs as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>; 
+      } else {
+        return FarteThemes as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
       }
     default:
       throw Error('A valid ThemeVariant must be provided');

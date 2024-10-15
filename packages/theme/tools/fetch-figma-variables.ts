@@ -25,7 +25,9 @@ const organizations: Organization[] = [
   {id: 'troms', name: 'Troms'},
   {id: 'fram', name: 'FRAM'},
   {id: 'innlandet', name: 'Innlandet'},
-  {id: 'nfk', name: 'Nfk'}
+  {id: 'nfk', name: 'Nfk'},
+  {id: 'vkt', name: 'VKT'},
+  {id: 'farte', name: 'Farte'}
 ]
 const modes: Modes[] = ['light', 'dark'];
 
