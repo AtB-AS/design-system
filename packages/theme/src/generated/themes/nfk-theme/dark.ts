@@ -11,7 +11,7 @@ export default {
     },
     dark: {
       primary: "#000000",
-      secondary: "#526164",
+      secondary: "#555760",
       disabled: "#8fa9af"
     },
     colors: {
@@ -21,7 +21,7 @@ export default {
     },
     inverse: {
       primary: "#000000",
-      secondary: "#526164",
+      secondary: "#555760",
       disabled: "#8fa9af"
     }
   },
@@ -132,15 +132,15 @@ export default {
         text: "#ffffff"
       },
       active: {
-        background: "#9acdda",
-        text: "#000000"
+        background: "#011a21",
+        text: "#ffffff"
       },
       disabled: {
         background: "#cce6ed",
         text: "#000000"
       },
       outline: {
-        background: "#9acdda",
+        background: "#b8d2d9",
         text: "#000000"
       },
       destructive: {
@@ -166,7 +166,7 @@ export default {
         text: "#000000"
       },
       outline: {
-        background: "#c9dde2",
+        background: "#b8d2d9",
         text: "#000000"
       },
       destructive: {
@@ -192,7 +192,7 @@ export default {
         text: "#ffffff"
       },
       outline: {
-        background: "#c9dde2",
+        background: "#94bbc5",
         text: "#000000"
       },
       destructive: {
@@ -214,11 +214,11 @@ export default {
         text: "#ffffff"
       },
       disabled: {
-        background: "#526164",
+        background: "#707070",
         text: "#ffffff"
       },
       outline: {
-        background: "#c9dde2",
+        background: "#b8d2d9",
         text: "#000000"
       },
       destructive: {
@@ -244,7 +244,7 @@ export default {
         text: "#000000"
       },
       outline: {
-        background: "#c9dde2",
+        background: "#b8d2d9",
         text: "#000000"
       },
       destructive: {
@@ -256,21 +256,21 @@ export default {
   transport: {
     transport_city: {
       primary: {
-        background: "#046078",
+        background: "#004d61",
         text: "#ffffff"
       },
       secondary: {
-        background: "#28778b",
+        background: "#256778",
         text: "#ffffff"
       }
     },
     transport_region: {
       primary: {
-        background: "#2b926f",
+        background: "#6b7d2e",
         text: "#000000"
       },
       secondary: {
-        background: "#33af85",
+        background: "#899758",
         text: "#000000"
       }
     },
@@ -286,21 +286,21 @@ export default {
     },
     transport_flexible: {
       primary: {
-        background: "#526164",
+        background: "#707070",
         text: "#ffffff"
       },
       secondary: {
-        background: "#67797e",
+        background: "#888888",
         text: "#000000"
       }
     },
     transport_boat: {
       primary: {
-        background: "#349ab6",
+        background: "#5ca1e3",
         text: "#000000"
       },
       secondary: {
-        background: "#67b4c8",
+        background: "#85b9ea",
         text: "#000000"
       }
     },
@@ -316,11 +316,11 @@ export default {
     },
     transport_scooter: {
       primary: {
-        background: "#1a5843",
+        background: "#414c1c",
         text: "#ffffff"
       },
       secondary: {
-        background: "#237559",
+        background: "#566526",
         text: "#ffffff"
       }
     },
@@ -346,11 +346,11 @@ export default {
     },
     transport_other: {
       primary: {
-        background: "#526164",
+        background: "#707070",
         text: "#ffffff"
       },
       secondary: {
-        background: "#67797e",
+        background: "#888888",
         text: "#000000"
       }
     }
@@ -394,9 +394,9 @@ export default {
     }
   },
   border: {
-    primary: "#034151",
-    secondary: "#022129",
-    focus: "#28778b",
+    primary: "#046078",
+    secondary: "#03313d",
+    focus: "#70a4b2",
     radius: {
       small: 4,
       regular: 8,

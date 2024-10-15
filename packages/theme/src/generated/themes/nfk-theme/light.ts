@@ -11,12 +11,12 @@ export default {
     },
     dark: {
       primary: "#000000",
-      secondary: "#526164",
+      secondary: "#555760",
       disabled: "#8fa9af"
     },
     colors: {
       primary: "#000000",
-      secondary: "#526164",
+      secondary: "#555760",
       disabled: "#8fa9af"
     },
     inverse: {
@@ -158,11 +158,11 @@ export default {
         text: "#ffffff"
       },
       active: {
-        background: "#022129",
+        background: "#03313d",
         text: "#ffffff"
       },
       disabled: {
-        background: "#b5c6ca",
+        background: "#dbe9ec",
         text: "#000000"
       },
       outline: {
@@ -256,7 +256,7 @@ export default {
   transport: {
     transport_city: {
       primary: {
-        background: "#046078",
+        background: "#004d61",
         text: "#ffffff"
       },
       secondary: {
@@ -266,11 +266,11 @@ export default {
     },
     transport_region: {
       primary: {
-        background: "#2b926f",
+        background: "#6b7d2e",
         text: "#000000"
       },
       secondary: {
-        background: "#237559",
+        background: "#566526",
         text: "#ffffff"
       }
     },
@@ -286,21 +286,21 @@ export default {
     },
     transport_flexible: {
       primary: {
-        background: "#526164",
+        background: "#707070",
         text: "#ffffff"
       },
       secondary: {
-        background: "#3e494b",
+        background: "#555760",
         text: "#ffffff"
       }
     },
     transport_boat: {
       primary: {
-        background: "#349ab6",
+        background: "#5ca1e3",
         text: "#000000"
       },
       secondary: {
-        background: "#0181a3",
+        background: "#4d87be",
         text: "#ffffff"
       }
     },
@@ -316,11 +316,11 @@ export default {
     },
     transport_scooter: {
       primary: {
-        background: "#1a5843",
+        background: "#414c1c",
         text: "#ffffff"
       },
       secondary: {
-        background: "#123b2d",
+        background: "#2b3313",
         text: "#ffffff"
       }
     },
@@ -346,11 +346,11 @@ export default {
     },
     transport_other: {
       primary: {
-        background: "#526164",
+        background: "#707070",
         text: "#ffffff"
       },
       secondary: {
-        background: "#3e494b",
+        background: "#555760",
         text: "#ffffff"
       }
     }
@@ -358,8 +358,8 @@ export default {
   geofencingZones: {
     allowed: {
       color: {
-        background: "#28778b",
-        text: "#ffffff"
+        background: "#70a4b2",
+        text: "#000000"
       },
       fillOpacity: 0.07999999821186066,
       strokeOpacity: 0.5,
