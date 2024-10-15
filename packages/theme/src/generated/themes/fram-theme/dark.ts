@@ -28,15 +28,15 @@ export default {
   static: {
     background: {
       background_0: {
-        background: "#011925",
+        background: "#011622",
         text: "#ffffff"
       },
       background_1: {
-        background: "#012537",
+        background: "#012133",
         text: "#ffffff"
       },
       background_2: {
-        background: "#013149",
+        background: "#012c44",
         text: "#ffffff"
       },
       background_3: {
@@ -52,7 +52,7 @@ export default {
         text: "#ffffff"
       },
       background_accent_2: {
-        background: "#011925",
+        background: "#011622",
         text: "#ffffff"
       },
       background_accent_3: {
@@ -64,7 +64,7 @@ export default {
         text: "#000000"
       },
       background_accent_5: {
-        background: "#013149",
+        background: "#012c44",
         text: "#ffffff"
       }
     },
@@ -86,7 +86,7 @@ export default {
         text: "#000000"
       },
       secondary: {
-        background: "#284320",
+        background: "#38502b",
         text: "#ffffff"
       }
     },
@@ -128,7 +128,7 @@ export default {
         text: "#ffffff"
       },
       hover: {
-        background: "#005686",
+        background: "#016291",
         text: "#ffffff"
       },
       active: {
@@ -154,7 +154,7 @@ export default {
         text: "#ffffff"
       },
       hover: {
-        background: "#005686",
+        background: "#016291",
         text: "#ffffff"
       },
       active: {
@@ -176,11 +176,11 @@ export default {
     },
     interactive_2: {
       default: {
-        background: "#011925",
+        background: "#011622",
         text: "#ffffff"
       },
       hover: {
-        background: "#013149",
+        background: "#012c44",
         text: "#ffffff"
       },
       active: {
@@ -270,7 +270,7 @@ export default {
         text: "#ffffff"
       },
       secondary: {
-        background: "#007ab5",
+        background: "#2b729a",
         text: "#ffffff"
       }
     },
@@ -280,17 +280,17 @@ export default {
         text: "#ffffff"
       },
       secondary: {
-        background: "#007ab5",
+        background: "#2b729a",
         text: "#ffffff"
       }
     },
     transport_flexible: {
       primary: {
-        background: "#ee777b",
+        background: "#ee8076",
         text: "#000000"
       },
       secondary: {
-        background: "#f4a4a7",
+        background: "#f4aaa4",
         text: "#000000"
       }
     },
@@ -367,7 +367,7 @@ export default {
     },
     slow: {
       color: {
-        background: "#f0e991",
+        background: "#fdee80",
         text: "#000000"
       },
       fillOpacity: 0.6000000238418579,
@@ -394,7 +394,7 @@ export default {
     }
   },
   border: {
-    primary: "#013149",
+    primary: "#012c44",
     secondary: "#000000",
     focus: "#005686",
     radius: {

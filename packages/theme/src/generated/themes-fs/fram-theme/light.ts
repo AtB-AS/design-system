@@ -205,7 +205,7 @@ export default {
           }
         },
         active: {
-          background: "#66afd3",
+          background: "#80abc3",
           foreground: {
             primary: "#000000",
             secondary: "#676767",
@@ -213,7 +213,7 @@ export default {
           }
         },
         disabled: {
-          background: "#cce5f0",
+          background: "#d5e3eb",
           foreground: {
             primary: "#000000",
             secondary: "#676767",
@@ -255,7 +255,7 @@ export default {
           }
         },
         active: {
-          background: "#012537",
+          background: "#011622",
           foreground: {
             primary: "#ffffff",
             secondary: "#e6e6e6",
@@ -263,7 +263,7 @@ export default {
           }
         },
         disabled: {
-          background: "#cce5f0",
+          background: "#d5e3eb",
           foreground: {
             primary: "#000000",
             secondary: "#676767",
@@ -297,7 +297,7 @@ export default {
           }
         },
         hover: {
-          background: "#cce5f0",
+          background: "#d5e3eb",
           foreground: {
             primary: "#000000",
             secondary: "#676767",
@@ -495,7 +495,7 @@ export default {
       },
       flexible: {
         primary: {
-          background: "#ee777b",
+          background: "#ee8076",
           foreground: {
             primary: "#000000",
             secondary: "#676767",
@@ -503,7 +503,7 @@ export default {
           }
         },
         secondary: {
-          background: "#e9494e",
+          background: "#cc6e66",
           foreground: {
             primary: "#000000",
             secondary: "#676767",
@@ -521,7 +521,7 @@ export default {
           }
         },
         secondary: {
-          background: "#005686",
+          background: "#016291",
           foreground: {
             primary: "#ffffff",
             secondary: "#e6e6e6",
@@ -641,7 +641,7 @@ export default {
     geofencingZone: {
       allowed: {
         color: {
-          background: "#007ab5",
+          background: "#2b729a",
           foreground: {
             primary: "#ffffff",
             secondary: "#e6e6e6",
@@ -654,7 +654,7 @@ export default {
       },
       slow: {
         color: {
-          background: "#f0e991",
+          background: "#fdee80",
           foreground: {
             primary: "#000000",
             secondary: "#676767",

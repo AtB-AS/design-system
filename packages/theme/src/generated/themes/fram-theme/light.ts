@@ -132,11 +132,11 @@ export default {
         text: "#ffffff"
       },
       active: {
-        background: "#66afd3",
+        background: "#80abc3",
         text: "#000000"
       },
       disabled: {
-        background: "#cce5f0",
+        background: "#d5e3eb",
         text: "#000000"
       },
       outline: {
@@ -158,11 +158,11 @@ export default {
         text: "#ffffff"
       },
       active: {
-        background: "#012537",
+        background: "#011622",
         text: "#ffffff"
       },
       disabled: {
-        background: "#cce5f0",
+        background: "#d5e3eb",
         text: "#000000"
       },
       outline: {
@@ -180,7 +180,7 @@ export default {
         text: "#000000"
       },
       hover: {
-        background: "#cce5f0",
+        background: "#d5e3eb",
         text: "#000000"
       },
       active: {
@@ -286,11 +286,11 @@ export default {
     },
     transport_flexible: {
       primary: {
-        background: "#ee777b",
+        background: "#ee8076",
         text: "#000000"
       },
       secondary: {
-        background: "#e9494e",
+        background: "#cc6e66",
         text: "#000000"
       }
     },
@@ -300,7 +300,7 @@ export default {
         text: "#ffffff"
       },
       secondary: {
-        background: "#005686",
+        background: "#016291",
         text: "#ffffff"
       }
     },
@@ -358,7 +358,7 @@ export default {
   geofencingZones: {
     allowed: {
       color: {
-        background: "#007ab5",
+        background: "#2b729a",
         text: "#ffffff"
       },
       fillOpacity: 0.07500000298023224,
@@ -367,7 +367,7 @@ export default {
     },
     slow: {
       color: {
-        background: "#f0e991",
+        background: "#fdee80",
         text: "#000000"
       },
       fillOpacity: 0.6000000238418579,
