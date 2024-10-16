@@ -1,5 +1,5 @@
 import merge from 'ts-deepmerge';
-import {ConfigurationOverride, overrideConfig} from './utils/override-config';
+import { ConfigurationOverride, overrideConfig } from './utils/override-config';
 import {
   AtBThemes,
   NfkThemes,
@@ -133,7 +133,7 @@ export interface Theme {
   };
 
   text: {
-    colors: {[key in TextColor]: string};
+    colors: { [key in TextColor]: string };
   };
 
   border: {
@@ -315,43 +315,43 @@ export function createThemesFor<T extends ThemeOptions>(
   switch (themeVariant) {
     case ThemeVariant.AtB:
       if (themeOptions?.useFigmaStructure) {
-        return AtBThemesFs as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>; 
+        return AtBThemesFs as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
       } else {
         return AtBThemes as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
       }
     case ThemeVariant.Troms:
       if (themeOptions?.useFigmaStructure) {
-        return TromsThemesFs as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>; 
+        return TromsThemesFs as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
       } else {
         return TromsThemes as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
       }
     case ThemeVariant.Nfk:
       if (themeOptions?.useFigmaStructure) {
-        return NfkThemesFs as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>; 
+        return NfkThemesFs as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
       } else {
         return NfkThemes as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
       }
     case ThemeVariant.FRAM:
       if (themeOptions?.useFigmaStructure) {
-        return FRAMThemesFs as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>; 
+        return FRAMThemesFs as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
       } else {
         return FRAMThemes as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
       }
     case ThemeVariant.Innlandet:
       if (themeOptions?.useFigmaStructure) {
-        return InnlandetThemesFs as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>; 
+        return InnlandetThemesFs as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
       } else {
         return InnlandetThemes as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
       }
     case ThemeVariant.VKT:
       if (themeOptions?.useFigmaStructure) {
-        return VKTThemesFs as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>; 
+        return VKTThemesFs as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
       } else {
         return VKTThemes as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
       }
     case ThemeVariant.Farte:
       if (themeOptions?.useFigmaStructure) {
-        return FarteThemesFs as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>; 
+        return FarteThemesFs as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
       } else {
         return FarteThemes as unknown as T['useFigmaStructure'] extends true ? Themes<ThemeFs> : Themes<Theme>;
       }
