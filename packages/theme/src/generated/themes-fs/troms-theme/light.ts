@@ -189,7 +189,7 @@ export default {
     interactive: {
       0: {
         default: {
-          background: "#4f1e06",
+          background: "#0020c2",
           foreground: {
             primary: "#ffffff",
             secondary: "#e3e5e6",
@@ -197,7 +197,7 @@ export default {
           }
         },
         hover: {
-          background: "#742700",
+          background: "#334dce",
           foreground: {
             primary: "#ffffff",
             secondary: "#e3e5e6",
@@ -205,7 +205,7 @@ export default {
           }
         },
         active: {
-          background: "#f4b392",
+          background: "#8a98e3",
           foreground: {
             primary: "#000000",
             secondary: "#555e65",
@@ -213,7 +213,7 @@ export default {
           }
         },
         disabled: {
-          background: "#f8ccb5",
+          background: "#b0baec",
           foreground: {
             primary: "#000000",
             secondary: "#555e65",

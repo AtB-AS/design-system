@@ -124,19 +124,19 @@ export default {
   interactive: {
     interactive_0: {
       default: {
-        background: "#4f1e06",
+        background: "#0020c2",
         text: "#ffffff"
       },
       hover: {
-        background: "#742700",
+        background: "#334dce",
         text: "#ffffff"
       },
       active: {
-        background: "#f4b392",
+        background: "#8a98e3",
         text: "#000000"
       },
       disabled: {
-        background: "#f8ccb5",
+        background: "#b0baec",
         text: "#000000"
       },
       outline: {
