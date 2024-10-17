@@ -9,7 +9,7 @@ export function overrideConfig<T extends Configuration>(
   base: T,
   overrides: ConfigurationOverride<T>,
 ): T {
-  let result: T = {...base};
+  let result: T = { ...base };
   for (let key in base) {
     if (isObject(result[key]) && isObject(overrides[key])) {
       result[key] = overrideConfig(result[key], overrides[key]!);
