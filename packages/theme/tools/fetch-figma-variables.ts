@@ -1,9 +1,11 @@
 import { useFigmaToDTCG } from "@tfk-samf/figma-to-dtcg"
 import type { GetLocalVariablesResponse } from "@figma/rest-api-spec"
 
+// @ts-ignore Package exists, but is not found by TS
 import StyleDictionary from 'style-dictionary';
-import type { Config, DesignTokens, TransformedToken } from 'style-dictionary/types';
+// @ts-ignore Package exists, but is not found by TS
 import { fileHeader } from 'style-dictionary/utils';
+import type { Config, DesignTokens, TransformedToken, File, Dictionary } from 'style-dictionary/types';
 
 import path from 'path';
 import { convertToCamelCase, convertToSnakeCase } from "./utils";
@@ -18,6 +20,15 @@ export type Modes = 'light' | 'dark'
 export type SharedCollections = 'border' | 'spacing' | 'typography' | 'icon'
 export type OrganisationCollections = 'color_palette'
 export type VariantCollections = 'theme'
+
+type FormatOptions = { 
+  file: File, 
+  options?: { 
+    content?: string 
+    useFigmaStructure?: boolean
+  },
+  dictionary?: Dictionary
+}
 
 const outDir = './src/generated/';
 const organizations: Organization[] = [
@@ -174,11 +185,11 @@ export default themes`;
  */
 StyleDictionary.registerFormat({
   name: 'index',
-  format: async ({ file, options }) => {
+  format: async ({ file, options }: FormatOptions) => {
     const header = await fileHeader({ file });
     return (
       header
-      + options.content
+      + options?.content
     );
   },
 });
@@ -227,8 +238,8 @@ const expandToNestedObject = (tokens: TransformedToken[], pathKey = 'path') => {
  */
 StyleDictionary.registerFormat({
   name: 'typescript/obj',
-  format: async ({ dictionary, file, options }) => (`${await fileHeader({ file })
-    }export default ${JSON.stringify(expandToNestedObject(dictionary.allTokens, options.useFigmaStructure ? 'path' : 'compatPath'), null, 2).replace(/"([^"]+)":/g, '$1:')
+  format: async ({ dictionary, file, options }: FormatOptions) => (`${await fileHeader({ file })
+    }export default ${JSON.stringify(expandToNestedObject(dictionary!.allTokens, options?.useFigmaStructure ? 'path' : 'compatPath'), null, 2).replace(/"([^"]+)":/g, '$1:')
     };\n`),
 });
 

@@ -44,7 +44,7 @@
     string_decoder "^1.3.0"
     url "^0.11.3"
 
-"@bundled-es-modules/memfs@^4.8.1":
+"@bundled-es-modules/memfs@^4.9.4":
   version "4.9.4"
   resolved "https://registry.yarnpkg.com/@bundled-es-modules/memfs/-/memfs-4.9.4.tgz#9c68d1ff10f485d59d45778c930aa8d60d0095a2"
   integrity sha512-1XyYPUaIHwEOdF19wYVLBtHJRr42Do+3ctht17cZOHwHf67vkmRNPlYDGY2kJps4RgE5+c7nEZmEzxxvb1NZWA==
@@ -5051,14 +5051,14 @@ strong-log-transformer@^2.1.0:
     minimist "^1.2.0"
     through "^2.3.4"
 
-style-dictionary@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/style-dictionary/-/style-dictionary-4.0.0.tgz#24a8993b62da2dbcb242049235215714a9c2bf98"
-  integrity sha512-7UA+gdkNumWwKF8EIWIxvY2kNjNizeozA5P04c9EDZzP/bMAqTgf3GpwDNEFSv9QFAjQ/KXEhfyWZZDUoIKuLA==
+style-dictionary@^4.1.3:
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/style-dictionary/-/style-dictionary-4.1.3.tgz#f49142f30d74d223d1248f368626bc194c0a30be"
+  integrity sha512-KJTkMaFbwSdSsDm6m5M6ki7oQo9vMKV37Vyj0cFpkYw6ucqQKORRQNZT0KXUubxNTtbjv2tmy9wvDSayxS0Zzg==
   dependencies:
     "@bundled-es-modules/deepmerge" "^4.3.1"
     "@bundled-es-modules/glob" "^10.4.2"
-    "@bundled-es-modules/memfs" "^4.8.1"
+    "@bundled-es-modules/memfs" "^4.9.4"
     "@zip.js/zip.js" "^2.7.44"
     chalk "^5.3.0"
     change-case "^5.3.0"
