@@ -747,7 +747,7 @@ export default {
   spacing: {
     xSmall: 4,
     small: 8,
-    medium: 12,
+    medium: 16,
     large: 20,
     xLarge: 24
   },
