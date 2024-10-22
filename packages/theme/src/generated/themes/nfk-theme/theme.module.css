@@ -34,6 +34,9 @@
   --text-inverse-primary: #FFFFFF;
   --text-inverse-secondary: #DAE2E4;
   --text-inverse-disabled: #8FA9AF;
+  --text-brand-primary: #FFFFFF;
+  --text-brand-secondary: #DAE2E4;
+  --text-brand-disabled: #8FA9AF;
 
   --static-background-background_0-background: #FFFFFF;
   --static-background-background_0-text: #000000;
@@ -215,6 +218,9 @@
   --text-inverse-primary: #000000;
   --text-inverse-secondary: #555760;
   --text-inverse-disabled: #8FA9AF;
+  --text-brand-primary: #000000;
+  --text-brand-secondary: #555760;
+  --text-brand-disabled: #8FA9AF;
 
   --static-background-background_0-background: #022129;
   --static-background-background_0-text: #FFFFFF;
@@ -396,6 +402,9 @@
   --text-inverse-primary: #000000;
   --text-inverse-secondary: #555760;
   --text-inverse-disabled: #8FA9AF;
+  --text-brand-primary: #000000;
+  --text-brand-secondary: #555760;
+  --text-brand-disabled: #8FA9AF;
 
   --static-background-background_0-background: #022129;
   --static-background-background_0-text: #FFFFFF;

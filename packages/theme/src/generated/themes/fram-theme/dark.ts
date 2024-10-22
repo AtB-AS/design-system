@@ -23,6 +23,11 @@ export default {
       primary: "#000000",
       secondary: "#676767",
       disabled: "#b3b3b3"
+    },
+    brand: {
+      primary: "#000000",
+      secondary: "#676767",
+      disabled: "#b3b3b3"
     }
   },
   static: {

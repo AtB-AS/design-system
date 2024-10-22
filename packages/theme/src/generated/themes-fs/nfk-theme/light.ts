@@ -24,6 +24,11 @@ export default {
         primary: "#ffffff",
         secondary: "#dae2e4",
         disabled: "#8fa9af"
+      },
+      brand: {
+        primary: "#ffffff",
+        secondary: "#dae2e4",
+        disabled: "#8fa9af"
       }
     },
     background: {
