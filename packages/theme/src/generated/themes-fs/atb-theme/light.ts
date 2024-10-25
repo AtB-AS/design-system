@@ -29,7 +29,7 @@ export default {
     background: {
       neutral: {
         0: {
-          background: "#ffffff",
+          background: "#6f777d",
           foreground: {
             primary: "#000000",
             secondary: "#555e65",
