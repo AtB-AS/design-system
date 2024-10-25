@@ -28,7 +28,7 @@ export default {
   static: {
     background: {
       background_0: {
-        background: "#ffffff",
+        background: "#e85912",
         text: "#000000"
       },
       background_1: {
