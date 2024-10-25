@@ -57,7 +57,7 @@ jobs:
           if [[ "${{ inputs.organization }}" == "all" || -z "${{ inputs.organization }}" ]]; then
             ORG_SUFFIX=""
           else
-            ORG_SUFFIX=" for ${{ inputs.organization }}"
+            ORG_SUFFIX=" for \`${{ inputs.organization }}\`"
           fi
           gh pr create --title "[BOT] Updated design tokens${ORG_SUFFIX}" --body "Design tokens ${ORG_SUFFIX} were automatically fetched from Figma and parsed into design tokens. The changes can be reviewed in the `Files changed` tab." --head "${CURRENT_BRANCH}" --base main
         env:
