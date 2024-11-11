@@ -180,6 +180,17 @@ const themes = {
 export default themes`;
 
 /**
+ * Contents of the main CSS file linking the themes
+ */
+const cssIndex = `/* Import dark mode */
+@import url('dark.css') layer(theme.dark);
+/* Import light mode */
+@import url('light.css') layer(theme.light);
+/* Override light mode if the user prefers the dark color scheme */
+@import url('dark.css') layer(theme.dark-override) (prefers-color-scheme: dark);
+`;
+
+/**
  * Outputs a string to a file. Used for generated
  * linking files defined above.
  */
@@ -309,6 +320,30 @@ const generateThemes = async () => {
       },
       tokens: makeTokens(organization, mode),
       platforms: {
+        css: {
+          buildPath: makeDestination(organization, {
+            useFigmaStructure: true
+          }),
+          expand: true,
+          // `css` transformGroup with `attribbute/append-type` prepended
+          transforms: ['attribute/append-type', 'attribute/cti', 'name/kebab', 'time/seconds', 'html/icon', 'size/rem', 'color/css', 'asset/url', 'fontFamily/css', 'cubicBezier/css', 'strokeStyle/css/shorthand', 'border/css/shorthand', 'typography/css/shorthand', 'transition/css/shorthand', 'shadow/css/shorthand'],
+          files: [
+            {
+              format: 'css/variables',
+              options: {
+                selector: `.${mode}, :root { color-scheme: ${mode}; } \n.${mode}, :root`,
+              },
+              destination: `${mode}.css`,
+            },
+            {
+              format: 'index',
+              options: {
+                content: cssIndex,
+              },
+              destination: 'theme.css',
+            },
+          ],
+        },
         ts: {
           buildPath: makeDestination(organization),
           expand: true,
