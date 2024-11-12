@@ -1,4 +1,4 @@
-import { useFigmaToDTCG } from "@tfk-samf/figma-to-dtcg"
+import { Options, useFigmaToDTCG } from "@tfk-samf/figma-to-dtcg"
 import type { GetLocalVariablesResponse } from "@figma/rest-api-spec"
 
 // @ts-ignore Package exists, but is not found by TS
@@ -20,11 +20,27 @@ export type Modes = 'light' | 'dark'
 export type SharedCollections = 'border' | 'spacing' | 'typography' | 'icon'
 export type OrganisationCollections = 'color_palette'
 export type VariantCollections = 'theme'
+export type Collections = SharedCollections | OrganisationCollections | VariantCollections
+const tokenTypeMap: Options<Collections>['typeMap'] = {
+  BOOLEAN: () => "boolean",
+  COLOR: () => "color",
+  STRING: () => "fontFamily",
+  FLOAT: (collection) => {
+    switch (collection) {
+      case "spacing":
+      case "border":
+      case "icon":
+        return "dimension"
+      default:
+        return "number"
+    }
+  }
+}
 
-type FormatOptions = { 
-  file: File, 
-  options?: { 
-    content?: string 
+type FormatOptions = {
+  file: File,
+  options?: {
+    content?: string
     useFigmaStructure?: boolean
   },
   dictionary?: Dictionary
@@ -43,7 +59,7 @@ const organizations: Organization[] = [
 const modes: Modes[] = ['light', 'dark'];
 
 /**
- * Prepends collection name to file path of the token 
+ * Prepends collection name to file path of the token
  * and converts it to camelCase.
  */
 StyleDictionary.registerTransform({
@@ -287,7 +303,8 @@ const generateThemes = async () => {
     api: "rest",
     response: await response.json() as GetLocalVariablesResponse
   }, {
-    verbosity: "silent"
+    verbosity: "silent",
+    typeMap: tokenTypeMap
   })
 
   const makeTokens = (organization: Organization, mode: Modes) => {
@@ -326,7 +343,7 @@ const generateThemes = async () => {
           }),
           expand: true,
           // `css` transformGroup with `attribbute/append-type` prepended
-          transforms: ['attribute/append-type', 'attribute/cti', 'name/kebab', 'time/seconds', 'html/icon', 'size/rem', 'color/css', 'asset/url', 'fontFamily/css', 'cubicBezier/css', 'strokeStyle/css/shorthand', 'border/css/shorthand', 'typography/css/shorthand', 'transition/css/shorthand', 'shadow/css/shorthand'],
+          transforms: ['attribute/append-type', 'attribute/cti', 'name/kebab', 'time/seconds', 'html/icon', 'size/pxToRem', 'color/css', 'asset/url', 'fontFamily/css', 'cubicBezier/css', 'strokeStyle/css/shorthand', 'border/css/shorthand', 'typography/css/shorthand', 'transition/css/shorthand', 'shadow/css/shorthand'],
           files: [
             {
               format: 'css/variables',
@@ -334,6 +351,7 @@ const generateThemes = async () => {
                 selector: `.${mode}, :root { color-scheme: ${mode}; } \n.${mode}, :root`,
               },
               destination: `${mode}.css`,
+              filter: 'filter-palette',
             },
             {
               format: 'index',
@@ -348,7 +366,7 @@ const generateThemes = async () => {
           buildPath: makeDestination(organization),
           expand: true,
           // `js` transformGroup with `attribbute/append-type` prepended
-          transforms: ['attribute/append-type', 'attribute/cti', 'attribute/compat-path', 'name/pascal', 'size/rem', 'color/hex'],
+          transforms: ['attribute/append-type', 'attribute/cti', 'attribute/compat-path', 'name/pascal', 'color/hex'],
           files: [
             {
               format: 'typescript/obj',
@@ -377,7 +395,7 @@ const generateThemes = async () => {
           }),
           expand: true,
           // `js` transformGroup with `attribbute/append-type` prepended
-          transforms: ['attribute/append-type', 'attribute/cti', 'attribute/compat-path', 'name/pascal', 'size/rem', 'color/hex'],
+          transforms: ['attribute/append-type', 'attribute/cti', 'attribute/compat-path', 'name/pascal', 'color/hex'],
           files: [
             {
               format: 'typescript/obj',
