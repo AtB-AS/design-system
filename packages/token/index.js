@@ -8,6 +8,10 @@ const { light: theme } = createThemesFor(ThemeVariant.AtB, {
   useFigmaStructure: true
 })
 
+const camelToKebab = (str) => {
+  return str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+}
+
 const token = (value) => {
 
   let token
@@ -31,7 +35,7 @@ const token = (value) => {
     }
   }
 
-  const makeToken = () => `var(--${token.replace(/\./g, '-')})`
+  const makeToken = () => `var(--${camelToKebab(token).replace(/\./g, '-')})`
 
   parse()
   exists()

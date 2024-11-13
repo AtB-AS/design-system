@@ -1,10 +1,10 @@
 const postcss = require('postcss')
-const { equal, rejects } = require('node:assert')
+const { strictEqual, rejects } = require('node:assert')
 const { describe, it } = require('node:test')
 
 const plugin = require('./')
 
-const run = async (input) => await postcss([plugin()]).process(input, { from: undefined })
+const run = async (input) => (await postcss([plugin()]).process(input, { from: undefined })).css
 
 describe("Token function", () => {
   it("Translates existing token to CSS variable correctly", async () => {
@@ -17,7 +17,7 @@ describe("Token function", () => {
         `
       )
   
-      equal(output,
+      strictEqual(output,
         `
         a {
           color: var(--color-foreground-dynamic-primary);
@@ -35,7 +35,7 @@ describe("Token function", () => {
         `
       )
   
-      equal(output,
+      strictEqual(output,
         `
         a {
           color: var(--color-background-neutral-0-background);
@@ -43,7 +43,26 @@ describe("Token function", () => {
         `
       )
     })
+
+    await it("For variables containing camelCase", async () => {
+      const output = await run(
+        `
+        a {
+          color: token('color.transport.airportExpress.primary.background');
+        }    
+        `
+      )
+  
+      strictEqual(output,
+        `
+        a {
+          color: var(--color-transport-airport-express-primary-background);
+        }    
+        `
+      )
+    })
   })
+  
 
   it("Throws an error when a token does not exist", async () => {
     await rejects(async () => await run(
@@ -133,15 +152,15 @@ describe("Token function", () => {
       `
       a {
         color: var(--regular-variable);
-      }    
+      }
       `
     )
 
-    equal(output,
+    strictEqual(output,
       `
       a {
         color: var(--regular-variable);
-      }    
+      }
       `
     )
   })
