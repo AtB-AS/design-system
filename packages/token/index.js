@@ -15,15 +15,7 @@ const token = (value) => {
   const parse = () => {
     const syntax = /^(['"])((?:[a-z0-9][a-zA-Z0-9]*)(?:\.[a-z0-9][a-zA-Z0-9]*)*)(\1)$/
 
-    const [, openingQuote, _token, closingQuote] = value.match(syntax);
-
-    if (!openingQuote) {
-      throw new Error(`Missing opening quote in ${value}`)
-    }
-
-    if (!closingQuote) {
-      throw new Error(`Missing closing quote in ${value}`)
-    }
+    const [,, _token] = value.match(syntax);
 
     if (!_token) {
       throw new Error(`Invalid syntax in value ${value}`)
