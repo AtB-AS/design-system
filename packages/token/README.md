@@ -27,7 +27,7 @@ Add a `postcss.config.json` file in the root of your project with the following 
 
 #### NextJS
 
-> ⚠️ [NextJS preconfigures PostCSS](https://nextjs.org/docs/pages/building-your-application/configuring/post-css):
+> ⚠️ [NextJS preconfigures PostCSS](https://nextjs.org/docs/pages/building-your-application/configuring/post-css).
 > Therefore, we need to include the entire NextJS config for PostCSS
 > and add the `@atb-as/token` plugin in addition.
 
