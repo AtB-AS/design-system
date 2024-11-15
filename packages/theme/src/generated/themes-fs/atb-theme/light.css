@@ -2,8 +2,8 @@
  * Do not edit directly, this file was auto-generated.
  */
 
-:root[data-theme="light"], :root[data-theme="auto"] { color-scheme: light; } 
-:root[data-theme="light"], :root[data-theme="auto"] {
+[data-theme="light"], [data-theme="auto"] { color-scheme: light; } 
+[data-theme="light"], [data-theme="auto"] {
   --color-foreground-light-primary: #ffffff;
   --color-foreground-light-secondary: #e1e7eb;
   --color-foreground-light-disabled: #a9aeb1;

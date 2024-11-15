@@ -348,7 +348,7 @@ const generateThemes = async () => {
             {
               format: 'css/variables',
               options: {
-                selector: `:root[data-theme="${mode}"], :root[data-theme="auto"] { color-scheme: ${mode}; } \n:root[data-theme="${mode}"], :root[data-theme="auto"]`,
+                selector: `[data-theme="${mode}"], [data-theme="auto"] { color-scheme: ${mode}; } \n[data-theme="${mode}"], [data-theme="auto"]`,
               },
               destination: `${mode}.css`,
               filter: 'filter-palette',
