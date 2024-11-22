@@ -108,7 +108,7 @@ const { light, dark } = createThemes(
     },
   },
 });
-console.log(dark.spacing.medium);
+console.log(light.spacing.medium);
 // 20
 ```
 
