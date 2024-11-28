@@ -567,7 +567,7 @@ export default {
       },
       car: {
         primary: {
-          background: "#5a2e61",
+          background: "#7b5881",
           foreground: {
             primary: "#ffffff",
             secondary: "#e1e7eb",
