@@ -108,6 +108,7 @@ export interface Theme {
       bike: TransportColor<ContrastColor>;
       car: TransportColor<ContrastColor>;
       other: TransportColor<ContrastColor>;
+      shuttle: TransportColor<ContrastColor>;
     };
 
     status: {
