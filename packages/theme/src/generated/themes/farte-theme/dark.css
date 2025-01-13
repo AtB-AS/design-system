@@ -354,8 +354,8 @@
   --color-border-focus-foreground-disabled: #a9a9a8;
   --border-radius-small: 0.25rem;
   --border-radius-regular: 0.5rem;
-  --border-radius-large: 1.25rem;
-  --border-radius-circle: 62.4375rem;
+  --border-radius-circle: 1.25rem;
+  --border-radius-full: 62.4375rem;
   --border-width-slim: 0.0625rem;
   --border-width-medium: 0.125rem;
   --typography-ios-font: 'SF Pro Text';

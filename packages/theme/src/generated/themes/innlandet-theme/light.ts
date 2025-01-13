@@ -759,8 +759,8 @@ export default {
     radius: {
       small: 4,
       regular: 8,
-      large: 20,
-      circle: 999
+      circle: 20,
+      full: 999
     },
     width: {
       slim: 1,
