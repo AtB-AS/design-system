@@ -158,6 +158,7 @@ export interface Theme {
     radius: {
       small: number;
       regular: number;
+      large: number;
       circle: number;
     };
     width: {
