@@ -26,22 +26,26 @@ export default {
       light: {
         primary: "#ffffff",
         secondary: "#e1e8eb",
-        disabled: "#a7b6be"
+        disabled: "#a7b6be",
+        accent: "#ff0000"
       },
       dark: {
         primary: "#000000",
         secondary: "#415058",
-        disabled: "#73848c"
+        disabled: "#73848c",
+        accent: "#ff0000"
       },
       dynamic: {
         primary: "#ffffff",
         secondary: "#e1e8eb",
-        disabled: "#a7b6be"
+        disabled: "#a7b6be",
+        accent: "#ff0000"
       },
       inverse: {
         primary: "#000000",
         secondary: "#415058",
-        disabled: "#73848c"
+        disabled: "#73848c",
+        accent: "#ff0000"
       }
     },
     background: {
