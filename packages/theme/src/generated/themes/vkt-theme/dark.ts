@@ -113,7 +113,7 @@ export default {
           }
         },
         4: {
-          background: "#ffd733",
+          background: "#00975f",
           foreground: {
             primary: "#000000",
             secondary: "#555e65",
@@ -770,15 +770,15 @@ export default {
   typography: {
     ios: {
       font: "SF Pro Text",
-      number: -0.3100000023841858
+      number: -0.30000001192092896
     },
     android: {
       font: "Roboto",
-      number: -0.5
+      number: 0.10000000149011612
     },
     web: {
       font: "Roboto",
-      number: -0.5
+      number: 0.10000000149011612
     }
   },
   spacing: {
