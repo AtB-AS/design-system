@@ -361,7 +361,7 @@
   --typography-ios-font: 'SF Pro Text';
   --typography-ios-number: -0.3100000023841858;
   --typography-android-font: Roboto;
-  --typography-android-number: 0.10000000149011612;
+  --typography-android-number: -0.5;
   --typography-web-font: Roboto;
   --typography-web-number: 0.10000000149011612;
   --spacing-x-small: 0.25rem;
