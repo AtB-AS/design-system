@@ -778,7 +778,7 @@ export default {
     },
     web: {
       font: "Roboto",
-      number: 0.10000000149011612
+      number: -0.5
     }
   },
   spacing: {
