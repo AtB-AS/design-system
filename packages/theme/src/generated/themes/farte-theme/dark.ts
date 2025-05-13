@@ -770,7 +770,7 @@ export default {
   typography: {
     ios: {
       font: "SF Pro Text",
-      number: -0.30000001192092896
+      number: -0.3100000023841858
     },
     android: {
       font: "Roboto",
