@@ -774,7 +774,7 @@ export default {
     },
     android: {
       font: "Roboto",
-      number: 0.10000000149011612
+      number: -0.5
     },
     web: {
       font: "Roboto",
