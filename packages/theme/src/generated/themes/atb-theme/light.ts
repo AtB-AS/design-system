@@ -767,20 +767,6 @@ export default {
       medium: 2
     }
   },
-  typography: {
-    ios: {
-      font: "SF Pro Text",
-      number: -0.3100000023841858
-    },
-    android: {
-      font: "Roboto",
-      number: -0.5
-    },
-    web: {
-      font: "Roboto",
-      number: -0.5
-    }
-  },
   spacing: {
     xSmall: 4,
     small: 8,
