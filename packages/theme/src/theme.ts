@@ -184,23 +184,6 @@ export interface Theme {
     large: number;
     xLarge: number;
   };
-
-  typography: {
-    ios: {
-      font: string;
-      number: number;
-    };
-
-    android: {
-      font: string;
-      number: number;
-    };
-
-    web: {
-      font: string;
-      number: number;
-    };
-  };
 }
 
 export enum ThemeVariant {
