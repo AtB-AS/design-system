@@ -9,6 +9,7 @@ import type { Config, DesignTokens, TransformedToken, File, Dictionary } from 's
 
 import path from 'path';
 import { convertToCamelCase } from "./utils";
+import { responseFigma } from "./responseFigma";
 
 export type OrganizationId = 'atb' | 'fram' | 'innlandet' | 'nfk' | 'troms' | 'vkt' | 'farte'
 export interface Organization {
@@ -190,15 +191,15 @@ const makeDestination = (organization: Organization): string => path.join(outDir
 
 const generateThemes = async () => {
 
-  const response = await fetch(`${process.env.FIGMA_VARIABLES_URL}`, {
-    headers: {
-      'X-FIGMA-TOKEN': process.env.FIGMA_REST_API_KEY ?? "FIGMA_REST_API_KEY inaccessible or not set."
-    }
-  })
+  // const response = await fetch(`${process.env.FIGMA_VARIABLES_URL}`, {
+  //   headers: {
+  //     'X-FIGMA-TOKEN': process.env.FIGMA_REST_API_KEY ?? "FIGMA_REST_API_KEY inaccessible or not set."
+  //   }
+  // })
 
-  if (!response.ok) {
-    throw new Error(`Failed to retrieve Figma variables with status ${response.status}: ${(await response.json())?.message}`)
-  }
+  // if (!response.ok) {
+  //   throw new Error(`Failed to retrieve Figma variables with status ${response.status}: ${(await response.json())?.message}`)
+  // }
 
   /**
    * Convert Figma response to Design Tokens Community Group (DTCG) standard
@@ -211,7 +212,7 @@ const generateThemes = async () => {
     VariantCollections
   >({
     api: "rest",
-    response: await response.json() as GetLocalVariablesResponse
+    response: responseFigma as GetLocalVariablesResponse
   }, {
     verbosity: "silent",
     typeMap: tokenTypeMap
