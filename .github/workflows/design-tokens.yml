@@ -35,7 +35,7 @@ jobs:
         run: |
           yarn install --immutable
           yarn fetch-variables
-          yarn build-all
+          yarn build
       - name: Commit new design tokens
         run: |
           CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
