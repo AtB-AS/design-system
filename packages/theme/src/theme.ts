@@ -65,6 +65,7 @@ export type GeofencingZoneStyle<T = ContrastColor> = {
   color: T;
   fillOpacity: number;
   strokeOpacity: number;
+  lineStyle?: 'solid' | 'dashed';
   layerIndexWeight: number;
 };
 export type GeofencingZoneStyles<T = ContrastColor> = {
