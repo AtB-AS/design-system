@@ -65,6 +65,9 @@ export type GeofencingZoneStyle<T = ContrastColor> = {
   color: T;
   fillOpacity: number;
   strokeOpacity: number;
+  /**
+   * 'solid' | 'dashed' (currently typed only as string to match the type from Figma)
+   */
   lineStyle: string;
   layerIndexWeight: number;
 };
