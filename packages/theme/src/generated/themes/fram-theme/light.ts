@@ -759,16 +759,13 @@ export default {
       }
     }
   },
-  border: {
-    radius: {
-      small: 4,
-      regular: 8,
+  spacing: {
+    scale: {
+      xSmall: 4,
+      small: 8,
+      medium: 12,
       large: 20,
-      circle: 999
-    },
-    width: {
-      slim: 1,
-      medium: 2
+      xLarge: 24
     }
   },
   typography: {
@@ -784,13 +781,6 @@ export default {
       font: "Roboto",
       number: -0.5
     }
-  },
-  spacing: {
-    xSmall: 4,
-    small: 8,
-    medium: 12,
-    large: 20,
-    xLarge: 24
   },
   icon: {
     size: {

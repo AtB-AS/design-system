@@ -549,19 +549,19 @@ export default {
       },
       train: {
         primary: {
-          background: "#ac53ac",
+          background: "#943894",
           foreground: {
-            primary: "#000000",
-            secondary: "#415058",
-            disabled: "#73848c"
+            primary: "#ffffff",
+            secondary: "#e1e8eb",
+            disabled: "#a7b6be"
           }
         },
         secondary: {
-          background: "#ac53ac",
+          background: "#943894",
           foreground: {
-            primary: "#000000",
-            secondary: "#415058",
-            disabled: "#73848c"
+            primary: "#ffffff",
+            secondary: "#e1e8eb",
+            disabled: "#a7b6be"
           }
         }
       },
@@ -569,17 +569,17 @@ export default {
         primary: {
           background: "#2273c3",
           foreground: {
-            primary: "#000000",
-            secondary: "#415058",
-            disabled: "#73848c"
+            primary: "#ffffff",
+            secondary: "#e1e8eb",
+            disabled: "#a7b6be"
           }
         },
         secondary: {
           background: "#2273c3",
           foreground: {
-            primary: "#000000",
-            secondary: "#415058",
-            disabled: "#73848c"
+            primary: "#ffffff",
+            secondary: "#e1e8eb",
+            disabled: "#a7b6be"
           }
         }
       },
@@ -759,16 +759,13 @@ export default {
       }
     }
   },
-  border: {
-    radius: {
-      small: 4,
-      regular: 8,
+  spacing: {
+    scale: {
+      xSmall: 4,
+      small: 8,
+      medium: 12,
       large: 20,
-      circle: 999
-    },
-    width: {
-      slim: 1,
-      medium: 2
+      xLarge: 24
     }
   },
   typography: {
@@ -784,13 +781,6 @@ export default {
       font: "Roboto",
       number: -0.5
     }
-  },
-  spacing: {
-    xSmall: 4,
-    small: 8,
-    medium: 12,
-    large: 20,
-    xLarge: 24
   },
   icon: {
     size: {
