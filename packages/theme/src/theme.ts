@@ -66,7 +66,7 @@ export type GeofencingZoneStyle<T = ContrastColor> = {
   layerIndexWeight: number;
 };
 export type GeofencingZoneStyles<T = ContrastColor> = {
-  [GZKey in GeofencingZoneCode]: GeofencingZoneStyle<T>;
+  [GZCode in GeofencingZoneCode]: GeofencingZoneStyle<T>;
 };
 
 export type ContrastColor = {
