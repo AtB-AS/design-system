@@ -41,7 +41,7 @@ const xxxLargeBase: TextStyle = {
 
 export const androidFontData: FontBook = {
   main: {
-    url: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap',
+    url: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap',
     fontFamily: `'Roboto', sans-serif`,
   },
 };
