@@ -72,7 +72,7 @@ export const androidTextTypeStyles: TextTypeStyles = {
   body__xs: {
     ...xSmallBase,
   },
-  body__sx__strike: {
+  body__xs__strike: {
     ...xSmallBase,
     textDecorationLine: 'line-through',
   },

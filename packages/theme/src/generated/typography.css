@@ -44,11 +44,11 @@
   --baseTypo-body__xs-lineHeight: 1rem;
   --baseTypo-body__xs-letterSpacing: 0.01875rem;
 
-  /* Definitions for body__sx__strike */
-  --baseTypo-body__sx__strike-fontSize: 0.75rem;
-  --baseTypo-body__sx__strike-lineHeight: 1rem;
-  --baseTypo-body__sx__strike-letterSpacing: 0.01875rem;
-  --baseTypo-body__sx__strike-textDecorationLine: line-through;
+  /* Definitions for body__xs__strike */
+  --baseTypo-body__xs__strike-fontSize: 0.75rem;
+  --baseTypo-body__xs__strike-lineHeight: 1rem;
+  --baseTypo-body__xs__strike-letterSpacing: 0.01875rem;
+  --baseTypo-body__xs__strike-textDecorationLine: line-through;
 
   /* Definitions for heading__3xl */
   --baseTypo-heading__3xl-fontSize: 2.25rem;
@@ -144,11 +144,11 @@ html {
   line-height: var(--baseTypo-body__xs-lineHeight, 1rem);
   letter-spacing: var(--baseTypo-body__xs-letterSpacing, 0.01875rem);
 }
-.typo-body__sx__strike {
-  font-size: var(--baseTypo-body__sx__strike-fontSize, 0.75rem);
-  line-height: var(--baseTypo-body__sx__strike-lineHeight, 1rem);
-  letter-spacing: var(--baseTypo-body__sx__strike-letterSpacing, 0.01875rem);
-  text-decoration: var(--baseTypo-body__sx__strike-textDecorationLine, line-through);
+.typo-body__xs__strike {
+  font-size: var(--baseTypo-body__xs__strike-fontSize, 0.75rem);
+  line-height: var(--baseTypo-body__xs__strike-lineHeight, 1rem);
+  letter-spacing: var(--baseTypo-body__xs__strike-letterSpacing, 0.01875rem);
+  text-decoration: var(--baseTypo-body__xs__strike-textDecorationLine, line-through);
 }
 .typo-heading__3xl {
   font-size: var(--baseTypo-heading__3xl-fontSize, 2.25rem);

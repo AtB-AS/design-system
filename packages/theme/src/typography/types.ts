@@ -6,7 +6,7 @@ export const textNames = [
   'body__s',
   'body__s__strong',
   'body__xs',
-  'body__sx__strike',
+  'body__xs__strike',
   'heading__3xl',
   'heading__2xl',
   'heading__xl',
