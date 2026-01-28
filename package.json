@@ -2,6 +2,9 @@
   "name": "@atb-as/design-system-monorepo",
   "version": "1.0.0",
   "description": "Collection of packages for managing colors, themes and shared design",
+  "repository": {
+    "url": "https://github.com/AtB-AS/design-system"
+  },
   "main": "index.js",
   "license": "EUPL-1.2",
   "private": true,
