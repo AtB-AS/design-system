@@ -4,6 +4,9 @@
   "private": false,
   "type": "commonjs",
   "description": "OOS Design System generate-assets",
+  "repository": {
+    "url": "https://github.com/AtB-AS/design-system"
+  },
   "license": "EUPL-1.2",
   "bin": {
     "generate-assets": "./lib/bin.js"
