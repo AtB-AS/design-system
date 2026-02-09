@@ -1,5 +1,12 @@
 # Changelog
 
+## [18.8.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.7.0...generate-assets@v18.8.0) (2026-02-09)
+
+
+### Features
+
+* Add save icons and set fill to black ([#373](https://github.com/AtB-AS/design-system/issues/373)) ([03dcb8a](https://github.com/AtB-AS/design-system/commit/03dcb8ace301389f805c48c450f1ff85149a8272))
+
 ## [18.7.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.6.0...generate-assets@v18.7.0) (2026-01-19)
 
 
