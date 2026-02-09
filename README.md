@@ -7,7 +7,7 @@ Monorepo for handling theming, colors, typography and more for different applica
 
 ## Requirements
 
-- node version 22 (or below)
+- node version 24.13.0 (needed for latest npm to support OIDC-based publishing)
 - yarn
 
 ## Release
