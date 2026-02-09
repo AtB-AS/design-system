@@ -8,6 +8,7 @@ permissions:
   contents: write
   pull-requests: write
   issues: write
+  id-token: write
 
 name: release-please
 
@@ -38,47 +39,41 @@ jobs:
     runs-on: ubuntu-latest
     needs: release-please
     if: ${{ needs.release-please.outputs.generate-assets--release_created }}
-    env:
-      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           always-auth: true
-          node-version: 22
+          node-version: '24.13.0'
           registry-url: 'https://registry.npmjs.org'
       - run: yarn workspace @atb-as/generate-assets install --frozen-lockfile --focus
       - run: yarn workspace @atb-as/generate-assets build
-      - run: yarn workspace @atb-as/generate-assets publish
+      - run: npm publish -w @atb-as/generate-assets
 
   release-theme:
     runs-on: ubuntu-latest
     needs: release-please
     if: ${{ needs.release-please.outputs.theme--release_created }}
-    env:
-      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           always-auth: true
-          node-version: 22
+          node-version: '24.13.0'
           registry-url: 'https://registry.npmjs.org'
       - run: yarn workspace @atb-as/theme install --frozen-lockfile --focus
       - run: yarn workspace @atb-as/theme build
-      - run: yarn workspace @atb-as/theme publish
+      - run: npm publish -w @atb-as/theme
 
   release-token:
     runs-on: ubuntu-latest
     needs: release-please
     if: ${{ needs.release-please.outputs.token--release_created }}
-    env:
-      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           always-auth: true
-          node-version: 22
+          node-version: '24.13.0'
           registry-url: 'https://registry.npmjs.org'
-      - run: yarn workspace @atb-as/token publish
+      - run: npm publish -w @atb-as/token

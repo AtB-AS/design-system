@@ -3,6 +3,9 @@
   "version": "15.0.1",
   "private": false,
   "description": "AtB Design System Colors",
+  "repository": {
+    "url": "https://github.com/AtB-AS/design-system"
+  },
   "license": "EUPL-1.2",
   "type": "commonjs",
   "main": "./lib/index.js",
