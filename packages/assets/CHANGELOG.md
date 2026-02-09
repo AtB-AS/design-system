@@ -1,5 +1,12 @@
 # Changelog
 
+## [18.9.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.8.0...generate-assets@v18.9.0) (2026-02-09)
+
+
+### Features
+
+* Change BoatFill to trigger new release ([#376](https://github.com/AtB-AS/design-system/issues/376)) ([8d7a9ea](https://github.com/AtB-AS/design-system/commit/8d7a9ea63d8ce91c1a397f4c79d977d3ad0dd154))
+
 ## [18.8.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.7.0...generate-assets@v18.8.0) (2026-02-09)
 
 
