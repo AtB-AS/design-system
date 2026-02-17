@@ -1,5 +1,12 @@
 # Changelog
 
+## [18.10.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.9.0...generate-assets@v18.10.0) (2026-02-17)
+
+
+### Features
+
+* added illustrations for scooter ([#378](https://github.com/AtB-AS/design-system/issues/378)) ([032967a](https://github.com/AtB-AS/design-system/commit/032967a33d2699ccabd28c2b121fa04e8695e975))
+
 ## [18.9.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.8.0...generate-assets@v18.9.0) (2026-02-09)
 
 
