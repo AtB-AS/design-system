@@ -1,5 +1,12 @@
 # Changelog
 
+## [18.11.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.10.0...generate-assets@v18.11.0) (2026-03-02)
+
+
+### Features
+
+* Added icons for E-bike ([#380](https://github.com/AtB-AS/design-system/issues/380)) ([f6996ee](https://github.com/AtB-AS/design-system/commit/f6996ee52f71b35d0b0643185990cf411f3e72e3))
+
 ## [18.10.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.9.0...generate-assets@v18.10.0) (2026-02-17)
 
 
