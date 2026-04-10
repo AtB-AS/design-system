@@ -42,6 +42,33 @@ export default {
         primary: "#ffffff",
         secondary: "#e3e5e6",
         disabled: "#a9aeb1"
+      },
+      emphasis: {
+        neutral: {
+          background: "#ffffff",
+          foreground: {
+            primary: "#000000",
+            secondary: "#555e65",
+            disabled: "#a9aeb1"
+          }
+        },
+        info: {
+          background: "#e3e5e6",
+          foreground: {
+            primary: "#000000",
+            secondary: "#555e65",
+            disabled: "#a9aeb1"
+          }
+        },
+        error: {
+          background: "#a9aeb1",
+          foreground: {
+            primary: "#000000",
+            secondary: "#555e65",
+            disabled: "#a9aeb1"
+          }
+        },
+        interactive: "#ffffff"
       }
     },
     background: {
