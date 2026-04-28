@@ -319,6 +319,11 @@
   resolved "https://registry.yarnpkg.com/@tfk-samf/figma-to-dtcg/-/figma-to-dtcg-0.4.0.tgz#6ee320293b89d9d64499b9c058cc34c630ad1453"
   integrity sha512-B8PTx1nP0YyWhTavBUEh/+FDJhctoMzBD3WZe2NPaxOCx+eibLc7/a12cMPpAaxTqqdreEnyL5es7JZRdldtlg==
 
+"@tfk-samf/figma-to-dtcg@0.4.4":
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/@tfk-samf/figma-to-dtcg/-/figma-to-dtcg-0.4.4.tgz#7471525b5242890e84c44a9da1ddf66f21899d0e"
+  integrity sha512-V0joTCKFWGgsOEgXPi0A6Ru43e8KCOdKUfhUIIBJYjSVDfUR4CPv8ak6zfADk5WaUh2yd5B/NSh0F2ddlQKkMg==
+
 "@types/braces@*":
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@types/braces/-/braces-3.0.1.tgz#5a284d193cfc61abb2e5a50d36ebbc50d942a32b"

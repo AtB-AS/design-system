@@ -32,7 +32,7 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
-    "@tfk-samf/figma-to-dtcg": "0.4.0",
+    "@tfk-samf/figma-to-dtcg": "0.4.4",
     "hex-to-rgba": "^2.0.1",
     "ts-deepmerge": "^4.0.0"
   },
