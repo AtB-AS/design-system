@@ -42,6 +42,11 @@ export default {
         primary: "#ffffff",
         secondary: "#e1e8eb",
         disabled: "#a7b6be"
+      },
+      emphasis: {
+        info: "#0959aa",
+        error: "#a1122a",
+        interactive: "#006a80"
       }
     },
     background: {
@@ -684,7 +689,7 @@ export default {
             disabled: "#a7b6be"
           }
         },
-        fillOpacity: 0.10000000149011612,
+        fillOpacity: 0.1,
         strokeOpacity: 1,
         layerIndexWeight: 1,
         lineStyle: "solid"
@@ -698,7 +703,7 @@ export default {
             disabled: "#73848c"
           }
         },
-        fillOpacity: 0.10000000149011612,
+        fillOpacity: 0.1,
         strokeOpacity: 1,
         layerIndexWeight: 2,
         lineStyle: "dashed"
@@ -712,7 +717,7 @@ export default {
             disabled: "#a7b6be"
           }
         },
-        fillOpacity: 0.20000000298023224,
+        fillOpacity: 0.2,
         strokeOpacity: 1,
         layerIndexWeight: 3,
         lineStyle: "solid"
@@ -726,7 +731,7 @@ export default {
             disabled: "#a7b6be"
           }
         },
-        fillOpacity: 0.30000001192092896,
+        fillOpacity: 0.3,
         strokeOpacity: 1,
         layerIndexWeight: 5,
         lineStyle: "solid"
@@ -774,7 +779,7 @@ export default {
   typography: {
     ios: {
       font: "SF Pro Text",
-      number: -0.3100000023841858
+      number: -0.31
     },
     android: {
       font: "Roboto",
