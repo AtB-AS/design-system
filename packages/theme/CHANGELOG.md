@@ -1,5 +1,12 @@
 # Changelog
 
+## [15.1.1](https://github.com/AtB-AS/design-system/compare/theme@v15.1.0...theme@v15.1.1) (2026-04-29)
+
+
+### Bug Fixes
+
+* **theme:** Added emphasis to ts-type ([#385](https://github.com/AtB-AS/design-system/issues/385)) ([a5e9230](https://github.com/AtB-AS/design-system/commit/a5e9230e8750e52a991104287f96bb76518d8c17))
+
 ## [15.1.0](https://github.com/AtB-AS/design-system/compare/theme@v15.0.1...theme@v15.1.0) (2026-04-29)
 
 
