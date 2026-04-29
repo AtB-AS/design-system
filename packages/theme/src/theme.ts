@@ -85,6 +85,11 @@ export interface Theme {
       light: ContrastColor['foreground'];
       dynamic: ContrastColor['foreground'];
       inverse: ContrastColor['foreground'];
+      emphasis: {
+        info: string,
+        error: string,
+        interactive: string
+      }
     };
 
     interactive: {
