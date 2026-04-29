@@ -1,5 +1,12 @@
 # Changelog
 
+## [18.12.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.11.0...generate-assets@v18.12.0) (2026-04-29)
+
+
+### Features
+
+* Added new status icons ([#387](https://github.com/AtB-AS/design-system/issues/387)) ([ee02dec](https://github.com/AtB-AS/design-system/commit/ee02dec93d9c8b875e2d698d7cce4a856a9ce519))
+
 ## [18.11.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.10.0...generate-assets@v18.11.0) (2026-03-02)
 
 
