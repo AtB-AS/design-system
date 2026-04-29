@@ -1,5 +1,13 @@
 # Changelog
 
+## [15.1.0](https://github.com/AtB-AS/design-system/compare/theme@v15.0.1...theme@v15.1.0) (2026-04-29)
+
+
+### Features
+
+* **theme:** update design tokens ([#384](https://github.com/AtB-AS/design-system/issues/384)) ([5f83827](https://github.com/AtB-AS/design-system/commit/5f838277ebe52dd2ebc97de04979a8b73bfcf09c))
+* **theme:** update design tokens for `vkt` ([#365](https://github.com/AtB-AS/design-system/issues/365)) ([4c0262c](https://github.com/AtB-AS/design-system/commit/4c0262c4ec025b491476d9170541b63e8b910abd))
+
 ## [15.0.1](https://github.com/AtB-AS/design-system/compare/theme@v15.0.0...theme@v15.0.1) (2025-12-08)
 
 
