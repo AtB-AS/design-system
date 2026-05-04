@@ -1,5 +1,12 @@
 # Changelog
 
+## [18.13.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.12.0...generate-assets@v18.13.0) (2026-05-04)
+
+
+### Features
+
+* add more assets ([#389](https://github.com/AtB-AS/design-system/issues/389)) ([07b7b5b](https://github.com/AtB-AS/design-system/commit/07b7b5b08259ecf48d85e086ed8943c46432f249))
+
 ## [18.12.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.11.0...generate-assets@v18.12.0) (2026-04-29)
 
 
