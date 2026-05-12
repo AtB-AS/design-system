@@ -1,5 +1,12 @@
 # Changelog
 
+## [18.13.1](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.13.0...generate-assets@v18.13.1) (2026-05-12)
+
+
+### Bug Fixes
+
+* replace vkt dummy images ([#391](https://github.com/AtB-AS/design-system/issues/391)) ([f1b8e30](https://github.com/AtB-AS/design-system/commit/f1b8e30d9af516027926dc30982c8e88ecd34eeb))
+
 ## [18.13.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.12.0...generate-assets@v18.13.0) (2026-05-04)
 
 
