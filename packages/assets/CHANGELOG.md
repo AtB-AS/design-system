@@ -1,5 +1,12 @@
 # Changelog
 
+## [18.14.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.13.1...generate-assets@v18.14.0) (2026-05-13)
+
+
+### Features
+
+* add Send icon ([#394](https://github.com/AtB-AS/design-system/issues/394)) ([754d101](https://github.com/AtB-AS/design-system/commit/754d101959ad503c6ed979a3ab4e66529904036e))
+
 ## [18.13.1](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.13.0...generate-assets@v18.13.1) (2026-05-12)
 
 
