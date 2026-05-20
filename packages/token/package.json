@@ -21,7 +21,7 @@
     "test": "npm run unit && eslint ."
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=24.0.0"
   },
   "peerDependencies": {
     "@atb-as/theme": ">=15.0.0",
