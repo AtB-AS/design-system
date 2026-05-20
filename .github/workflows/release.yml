@@ -41,14 +41,17 @@ jobs:
     if: ${{ needs.release-please.outputs.generate-assets--release_created }}
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
-          always-auth: true
           node-version-file: '.nvmrc'
           registry-url: 'https://registry.npmjs.org'
-      - run: yarn workspace @atb-as/generate-assets install --frozen-lockfile --focus
-      - run: yarn workspace @atb-as/generate-assets build
-      - run: npm publish -w @atb-as/generate-assets
+          cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @atb-as/generate-assets build
+      - run: pnpm --filter @atb-as/generate-assets publish --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   release-theme:
     runs-on: ubuntu-latest
@@ -56,14 +59,17 @@ jobs:
     if: ${{ needs.release-please.outputs.theme--release_created }}
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
-          always-auth: true
           node-version-file: '.nvmrc'
           registry-url: 'https://registry.npmjs.org'
-      - run: yarn workspace @atb-as/theme install --frozen-lockfile --focus
-      - run: yarn workspace @atb-as/theme build
-      - run: npm publish -w @atb-as/theme
+          cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @atb-as/theme build
+      - run: pnpm --filter @atb-as/theme publish --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   release-token:
     runs-on: ubuntu-latest
@@ -71,9 +77,12 @@ jobs:
     if: ${{ needs.release-please.outputs.token--release_created }}
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
-          always-auth: true
           node-version-file: '.nvmrc'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm publish -w @atb-as/token
+          cache: 'pnpm'
+      - run: pnpm --filter @atb-as/token publish --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -18,7 +18,7 @@
   "license": "EUPL-1.2",
   "scripts": {
     "unit": "node --test index.test.js",
-    "test": "npm run unit && eslint ."
+    "test": "pnpm run unit && eslint ."
   },
   "peerDependencies": {
     "@atb-as/theme": ">=15.0.0",

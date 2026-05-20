@@ -20,7 +20,7 @@
   "scripts": {
     "clean": "rm -rf lib",
     "build": "tsc && node lib/tools/validate-files",
-    "pack": "yarn pack"
+    "pack": "pnpm pack"
   },
   "devDependencies": {
     "@types/micromatch": "^4.0.2",
