@@ -44,7 +44,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           always-auth: true
-          node-version: '24'
+          node-version-file: '.nvmrc'
           registry-url: 'https://registry.npmjs.org'
       - run: yarn workspace @atb-as/generate-assets install --frozen-lockfile --focus
       - run: yarn workspace @atb-as/generate-assets build
@@ -59,7 +59,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           always-auth: true
-          node-version: '24'
+          node-version-file: '.nvmrc'
           registry-url: 'https://registry.npmjs.org'
       - run: yarn workspace @atb-as/theme install --frozen-lockfile --focus
       - run: yarn workspace @atb-as/theme build
@@ -74,6 +74,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           always-auth: true
-          node-version: '24'
+          node-version-file: '.nvmrc'
           registry-url: 'https://registry.npmjs.org'
       - run: npm publish -w @atb-as/token

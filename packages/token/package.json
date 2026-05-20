@@ -20,9 +20,6 @@
     "unit": "node --test index.test.js",
     "test": "npm run unit && eslint ."
   },
-  "engines": {
-    "node": ">=24.0.0"
-  },
   "peerDependencies": {
     "@atb-as/theme": ">=15.0.0",
     "postcss": "^8.4.27"
