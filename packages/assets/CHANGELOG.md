@@ -1,5 +1,12 @@
 # Changelog
 
+## [18.14.1](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.14.0...generate-assets@v18.14.1) (2026-05-22)
+
+
+### Bug Fixes
+
+* match `.*` when filtering files with micromatch ([#398](https://github.com/AtB-AS/design-system/issues/398)) ([b5667f0](https://github.com/AtB-AS/design-system/commit/b5667f0c3e7bab0d47ae63b5b63ce75c196c928d))
+
 ## [18.14.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.13.1...generate-assets@v18.14.0) (2026-05-13)
 
 
