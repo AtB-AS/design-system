@@ -74,7 +74,7 @@ export async function generateAssets(
   log('Found merged files:', allFilesToBeCopied.length);
 
   const potentiallyFiltered = opts.patterns
-    ? micromatch(allFilesToBeCopied, opts.patterns)
+    ? micromatch(allFilesToBeCopied, opts.patterns, {dot: true})
     : allFilesToBeCopied;
 
   let allFiles = potentiallyFiltered.map(async (absolutePath) => {
