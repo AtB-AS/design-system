@@ -18,20 +18,17 @@
   "license": "EUPL-1.2",
   "scripts": {
     "unit": "node --test index.test.js",
-    "test": "npm run unit && eslint ."
-  },
-  "engines": {
-    "node": ">=18.0.0"
+    "test": "pnpm run unit && eslint ."
   },
   "peerDependencies": {
-    "@atb-as/theme": "11.0.1",
+    "@atb-as/theme": ">=15.0.0",
     "postcss": "^8.4.27"
   },
   "dependencies": {
-    "postcss-functions": "4.0.2"
+    "postcss-functions": "^4.0.2"
   },
   "devDependencies": {
-    "@atb-as/theme": "11.0.1",
+    "@atb-as/theme": "^15.2.0",
     "eslint": "^8.47.0",
     "postcss": "^8.4.27"
   },

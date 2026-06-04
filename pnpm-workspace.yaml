@@ -1,0 +1,8 @@
+packages:
+  - 'packages/*'
+allowBuilds:
+  '@bundled-es-modules/glob': true
+  esbuild: true
+  style-dictionary: true
+minimumReleaseAgeExclude:
+- '@atb-as/*'

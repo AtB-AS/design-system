@@ -24,18 +24,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - run: git checkout -b bot-design-tokens-$(date +%Y%m%d%H%M%S)
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: '24'
+          cache: 'pnpm'
       - name: Fetch variables from Figma
         env:
           FIGMA_REST_API_KEY: ${{ secrets.FIGMA_REST_API_KEY }}
           FIGMA_VARIABLES_URL: ${{ vars.FIGMA_VARIABLES_URL }}
         run: |
-          yarn install --immutable
-          yarn fetch-variables
-          yarn build
+          pnpm install --frozen-lockfile
+          pnpm fetch-variables
+          pnpm build
       - name: Commit new design tokens
         run: |
           CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)

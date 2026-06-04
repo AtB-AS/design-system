@@ -18,7 +18,7 @@ type InputOptions = {
 };
 
 program
-  .name('npx @atb-as/generate-assets')
+  .name('pnpm dlx @atb-as/generate-assets')
   .addArgument(
     new Argument('<type>', 'Type of assets to generate')
       .choices(['colors', 'all', 'mono'])
