@@ -1,5 +1,12 @@
 # Changelog
 
+## [18.15.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.14.1...generate-assets@v18.15.0) (2026-06-11)
+
+
+### Features
+
+* add city bike illustrations and bonus star ([#400](https://github.com/AtB-AS/design-system/issues/400)) ([4d30c4b](https://github.com/AtB-AS/design-system/commit/4d30c4bcfd78023353c5ccbabcf46209f65db62a))
+
 ## [18.14.1](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.14.0...generate-assets@v18.14.1) (2026-05-22)
 
 
