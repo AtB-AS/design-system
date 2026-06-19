@@ -1,5 +1,12 @@
 # Changelog
 
+## [18.16.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.15.0...generate-assets@v18.16.0) (2026-06-19)
+
+
+### Features
+
+* new parking icon ([#402](https://github.com/AtB-AS/design-system/issues/402)) ([d83e6c6](https://github.com/AtB-AS/design-system/commit/d83e6c69cb4b4d726e81683935220636be89edde))
+
 ## [18.15.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.14.1...generate-assets@v18.15.0) (2026-06-11)
 
 
