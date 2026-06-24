@@ -53,7 +53,12 @@ export type InteractiveColorName = keyof Theme['color']['interactive'];
 export type InteractiveColors = Theme['color']['interactive'];
 export type InteractiveState = keyof InteractiveColor;
 
-export type GeofencingZoneCode = 'allowed' | 'slow' | 'noParking' | 'noEntry';
+export type GeofencingZoneCode =
+  | 'allowed'
+  | 'slow'
+  | 'parking'
+  | 'noParking'
+  | 'noEntry';
 
 export type GeofencingZoneStyle<T = ContrastColor> = {
   color: T;
