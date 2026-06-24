@@ -735,6 +735,20 @@ export default {
         strokeOpacity: 0.75,
         layerIndexWeight: 5,
         lineStyle: "solid"
+      },
+      parking: {
+        color: {
+          background: "#007ab5",
+          foreground: {
+            primary: "#ffffff",
+            secondary: "#e6e6e6",
+            disabled: "#b3b3b3"
+          }
+        },
+        fillOpacity: 0.075,
+        strokeOpacity: 0.5,
+        layerIndexWeight: 1,
+        lineStyle: "solid"
       }
     },
     border: {

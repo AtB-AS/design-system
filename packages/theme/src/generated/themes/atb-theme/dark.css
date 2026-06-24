@@ -347,6 +347,14 @@
   --color-geofencing-zone-no-entry-stroke-opacity: 1;
   --color-geofencing-zone-no-entry-layer-index-weight: 5;
   --color-geofencing-zone-no-entry-line-style: solid;
+  --color-geofencing-zone-parking-color-background: #0959aa;
+  --color-geofencing-zone-parking-color-foreground-primary: #ffffff;
+  --color-geofencing-zone-parking-color-foreground-secondary: #e1e8eb;
+  --color-geofencing-zone-parking-color-foreground-disabled: #a7b6be;
+  --color-geofencing-zone-parking-fill-opacity: 0.1;
+  --color-geofencing-zone-parking-stroke-opacity: 1;
+  --color-geofencing-zone-parking-layer-index-weight: 1;
+  --color-geofencing-zone-parking-line-style: solid;
   --color-border-primary-background: #0b0d0f;
   --color-border-primary-foreground-primary: #ffffff;
   --color-border-primary-foreground-secondary: #e1e8eb;
