@@ -1,5 +1,13 @@
 # Changelog
 
+## [15.3.0](https://github.com/AtB-AS/design-system/compare/theme@v15.2.0...theme@v15.3.0) (2026-06-24)
+
+
+### Features
+
+* Add parking as a GeofencingZoneCode ([#404](https://github.com/AtB-AS/design-system/issues/404)) ([bdd5ebe](https://github.com/AtB-AS/design-system/commit/bdd5ebefeacb427fa25cf8ad9cf11461fe688de5))
+* **theme:** update design tokens ([#407](https://github.com/AtB-AS/design-system/issues/407)) ([dedfc6c](https://github.com/AtB-AS/design-system/commit/dedfc6c34a4c316fb44c69357066eadfa77acbd8))
+
 ## [15.2.0](https://github.com/AtB-AS/design-system/compare/theme@v15.1.1...theme@v15.2.0) (2026-05-13)
 
 
