@@ -1,5 +1,12 @@
 # Changelog
 
+## [18.17.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.16.0...generate-assets@v18.17.0) (2026-06-24)
+
+
+### Features
+
+* new citybike illustrations ([#405](https://github.com/AtB-AS/design-system/issues/405)) ([b228873](https://github.com/AtB-AS/design-system/commit/b2288731c1ed9481fa7cecb40f208d1bbadba7c2))
+
 ## [18.16.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.15.0...generate-assets@v18.16.0) (2026-06-19)
 
 
