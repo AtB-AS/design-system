@@ -1,5 +1,12 @@
 # Changelog
 
+## [18.18.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.17.0...generate-assets@v18.18.0) (2026-06-25)
+
+
+### Features
+
+* Add ParkingThick icon ([#409](https://github.com/AtB-AS/design-system/issues/409)) ([d048420](https://github.com/AtB-AS/design-system/commit/d0484205dcee353abd7797c5e91485f3e0d095fa))
+
 ## [18.17.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.16.0...generate-assets@v18.17.0) (2026-06-24)
 
 
