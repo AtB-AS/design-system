@@ -659,6 +659,24 @@ export default {
             disabled: "#a9aeb1"
           }
         }
+      },
+      walk: {
+        primary: {
+          background: "#c7cacc",
+          foreground: {
+            primary: "#000000",
+            secondary: "#555e65",
+            disabled: "#a9aeb1"
+          }
+        },
+        secondary: {
+          background: "#c7cacc",
+          foreground: {
+            primary: "#000000",
+            secondary: "#555e65",
+            disabled: "#a9aeb1"
+          }
+        }
       }
     },
     zone: {

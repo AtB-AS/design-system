@@ -307,6 +307,14 @@
   --color-transport-shuttle-secondary-foreground-primary: #000000;
   --color-transport-shuttle-secondary-foreground-secondary: #415058;
   --color-transport-shuttle-secondary-foreground-disabled: #73848c;
+  --color-transport-walk-primary-background: #415058;
+  --color-transport-walk-primary-foreground-primary: #ffffff;
+  --color-transport-walk-primary-foreground-secondary: #e1e8eb;
+  --color-transport-walk-primary-foreground-disabled: #a7b6be;
+  --color-transport-walk-secondary-background: #415058;
+  --color-transport-walk-secondary-foreground-primary: #ffffff;
+  --color-transport-walk-secondary-foreground-secondary: #e1e8eb;
+  --color-transport-walk-secondary-foreground-disabled: #a7b6be;
   --color-zone-from-background: #608000;
   --color-zone-from-foreground-primary: #ffffff;
   --color-zone-from-foreground-secondary: #e1e8eb;
