@@ -1,5 +1,12 @@
 # Changelog
 
+## [15.5.0](https://github.com/AtB-AS/design-system/compare/theme@v15.4.0...theme@v15.5.0) (2026-09-10)
+
+
+### Features
+
+* add walk transport color ([#413](https://github.com/AtB-AS/design-system/issues/413)) ([2e9b8ee](https://github.com/AtB-AS/design-system/commit/2e9b8eef32241c1aa73d127ed48e0fea3831d472))
+
 ## [15.4.0](https://github.com/AtB-AS/design-system/compare/theme@v15.3.0...theme@v15.4.0) (2026-09-10)
 
 
