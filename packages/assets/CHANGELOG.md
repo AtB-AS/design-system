@@ -1,5 +1,12 @@
 # Changelog
 
+## [18.19.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.18.0...generate-assets@v18.19.0) (2026-09-16)
+
+
+### Features
+
+* update stay seated icons ([#415](https://github.com/AtB-AS/design-system/issues/415)) ([ffb5afe](https://github.com/AtB-AS/design-system/commit/ffb5afe4b6cf091f45d30d805070c453c4ec72f1))
+
 ## [18.18.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.17.0...generate-assets@v18.18.0) (2026-06-25)
 
 
