@@ -1,5 +1,13 @@
 # Changelog
 
+## [18.20.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.19.0...generate-assets@v18.20.0) (2026-09-18)
+
+
+### Features
+
+* add icons for ticket symbol ([#417](https://github.com/AtB-AS/design-system/issues/417)) ([224eb76](https://github.com/AtB-AS/design-system/commit/224eb76d812ea32089128cb71c7b3005747f89a8))
+* add mono-icons for ticket status symbols ([#419](https://github.com/AtB-AS/design-system/issues/419)) ([5706540](https://github.com/AtB-AS/design-system/commit/57065408bf4c4a0fe90f5fc2a7f35ecc645acf4d))
+
 ## [18.19.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.18.0...generate-assets@v18.19.0) (2026-09-16)
 
 
