@@ -472,11 +472,11 @@ export default {
           }
         },
         secondary: {
-          background: "#608000",
+          background: "#c9e085",
           foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
+            primary: "#000000",
+            secondary: "#415058",
+            disabled: "#73848c"
           }
         }
       },
@@ -490,11 +490,11 @@ export default {
           }
         },
         secondary: {
-          background: "#008099",
+          background: "#99d9e5",
           foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
+            primary: "#000000",
+            secondary: "#415058",
+            disabled: "#73848c"
           }
         }
       },
@@ -508,11 +508,11 @@ export default {
           }
         },
         secondary: {
-          background: "#576b75",
+          background: "#c2cfd6",
           foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
+            primary: "#000000",
+            secondary: "#415058",
+            disabled: "#73848c"
           }
         }
       },
@@ -526,11 +526,11 @@ export default {
           }
         },
         secondary: {
-          background: "#c2570a",
+          background: "#e8aa7d",
           foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
+            primary: "#000000",
+            secondary: "#415058",
+            disabled: "#73848c"
           }
         }
       },
@@ -544,11 +544,11 @@ export default {
           }
         },
         secondary: {
-          background: "#00404d",
+          background: "#70c9db",
           foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
+            primary: "#000000",
+            secondary: "#415058",
+            disabled: "#73848c"
           }
         }
       },
@@ -562,11 +562,11 @@ export default {
           }
         },
         secondary: {
-          background: "#943894",
+          background: "#cd98cd",
           foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
+            primary: "#000000",
+            secondary: "#415058",
+            disabled: "#73848c"
           }
         }
       },
@@ -580,11 +580,11 @@ export default {
           }
         },
         secondary: {
-          background: "#2273c3",
+          background: "#85b2e0",
           foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
+            primary: "#000000",
+            secondary: "#415058",
+            disabled: "#73848c"
           }
         }
       },
@@ -598,11 +598,11 @@ export default {
           }
         },
         secondary: {
-          background: "#4c1a4c",
+          background: "#bd75bd",
           foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
+            primary: "#000000",
+            secondary: "#415058",
+            disabled: "#73848c"
           }
         }
       },
@@ -616,11 +616,11 @@ export default {
           }
         },
         secondary: {
-          background: "#c91d39",
+          background: "#e996a4",
           foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
+            primary: "#000000",
+            secondary: "#415058",
+            disabled: "#73848c"
           }
         }
       },
@@ -634,29 +634,29 @@ export default {
           }
         },
         secondary: {
-          background: "#576b75",
+          background: "#c2cfd6",
           foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
+            primary: "#000000",
+            secondary: "#415058",
+            disabled: "#73848c"
           }
         }
       },
       shuttle: {
         primary: {
-          background: "#002677",
+          background: "#cc9900",
           foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
+            primary: "#000000",
+            secondary: "#415058",
+            disabled: "#73848c"
           }
         },
         secondary: {
-          background: "#002677",
+          background: "#f0d175",
           foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
+            primary: "#000000",
+            secondary: "#415058",
+            disabled: "#73848c"
           }
         }
       },
@@ -670,7 +670,7 @@ export default {
           }
         },
         secondary: {
-          background: "#c2cfd6",
+          background: "#e1e8eb",
           foreground: {
             primary: "#000000",
             secondary: "#415058",
