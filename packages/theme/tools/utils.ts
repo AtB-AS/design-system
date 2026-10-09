@@ -15,6 +15,17 @@ export function maybeConvertToRem(val: any, name?: string) {
   return `${val / 16}rem`;
 }
 
+/**
+ * Converts a token name to camelCase, treating spaces, dashes and
+ * underscores as word separators.
+ *
+ * "AirportExpress" -> "airportExpress"
+ * "Strong Highlight", "strong--highlight", "strong_highlight" -> "strongHighlight"
+ */
 export function convertToCamelCase(input: string) {
-  return input.length === 0 ? '' : input.charAt(0).toLowerCase() + input.slice(1);
+  const [first = '', ...rest] = input.split(/[\s_-]+/).filter(Boolean);
+  return (
+    first.charAt(0).toLowerCase() + first.slice(1)
+    + rest.map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join('')
+  );
 } 
