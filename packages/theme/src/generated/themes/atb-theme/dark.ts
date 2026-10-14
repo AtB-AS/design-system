@@ -565,219 +565,99 @@ export default {
     },
     transport: {
       city: {
-        primary: {
-          background: "#a9d22d",
-          foreground: {
-            primary: "#000000",
-            secondary: "#415058",
-            disabled: "#73848c"
-          }
-        },
-        secondary: {
-          background: "#394d00",
-          foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
-          }
+        background: "#a9d22d",
+        foreground: {
+          primary: "#000000",
+          secondary: "#415058",
+          disabled: "#73848c"
         }
       },
       region: {
-        primary: {
-          background: "#0095b2",
-          foreground: {
-            primary: "#000000",
-            secondary: "#415058",
-            disabled: "#73848c"
-          }
-        },
-        secondary: {
-          background: "#00404d",
-          foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
-          }
+        background: "#0095b2",
+        foreground: {
+          primary: "#000000",
+          secondary: "#415058",
+          disabled: "#73848c"
         }
       },
       airportExpress: {
-        primary: {
-          background: "#8f9ca3",
-          foreground: {
-            primary: "#000000",
-            secondary: "#415058",
-            disabled: "#73848c"
-          }
-        },
-        secondary: {
-          background: "#576b75",
-          foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
-          }
+        background: "#8f9ca3",
+        foreground: {
+          primary: "#000000",
+          secondary: "#415058",
+          disabled: "#73848c"
         }
       },
       flexible: {
-        primary: {
-          background: "#d97126",
-          foreground: {
-            primary: "#000000",
-            secondary: "#415058",
-            disabled: "#73848c"
-          }
-        },
-        secondary: {
-          background: "#4d2000",
-          foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
-          }
+        background: "#d97126",
+        foreground: {
+          primary: "#000000",
+          secondary: "#415058",
+          disabled: "#73848c"
         }
       },
       boat: {
-        primary: {
-          background: "#99d9e5",
-          foreground: {
-            primary: "#000000",
-            secondary: "#415058",
-            disabled: "#73848c"
-          }
-        },
-        secondary: {
-          background: "#00404d",
-          foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
-          }
+        background: "#99d9e5",
+        foreground: {
+          primary: "#000000",
+          secondary: "#415058",
+          disabled: "#73848c"
         }
       },
       train: {
-        primary: {
-          background: "#cd98cd",
-          foreground: {
-            primary: "#000000",
-            secondary: "#415058",
-            disabled: "#73848c"
-          }
-        },
-        secondary: {
-          background: "#391339",
-          foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
-          }
+        background: "#cd98cd",
+        foreground: {
+          primary: "#000000",
+          secondary: "#415058",
+          disabled: "#73848c"
         }
       },
       scooter: {
-        primary: {
-          background: "#5c99d6",
-          foreground: {
-            primary: "#000000",
-            secondary: "#415058",
-            disabled: "#73848c"
-          }
-        },
-        secondary: {
-          background: "#00264d",
-          foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
-          }
+        background: "#5c99d6",
+        foreground: {
+          primary: "#000000",
+          secondary: "#415058",
+          disabled: "#73848c"
         }
       },
       car: {
-        primary: {
-          background: "#ac53ac",
-          foreground: {
-            primary: "#000000",
-            secondary: "#415058",
-            disabled: "#73848c"
-          }
-        },
-        secondary: {
-          background: "#391339",
-          foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
-          }
+        background: "#ac53ac",
+        foreground: {
+          primary: "#000000",
+          secondary: "#415058",
+          disabled: "#73848c"
         }
       },
       bike: {
-        primary: {
-          background: "#d7425b",
-          foreground: {
-            primary: "#000000",
-            secondary: "#415058",
-            disabled: "#73848c"
-          }
-        },
-        secondary: {
-          background: "#450812",
-          foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
-          }
+        background: "#d7425b",
+        foreground: {
+          primary: "#000000",
+          secondary: "#415058",
+          disabled: "#73848c"
         }
       },
       other: {
-        primary: {
-          background: "#8f9ca3",
-          foreground: {
-            primary: "#000000",
-            secondary: "#415058",
-            disabled: "#73848c"
-          }
-        },
-        secondary: {
-          background: "#576b75",
-          foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
-          }
+        background: "#8f9ca3",
+        foreground: {
+          primary: "#000000",
+          secondary: "#415058",
+          disabled: "#73848c"
         }
       },
       shuttle: {
-        primary: {
-          background: "#e5b21a",
-          foreground: {
-            primary: "#000000",
-            secondary: "#415058",
-            disabled: "#73848c"
-          }
-        },
-        secondary: {
-          background: "#4d3900",
-          foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
-          }
+        background: "#e5b21a",
+        foreground: {
+          primary: "#000000",
+          secondary: "#415058",
+          disabled: "#73848c"
         }
       },
       walk: {
-        primary: {
-          background: "#415058",
-          foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
-          }
-        },
-        secondary: {
-          background: "#161b1d",
-          foreground: {
-            primary: "#ffffff",
-            secondary: "#e1e8eb",
-            disabled: "#a7b6be"
-          }
+        background: "#415058",
+        foreground: {
+          primary: "#ffffff",
+          secondary: "#e1e8eb",
+          disabled: "#a7b6be"
         }
       }
     },
