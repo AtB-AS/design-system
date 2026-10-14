@@ -26,13 +26,8 @@ export type BackgroundColorName = keyof Theme['color']['background'];
 export type BackgroundColorState<T extends BackgroundColorName> =
   keyof Theme['color']['background'][T];
 
-export type TransportColor<T = ContrastColor> = {
-  primary: T;
-  secondary: T;
-};
 export type TransportColorName = keyof Theme['color']['transport'];
 export type TransportColors = Theme['color']['transport'];
-export type TransportColorState = keyof Theme['color']['transport']['city'];
 
 export type StatusColor<T = ContrastColor> = {
   primary: T;
@@ -52,6 +47,18 @@ export type InteractiveColor<T = ContrastColor> = {
 export type InteractiveColorName = keyof Theme['color']['interactive'];
 export type InteractiveColors = Theme['color']['interactive'];
 export type InteractiveState = keyof InteractiveColor;
+
+export type SurfaceColor<T = ContrastColor> = {
+  strong: T;
+  strongHighlight: T;
+  strongPressed: T;
+  subtle: T;
+  subtleHighlight: T;
+  subtlePressed: T;
+};
+export type SurfaceColorName = keyof Theme['color']['surface'];
+export type SurfaceColors = Theme['color']['surface'];
+export type SurfaceState = keyof SurfaceColor;
 
 export type GeofencingZoneCode =
   | 'allowed'
@@ -105,19 +112,24 @@ export interface Theme {
       destructive: InteractiveColor<ContrastColor>;
     };
 
+    surface: {
+      neutral: SurfaceColor<ContrastColor>;
+      accent: SurfaceColor<ContrastColor>;
+    };
+
     transport: {
-      city: TransportColor<ContrastColor>;
-      region: TransportColor<ContrastColor>;
-      airportExpress: TransportColor<ContrastColor>;
-      boat: TransportColor<ContrastColor>;
-      train: TransportColor<ContrastColor>;
-      flexible: TransportColor<ContrastColor>;
-      scooter: TransportColor<ContrastColor>;
-      bike: TransportColor<ContrastColor>;
-      car: TransportColor<ContrastColor>;
-      other: TransportColor<ContrastColor>;
-      shuttle: TransportColor<ContrastColor>;
-      walk: TransportColor<ContrastColor>;
+      city: ContrastColor;
+      region: ContrastColor;
+      airportExpress: ContrastColor;
+      boat: ContrastColor;
+      train: ContrastColor;
+      flexible: ContrastColor;
+      scooter: ContrastColor;
+      bike: ContrastColor;
+      car: ContrastColor;
+      other: ContrastColor;
+      shuttle: ContrastColor;
+      walk: ContrastColor;
     };
 
     status: {
