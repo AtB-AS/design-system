@@ -1,5 +1,17 @@
 # Changelog
 
+## [16.0.0](https://github.com/AtB-AS/design-system/compare/theme@v15.5.0...theme@v16.0.0) (2026-10-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* **theme:** `color.transport.<mode>.primary|secondary` is replaced by `color.transport.<mode>`. `TransportColor` and `TransportColorState` types are removed.
+
+### Features
+
+* **theme:** flatten transport colors and add surface colors ([e59a02a](https://github.com/AtB-AS/design-system/commit/e59a02a946d6b34e3135dfc0970a9168242b7434))
+* **theme:** update design tokens ([#422](https://github.com/AtB-AS/design-system/issues/422)) ([f00f458](https://github.com/AtB-AS/design-system/commit/f00f458f9b17b0c5120d2ae1f58885a1abf4f3e9))
+
 ## [15.5.0](https://github.com/AtB-AS/design-system/compare/theme@v15.4.0...theme@v15.5.0) (2026-09-10)
 
 
