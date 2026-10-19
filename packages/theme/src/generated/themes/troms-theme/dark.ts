@@ -235,6 +235,106 @@ export default {
             disabled: "#a9aeb1"
           }
         }
+      },
+      valid: {
+        strong: {
+          background: "#86bf6c",
+          foreground: {
+            primary: "#000000",
+            secondary: "#555e65",
+            disabled: "#a9aeb1"
+          }
+        },
+        strongHighlight: {
+          background: "#8ecc73",
+          foreground: {
+            primary: "#000000",
+            secondary: "#555e65",
+            disabled: "#a9aeb1"
+          }
+        },
+        strongPressed: {
+          background: "#6b9956",
+          foreground: {
+            primary: "#000000",
+            secondary: "#555e65",
+            disabled: "#a9aeb1"
+          }
+        },
+        subtle: {
+          background: "#3e5932",
+          foreground: {
+            primary: "#ffffff",
+            secondary: "#e3e5e6",
+            disabled: "#a9aeb1"
+          }
+        },
+        subtleHighlight: {
+          background: "#000000",
+          foreground: {
+            primary: "#ffffff",
+            secondary: "#e3e5e6",
+            disabled: "#a9aeb1"
+          }
+        },
+        subtlePressed: {
+          background: "#000000",
+          foreground: {
+            primary: "#ffffff",
+            secondary: "#e3e5e6",
+            disabled: "#a9aeb1"
+          }
+        }
+      },
+      error: {
+        strong: {
+          background: "#d44546",
+          foreground: {
+            primary: "#000000",
+            secondary: "#555e65",
+            disabled: "#a9aeb1"
+          }
+        },
+        strongHighlight: {
+          background: "#db6364",
+          foreground: {
+            primary: "#000000",
+            secondary: "#555e65",
+            disabled: "#a9aeb1"
+          }
+        },
+        strongPressed: {
+          background: "#c91618",
+          foreground: {
+            primary: "#000000",
+            secondary: "#555e65",
+            disabled: "#a9aeb1"
+          }
+        },
+        subtle: {
+          background: "#54090a",
+          foreground: {
+            primary: "#ffffff",
+            secondary: "#e3e5e6",
+            disabled: "#a9aeb1"
+          }
+        },
+        subtleHighlight: {
+          background: "#ffffff",
+          foreground: {
+            primary: "#ffffff",
+            secondary: "#e3e5e6",
+            disabled: "#a9aeb1"
+          }
+        },
+        subtlePressed: {
+          background: "#ffffff",
+          foreground: {
+            primary: "#ffffff",
+            secondary: "#e3e5e6",
+            disabled: "#a9aeb1"
+          }
+        }
       }
     },
     status: {
