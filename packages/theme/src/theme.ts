@@ -115,6 +115,8 @@ export interface Theme {
     surface: {
       neutral: SurfaceColor<ContrastColor>;
       accent: SurfaceColor<ContrastColor>;
+      valid: SurfaceColor<ContrastColor>;
+      error: SurfaceColor<ContrastColor>;
     };
 
     transport: {
