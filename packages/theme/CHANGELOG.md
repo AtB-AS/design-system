@@ -1,5 +1,13 @@
 # Changelog
 
+## [16.1.0](https://github.com/AtB-AS/design-system/compare/theme@v16.0.0...theme@v16.1.0) (2026-10-19)
+
+
+### Features
+
+* add valid and error surface sets ([#427](https://github.com/AtB-AS/design-system/issues/427)) ([e56abc2](https://github.com/AtB-AS/design-system/commit/e56abc2f10f909eaa9f4f16d880ce498260ea2f8))
+* **theme:** update design tokens ([#425](https://github.com/AtB-AS/design-system/issues/425)) ([9c9d969](https://github.com/AtB-AS/design-system/commit/9c9d9696320f97fe525ebb5c6b6bd3fe2f40ad62))
+
 ## [16.0.0](https://github.com/AtB-AS/design-system/compare/theme@v15.5.0...theme@v16.0.0) (2026-10-14)
 
 
