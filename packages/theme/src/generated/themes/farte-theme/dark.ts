@@ -138,7 +138,7 @@ export default {
     surface: {
       neutral: {
         strong: {
-          background: "#2c2c2c",
+          background: "#000000",
           foreground: {
             primary: "#ffffff",
             secondary: "#e2e2e2",
@@ -146,7 +146,7 @@ export default {
           }
         },
         strongHighlight: {
-          background: "#434342",
+          background: "#000000",
           foreground: {
             primary: "#ffffff",
             secondary: "#e2e2e2",
@@ -154,7 +154,7 @@ export default {
           }
         },
         strongPressed: {
-          background: "#000000",
+          background: "#161616",
           foreground: {
             primary: "#ffffff",
             secondary: "#e2e2e2",
@@ -162,7 +162,7 @@ export default {
           }
         },
         subtle: {
-          background: "#000000",
+          background: "#2c2c2c",
           foreground: {
             primary: "#ffffff",
             secondary: "#e2e2e2",
@@ -170,7 +170,7 @@ export default {
           }
         },
         subtleHighlight: {
-          background: "#000000",
+          background: "#434342",
           foreground: {
             primary: "#ffffff",
             secondary: "#e2e2e2",
@@ -178,7 +178,7 @@ export default {
           }
         },
         subtlePressed: {
-          background: "#161616",
+          background: "#000000",
           foreground: {
             primary: "#ffffff",
             secondary: "#e2e2e2",
