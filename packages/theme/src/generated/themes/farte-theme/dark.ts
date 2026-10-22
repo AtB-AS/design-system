@@ -138,30 +138,6 @@ export default {
     surface: {
       neutral: {
         strong: {
-          background: "#000000",
-          foreground: {
-            primary: "#ffffff",
-            secondary: "#e2e2e2",
-            disabled: "#a9a9a8"
-          }
-        },
-        strongHighlight: {
-          background: "#000000",
-          foreground: {
-            primary: "#ffffff",
-            secondary: "#e2e2e2",
-            disabled: "#a9a9a8"
-          }
-        },
-        strongPressed: {
-          background: "#161616",
-          foreground: {
-            primary: "#ffffff",
-            secondary: "#e2e2e2",
-            disabled: "#a9a9a8"
-          }
-        },
-        subtle: {
           background: "#2c2c2c",
           foreground: {
             primary: "#ffffff",
@@ -169,7 +145,7 @@ export default {
             disabled: "#a9a9a8"
           }
         },
-        subtleHighlight: {
+        strongHighlight: {
           background: "#434342",
           foreground: {
             primary: "#ffffff",
@@ -177,8 +153,32 @@ export default {
             disabled: "#a9a9a8"
           }
         },
-        subtlePressed: {
+        strongPressed: {
+          background: "#212121",
+          foreground: {
+            primary: "#ffffff",
+            secondary: "#e2e2e2",
+            disabled: "#a9a9a8"
+          }
+        },
+        subtle: {
           background: "#000000",
+          foreground: {
+            primary: "#ffffff",
+            secondary: "#e2e2e2",
+            disabled: "#a9a9a8"
+          }
+        },
+        subtleHighlight: {
+          background: "#0b0b0b",
+          foreground: {
+            primary: "#ffffff",
+            secondary: "#e2e2e2",
+            disabled: "#a9a9a8"
+          }
+        },
+        subtlePressed: {
+          background: "#161616",
           foreground: {
             primary: "#ffffff",
             secondary: "#e2e2e2",
@@ -228,7 +228,7 @@ export default {
           }
         },
         subtlePressed: {
-          background: "#000000",
+          background: "#212121",
           foreground: {
             primary: "#ffffff",
             secondary: "#e2e2e2",
@@ -278,7 +278,7 @@ export default {
           }
         },
         subtlePressed: {
-          background: "#ffffff",
+          background: "#bce0d0",
           foreground: {
             primary: "#000000",
             secondary: "#595958",
@@ -328,7 +328,7 @@ export default {
           }
         },
         subtlePressed: {
-          background: "#ffffff",
+          background: "#eabac5",
           foreground: {
             primary: "#000000",
             secondary: "#595958",

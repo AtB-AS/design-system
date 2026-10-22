@@ -138,30 +138,6 @@ export default {
     surface: {
       neutral: {
         strong: {
-          background: "#000000",
-          foreground: {
-            primary: "#ffffff",
-            secondary: "#e6e6e6",
-            disabled: "#b3b3b3"
-          }
-        },
-        strongHighlight: {
-          background: "#0d0d0d",
-          foreground: {
-            primary: "#ffffff",
-            secondary: "#e6e6e6",
-            disabled: "#b3b3b3"
-          }
-        },
-        strongPressed: {
-          background: "#1a1a1a",
-          foreground: {
-            primary: "#ffffff",
-            secondary: "#e6e6e6",
-            disabled: "#b3b3b3"
-          }
-        },
-        subtle: {
           background: "#343434",
           foreground: {
             primary: "#ffffff",
@@ -169,7 +145,7 @@ export default {
             disabled: "#b3b3b3"
           }
         },
-        subtleHighlight: {
+        strongHighlight: {
           background: "#4d4d4d",
           foreground: {
             primary: "#ffffff",
@@ -177,8 +153,32 @@ export default {
             disabled: "#b3b3b3"
           }
         },
-        subtlePressed: {
+        strongPressed: {
           background: "#272727",
+          foreground: {
+            primary: "#ffffff",
+            secondary: "#e6e6e6",
+            disabled: "#b3b3b3"
+          }
+        },
+        subtle: {
+          background: "#000000",
+          foreground: {
+            primary: "#ffffff",
+            secondary: "#e6e6e6",
+            disabled: "#b3b3b3"
+          }
+        },
+        subtleHighlight: {
+          background: "#0d0d0d",
+          foreground: {
+            primary: "#ffffff",
+            secondary: "#e6e6e6",
+            disabled: "#b3b3b3"
+          }
+        },
+        subtlePressed: {
+          background: "#1a1a1a",
           foreground: {
             primary: "#ffffff",
             secondary: "#e6e6e6",
@@ -328,7 +328,7 @@ export default {
           }
         },
         subtlePressed: {
-          background: "#ffffff",
+          background: "#45090b",
           foreground: {
             primary: "#ffffff",
             secondary: "#e6e6e6",
