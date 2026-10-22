@@ -107,7 +107,7 @@
   --color-surface-accent-subtle-foreground-primary: #000000;
   --color-surface-accent-subtle-foreground-secondary: #555760;
   --color-surface-accent-subtle-foreground-disabled: #8fa9af;
-  --color-surface-accent-subtle-highlight-background: #cce6ed;
+  --color-surface-accent-subtle-highlight-background: #b3dae4;
   --color-surface-accent-subtle-highlight-foreground-primary: #000000;
   --color-surface-accent-subtle-highlight-foreground-secondary: #555760;
   --color-surface-accent-subtle-highlight-foreground-disabled: #8fa9af;
@@ -135,7 +135,7 @@
   --color-surface-valid-subtle-highlight-foreground-primary: #000000;
   --color-surface-valid-subtle-highlight-foreground-secondary: #555760;
   --color-surface-valid-subtle-highlight-foreground-disabled: #8fa9af;
-  --color-surface-valid-subtle-pressed-background: #ffffff;
+  --color-surface-valid-subtle-pressed-background: #b3e1d2;
   --color-surface-valid-subtle-pressed-foreground-primary: #000000;
   --color-surface-valid-subtle-pressed-foreground-secondary: #555760;
   --color-surface-valid-subtle-pressed-foreground-disabled: #8fa9af;
@@ -159,7 +159,7 @@
   --color-surface-error-subtle-highlight-foreground-primary: #000000;
   --color-surface-error-subtle-highlight-foreground-secondary: #555760;
   --color-surface-error-subtle-highlight-foreground-disabled: #8fa9af;
-  --color-surface-error-subtle-pressed-background: #ffffff;
+  --color-surface-error-subtle-pressed-background: #fbcbc8;
   --color-surface-error-subtle-pressed-foreground-primary: #000000;
   --color-surface-error-subtle-pressed-foreground-secondary: #555760;
   --color-surface-error-subtle-pressed-foreground-disabled: #8fa9af;

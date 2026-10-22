@@ -278,7 +278,7 @@ export default {
           }
         },
         subtlePressed: {
-          background: "#ffffff",
+          background: "#d7dc92",
           foreground: {
             primary: "#000000",
             secondary: "#555e65",
@@ -328,7 +328,7 @@ export default {
           }
         },
         subtlePressed: {
-          background: "#ffffff",
+          background: "#e9c5d1",
           foreground: {
             primary: "#000000",
             secondary: "#555e65",

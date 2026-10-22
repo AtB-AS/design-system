@@ -220,7 +220,7 @@ export default {
           }
         },
         subtleHighlight: {
-          background: "#ffffff",
+          background: "#f6c0a4",
           foreground: {
             primary: "#000000",
             secondary: "#555e65",
@@ -278,7 +278,7 @@ export default {
           }
         },
         subtlePressed: {
-          background: "#ffffff",
+          background: "#edffe6",
           foreground: {
             primary: "#000000",
             secondary: "#555e65",
@@ -328,7 +328,7 @@ export default {
           }
         },
         subtlePressed: {
-          background: "#ffffff",
+          background: "#eaa6a6",
           foreground: {
             primary: "#000000",
             secondary: "#555e65",
