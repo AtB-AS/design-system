@@ -138,7 +138,7 @@ export default {
     surface: {
       neutral: {
         strong: {
-          background: "#293132",
+          background: "#034151",
           foreground: {
             primary: "#ffffff",
             secondary: "#dae2e4",
@@ -146,7 +146,7 @@ export default {
           }
         },
         strongHighlight: {
-          background: "#555760",
+          background: "#046078",
           foreground: {
             primary: "#ffffff",
             secondary: "#dae2e4",
@@ -522,7 +522,7 @@ export default {
           }
         },
         hover: {
-          background: "#03313d",
+          background: "#046078",
           foreground: {
             primary: "#ffffff",
             secondary: "#dae2e4",
@@ -530,7 +530,7 @@ export default {
           }
         },
         active: {
-          background: "#046078",
+          background: "#033947",
           foreground: {
             primary: "#ffffff",
             secondary: "#dae2e4",

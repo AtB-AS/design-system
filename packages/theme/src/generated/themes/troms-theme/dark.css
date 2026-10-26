@@ -67,15 +67,15 @@
   --color-background-accent-5-foreground-primary: #ffffff;
   --color-background-accent-5-foreground-secondary: #e3e5e6;
   --color-background-accent-5-foreground-disabled: #a9aeb1;
-  --color-surface-neutral-strong-background: #2b343a;
+  --color-surface-neutral-strong-background: #37424a;
   --color-surface-neutral-strong-foreground-primary: #ffffff;
   --color-surface-neutral-strong-foreground-secondary: #e3e5e6;
   --color-surface-neutral-strong-foreground-disabled: #a9aeb1;
-  --color-surface-neutral-strong-highlight-background: #37424a;
+  --color-surface-neutral-strong-highlight-background: #555e65;
   --color-surface-neutral-strong-highlight-foreground-primary: #ffffff;
   --color-surface-neutral-strong-highlight-foreground-secondary: #e3e5e6;
   --color-surface-neutral-strong-highlight-foreground-disabled: #a9aeb1;
-  --color-surface-neutral-strong-pressed-background: #242b30;
+  --color-surface-neutral-strong-pressed-background: #2b343a;
   --color-surface-neutral-strong-pressed-foreground-primary: #ffffff;
   --color-surface-neutral-strong-pressed-foreground-secondary: #e3e5e6;
   --color-surface-neutral-strong-pressed-foreground-disabled: #a9aeb1;

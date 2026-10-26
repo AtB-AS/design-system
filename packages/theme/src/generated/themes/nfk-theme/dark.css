@@ -67,11 +67,11 @@
   --color-background-accent-5-foreground-primary: #ffffff;
   --color-background-accent-5-foreground-secondary: #dae2e4;
   --color-background-accent-5-foreground-disabled: #8fa9af;
-  --color-surface-neutral-strong-background: #293132;
+  --color-surface-neutral-strong-background: #034151;
   --color-surface-neutral-strong-foreground-primary: #ffffff;
   --color-surface-neutral-strong-foreground-secondary: #dae2e4;
   --color-surface-neutral-strong-foreground-disabled: #8fa9af;
-  --color-surface-neutral-strong-highlight-background: #555760;
+  --color-surface-neutral-strong-highlight-background: #046078;
   --color-surface-neutral-strong-highlight-foreground-primary: #ffffff;
   --color-surface-neutral-strong-highlight-foreground-secondary: #dae2e4;
   --color-surface-neutral-strong-highlight-foreground-disabled: #8fa9af;
@@ -247,11 +247,11 @@
   --color-interactive-2-default-foreground-primary: #ffffff;
   --color-interactive-2-default-foreground-secondary: #dae2e4;
   --color-interactive-2-default-foreground-disabled: #8fa9af;
-  --color-interactive-2-hover-background: #03313d;
+  --color-interactive-2-hover-background: #046078;
   --color-interactive-2-hover-foreground-primary: #ffffff;
   --color-interactive-2-hover-foreground-secondary: #dae2e4;
   --color-interactive-2-hover-foreground-disabled: #8fa9af;
-  --color-interactive-2-active-background: #046078;
+  --color-interactive-2-active-background: #033947;
   --color-interactive-2-active-foreground-primary: #ffffff;
   --color-interactive-2-active-foreground-secondary: #dae2e4;
   --color-interactive-2-active-foreground-disabled: #8fa9af;

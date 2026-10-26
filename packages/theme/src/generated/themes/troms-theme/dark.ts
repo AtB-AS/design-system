@@ -138,14 +138,6 @@ export default {
     surface: {
       neutral: {
         strong: {
-          background: "#2b343a",
-          foreground: {
-            primary: "#ffffff",
-            secondary: "#e3e5e6",
-            disabled: "#a9aeb1"
-          }
-        },
-        strongHighlight: {
           background: "#37424a",
           foreground: {
             primary: "#ffffff",
@@ -153,8 +145,16 @@ export default {
             disabled: "#a9aeb1"
           }
         },
+        strongHighlight: {
+          background: "#555e65",
+          foreground: {
+            primary: "#ffffff",
+            secondary: "#e3e5e6",
+            disabled: "#a9aeb1"
+          }
+        },
         strongPressed: {
-          background: "#242b30",
+          background: "#2b343a",
           foreground: {
             primary: "#ffffff",
             secondary: "#e3e5e6",
