@@ -1,5 +1,12 @@
 # Changelog
 
+## [16.5.0](https://github.com/AtB-AS/design-system/compare/theme@v16.4.0...theme@v16.5.0) (2026-11-16)
+
+
+### Features
+
+* **theme:** update design tokens for `farte` ([#434](https://github.com/AtB-AS/design-system/issues/434)) ([23f5cf0](https://github.com/AtB-AS/design-system/commit/23f5cf0c8d6a46bd4a9fbc50df39d598a60d773e))
+
 ## [16.4.0](https://github.com/AtB-AS/design-system/compare/theme@v16.3.0...theme@v16.4.0) (2026-10-26)
 
 
