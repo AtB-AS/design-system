@@ -1,5 +1,12 @@
 # Changelog
 
+## [18.21.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.20.0...generate-assets@v18.21.0) (2026-11-23)
+
+
+### Features
+
+* Added Google Pay mark svg ([#436](https://github.com/AtB-AS/design-system/issues/436)) ([ddca441](https://github.com/AtB-AS/design-system/commit/ddca441b9f79716c00a8db1343a1614fae1d42f5))
+
 ## [18.20.0](https://github.com/AtB-AS/design-system/compare/generate-assets@v18.19.0...generate-assets@v18.20.0) (2026-09-18)
 
 
